@@ -3,6 +3,8 @@ function solve() {
     .map(x => x.addEventListener("click", handleVisited))
 
   function handleVisited(e) {
+    // console.log(e.target);
+    // console.log(e.currentTarget);
     e.preventDefault();
     let visitedText = e.currentTarget.nextElementSibling;
     let arr = visitedText.innerText.split(" ");
