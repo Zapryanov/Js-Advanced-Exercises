@@ -13,5 +13,18 @@ function clickMe() {
 
     let arrItemsByQuerySelector = Array.from(itemsByQuerySelector);
 
-    arrItemsByQuerySelector.map(x => console.log("From convertedArray: ", x.innerHTML))
+    arrItemsByQuerySelector.map(x => console.log("From convertedArray: ", x.innerHTML));
+
+    function foo(x) {
+        return x * x;
+    }
+
+    function bar(y) {
+        return foo(y + 2);
+    }
+
+    // bar(8);
+
+    let divText = document.querySelector(".result");
+    divText.textContent = bar(18)
 }
