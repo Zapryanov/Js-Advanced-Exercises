@@ -5,10 +5,9 @@ function solve() {
   function handleVisited(e) {
     // console.log(e.target);
     // console.log(e.currentTarget);
-    e.preventDefault();
     let visitedText = e.currentTarget.nextElementSibling;
-    let arr = visitedText.innerText.split(" ");
-    arr[1]++;
-    visitedText.innerText = arr.join(" ");
+    let textLikeArr = visitedText.innerText.split(" ");
+    textLikeArr[1]++;
+    visitedText.innerText = textLikeArr.join(" ");
   }
 }
