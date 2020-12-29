@@ -2,10 +2,10 @@ function addItem() {
     const ul = document.getElementById("items");
     const input = document.getElementById("newText");
 
-    if (input.value !== "") {
+    if (input.value && input.value !== "") {
         const newLi = document.createElement("li");
         newLi.textContent = input.value;
-        
+
         const aDelete = document.createElement("a");
         aDelete.setAttribute("href", "#")
         aDelete.textContent = "[Delete]";
