@@ -3,9 +3,14 @@ function addItem() {
     const input = document.getElementById("newItemText");
 
     if (input.value !== "") {
-        const newLi = document.createElement("li");
-        newLi.textContent = input.value;
+        const newLi = createElement("li", input.value);
         ul.appendChild(newLi);
         input.value = "";
+    }
+
+    function createElement(type, content) {
+        let el = document.createElement(type);
+        el.textContent = content;
+        return el;
     }
 }
