@@ -26,5 +26,5 @@ function clickMe() {
     // bar(8);
 
     let divText = document.querySelector(".result");
-    divText.textContent = bar(18)
+    divText.textContent = bar(18);
 }
