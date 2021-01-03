@@ -2,8 +2,8 @@
 // a single non-repeating element in an array
 
 function findUniq(arr) {
-    arr.sort((a,b)=>a-b);
-    return arr[0]==arr[1]?arr.pop():arr[0]
+    arr.sort((a,b) => a - b);
+    return arr[0] == arr[1] ? arr.pop() : arr[0]
 }
 
 // Second place good preformance
@@ -16,10 +16,10 @@ function findUniqSecondFunction(arr) {
 
     function nonrep() {
         for (var i = 0; i < n; i++) {
-            for (var j=0 ; j < n; j++)
-            if (i!=j && arr[i]==arr[j])
+            for (var j = 0 ; j < n; j++)
+            if (i != j && arr[i] == arr[j])
                 break;
-            if(j==n)
+            if(j == n)
                 result.push(arr[i]);
         }
         return result[0];
