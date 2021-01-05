@@ -11,13 +11,13 @@
 // The board is always 9 cells by 9 cells, and every cell only contains integers from 0 to 9.
 
 function validSolution(board){
-
+// Helper function for valid array
     function checkArrays(arr) {
         let sortedStr = arr.slice(0).sort().join("");
         let example = "123456789";
         return sortedStr === example ? true : false;
     }
-
+// Check both - horizontal and vertical lines
     for (let i = 0; i < board.length; i++) {
         let xArr = board[i];
         let yArr = board.map((el) => el[i]).reduce((acc, cur) => {
@@ -32,7 +32,7 @@ function validSolution(board){
     
     let temp = 0;
     let currentSquare = [];
-
+// Chek for boxes
     for (let i = 0; i < board.length; i += 3) {
         for (let j = 0; j < board.length; j += 3) {
 
