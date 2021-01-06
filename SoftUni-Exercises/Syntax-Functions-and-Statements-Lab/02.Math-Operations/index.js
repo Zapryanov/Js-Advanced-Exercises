@@ -37,9 +37,9 @@ function mathOperations(sign, ...params) {
     return params.reduce((acc, cur) => obj[sign](acc, Number(cur)), Number(params.shift()))
 }
 
-console.log(mathOperations("+", 3, 5.5));
+console.log(mathOperations("+", 3, 5.5, 10));
 console.log(mathOperations("-", 3, 5.5));
-console.log(mathOperations("*", 3, 5.5));
-console.log(mathOperations("/", 3, 5.5));
+console.log(mathOperations("*", 3, 5.5, 10));
+console.log(mathOperations("/", 23, 5.5));
 console.log(mathOperations("%", 12, 10));
-console.log(mathOperations("**", 3, 5));
+console.log(mathOperations("**", 3, 5, 2));
