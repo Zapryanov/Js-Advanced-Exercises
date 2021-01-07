@@ -9,15 +9,28 @@ function gcd(x, y) {
 
 console.log(gcd(15, 5));
 
-function greatestCommonDivisor(x, y) {
-    let result = 0;
+function greatestCommonDivisor(firstNum, secondNum) {
 
-    while((x % y) > 0) {
-        result = x % y;
-        x = y;
-        y = result;
+    let num = Math.min(firstNum, secondNum);
+    for (let i = num; i > 0; i--) {
+        if (firstNum % i === 0 && secondNum % i === 0) {
+            return i;
+        }
     }
-    console.log(y)
+
 }
 
-greatestCommonDivisor(8, 4);
+console.log(greatestCommonDivisor(8, 4));
+
+// function greatestCommonDivisor(x, y) {
+//     let result = 0;
+
+//     while((x % y) > 0) {
+//         result = x % y;
+//         x = y;
+//         y = result;
+//     }
+//     console.log(y)
+// }
+
+// greatestCommonDivisor(8, 4);
