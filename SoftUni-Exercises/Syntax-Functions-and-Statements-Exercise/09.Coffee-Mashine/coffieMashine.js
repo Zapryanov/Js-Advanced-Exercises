@@ -36,7 +36,7 @@ function coffieMashine(mainArr) {
             console.log(`You ordered ${drink}. Price: $${sum.toFixed(2)} Change: $${(insertedCoins - sum).toFixed(2)}`);
             incomeReport += sum;
         } else {
-            console.log(`Not enough money for ${drink}. Need $${(sum - insertedCoins).toFixed(2)} more`);
+            console.log(`Not enough money for ${drink}. Need $${(sum - insertedCoins).toFixed(2)} more.`);
         }
     }
     console.log(`Income Report: $${incomeReport.toFixed(2)}`);
