@@ -9,13 +9,14 @@ function townToJson(arr) {
         let [town, latitude, longitude] = cur.split(regex).filter(clearSpace);
         latitude = Math.round(latitude * 100) / 100;
         longitude = Math.round(longitude * 100) / 100;
-// This is hardcode approach with keys
-        // let curObj = {"Town": town, "Latitude": Number(latitude), "Longitude": Number(longitude)};
+// This is the way how can we pass variable to an object like key
+        let curObj = {[headers[0]]: town, [headers[1]]: Number(latitude), [headers[2]]: Number(longitude)};
+        console.log(curObj[headers[0]])
 // ----------------------------------------------------------------------------------------------------
-        let curObj = {};
-        curObj[headers[0]] = town;
-        curObj[headers[1]] = Number(latitude);
-        curObj[headers[2]] = Number(longitude);
+        // let curObj = {};
+        // curObj[headers[0]] = town;
+        // curObj[headers[1]] = Number(latitude);
+        // curObj[headers[2]] = Number(longitude);
         
         acc.push(curObj);
         return acc;
