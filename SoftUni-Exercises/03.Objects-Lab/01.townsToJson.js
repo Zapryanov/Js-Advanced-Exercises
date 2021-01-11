@@ -3,22 +3,16 @@ function townToJson(arr) {
         return e !== "";
     }
     const regex = /\s*\|\s*/gm;
-    const headers = arr.shift().split(regex).filter(clearSpace);
 
-    let result = arr.reduce((acc, cur) => {
-        let [town, latitude, longitude] = cur.split(regex).filter(clearSpace);
-        latitude = Math.round(latitude * 100) / 100;
-        longitude = Math.round(longitude * 100) / 100;
-// This is the way how can we pass variable to an object like key
-        let curObj = {[headers[0]]: town, [headers[1]]: Number(latitude), [headers[2]]: Number(longitude)};
-        console.log(curObj[headers[0]])
-// ----------------------------------------------------------------------------------------------------
-        // let curObj = {};
-        // curObj[headers[0]] = town;
-        // curObj[headers[1]] = Number(latitude);
-        // curObj[headers[2]] = Number(longitude);
-        
+    let result = arr.slice(1).reduce((acc, cur) => {
+        let [Town, Latitude, Longitude] = cur.split(regex).filter(clearSpace);
+
+        Latitude = Math.round(Latitude * 100) / 100;
+        Longitude = Math.round(Longitude * 100) / 100;
+
+        let curObj = {Town, Latitude, Longitude};
         acc.push(curObj);
+
         return acc;
     }, []);
 
