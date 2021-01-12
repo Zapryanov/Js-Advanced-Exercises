@@ -1,4 +1,5 @@
 let obj = {};
+obj["age"] = 23;
 
 Object.defineProperties(
     obj,
@@ -9,3 +10,5 @@ Object.defineProperties(
         }
     }
 )
+
+console.log(obj)
