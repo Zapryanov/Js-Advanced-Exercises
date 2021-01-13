@@ -16,6 +16,7 @@ function lastKNumbersSequence(n, k) {
 
 console.log(lastKNumbersSequence(6, 3));
 
+// This is old programming way except "reduce"
 
 // function lastKNumbersSequence(n, k) {
 //     let result = [1];
