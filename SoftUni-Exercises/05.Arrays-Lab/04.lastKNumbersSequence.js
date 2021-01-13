@@ -8,11 +8,7 @@ function lastKNumbersSequence(n, k) {
     for (let i = 1; i < n; i++ ) {
         let sum = 0;
         let nextNums = result.slice(-k);
-        if (nextNums.length < k) {
-            sum = result.reduce(agregate);
-        } else {
-            sum = nextNums.reduce(agregate);
-        }
+        nextNums.length < k ? sum = result.reduce(agregate) : sum = nextNums.reduce(agregate);
         result.push(sum);
     }
     return result;
