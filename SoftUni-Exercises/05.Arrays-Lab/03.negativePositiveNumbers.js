@@ -5,7 +5,10 @@ function negativePositiveNumbers(arr) {
         true: "unshift",
         false: "push"
     }
-    return arr.reduce((acc, cur) => acc[actionsMap[cur < 0]](cur) && acc, []).join("\n");
+    return arr.reduce((acc, cur) => {
+        acc[actionsMap[cur < 0]](cur);
+        return acc;
+    }, []).join("\n");
 }
 
 console.log(negativePositiveNumbers([3, -2, 0, -1]));
