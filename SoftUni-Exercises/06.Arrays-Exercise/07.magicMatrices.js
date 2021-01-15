@@ -1,13 +1,13 @@
 function magicMatrices(matrix) {
     let isTrue = true;
     let sumArr = (acc, cur) => acc + cur;
-    let valueToCompare = matrix[0].reduce(sumArr);
+    let valueToCompare = matrix[0].reduce(sumArr, 0);
     
     matrix.map((el, i) => {
-        let sumHorizontal = el.reduce(sumArr);
+        let sumHorizontal = el.reduce(sumArr, 0);
         let sumVertical = matrix
             .map((x, idx) => x = matrix[idx][i])
-            .reduce(sumArr)
+            .reduce(sumArr, 0)
         if (sumHorizontal !== valueToCompare || sumVertical !== valueToCompare) {
             isTrue = false
         }
