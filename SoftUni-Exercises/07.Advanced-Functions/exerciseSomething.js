@@ -26,12 +26,23 @@ Function.prototype.curry = function() {
     };
 };
 
-function sumNumbers(x, y) {
-    return x + y;
+// function sumNumbers(x, y) {
+//     return x + y;
+// }
+
+// const addTo5 = sumNumbers.curry(5);
+// console.log(addTo5(5))
+let converter = function(ratio, symbol, input) {
+    return [ (input * ratio).toFixed(1), symbol ].join(" ");
 }
 
-const addTo5 = sumNumbers.curry(5);
-console.log(addTo5(5))
+let kilosToPound = converter.curry(2.2, "lbs");
+let milesToKilometers = converter.curry(1.62, "km");
+
+console.log(kilosToPound(4));
+console.log(milesToKilometers(61.75));
+
+
 
 // function foo(param1, param2) {
 //     console.log(param1, param2);
