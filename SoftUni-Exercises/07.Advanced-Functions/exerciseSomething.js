@@ -1,14 +1,3 @@
-// function test(a, b, c) {
-//     for (let i = 0; i < arguments.length; i++) {
-//         console.log(`element: ${arguments[i]} - index - ${i}`)
-//     }
-//     console.log(arguments);
-// }
-
-// test("a", "b", "c");
-
-// ---------------------------------------------------
-
 function toArray(x) {
     return Array.prototype.slice.call(x)
 }
@@ -26,21 +15,23 @@ Function.prototype.curry = function() {
     };
 };
 
-// function sumNumbers(x, y) {
-//     return x + y;
-// }
+function sumNumbers(x, y) {
+    return x + y;
+}
 
-// const addTo5 = sumNumbers.curry(5);
-// console.log(addTo5(5))
+const addTo5 = sumNumbers.curry(5);
+console.log(addTo5(5))
 let converter = function(ratio, symbol, input) {
     return [ (input * ratio).toFixed(1), symbol ].join(" ");
 }
 
-let kilosToPound = converter.curry(2.2, "lbs");
-let milesToKilometers = converter.curry(1.62, "km");
+// -----------------------------------------------------------------------
 
-console.log(kilosToPound(4));
-console.log(milesToKilometers(61.75));
+// let kilosToPound = converter.curry(2.2, "lbs");
+// let milesToKilometers = converter.curry(1.62, "km");
+
+// console.log(kilosToPound(4));
+// console.log(milesToKilometers(61.75));
 
 
 
