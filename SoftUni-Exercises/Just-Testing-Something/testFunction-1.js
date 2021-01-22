@@ -1,6 +1,4 @@
-let add = (a, b) => {
-    return a + b;
-}
+let add = (a, b) => a + b;
 
 function calculate(addNumbers, firstOperand, secondOperand) {
     return addNumbers(firstOperand, secondOperand);
