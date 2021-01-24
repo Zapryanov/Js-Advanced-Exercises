@@ -41,3 +41,19 @@ console.log(globalSpeak("Hello from global!"));
 
 // Person.watsThis - return "person-object" 
 console.log(person.whatsThis());
+
+//--------------------------
+// Using arrow function we use upper context;
+// Arrow function doesn't have own context;
+// The Arrow function automatically transfers the parent context to itself!!!
+let testObj = {
+    name: "Stoil",
+    grades: [5, 6, 5, 4, 6, 5, 6],
+    speak: function() {
+        this.grades.forEach(eachGrade => {
+            console.log(`${this.name}: ${eachGrade}`)
+        })
+    }
+}
+
+testObj.speak();
