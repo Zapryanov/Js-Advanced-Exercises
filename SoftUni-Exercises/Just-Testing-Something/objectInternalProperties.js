@@ -1,23 +1,23 @@
-// let person = {
-//     name: "John",
-//     age: 23,
-//     eyeColor: "brown",
-//     country: "England"
-// }
+let person = {
+    name: "John",
+    age: 23,
+    eyeColor: "brown",
+    country: "England"
+}
 
-// Object.defineProperty(person, "age", {enumerable: false});
-// Object.defineProperty(person, "job", {enumerable: true, value: "Js-Programmer"});
+Object.defineProperty(person, "age", {enumerable: false});
+Object.defineProperty(person, "job", {enumerable: true, value: "Js-Programmer"});
 
-// for (const key in person) {
-//     console.log(key, person[key]);
-// }
+for (const key in person) {
+    console.log(key, person[key]);
+}
 
-// console.log("-------------------------------");
+console.log("-------------------------------");
 
-// console.log(person.propertyIsEnumerable("age"));
-// console.log(person.job);
+console.log(person.propertyIsEnumerable("age"));
+console.log(person.job);
 
-// console.log("-------------------------------");
+console.log("-------------------------------");
 
 let car = {brand: "Audi", model: "RSQ-8", price: 180000};
 
