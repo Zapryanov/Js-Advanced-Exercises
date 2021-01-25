@@ -25,4 +25,4 @@ console.log(areaAndVolumeCalculator(area, vol, `[
     {"x":"55","y":"8","z":"0"},
     {"x":"100","y":"100","z":"100"},
     {"x":"55","y":"80","z":"250"}
-]`))
+]`));
