@@ -12,6 +12,6 @@ let car = {
 }
 
 // At first position we pass the context (reference from an object for example)
-// In the following positions, we pass arguments listed with commas
+// In the following position, we pass an array with arguments listed with commas.
 
 test.apply(car, ["awesome car", "See you soon"]);
