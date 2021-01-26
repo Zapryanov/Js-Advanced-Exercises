@@ -1,9 +1,11 @@
 function arrayMap(arr, func) {
-    return arr.reduce((acc, cur) => {
-        acc.push(func(cur));
-        return acc;
-    },[]);
-    // return arr.reduce((acc, cur) => acc.concat(func(cur)),[]);
+    
+    return arr.reduce((acc, cur) => acc.concat(func(cur)),[]);
+
+    // return arr.reduce((acc, cur) => {
+    //     acc.push(func(cur));
+    //     return acc;
+    // },[]);
 }
 
 let nums = [1,2,3,4,5];
