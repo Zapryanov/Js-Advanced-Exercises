@@ -17,9 +17,6 @@ class Person {
     }
 
     set age(value) {
-        // if (!(value < 0 || value > 120)) {
-        //     this.#currentAge = value;
-        // }
         if (value < 0 || value > 120) {
             return this.#currentAge = "The age must be bigger than 0 and less than 120...!!!";
         } else {
