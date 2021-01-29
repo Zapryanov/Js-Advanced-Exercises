@@ -1,9 +1,9 @@
 class Car {
 // Private Field can't access outside the class.
-    #brand;
+    #currentBrand;
 
     constructor(brand, model, engine, color, price) {
-        this.brand = brand;
+        this.#currentBrand = brand;
         this.model = model;
         this.engine = engine;
         this.color = color;
@@ -11,21 +11,21 @@ class Car {
     }
 
     get brand() {
-        return this.#brand;
+        return this.#currentBrand;
     }
 
 // Simple validation with setter
 
     set brand(value) {
         if (value !== "Audi") {
-            throw new Error(`Here is only for Audi fans!!!The car must be only Audi!!! Your value is /${value}/...!!!`);
+            throw new Error(`Here is only for Audi fans!!!The car must be only Audi!!! Your value is |---${value}---|...!!!`);
         } else {
-            this.#brand = value;
+            this.#currentBrand = value;
         }
     }
 
     get fullDescription() {
-        return `${this.#brand} ${this.model} with engine ${this.engine} and ${this.color} color cost: €${this.price}.`
+        return `${this.#currentBrand} ${this.model} with engine ${this.engine} and ${this.color} color cost: €${this.price}.`
     }
 }
 
@@ -35,7 +35,7 @@ console.log(audi.fullDescription);
 // ----------------------------------------------------------------------
 
 // If you try to change Brand, the code will throw an error
-// from the Setter in the class Car
+// from the Setter in the class Car:
 
 audi.brand = "Renault";
 console.log(audi.brand);
