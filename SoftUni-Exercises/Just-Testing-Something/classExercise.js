@@ -18,7 +18,7 @@ class Person {
 
     set age(value) {
         if (value < 0 || value > 120) {
-            return this.#currentAge = "The age must be bigger than 0 and less than 120...!!!";
+            return this.#currentAge = `The age must be bigger than 0 and less than 120...!!! Your value is: ${value}!!!`;
         } else {
             return this.#currentAge = value;
         }
@@ -31,5 +31,5 @@ const person2 = new Person("Lucy", "Spenson", 33);
 console.log(person1.greet());
 console.log(person2.greet());
 
-person1.age = 10;
+person1.age = -10;
 console.log(person1.age);
