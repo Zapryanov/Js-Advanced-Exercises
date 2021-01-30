@@ -1,18 +1,9 @@
 function solve(arr, criteria) {
     class Ticket {
-        _price;
         constructor(destination, price, status) {
             this.destination = destination;
-            this.price = price;
+            this.price = Number(price);
             this.status = status;
-        }
-
-        get price() {
-            return this._price;
-        }
-
-        set price(value) {
-            this._price = Number(value);
         }
     }
 
