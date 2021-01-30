@@ -21,6 +21,7 @@ class Stringer {
     }
 }
 
+
 let test = new Stringer("Test", 5);
 console.log(test.toString()); // Test
 test.decrease(3);
