@@ -11,7 +11,7 @@ class Rat {
     }
 
     getRats() {
-        return this.unitedRats;
+        return [...this.unitedRats];
     }
 
     toString() {
