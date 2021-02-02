@@ -15,12 +15,10 @@ function orderRectangles(arr) {
         });
         return acc;
     },[])
-    .sort((a, b) => {
-        return a.compareTo(b)
-    })
+    .sort((a, b) => a.compareTo(b))
 
 }
 
-orderRectangles(
+console.log(orderRectangles(
     [[10,5], [3,20], [5,12]]
-);
+));
