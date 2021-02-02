@@ -10,6 +10,13 @@ function objectFactory(str) {
         },{})
 }
 
+// function solve(str) {
+//     return JSON.parse(str).reduce((a, b) => {
+//         a = Object.assign(a, b);
+//         return a;
+//     },{})
+// }
+
 console.log(objectFactory(
     `[{"canMove": true},{"canMove":true, "doors": 4},{"capacity": 5}]`
 ))
