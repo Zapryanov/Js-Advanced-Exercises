@@ -1,4 +1,4 @@
-// Desctructoring - Object
+// Desctructuring - Object
 
 const person = {
     firstName: "Pesho",
@@ -36,7 +36,7 @@ const { school: { teachers, maxGrade } } = person;
 
 // console.log("-----------------------");
 
-// Destructoring - Array
+// Destructuring - Array
 
 const arr = ["Pesho", "Monica", "Stamat", "Teodor", "Alice", "Nikolina"];
 
@@ -47,7 +47,7 @@ const [personOne, personTwo, personThree, ...others] = arr;000
 // console.log(personThree);
 // console.log(others);
 
-// Destructoring nested Array - destructuring
+// Destructuring nested Array - destructuring
 
 let matrix = [
     [1, 2, 3],
