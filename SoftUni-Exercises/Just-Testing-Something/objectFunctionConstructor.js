@@ -19,6 +19,8 @@ function Person(firstName, lastName, age) {
 // This is a prototype of all objects created with "new" keyword
 // when we call "new" and "function constructor": for example "Person"
 
+// This way they are stored in the same place in the memory and is more optimized.
+
 Person.prototype.speak = function() {
     console.log(`Hello, my name is ${this.firstName} ${this.lastName}.`);
 }
@@ -26,7 +28,12 @@ Person.prototype.speak = function() {
 let pesho = new Person("Pesho", "Georgiev", 26);
 let gosho = new Person("Gosho", "Petrov", 28);
 
-console.log(pesho.speak === gosho.speak);
+// This will return "true", because they are stored in the same place in the memory
+console.log(pesho.speak === gosho.speak);   // true
+
+// Here the new instance "pesho" doesn't have "speak() - function",
+// because it is on his prototype
+console.log(pesho);
 
 // let proto1 = Object.getPrototypeOf(pesho);
 // let proto2 = Object.getPrototypeOf(gosho);
