@@ -11,10 +11,13 @@ function newPerson(constrFunction, ...args) {
 // Create new Object
     let newObj = {};
 
-// Set prototype
+// Set prototype 
+// Тук сетваме прототипа на нашия обект. Прототипа на "конструктор-функцията",
+// ще бъде прототипа на нашия новосъздаден обект
     Object.setPrototypeOf(newObj, constrFunction.prototype);
 
 // Call constructor with context
+// Изпълняване на конструктора с правилния "контекст-newObj"
     constrFunction.apply(newObj, args);
 
 // Return new Object
