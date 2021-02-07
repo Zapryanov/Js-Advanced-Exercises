@@ -1,4 +1,4 @@
-// IFEE and closure inside
+// IIFE and closure inside
 
 let y = (function() {
     let counter = 0;
