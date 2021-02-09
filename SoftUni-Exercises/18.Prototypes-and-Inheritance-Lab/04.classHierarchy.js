@@ -27,6 +27,9 @@ function classHierarchy() {
             return x * objMetrics[this.units];
         }
 
+        toString() {
+            return `Figures units: ${this.units} Area: ${this.area}`;
+        }
     }
 
     class Circle extends Figure {
@@ -41,7 +44,7 @@ function classHierarchy() {
         }
 
         toString() {
-            return `Figures units: ${this.units} Area: ${this.area} - radius: ${this.calcWithUnit(this.radius)}`;
+            return super.toString() + ` - radius: ${this.calcWithUnit(this.radius)}`;
         }
     }
 
@@ -57,7 +60,7 @@ function classHierarchy() {
         }
 
         toString() {
-            return `Figures units: ${this.units} Area: ${this.area} - width: ${this.calcWithUnit(this.width)}, height: ${this.calcWithUnit(this.height)}`
+            return super.toString() + ` - width: ${this.calcWithUnit(this.width)}, height: ${this.calcWithUnit(this.height)}`
         }
     }
 
