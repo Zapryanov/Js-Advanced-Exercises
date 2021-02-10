@@ -16,6 +16,11 @@ function Person(firstName, lastName) {
     Object.defineProperty(this, "fullName", {
         get() {
             return `${this.firstName} ${this.lastName}`;
+        },
+        set(value) {
+            let [f, l] = value.split(" ");
+            this.firstName = f;
+            this.lastName = l;
         }
     })
 }
@@ -25,5 +30,9 @@ let person = new Person("Albert", "Simpson");
 console.log(person.fullName);
 
 person.firstName = "Simon";
+
+console.log(person.fullName);
+
+person.fullName = "Pere Toshev";
 
 console.log(person.fullName);
