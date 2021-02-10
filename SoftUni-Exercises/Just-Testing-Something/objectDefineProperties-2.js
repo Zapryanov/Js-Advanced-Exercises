@@ -7,7 +7,7 @@ Object.defineProperty(myObj, "name", {
     value: "Peter",
     writable: true,         // we can overwrite/change the value
     enumerable: true,       // will be displayed in a "for-in-loop"
-    configurable: false      // the property can be deleted
+    configurable: false      // the property can be deleted if "true" and the value after for-in-loop will be "undefined"
 });
 
 myObj.name = "John";
