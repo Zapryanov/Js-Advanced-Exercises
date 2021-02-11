@@ -14,13 +14,11 @@ function Person(firstName, lastName) {
     this.lastName = lastName;
 
     Object.defineProperty(this, "fullName", {
-        get() {
+        get: function() {
             return `${this.firstName} ${this.lastName}`;
         },
-        set(value) {
-            let [f, l] = value.split(" ");
-            this.firstName = f;
-            this.lastName = l;
+        set: function(value) {
+            [ this.firstName, this.lastName ] = value.split(" ");
         }
     })
 }
