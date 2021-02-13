@@ -1,0 +1,202 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+/* font-family: 'Pacifico', cursive; <- Only One Rule*/
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+/* font-family: 'Caveat', cursive;  <- Many sizes of thickness*/
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+/* font-family: 'Pacifico', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+/* font-family: 'EB Garamond', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600&display=swap');
+/* font-family: 'Roboto Slab', serif; --- For the ordinary shrift */
+
+body {
+    background-image: url("./images/unsplash-gray.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto Slab', serif;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+}
+
+/* --- General Rules --- */
+
+h1 {
+    color: #f5f5f5;
+    font-family: 'EB Garamond', serif;
+    font-size: 60px;
+}
+
+section {
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    margin: 20px 15%;
+}
+
+article {
+    border: 2mm ridge rgba(170, 50, 220, .6);
+    border-radius: 20px;
+    margin: 10px;
+    padding: 30px;
+}
+
+.font-icons {
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+/* --- End General Rules --- */
+
+/* ---Start Section Header --- */
+
+article.heading-wraper {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px 50px;
+}
+
+h1 span {
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+
+h1 span.bold {
+    font-weight: 600;
+    position: relative;
+}
+
+h1 span.bold::before {
+    bottom: 60px;
+    color: darkcyan;
+    content: "\f304";
+    font-size: 20px;
+    left: 25px;
+    position: absolute;
+    text-shadow: none;
+}
+
+h1 span.thin {
+    font-weight: 500;
+    position: relative;
+}
+
+h1 span.thin::before {
+    bottom: 60px;
+    color: darkcyan;
+    content: "\f1b2";
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 20px;
+    left: 50px;
+    position: absolute;
+    text-shadow: none;
+}
+
+.length {
+    width: 100%;
+}
+
+.upper-right {
+    text-align: right;
+}
+
+.space-right {
+    padding-right: 50px;
+}
+
+.h1 {
+    text-align: center;
+}
+
+.lower-left .space-left {
+    padding-left: 25px;
+}
+
+.wrap-kite {
+    position: relative;
+    text-align: right;
+    width: 100%;
+}
+
+.kite {
+    position: relative;
+    top: -35px;
+    width: 55px;
+}
+
+.wrap-kite::after {
+    content: "\f522";
+    color: rgb(92, 91, 91);
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.text-kids {
+    color: rgb(156, 201, 201);
+    font-size: 30px;
+    font-weight: 400;
+    width: 100%;
+    text-shadow: 1px 1px 1px rgb(128, 145, 145),
+        1px 2px 1px rgb(87, 100, 100),
+        1px 3px 1px rgb(87, 100, 100),
+        1px 4px 1px rgb(87, 100, 100),
+        1px 5px 1px rgb(87, 100, 100),
+        1px 6px 1px rgb(87, 100, 100),
+        1px 7px 1px rgb(87, 100, 100),
+        1px 8px 1px rgb(87, 100, 100),
+        1px 9px 1px rgb(87, 100, 100),
+        1px 10px 1px rgb(87, 100, 100),
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+
+.wrap-ant {
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.ant {
+    position: absolute;
+    right: -4px;
+    top: 10px;
+    width: 60px;
+}
+
+.wrap-text-under-header ul {
+    display: flex;
+    justify-content: center;
+}
+
+.wrap-text-under-header ul li {
+    margin: 0 10px;
+}
+
+/* --- End Section Header --- */
