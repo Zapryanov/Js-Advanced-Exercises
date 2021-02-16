@@ -11,6 +11,7 @@
 /* font-family: 'Roboto Slab', serif; --- For the ordinary shrift */
 
 body {
+    /* background-color: rgba(211, 209, 205, 0.3); */
     background-image: url("./images/unsplash-gray.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -21,6 +22,9 @@ body {
 
 main {
     display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 /* --- General Rules --- */
@@ -31,17 +35,25 @@ h1 {
     font-size: 60px;
 }
 
+h2 {
+    text-align: center;
+}
+
 section {
-    border: 1px solid black;
+    border: 1mm groove rgba(66, 64, 64, .6);
     border-radius: 10px;
     display: flex;
     flex-flow: column;
     margin: 20px 15%;
+    max-width: 1200px;
 }
 
 article {
     border: 2mm ridge rgba(170, 50, 220, .6);
     border-radius: 20px;
+    /* Check here if something wrong */
+    flex: 1 1 100%;
+    /* ----------------------------- */
     margin: 10px;
     padding: 30px;
 }
@@ -84,14 +96,21 @@ h1 span.bold {
     position: relative;
 }
 
-h1 span.bold::before {
+h1 span.bold::before,
+h1 span.thin::before {
     bottom: 60px;
     color: darkcyan;
-    content: "\f304";
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
     font-size: 20px;
-    left: 25px;
     position: absolute;
     text-shadow: none;
+}
+
+h1 span.bold::before {
+    content: "\f304";
+    left: 25px;
 }
 
 h1 span.thin {
@@ -100,16 +119,8 @@ h1 span.thin {
 }
 
 h1 span.thin::before {
-    bottom: 60px;
-    color: darkcyan;
     content: "\f1b2";
-    display: inline-block;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 20px;
     left: 50px;
-    position: absolute;
-    text-shadow: none;
 }
 
 .length {
@@ -139,14 +150,23 @@ h1 span.thin::before {
 }
 
 .kite {
-    position: relative;
+    animation: myfirst 5s 2;
+    animation-direction: alternate;
+    position: absolute;
+    right: 0px;
     top: -35px;
     width: 55px;
 }
 
+@keyframes myfirst {
+    0%   {width: 55px; top: -35px;}
+    50%  {width: 45px; top: -100px;}
+    100% {width: 35px; top: -35px;}
+}
+
 .wrap-kite::after {
     content: "\f522";
-    color: rgb(92, 91, 91);
+    color: darkcyan;
     position: absolute;
     right: 20px;
     top: 10px;
@@ -176,6 +196,10 @@ h1 span.thin::before {
 .wrap-ant {
     border: 1px solid black;
     border-radius: 50%;
+    box-shadow: inset  10px -10px 25px rgba(0,0,0,0.6);
+    -moz-box-shadow: inset  10px -10px 25px rgba(0,0,0,0.6);
+    -webkit-box-shadow: inset  10px -10px 25px rgba(0,0,0,0.6);
+    -o-box-shadow: inset  10px -10px 25px rgba(0,0,0,0.6);
     width: 55px;
     height: 55px;
     display: inline-block;
@@ -199,4 +223,255 @@ h1 span.thin::before {
     margin: 0 10px;
 }
 
+.shadow {
+    color: darkcyan;
+    border-top-right-radius: 3px;
+    box-shadow: 8px -7px 5px  rgba(0,0,0,0.6);
+    -moz-box-shadow: 8px -7px 5px  rgba(0,0,0,0.6);
+    -webkit-box-shadow: 8x -7px 5px  rgba(0,0,0,0.6);
+    -o-box-shadow: 8px -7px 5px  rgba(0,0,0,0.6);
+}
+
 /* --- End Section Header --- */
+
+/* --- Start Second Section --- */
+
+.second-section {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+.people-speaking-wraper {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+.two-people {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.wrap-mother {
+    width: 50px;
+}
+
+.wrap-mother-pic {
+    align-items: flex-start;
+    display: flex;
+}
+
+.wrap-mother img {
+    width: 100%;
+}
+
+.left-mother {
+    position: relative;
+}
+
+.comment.left span,
+.comment.right span {
+    background-color: #00bfb6;
+    padding: 10px;
+    position: relative;
+    width: 200px;
+}
+
+.comment.left span {
+    left: 20px;
+    top: 10px;
+}
+
+.comment.left span::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid #00bfb6;
+    border-top: 10px solid #00bfb6;
+    border-bottom: 10px solid transparent;
+    left: -20px;
+    top: 6px;
+}
+
+.comment.right span {
+    right: 20px;
+    top: 10px;
+}
+
+.comment.right span::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid #00bfb6;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #00bfb6;
+    border-bottom: 10px solid transparent;
+    right: -19px;
+    top: 6px;
+}
+
+ul.reasons {
+    list-style-type: disc;
+    padding: 20px;
+}
+
+/* --- End Second Section --- */
+
+/* --- Start Third Section - Boxes --- */
+
+.third-section {
+    width: 100%;
+}
+
+.wrap-boxes {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    /* margin: 20px auto; */
+    /* width: 80%; */
+}
+
+ .line-pair {
+    display: flex;
+    margin: 30px 50px;
+}
+
+.single {
+    display: flex;
+    position: relative;
+}
+
+.second-pair {
+    padding-left: 20px;
+} 
+
+.padding-right {
+    margin-right: 20px;
+}
+
+ul.line-dashed li {
+    border-top: 2px solid black;
+    display: inline-block;
+    margin: 0 5px;
+    position: relative;
+    bottom: 3px;
+    width: 12px;
+}
+
+/* ul.line-dashed::after {
+    content: "\f054";
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";
+    font-size: 12px;
+    font-weight: 900;
+    right: -5px;
+    position: absolute;
+    bottom: 2px;
+} */
+
+.arrow-box {
+    margin: 0 5px;
+    position: relative;
+}
+
+.big-buffer {
+    width: 300px;
+}
+
+.big-buffer.smaller {
+    width: 260px;
+}
+
+.big-buffer.middle {
+    width: 280px;
+}
+
+.big-buffer.smallest {
+    width: 150px;
+}
+
+/* make curved line */
+
+.line-dashed.curved {
+    position: relative;
+}
+
+.line-dashed.curved .dash-one {
+    transform: rotateZ(7deg);
+}
+
+.line-dashed.curved .dash-two {
+    position: absolute;
+    top: 22px;
+    transform: rotateZ(32deg);
+    left: 27px;
+}
+
+.line-dashed.curved .dash-three {
+    position: absolute;
+    left: 47px;
+    top: 42px;
+    transform: rotateZ(50deg);
+}
+
+.line-dashed.curved .dash-three::after, 
+.line-dashed.flat .dash-three::after {
+    content: "\f054";
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";
+    font-size: 12px;
+    font-weight: 900;
+    right: -3px;
+    position: absolute;
+    top: -7px;
+}
+
+.line-dashed.reverse .dash-one::before {
+    content: "\f053";
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";
+    font-size: 12px;
+    font-weight: 900;
+    left: -3px;
+    position: absolute;
+    top: -7px;
+}
+
+.line-dashed.curved.after {
+    position: relative;
+}
+
+.line-dashed.curved.after .dash-one {
+    position: absolute;
+    left: -41px;
+    top: 26px;
+    transform: rotateZ(90deg);
+}
+
+.line-dashed.curved.after .dash-two {
+    position: absolute;
+    left: -46px;
+    top: 50px;
+    transform: rotateZ(124deg);
+}
+
+.line-dashed.curved.after .dash-three {
+    position: absolute;
+    left: -63px;
+    top: 60px;
+    transform: rotateZ(176deg);
+}
+
+.arrow-box.absolute {
+    position: absolute;
+}
+
+.line-dashed.reverse {
+    position: relative;
+}
