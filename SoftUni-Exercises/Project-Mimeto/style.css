@@ -333,13 +333,15 @@ ul.reasons {
     align-items: center;
     display: flex;
     flex-flow: column;
-    /* margin: 20px auto; */
-    /* width: 80%; */
 }
 
  .line-pair {
     display: flex;
     margin: 30px 50px;
+}
+
+.box {
+    border: 1px solid black;
 }
 
 .single {
@@ -363,17 +365,6 @@ ul.line-dashed li {
     bottom: 3px;
     width: 12px;
 }
-
-/* ul.line-dashed::after {
-    content: "\f054";
-    display: inline-block;
-    font-family: "Font Awesome 5 Free";
-    font-size: 12px;
-    font-weight: 900;
-    right: -5px;
-    position: absolute;
-    bottom: 2px;
-} */
 
 .arrow-box {
     margin: 0 5px;
@@ -470,8 +461,59 @@ ul.line-dashed li {
 
 .arrow-box.absolute {
     position: absolute;
+    top: 20px;
 }
 
 .line-dashed.reverse {
     position: relative;
 }
+
+.arrow-box.absolute .reverse .dash-one {
+    bottom: 25px;
+    position: absolute;
+    transform: rotateZ(280deg);
+}
+
+.arrow-box.absolute .reverse .dash-two {
+    bottom: 50px;
+    left: 15px;
+    position: absolute;
+    transform: rotateZ(130deg)
+}
+
+.arrow-box.absolute .reverse .dash-three {
+    bottom: 60px;
+    left: 35px;
+    position: absolute;
+
+}
+
+.seven {
+    position: relative;
+}
+
+.seven .absolute .reverse .dash-one {
+    position: absolute;
+    right: 6px;
+    bottom: 11px;
+    transform: rotate(200deg);
+}
+
+.seven .absolute .reverse .dash-two {
+    position: absolute;
+    left: -42px;
+    bottom: 25px;
+    transform: rotate(236deg);
+}
+
+.seven .absolute .reverse .dash-three {
+    position: absolute;
+    left: -49px;
+    bottom: 42px;
+    transform: rotate(77deg);
+}
+
+.single:last-child {
+    margin-top: 30px;
+}
+
