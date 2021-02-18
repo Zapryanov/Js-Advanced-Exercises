@@ -64,6 +64,11 @@ article {
     font-weight: 900;
 }
 
+.html-icon {
+    font-size: 25px;
+    padding: 3px;
+}
+
 /* --- End General Rules --- */
 
 /* ---Start Section Header --- */
@@ -337,18 +342,18 @@ ul.reasons {
 
  .line-pair {
     display: flex;
-    margin: 30px 50px;
+    margin: 30px 50px 0 30px;
 }
 
 .box {    
     /* display: flex;
     flex-flow: column;
     align-items: center; */
+    align-items: center;
     display: flex;
     flex-flow: column;
-    align-items: center;
-    width: 57px;
     text-align: center;
+    width: 57px;
 }
 
 .wrap-box-icon {
@@ -457,22 +462,22 @@ ul.line-dashed li {
 
 .line-dashed.curved.after .dash-one {
     position: absolute;
-    left: -41px;
-    top: 26px;
-    transform: rotateZ(90deg);
+    left: -47px;
+    top: 57px;
+    transform: rotateZ(101deg);
 }
 
 .line-dashed.curved.after .dash-two {
     position: absolute;
-    left: -46px;
-    top: 50px;
-    transform: rotateZ(124deg);
+    left: -57px;
+    top: 79px;
+    transform: rotateZ(125deg);
 }
 
 .line-dashed.curved.after .dash-three {
     position: absolute;
-    left: -63px;
-    top: 60px;
+    left: -76px;
+    top: 91px;
     transform: rotateZ(176deg);
 }
 
