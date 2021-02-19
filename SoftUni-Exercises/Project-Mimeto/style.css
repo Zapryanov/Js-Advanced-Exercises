@@ -65,6 +65,7 @@ article {
 }
 
 .html-icon {
+    color: darkcyan;
     font-size: 25px;
     padding: 3px;
 }
@@ -357,8 +358,14 @@ ul.reasons {
 }
 
 .wrap-box-icon {
+    /* border: 2px groove rgba(66, 64, 64, .6); */
     border: 2px groove rgba(66, 64, 64, .6);
     border-radius: 10px;
+    /* box-shadow: 2px 3px 5px #000; */
+    box-shadow: 9px -6px 5px  rgba(0,0,0,0.6);
+  -moz-box-shadow: 9px -6px 5px  rgba(0,0,0,0.6);
+  -webkit-box-shadow: 9px -6px 5px  rgba(0,0,0,0.6);
+  -o-box-shadow: 9px -6px 5px  rgba(0,0,0,0.6);
     display: flex;
 }
 
@@ -547,3 +554,56 @@ ul.line-dashed li {
 .m-top {
     margin-top: 30px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .krasi {
+    background-color: red;
+    width: 100%;
+    height: 300px;
+    display: flex;
+}
+
+.upper,
+.lower {
+    width: 5px;
+    height: 30px;
+    background-color: black;
+    position: absolute;
+}
+
+.wrap-sign {
+    margin: 100px auto;
+    position: relative;
+}
+
+.upper {
+    left: 28px;
+    top: -37px;
+}
+
+.middle {
+    width: 60px;
+    height: 5px;
+    background-color: black;
+}
+
+.lower {
+    left: 28px;
+    top: 12px;
+} */
