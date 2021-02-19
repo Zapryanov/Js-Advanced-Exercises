@@ -371,6 +371,10 @@ ul.reasons {
     position: relative;
 }
 
+.single.absolute {
+    margin-top: 30px;
+}
+
 .second-pair {
     padding-left: 20px;
 } 
@@ -398,7 +402,8 @@ ul.line-dashed li {
 }
 
 .big-buffer.smaller {
-    width: 260px;
+    /* width: 260px; */
+    width: 315px;
 }
 
 .big-buffer.middle {
@@ -491,23 +496,23 @@ ul.line-dashed li {
 }
 
 .arrow-box.absolute .reverse .dash-one {
-    bottom: 25px;
+    bottom: 5px;
+    left: 14px;
     position: absolute;
     transform: rotateZ(280deg);
 }
 
 .arrow-box.absolute .reverse .dash-two {
-    bottom: 50px;
-    left: 15px;
+    bottom: 33px;
+    left: 25px;
     position: absolute;
-    transform: rotateZ(130deg)
+    transform: rotateZ(130deg);
 }
 
 .arrow-box.absolute .reverse .dash-three {
-    bottom: 60px;
-    left: 35px;
+    bottom: 47px;
+    left: 50px;
     position: absolute;
-
 }
 
 .seven {
@@ -516,21 +521,21 @@ ul.line-dashed li {
 
 .seven .absolute .reverse .dash-one {
     position: absolute;
-    right: 6px;
-    bottom: 11px;
+    left: -23px;
+    bottom: 8px;
     transform: rotate(200deg);
 }
 
 .seven .absolute .reverse .dash-two {
     position: absolute;
-    left: -42px;
-    bottom: 25px;
-    transform: rotate(236deg);
+    left: -38px;
+    bottom: 21px;
+    transform: rotate(237deg);
 }
 
 .seven .absolute .reverse .dash-three {
     position: absolute;
-    left: -49px;
+    left: -46px;
     bottom: 42px;
     transform: rotate(77deg);
 }
@@ -539,3 +544,6 @@ ul.line-dashed li {
     margin-top: 30px;
 }
 
+.m-top {
+    margin-top: 30px;
+}
