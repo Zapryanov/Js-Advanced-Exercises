@@ -1,9 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
 
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-/* font-family: 'Pacifico', cursive; <- Only One Rule*/
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
-/* font-family: 'Caveat', cursive;  <- Many sizes of thickness*/
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
 /* font-family: 'EB Garamond', serif; */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600&display=swap');
@@ -133,7 +129,6 @@ img {
 }
 
 .fa-phone {
-    /* background-color: rgba(48, 179, 184, 0.9); */
     border: 1px solid black;
     border-radius: 50%;
     color: rgba(141, 34, 34, 1);
@@ -185,15 +180,6 @@ ul.text-image li {
 }
 
 ul.text-image li::before {
-    /* background-color: rgb(141, 34, 34);
-    bottom: 3px;
-    content: "";
-    display: inline-block;
-    height: 2px;
-    margin-right: 5px;
-    position: relative;
-    width: 5px; */
-    /* bottom: 3px; */
     color: darkcyan;
     content: "\f054";
     display: inline-block;
@@ -223,6 +209,7 @@ ul.text-image li::before {
 }
 
 .description-services {
+    border: 1px solid rgba(141, 34, 34, 1);
     border-bottom: 1px solid rgba(136, 136, 136, 0.3);
     color: rgb(65, 65, 65);
     flex: 0 1 70%;
@@ -263,10 +250,6 @@ ul.text-image li::before {
     height: 220px;
     width: 95%;
 }
-
-/* .second-section ul li {
-    color: black;
-} */
 
 /* End - Second Section */
 
