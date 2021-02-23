@@ -13,6 +13,7 @@ body {
     /* background-image: linear-gradient(rgba(151, 213, 252, 0.7), rgb(128, 199, 243)); */
     background-image: url("./images/paper-2.jpg");
     /* background-size: cover; */
+    background-attachment: fixed;
     color: rgb(70, 68, 68);
     font-family: 'Roboto Slab', serif;
 }
@@ -251,7 +252,7 @@ ul.text-image li::before {
     -webkit-box-shadow: inset 0px 0px 15px rgb(0 0 0 / 60%);
     display: flex;
     justify-content: center;
-    padding: 5px;
+    padding: 14px 5px;
     width: 100%;
 }
 
@@ -282,6 +283,14 @@ footer .footer-wrapper {
       background-color: red;
     }
 
+    .first-section {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
     h3 {
         text-align: center;
         width: 100%;
@@ -296,13 +305,18 @@ footer .footer-wrapper {
     .wrap-small-image {
         align-items: center;
         border: 1px solid rgb(94, 93, 93);
-        box-shadow: inset 0px 0px 15px rgb(0 0 0 / 60%);
-        -moz-box-shadow: inset 0px 0px 15px rgba(0,0,0,0.6);
-        -webkit-box-shadow: inset 0px 0px 15px rgb(0 0 0 / 60%);
         display: flex;
         justify-content: center;
-        padding: 5px;
         width: 400px;
+    }
+
+    .wrap-text-image,
+    .wrap-image {
+        flex: 0 0 51%;
+    }
+
+    .wrap-text-image h2 {
+        text-align: center;
     }
 
     .second-section ul {
