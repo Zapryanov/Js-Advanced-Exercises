@@ -411,9 +411,10 @@ footer .footer-wrapper {
 }
 
 @media only screen and (max-width: 480px) {
-    /* .wrap-small-image {
-        width: 260px;
-    } */
+
+    h1 {
+        padding: 0 15%;
+    }
 
     .wrap-small-image img {
         height: 155px;
@@ -423,7 +424,25 @@ footer .footer-wrapper {
         flex: 0 1 90%;
     }
 
-    .wrap-small-image, .second-section ul {
+    .wrap-small-image, 
+    .second-section ul {
         width: 240px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .description-services {
+        flex: 0 1 95%;
+        font-size: 12px;
+        padding: 40px;
+    }
+    
+    .wrap-small-image, 
+    .second-section ul {
+        width: 200px;
+    }
+
+    .wrap-small-image img {
+        height: 125px;
     }
 }
