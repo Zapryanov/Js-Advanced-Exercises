@@ -102,6 +102,10 @@ img {
 
 /* Header */
 
+.header-wrap-phone-2 {
+    display: none;
+}
+
 .wrap-heading {
     background-color: rgba(48, 179, 184, 0.9);
     background-image: linear-gradient(rgba(48, 179, 184, 0.9), rgba(99, 223, 228, 0.9));
@@ -116,10 +120,10 @@ img {
 .wrap-heading::before {
     background-color: rgb(21, 124, 128);
     content: "";
+    height: 100%;
     left: 15%;
     padding: 0;
     position: absolute;
-    height: 100%;
     width: 1px;
 }
 
@@ -208,7 +212,7 @@ ul.text-image li::before {
     display: flex;
     flex-flow: row wrap;
     font-family: 'EB Garamond', serif;
-    font-size: 18px;
+    /* font-size: 18px; */
     font-weight: 500;
 }
 
@@ -279,8 +283,11 @@ footer .footer-wrapper {
 /* Start media queries */
 
 @media only screen and (max-width: 1080px) {
-    body {
-      background-color: red;
+
+    .phone,
+    .space-left-phone {
+        font-size: 12px;
+        /* margin: 0; */
     }
 
     .first-section {
@@ -316,10 +323,99 @@ footer .footer-wrapper {
     }
 
     .wrap-text-image h2 {
+        font-size: 20px;
         text-align: center;
     }
 
     .second-section ul {
         width: 400px;
     }
+
+    ul.text-image {
+        font-size: 16px;
+    }
+
+    .description-services {
+        font-size: 20px;
+    }
   }
+
+@media only screen and (max-width: 768px) {
+
+    .wrap-heading {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    h1 {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .header-wrap-phone {
+        display: none;
+    }
+
+    .header-wrap-phone-2 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-flow: row wrap;
+        text-align: center;
+    }
+
+    .phone,
+    .space-left-phone {
+        margin: 0;
+        width: 100%;
+    }
+
+    .fa-phone {
+        padding: 3px;
+        font-size: 7px;
+    }
+
+    .phone span {
+        font-size: 10px;
+    }
+
+    .wrap-text-image, .wrap-image {
+        flex: 0 0 100%;
+    }
+
+    .wrap-small-image {
+        width: 350px;
+    }
+
+    .second-section ul {
+        width: 100%;
+    }
+
+    .description-services {
+        font-size: 16px;
+        padding: 40px;
+    }
+
+    footer .footer-wrapper {
+        font-size: 12px;
+        padding: 10px 5px;
+    }
+
+    .contacts {
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .wrap-small-image {
+        width: 260px;
+    }
+
+    .wrap-small-image img {
+        height: 155px;
+    }
+
+    .description-services {
+        flex: 0 1 90%;
+    }
+}
