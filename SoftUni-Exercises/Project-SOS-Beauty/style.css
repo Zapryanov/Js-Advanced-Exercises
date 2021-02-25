@@ -1,0 +1,9 @@
+:root {
+    --color-text-main: rgb(32, 10, 230);
+}
+
+body {
+    background: rgba(189, 92, 93, 1);
+    color: var(--color-text-main, #0f0);
+    min-height: 100vh;
+}
