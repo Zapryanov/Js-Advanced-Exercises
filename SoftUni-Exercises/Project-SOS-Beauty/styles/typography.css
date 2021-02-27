@@ -11,6 +11,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600&display=swap');
 /* font-family: 'Roboto Slab', serif; --- For the ordinary shrift */
 
+/* Start Global Rules */
+
 *, *::before, *::after {
     box-sizing: inherit;
     margin: 0;
@@ -19,7 +21,7 @@
 
 html {
     box-sizing: border-box;
-    font: 14px/1.5 "Roboto Slab", Georgia, serif
+    font: var(--font-size-body, 14px)/1.5 "Roboto Slab", Georgia, serif
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,24 +30,26 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 600px) {
     html {
-        font-size: 16px;
+        font-size: var(--font-size-body-larger, 16px);
     }
 }
 
-@media (min-width: 1024) {
+@media (min-width: 1024px) {
     html {
-        font-size: 30px;
+        font-size: var(--font-size-body-big, 18px);
     }
 }
 
 @media (min-width: 1600px) {
     html {
-        font-size: 50px;
+        font-size: var(--font-size-body-huge, 20px);
     }
 }
 
 body, table, form, select, option, input, textarea {
+    background: rgba(189, 92, 93, 1);
     font: inherit;
+    min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -93,4 +97,19 @@ blockquote .author::before {
     display: inline-block;
     content: "\2021";
     padding-right: 0.5em;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+/* End global rules */
+
+.name {
+    color: black;
+    font-family: 'Caveat', cursive;
+}
+
+nav.header {
+    background-color: #daa48a;
 }
