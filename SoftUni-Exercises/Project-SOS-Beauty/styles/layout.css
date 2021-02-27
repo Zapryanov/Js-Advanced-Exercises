@@ -1,0 +1,5 @@
+.wrap-all-page {
+    max-width: var(--layout-main-width, 70em);
+    margin: 0 auto;
+    padding: 2em;
+}
