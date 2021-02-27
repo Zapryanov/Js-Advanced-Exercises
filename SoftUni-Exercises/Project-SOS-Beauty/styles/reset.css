@@ -19,7 +19,7 @@ ol, ul {
 }
 
 a {
-    color: black;
+    color: var(--color-link-default, rgb(6, 212, 51));
     text-decoration: none;
 }
 
