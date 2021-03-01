@@ -1,7 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
 
-/* @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); */
-/* font-family: 'Pacifico', cursive; <- Only One Rule*/
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
 /* font-family: 'Caveat', cursive;  <- Many sizes of thickness*/
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
@@ -10,8 +8,6 @@
 /* font-family: 'EB Garamond', serif; */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600&display=swap');
 /* font-family: 'Roboto Slab', serif; --- For the ordinary shrift */
-
-/* Start Global Rules */
 
 *, *::before, *::after {
     box-sizing: inherit;
@@ -47,8 +43,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body, table, form, select, option, input, textarea {
-    background: rgba(189, 92, 93, 1);
     font: inherit;
+}
+
+body {
+    background: rgba(189, 92, 93, 1);
     min-height: 100vh;
 }
 
@@ -71,6 +70,7 @@ p, ul, ol {
 }
 
 ul, ol {
+    list-style: none;
     padding-left: 2em;
 }
 
@@ -81,6 +81,19 @@ ul ul, ol, ul, ul ol, ol ol {
 
 ol > li >ol > li {
     list-style-type: lower-roman;
+}
+
+a {
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+button {
+    border: none;
 }
 
 blockquote {
@@ -97,19 +110,4 @@ blockquote .author::before {
     display: inline-block;
     content: "\2021";
     padding-right: 0.5em;
-}
-
-h1 {
-    font-size: 50px;
-}
-
-/* End global rules */
-
-.name {
-    color: black;
-    font-family: 'Caveat', cursive;
-}
-
-nav.header {
-    background-color: rgba(218, 164, 138, 0.4);
 }

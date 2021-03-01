@@ -1,5 +1,6 @@
-.wrap-all-page {
+/* .wrap-all-page {
+    display: flex;
     max-width: var(--layout-main-width, 70em);
     margin: 0 auto;
     padding: 2em;
-}
+} */

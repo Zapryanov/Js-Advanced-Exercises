@@ -1,11 +1,12 @@
-(function() {
-    document.getElementById("test").addEventListener("click", (e) => {
-        console.log(e.target.textContent)
-    });
+document.getElementById("test").addEventListener("click", (e) => {
+    console.log(e.target.textContent)
+});
 
-    let nails = Array.from(document.getElementsByClassName("test2"))[0];
+document.getElementById("test2").addEventListener("click", (e) => {
+    console.log(e.target.textContent)
+});
 
-    nails.addEventListener("click", (e) => {
-        console.log(e.target.textContent)
-    })
-}())
+window.addEventListener("DOMContentLoaded", (e) => {
+    console.log("It is working!")
+    document.getElementsByTagName("body")[0].classList.add("load")
+})
