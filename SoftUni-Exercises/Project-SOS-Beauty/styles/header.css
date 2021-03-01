@@ -1,0 +1,62 @@
+.wrap-h1 {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    /* font-family: 'Caveat', cursive; */
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.wrap-h1 i {
+    margin-right: 10px;
+}
+
+/* h1::before {
+    content: "\f06c";
+    font-size: 20px;
+    position: absolute;
+    left: -20px;
+} */
+
+.section-header {
+    align-items: center;
+    display: flex;
+    flex: 1 0 100%;
+    justify-content: space-around;
+}
+
+.logo {
+    text-align: center;
+}
+
+.name {
+    color: rgba(211, 211, 211, 0.8);
+}
+
+.wrap-socials {
+    display: flex;
+}
+
+.social a {
+    background-color: rgba(211, 211, 211, 0.8);
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    margin: 5px;
+    padding: 0.3em;
+}
+
+i {
+    color:rgba(255, 255, 255, 1);
+    /* color:rgba(60, 61, 61, 0.8); */
+}
+
+.social a:hover {
+    background-color: rgba(211, 211, 211, 0.5);
+}
+
+.social i:hover > i {
+    color: blue;
+}

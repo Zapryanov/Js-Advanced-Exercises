@@ -1,6 +1,38 @@
-/* .wrap-all-page {
+.wrap-all-page {
     display: flex;
-    max-width: var(--layout-main-width, 70em);
+    flex-flow: row wrap;
+    max-width: 70em;
     margin: 0 auto;
     padding: 2em;
+}
+
+header {
+    flex: 1 0 100%;
+}
+
+aside, main {
+    display: flex;
+    margin: 30px 0;
+}
+
+aside {
+    flex: 0 0 300px;
+}
+
+main {
+    flex: 0 0 ;
+}
+
+/* .icon::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+} */
+
+/* .leaf::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f06c";
 } */
