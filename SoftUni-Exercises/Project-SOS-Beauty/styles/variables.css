@@ -1,7 +1,9 @@
 :root {
     --main-background: rgba(181, 129, 125, 0.7);
-    --brown-color: rgba(165, 42, 42, 1);
+    --color-brown: rgba(165, 42, 42, 1);
+    --color-light-brown: rgba(165, 42, 42, 0.7);
     --color-almost-white: rgba(230,230,230,1);
     --color-almost-black: 3px 3px 1px rgba(0, 0, 0, 0.5);
     --color-lightgray: rgba(220,220,220,0.7);
+    --color-darkgray: rgba(158, 158, 158, 0.7);
 }

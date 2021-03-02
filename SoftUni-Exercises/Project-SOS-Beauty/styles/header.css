@@ -23,7 +23,7 @@ header::before {
 }
 
 h1 {
-    color: brown;
+    color: var(--color-brown, rgba(165, 42, 42, 1));
     /* font-family: 'Caveat', cursive; */
     font-family: 'Pacifico', cursive;
     margin-bottom: 0;
@@ -52,7 +52,7 @@ h1 {
 
 i.fa-leaf {
     color: rgba(230,230,230,1);
-    text-shadow: 0px 0px 5px brown;
+    text-shadow: 0px 0px 5px var(--color-brown, rgba(165, 42, 42, 1));
 }
 
 .wrap-socials {
@@ -60,7 +60,7 @@ i.fa-leaf {
 }
 
 .social a {
-    background-color: var(--brown-color, rgba(165, 42, 42, 1));
+    background-color: var(--color-brown, rgba(165, 42, 42, 1));
     border-radius: 5px;
     box-shadow: 2px 2px 1px rgba(220,220,220,0.7),
     3px 3px 1px rgba(0, 0, 0, 0.5);
@@ -74,10 +74,10 @@ i {
 
 .social a:hover {
     background-color: var(--color-almost-white, rgba(230, 230, 230, 1));
-    box-shadow: 2px 2px 1px rgba(165, 42, 42, 1),
+    box-shadow: 2px 2px 1px var(--color-brown, rgba(165, 42, 42, 1)),
     3px 3px 1px rgba(0, 0, 0, 0.5);
 }
 
 .social a:hover > i {
-    color: var(--brown-color, rgba(165, 42, 42, 1));
+    color: var(--color-brown, rgba(165, 42, 42, 1));
 }

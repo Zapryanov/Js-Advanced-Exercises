@@ -17,7 +17,7 @@
 
 html {
     box-sizing: border-box;
-    font: var(--font-size-body, 14px)/1.5 "Roboto Slab", Georgia, serif
+    font: var(--font-size-body, 14px)/1.5 "Roboto Slab", Georgia, serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,8 +47,6 @@ body, table, form, select, option, input, textarea {
 }
 
 body {
-    /* background-image: linear-gradient(rgba(189, 92, 93, 0.8), rgba(189, 92, 93, 0.6)); */
-    /* background-color: rgb(223, 193, 185); */
     background-color: rgba(181, 129, 125, 0.7);
     min-height: 100vh;
 }
@@ -67,18 +65,12 @@ h4 { font-size: 1.4em; }
 h5 { font-size: 1.2em; }
 h6 { font-size: 1.0em; }
 
-p, ul, ol {
+p {
     padding-bottom: 1.5em;
 }
 
 ul, ol {
     list-style: none;
-    padding-left: 2em;
-}
-
-ul ul, ol, ul, ul ol, ol ol {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
 }
 
 ol > li >ol > li {
@@ -86,6 +78,7 @@ ol > li >ol > li {
 }
 
 a {
+    font-size: 14px;
     text-decoration: none;
 }
 
