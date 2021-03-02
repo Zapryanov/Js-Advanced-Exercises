@@ -32,14 +32,6 @@ h1 {
     4px 4px 1px rgba(0, 0, 0, 0.6);
 }
 
-
-/* h1::before {
-    content: "\f06c";
-    font-size: 20px;
-    position: absolute;
-    left: -20px;
-} */
-
 .section-header {
     align-items: center;
     display: flex;
@@ -61,9 +53,6 @@ h1 {
 i.fa-leaf {
     color: rgba(230,230,230,1);
     text-shadow: 0px 0px 5px brown;
-    /* color: rgba(165, 42, 42, 1); */
-    /* text-shadow: 2px 2px 1px rgba(220,220,220,0.7),
-    3px 3px 1px rgba(0, 0, 0, 0.6); */
 }
 
 .wrap-socials {
@@ -71,11 +60,8 @@ i.fa-leaf {
 }
 
 .social a {
-    /* background-color: rgba(211, 211, 211, 0.8); */
     background-color: var(--brown-color, rgba(165, 42, 42, 1));
     border-radius: 5px;
-    /* box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5); */
-    /* box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6); */
     box-shadow: 2px 2px 1px rgba(220,220,220,0.7),
     3px 3px 1px rgba(0, 0, 0, 0.5);
     margin: 5px;
@@ -84,20 +70,14 @@ i.fa-leaf {
 
 i {
     color: rgba(230, 230, 230, 1);
-    /* color:rgba(255, 255, 255, 1); */
-    /* color: rgba(189, 92, 93, 1); */
-    /* color:rgba(60, 61, 61, 0.8); */
 }
 
 .social a:hover {
-    background-color: rgba(211, 211, 211, 0.5);
+    background-color: var(--color-almost-white, rgba(230, 230, 230, 1));
+    box-shadow: 2px 2px 1px rgba(165, 42, 42, 1),
+    3px 3px 1px rgba(0, 0, 0, 0.5);
 }
 
 .social a:hover > i {
-    /* color: rgba(189, 92, 93, 1); */
     color: var(--brown-color, rgba(165, 42, 42, 1));
-}
-
-.social a:hover {
-    background-color: rgba(255, 255, 255, 1);
 }
