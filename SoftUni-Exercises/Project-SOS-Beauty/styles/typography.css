@@ -47,7 +47,9 @@ body, table, form, select, option, input, textarea {
 }
 
 body {
-    background-image: linear-gradient(rgba(189, 92, 93, 0.9), rgba(189, 92, 93, 0.7));
+    /* background-image: linear-gradient(rgba(189, 92, 93, 0.8), rgba(189, 92, 93, 0.6)); */
+    /* background-color: rgb(223, 193, 185); */
+    background-color: rgba(181, 129, 125, 0.7);
     min-height: 100vh;
 }
 

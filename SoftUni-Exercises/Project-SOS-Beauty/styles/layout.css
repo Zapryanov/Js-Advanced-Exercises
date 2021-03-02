@@ -16,7 +16,8 @@ aside, main {
 }
 
 aside {
-    flex: 0 0 300px;
+    flex: 0 0 20%;
+    min-width: 220px;
 }
 
 main {
