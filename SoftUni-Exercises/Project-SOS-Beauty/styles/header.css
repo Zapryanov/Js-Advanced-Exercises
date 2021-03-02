@@ -3,14 +3,15 @@ header {
 }
 
 header::before {
-    bottom: 0;
-    content: "";
-    position: absolute;
-    left: 0;
-    margin-left: 5%;
-    width: 90%;
-    height: 0.5px;
     background-color: rgba(220, 220, 220, 0.4);
+    bottom: 0;
+    border-radius: 50%;
+    box-shadow: 0px 2px 12px 3px cornsilk;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 100%;
 }
 
 .wrap-h1 {

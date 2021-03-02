@@ -47,8 +47,20 @@ body, table, form, select, option, input, textarea {
 }
 
 body {
-    background-color: rgba(181, 129, 125, 0.7);
+    background-image: url("../images/rose-full.jpg");
+    background-size: cover;
+    background-position: center;
     min-height: 100vh;
+    position: relative;
+}
+
+.image-all-page {
+    background-color: var(--main-background, rgba(181, 129, 125, 0.8));
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
