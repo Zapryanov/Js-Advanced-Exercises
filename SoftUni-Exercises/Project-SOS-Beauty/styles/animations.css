@@ -1,6 +1,6 @@
 /* Aside when page refresh */
 
-.aside li {
+/* .aside li {
     animation: nav-background 2s ease-in;
 } 
 
@@ -36,7 +36,7 @@
 .aside li:nth-child(7)a { animation-delay: 1.2s; }
 .aside li:nth-child(8)a { animation-delay: 1.4s; }
 .aside li:nth-child(9)a { animation-delay: 1.6s; }
-.aside li:nth-child(10)a { animation-delay: 1.8s; }
+.aside li:nth-child(10)a { animation-delay: 1.8s; } */
 
 /* End Aside when page refresh */
 
