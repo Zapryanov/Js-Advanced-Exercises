@@ -17,11 +17,12 @@ aside, main {
 
 aside {
     flex: 0 0 20%;
-    min-width: 220px;
 }
 
 main {
-    flex: 0 0 ;
+    background-color: rgba(255, 255, 100, 0.5);
+    border-radius: 20px;
+    flex: 0 0 80%;
 }
 
 /* .icon::before {
