@@ -40,3 +40,19 @@
 
 /* End Aside when page refresh */
 
+/* Social icons */
+
+.wrap-socials {
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* End Social icons */
