@@ -47,6 +47,7 @@ body, table, form, select, option, input, textarea {
 }
 
 body {
+    background-attachment: fixed;
     background-image: url("../images/rose-full.jpg");
     background-size: cover;
     background-position: center;
@@ -105,6 +106,10 @@ button {
     border: none;
 }
 
+img {
+    width: 100%;
+}
+
 blockquote {
     padding: 1rem;
 }
@@ -120,3 +125,4 @@ blockquote .author::before {
     content: "\2021";
     padding-right: 0.5em;
 }
+
