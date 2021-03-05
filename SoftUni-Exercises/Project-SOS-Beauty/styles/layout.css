@@ -79,6 +79,7 @@ main {
 }
 
 h5 {
+    color: rgba(0, 139, 139, 1);
     font-size: 18px;
     font-weight: 600;
     text-align: center;
@@ -91,7 +92,7 @@ h5 {
 }
 
 .ul-text li::before {
-    color: darkcyan;
+    color: rgba(0, 139, 139, 1);
     content: "\f054";
     display: inline-block;
     font-family: "Font Awesome 5 Free";
