@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S.O.S Beauty - Cosmetics</title>
     <link rel="stylesheet" href="./styles/style.css">
-    <script src="./scripts/index.js"></script>
 </head>
 <body>
 
@@ -51,6 +50,7 @@
                         <li class="link-nav-aside"><a href="#">Ноктопластика</a></li>
                         <li class="link-nav-aside"><a href="#">Миглопластика</a></li>
                         <li class="link-nav-aside"><a href="#">Фризьорство</a></li>
+                        <li class="link-nav-aside"><a href="#">Цени</a></li>
                         <li class="link-nav-aside"><a href="#">Контакти</a></li>
                     </ul>
                 </nav>
@@ -60,13 +60,16 @@
                 <h2>Козметика</h2>
 
                 <section class="wrap-all-services">
-                    <article class="wrap-cur-service">
+
+                    <article class="wrap-cur-service wrap-cleaning-face">
                         <h4>Почистване на лице</h4>
                         <div class="wrap-image-service">
                             <img src="./images/cleaning-face-1.jpg" alt="cleaning-face">
                         </div>
-                        <div class="wrap-text">
-                            <div class="text-service">
+                        <button class="more">Виж детайли</button>
+
+                        <div class="show-info whole-info-cleaning-face">
+                            <div class="wrap-description">
                                 <h5>Почистването включва:</h5>
                                 <ul class="ul-text">
                                     <li>Почистване с тоалетно мляко, последвано от специален тоник</li>
@@ -83,40 +86,38 @@
                                     <li>Нанасяне на финален крем</li>
                                 </ul>
                             </div>
-                            <p class="price">
-                                <strong>Цена: 30 лв.</strong>
-                            </p>
+                            <button class="icon closeIcon"></button>
                         </div>
+
                     </article>
+
 
                     <article class="wrap-cur-service">
                         <h4>Хидратираща терапия</h4>
                         <div class="wrap-image-service">
                             <img src="./images/therapy-1.jpg" alt="therapy-face">
                         </div>
-                        <div class="wrap-text">
-                            <div class="text-service">
-                                <h5>Как действа:</h5>
+                        <button class="more">Виж детайли</button>
+
+                        <div class="show-info whole-info-hydration-face">
+                            <div class="wrap-description">
+                                <h5>Терапията включва:</h5>
                                 <ul class="ul-text">
-                                    <li>Овлажнява епидермиса</li>
-                                    <li>Подобрява еластичността</li>
-                                    <li>Успокоява и намалява зачервяването на кожата</li>
+                                    <li>Почистване с тоалетно мляко, последвано от специален тоник</li>
                                     <li>
-                                        Използват се продукти, обогатени с витамин Ц, витамин К и теперон за укрепване 
-                                        и запечатване на спукани капиляри
+                                        Оставя се 15 мин. на пара за омекотяване на кожата и отваряне на порите, 
+                                        за по-лесното им почистване
                                     </li>
-                                    <li>Успокоява възпалението</li>
-                                    <li>Намалява риска от еритематозни кожни реакции</li>
-                                    <li>намалява се появата на кожни дефекти</li>
+                                    <li>Мануална екстракция на комедоните</li>
                                     <li>
-                                        Препоръчва се за свръхчувствителни кожи с видими капиляри и 
-                                        кожа склонна към зачервяване и възпаление
+                                        Поставяне на подходяща маска за лице съобразно типа кожа на клиента,
+                                        която регулира себумната секреция и матира кожата
                                     </li>
+                                    <li>Обработване на кожата с Д'арсонвал</li>
+                                    <li>Нанасяне на финален крем</li>
                                 </ul>
                             </div>
-                            <p class="price">
-                                <strong>Цена: 45 лв.</strong>
-                            </p>
+                            <button class="icon closeIcon"></button>
                         </div>
                     </article>
 
@@ -125,23 +126,27 @@
                         <div class="wrap-image-service">
                             <img src="./images/face-massage-1-copy.jpg" alt="cleaning-face">
                         </div>
-                        <div class="wrap-text">
-                            <div class="text-service">
-                                <h5>Как действа:</h5>
+                        <button class="more">Виж детайли</button>
+
+                        <div class="show-info whole-info-massage-face">
+                            <div class="wrap-description">
+                                <h5>Масажът на лице включва:</h5>
                                 <ul class="ul-text">
-                                    <li>подпухналостта изчезва</li>
-                                    <li>кожата се подхранва по-добре с хранителни вещества</li>
-                                    <li>всички лицеви мускули се тонизират и кожата се стяга</li>
-                                    <li>чертите на лицето стават по-ясни</li>
-                                    <li>стимулира се активността на кръвоносните съдове</li>
-                                    <li>подобрява се цветът на кожата</li>
-                                    <li>намалява се появата на кожни дефекти</li>
-                                    <li>изглаждат се бръчките, стават все по-незабележими</li>
+                                    <li>Почистване с тоалетно мляко, последвано от специален тоник</li>
+                                    <li>
+                                        Оставя се 15 мин. на пара за омекотяване на кожата и отваряне на порите, 
+                                        за по-лесното им почистване
+                                    </li>
+                                    <li>Мануална екстракция на комедоните</li>
+                                    <li>
+                                        Поставяне на подходяща маска за лице съобразно типа кожа на клиента,
+                                        която регулира себумната секреция и матира кожата
+                                    </li>
+                                    <li>Обработване на кожата с Д'арсонвал</li>
+                                    <li>Нанасяне на финален крем</li>
                                 </ul>
                             </div>
-                            <p class="price">
-                                <strong>Цена: 30 лв.</strong>
-                            </p>
+                            <button class="icon closeIcon"></button>
                         </div>
                     </article>
                 </section>
@@ -153,5 +158,7 @@
         </div>
     </div>
     
+    <script src="./scripts/index.js"></script>
+
 </body>
 </html>

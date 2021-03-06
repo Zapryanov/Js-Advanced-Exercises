@@ -21,6 +21,14 @@ aside {
 
 /* Start - Main */
 
+.icon::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
 main {
     /* background-color: rgba(255, 255, 255, 0.5); */
     border-radius: 20px;
@@ -35,15 +43,18 @@ main {
     flex-flow: row wrap;
     justify-content: space-evenly;
     padding-bottom: 3.33%;
+    position: relative;
 }
 
 .wrap-cur-service {
+    align-items: flex-start;
     background-color: rgba(248, 248, 248, 0.7);
     border-radius: 12px;
     box-shadow: 0 0 8px 3px rgb(0 0 0 / 55%);
     display: flex;
     flex: 0 0 30%;
-    flex-flow: column;
+    flex-flow: row wrap;
+    justify-content: center;
     padding: 10px;
 }
 
@@ -58,11 +69,9 @@ main {
 }
 
 .wrap-image-service {
-    align-items: center;
     border: 1px solid rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 5px 2px inset rgba(0, 0, 0, 0.5);
     display: flex;
-    justify-content: center;
     padding: 10px;
 }
 
@@ -115,7 +124,24 @@ strong {
     font-weight: 700;
 }
 
+button.more {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: var(--color-darkcyan, rgba(0, 139, 139, 1));
+    color: white;
+    border-radius: 8px;
+}
 
+button.more:hover {
+    background-color: var(--color-light-darkcyan, rgba(0, 139, 139, 0.7));
+}
+
+.closeIcon::before {
+    background-color: wheat;
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
 
 
 
