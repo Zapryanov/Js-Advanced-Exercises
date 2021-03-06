@@ -52,6 +52,7 @@ main {
 }
 
 .wrap-cur-service h4 {
+    color: var(--color-brown, rgba(165, 42, 42, 1));
     text-align: center;
     width: 100%;
 }
@@ -106,7 +107,12 @@ h5 {
 
 .price {
     border-top: 1px solid rgba(0, 0, 0, 0.6);
+    font-weight: 900;
     padding-top: 20px;
+}
+
+strong {
+    font-weight: 700;
 }
 
 
