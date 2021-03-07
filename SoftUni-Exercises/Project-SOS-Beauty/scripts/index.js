@@ -24,6 +24,8 @@ showButtons.forEach(el => {
     
         close.forEach(item => {
             item.addEventListener("click", function(ev) {
+                e.target.style.backgroundColor = "#008b8b";
+                
                 ev.target.parentNode.style.display = "none";
                 x.classList.add("close")
             })
