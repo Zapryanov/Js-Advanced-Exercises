@@ -133,11 +133,10 @@ button.more {
 }
 
 button.more:hover {
-    background-color: var(--color-light-darkcyan, rgba(0, 139, 139, 0.7));
+    background-color: var(--color-light-darkcyan, rgba(0, 204, 204, 1));
 }
 
 .closeIcon::before {
-    background-color: wheat;
     content: "\f00d";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
