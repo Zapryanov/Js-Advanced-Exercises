@@ -13,7 +13,7 @@ showButtons.forEach(el => {
 
     el.addEventListener("click", function(e) {
 
-        const x = e.target.nextElementSibling;
+        const x = e.target.parentNode.nextElementSibling;
     
         if (x.style.display === "" || x.style.display === "none") {
             x.style.display = "block";
