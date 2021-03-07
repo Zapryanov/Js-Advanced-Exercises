@@ -55,6 +55,7 @@ main {
     flex: 0 0 30%;
     flex-flow: row wrap;
     justify-content: center;
+    margin-bottom: 3%;
     padding: 10px;
 }
 
