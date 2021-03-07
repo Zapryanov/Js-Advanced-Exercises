@@ -56,3 +56,11 @@
 }
 
 /* End Social icons */
+
+/* Darkening each service */
+
+.wrap-cur-service:hover {
+    background-color: rgba(248, 248, 248, 0.9);
+}
+
+/* End Darkening each service */
