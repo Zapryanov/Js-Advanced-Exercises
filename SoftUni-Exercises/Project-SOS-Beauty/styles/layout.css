@@ -65,6 +65,7 @@ main {
 
 .wrap-cur-service h4 {
     color: var(--color-brown, rgba(165, 42, 42, 1));
+    line-height: 1;
     text-align: center;
     width: 100%;
 }
