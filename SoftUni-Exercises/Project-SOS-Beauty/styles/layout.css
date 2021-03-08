@@ -63,10 +63,11 @@ main {
     font-size: 13px;
 }
 
-.wrap-brand-name {
-    align-items: center;
+.wrap-brand-name,
+.wrap-therapy-name {
+    align-items: flex-start;
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     justify-content: center;
 }
 

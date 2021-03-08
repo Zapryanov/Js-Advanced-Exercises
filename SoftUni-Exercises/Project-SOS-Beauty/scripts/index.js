@@ -19,19 +19,28 @@ showButtons.forEach(el => {
             x.style.display = "block";
             x.classList.add("show");
         }
+
+// disabled all buttons when click for details
+        showButtons.forEach(z => {
+            z.disabled = true;
+        });
         
         const close = Array.from(document.getElementsByClassName("closeIcon"));
-    
+        
         close.forEach(item => {
             item.addEventListener("click", function(ev) {
-                e.target.style.backgroundColor = "#008b8b";
                 
                 ev.target.parentNode.style.display = "none";
-                x.classList.add("close")
+                x.classList.add("close");
+
+// enable all buttons when close popup
+                showButtons.forEach(y => {
+                    y.disabled = false;
+                });
+
             })
         })
     
-        e.target.style.backgroundColor = "#00cccc";
     
     })
 
