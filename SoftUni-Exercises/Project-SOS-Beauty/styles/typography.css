@@ -130,26 +130,3 @@ blockquote .author::before {
     content: "\2021";
     padding-right: 0.5em;
 }
-
-
-.show-info {
-    background-color: rgba(245, 245, 245, 1);
-    display: none;
-    left: 0;
-    padding: 20px;
-    position: absolute;
-    transition: display 950ms ease-in-out, opacity 750ms ease-in-out;
-    width: 100%;
-}
-
-.closeIcon {
-    background-color: rgba(245, 245, 245, 1);
-    font-weight: 900;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-}
-
-.show {
-    opacity: 1;
-}

@@ -94,70 +94,19 @@ main {
     padding: 10px;
 }
 
-.wrap-text {
+/* .wrap-text {
     display: flex;
     flex-flow: column;
     height: 100%;
     justify-content: space-between;
-}
+} */
 
-.text-service {
+/* .text-service {
     line-height: 1.5;
     padding: 20px 5px;
     text-align: justify;
-}
+} */
 
-h5 {
-    color: rgba(0, 139, 139, 1);
-    font-size: 18px;
-    font-weight: 600;
-    text-align: center;
-}
-
-.ul-text li {
-    padding-left: 10px;
-    padding-bottom: 10px;
-    position: relative;
-}
-
-.ul-text li::before {
-    color: rgba(0, 139, 139, 1);
-    content: "\f054";
-    display: inline-block;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 9px;
-    left: 0px;
-    margin-right: 5px;
-    position: absolute;
-    top: 5px;
-}
-
-strong {
-    font-weight: 700;
-}
-
-.wrap-btn-more {
-    margin-bottom: 10px;
-}
-
-button.more {
-    display: inline-block;
-    padding: 10px 30px;
-    background-color: var(--color-darkcyan, rgba(0, 139, 139, 1));
-    color: white;
-    border-radius: 8px;
-}
-
-button.more:hover {
-    background-color: var(--color-light-darkcyan, rgba(0, 204, 204, 1));
-}
-
-.closeIcon::before {
-    content: "\f00d";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-}
 
 
 
