@@ -94,6 +94,29 @@ main {
     padding: 10px;
 }
 
+.wrap-btn-more {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+button.more {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: var(--color-darkcyan, rgba(0, 139, 139, 1));
+    color: white;
+    border-radius: 8px;
+}
+
+.long-full {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.wrap-therapy-name h4:last-child {
+    color: var(--color-darkcyan, rgba(0,    139, 139, 1));
+}
+
 /* .wrap-text {
     display: flex;
     flex-flow: column;
