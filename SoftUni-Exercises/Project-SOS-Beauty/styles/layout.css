@@ -30,9 +30,7 @@ aside {
 }
 
 main {
-    /* background-color: rgba(255, 255, 255, 0.5); */
     border-radius: 20px;
-    /* box-shadow: 0px 0px 35px 10px inset rgba(181, 129, 115, 1); */
     display: flex;
     flex: 0 0 80%;
     flex-flow: row wrap;
