@@ -1,0 +1,104 @@
+.show-info {
+    background-color: rgba(245, 245, 245, 1);
+    box-shadow: 0px 0px 15px 3px inset rgb(181 129 115 / 70%);
+    border-radius: 12px;
+    display: none;
+    left: 0;
+    padding: 20px;
+    position: absolute;
+    transition: display 950ms ease-in-out, opacity 750ms ease-in-out;
+    width: 100%;
+}
+
+.wrap-description > p {
+    padding: 1em;
+    position: relative;
+}
+
+.wrap-description > p::before {
+    background-color: rgba(68, 66, 66, 0.5);
+    bottom: 0;
+    border-radius: 50%;
+    box-shadow: 0px 2px 12px 3px rgb(247, 244, 232);
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.closeIcon {
+    background-color: rgba(245, 245, 245, 1);
+    font-weight: 900;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.closeIcon::before {
+    color: var(--color-brown, rgba(165, 42, 42, 1));
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+h5 {
+    color: rgba(0, 139, 139, 1);
+    margin: 1em 0;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 1px 1px 0px rgba(143, 49, 5, 1);
+}
+
+.ul-text {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.ul-text li {
+    color: var(--color-light-brown, rgba(165, 42, 42, 0.7));
+    padding-left: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.ul-text li::before {
+    color: rgba(0, 139, 139, 1);
+    content: "\f054";
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 9px;
+    left: 0px;
+    margin-right: 5px;
+    position: absolute;
+    text-shadow: none;
+    top: 0px;
+}
+
+button.more:hover {
+    background-color: var(--color-light-darkcyan, rgba(0, 204, 204, 1));
+}
+
+.styling-text-popup {
+    color: rgba(68, 66, 66, 0.8);
+    font-family: 'Open Sans', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.wrap-popup-price {
+    display: flex;
+    justify-content: center;
+}
+
+.wrap-popup-price span {
+    color: rgba(68, 66, 66, 0.8);
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 10px auto;
+}
