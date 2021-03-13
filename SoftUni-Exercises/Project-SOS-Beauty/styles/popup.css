@@ -16,7 +16,6 @@
 }
 
 .wrap-description > p::before {
-    /* background-color: rgba(220, 220, 220, 0.4); */
     background-color: rgba(68, 66, 66, 0.5);
     bottom: 0;
     border-radius: 50%;
@@ -58,8 +57,6 @@ h5 {
 }
 
 .ul-text li {
-    /* color: rgba(68, 66, 66, 0.8);
-    text-shadow: 1px 1px 0px rgba(143, 49, 5, 1); */
     color: var(--color-light-brown, rgba(165, 42, 42, 0.7));
     padding-left: 10px;
     padding-bottom: 10px;
