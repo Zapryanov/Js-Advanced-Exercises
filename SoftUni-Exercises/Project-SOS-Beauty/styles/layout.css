@@ -163,7 +163,7 @@ footer {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
 }
 
-/* Start styling the after element of the brand */
+/* Start styling the before element of the brand */
 
 .brands ul {
     color: brown;
@@ -197,7 +197,7 @@ footer {
     background-color: rgba(155, 255, 255, 1);
     bottom: 0;
     border-radius: 50%;
-    box-shadow: 0px 9px 6px 2px rgb(0 113 0 / 50%);
+    box-shadow: 0px 9px 6px 2px rgba(0, 113, 0, 0.5);
     content: "";
     height: 2px;
     position: absolute;
