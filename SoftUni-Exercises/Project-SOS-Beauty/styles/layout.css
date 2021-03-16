@@ -170,11 +170,26 @@ footer {
 
 .brands ul {
     color: brown;
+    display: flex;
+    flex-flow: row wrap;
     text-shadow: 0px 0px 1px darkcyan;
 }
 
-.brands ul li:nth-child(odd) {
-    padding-left: 65%;
+.brands ul li:first-child {
+    flex: 1 0 100%;
+    text-align: center;
+}
+
+.one-line-brand {
+    flex: 0 0 50%;
+}
+
+.first-level {
+    text-align: center;
+}
+
+.second-level:last-child {
+    text-align: right;
 }
 
 .contacts .wrap-h1 {
