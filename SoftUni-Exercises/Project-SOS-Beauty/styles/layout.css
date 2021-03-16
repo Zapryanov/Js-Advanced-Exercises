@@ -145,11 +145,6 @@ footer {
     padding: 20px;
 }
 
-/* .brands ul {
-    color: rgba(68, 66, 66, 0.8);
-    text-shadow: 1px 1px 0px rgb(143 49 5);
-} */
-
 .brands h4 {
     color: var(--color-darkcyan, rgba(0, 139, 139, 1));
     text-shadow: 1px 1px 0px rgb(143 49 5);
@@ -168,6 +163,8 @@ footer {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
 }
 
+/* Start styling the after element of the brand */
+
 .brands ul {
     color: brown;
     display: flex;
@@ -175,22 +172,58 @@ footer {
     text-shadow: 0px 0px 1px darkcyan;
 }
 
+.brands .one-line-brand {
+    flex: 0 0 50%;
+}
+
+.brands .first-level {
+    text-align: center;
+}
+
+.brands .second-level:last-child {
+    text-align: right;
+}
+
+.brands ul li {
+    position: relative;
+}
+
 .brands ul li:first-child {
     flex: 1 0 100%;
     text-align: center;
 }
 
-.one-line-brand {
-    flex: 0 0 50%;
+.brands ul li::before {
+    background-color: rgba(155, 255, 255, 1);
+    bottom: 0;
+    border-radius: 50%;
+    box-shadow: 0px 9px 6px 2px rgb(0 113 0 / 50%);
+    content: "";
+    height: 2px;
+    position: absolute;
 }
 
-.first-level {
-    text-align: center;
+.brands ul li:first-child::before {
+    width: 150px;
 }
 
-.second-level:last-child {
-    text-align: right;
+.brands ul li:nth-child(2)::before {
+    width: 110px;
 }
+
+.brands ul li:nth-child(3)::before {
+    width: 85px;
+}
+
+.brands ul li:nth-child(4)::before {
+    width: 75px;
+}
+
+.brands ul li:nth-child(5)::before {
+    width: 85px;
+}
+
+/* End styling the after element of the brand */
 
 .contacts .wrap-h1 {
     justify-content: center;
