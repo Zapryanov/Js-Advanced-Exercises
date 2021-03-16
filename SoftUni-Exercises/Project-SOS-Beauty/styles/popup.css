@@ -8,6 +8,7 @@
     position: absolute;
     transition: display 950ms ease-in-out, opacity 750ms ease-in-out;
     width: 100%;
+    z-index: 1;
 }
 
 .wrap-description > p {
