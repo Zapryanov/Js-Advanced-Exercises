@@ -18,6 +18,10 @@
     color: rgb(43, 41, 41);
 }
 
+.top-line {
+    border-top: 1px solid var(--color-brown, rgba(165, 42, 42, 1));
+}
+
 .wrap-description > p {
     padding: 1em;
     position: relative;
