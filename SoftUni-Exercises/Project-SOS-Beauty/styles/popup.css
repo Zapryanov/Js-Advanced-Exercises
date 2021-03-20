@@ -95,6 +95,10 @@ button.more:hover {
     font-style: normal;
 }
 
+p.styling-text-popup {
+    text-indent: 20px;
+}
+
 .wrap-popup-price {
     display: flex;
     justify-content: center;
