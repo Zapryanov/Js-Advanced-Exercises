@@ -119,3 +119,10 @@ button {
 img {
     width: 100%;
 }
+
+.italic {
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 100;
+    color: rgb(43, 41, 41);
+}

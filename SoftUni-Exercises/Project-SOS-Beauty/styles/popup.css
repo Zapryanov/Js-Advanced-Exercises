@@ -11,14 +11,7 @@
     z-index: 1;
 }
 
-.italic {
-    font-style: italic;
-    font-size: 14px;
-    font-weight: 100;
-    color: rgb(43, 41, 41);
-}
-
-.top-line {
+.border-top {
     border-top: 1px solid var(--color-brown, rgba(165, 42, 42, 1));
 }
 
