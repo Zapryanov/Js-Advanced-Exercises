@@ -126,3 +126,7 @@ img {
     font-weight: 100;
     color: rgb(43, 41, 41);
 }
+
+.center {
+    text-align: center;
+}
