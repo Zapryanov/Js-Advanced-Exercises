@@ -133,5 +133,6 @@ img {
 
 .styling-brand {
     color: var(--color-brown, rgba(165, 42, 42, 1));
+    text-align: center;
     text-shadow: 0px 0px 1px rgba(0, 0, 0, 1);
 }
