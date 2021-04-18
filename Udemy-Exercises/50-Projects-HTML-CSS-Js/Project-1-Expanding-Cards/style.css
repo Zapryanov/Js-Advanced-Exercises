@@ -51,18 +51,18 @@ body {
   opacity: 1;
 }
 
-@media(max-width: 480px) {
+@media(max-width : 480px) {
+  body {
+    background-color: red;
+  }
 
-    body {
-        background-color: red;
-    }
+  .container {
+    width: 100vw;
+  }
 
-    .container {
-        width: 100vw;
-    }
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+      display: none;
+  }
 
-    .panel:nth-of-type(4),
-    .panel:nth-of-type(5) {
-        display: none;
-    }
 }
