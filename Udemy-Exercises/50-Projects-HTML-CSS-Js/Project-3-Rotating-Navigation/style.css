@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+:root {
+    --line-border-fill: #3498db;
+    --line-border-empty: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  color: #222;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.container {
+    background-color: #fafafa;
+}
