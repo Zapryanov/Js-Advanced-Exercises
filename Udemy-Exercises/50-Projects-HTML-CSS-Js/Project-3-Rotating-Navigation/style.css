@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
 
-:root {
-    --line-border-fill: #3498db;
-    --line-border-empty: #e0e0e0;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -19,5 +14,113 @@ body {
 }
 
 .container {
-    background-color: #fafafa;
+  background-color: #fafafa;
+  min-height: 100vh;
+  padding: 50px;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+  width: 100vw;
+}
+
+.container.show-nav {
+  transform: rotate(-20deg);
+}
+
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+.circle-container {
+  left: -100px;
+  position: fixed;
+  top: -100px;
+}
+
+.circle {
+  background-color: #ff7979;
+  border-radius: 50%;
+  height: 200px;
+  position: relative;
+  transition: transform 0.5s linear;
+  width: 200px;
+}
+
+.circle button {
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 26px;
+  left: 50%;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+}
+
+.circle button:focus {
+  outline: none;
+}
+
+.circle button#open {
+  left: 60%;
+}
+
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+nav {
+  bottom: 40px;
+  left: 0;
+  position: fixed;
+  z-index: 100;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+nav ul li {
+  color: #fff;
+  margin: 40px 0;
+  text-transform: uppercase;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in;
+}
+
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+
+nav ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+
+nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.content img {
+  max-width: 100%;
+}
+
+.content {
+  margin: 50px;
+  max-width: 1000px;
+}
+
+.content h1 {
+  margin: 0;
+}
+
+.content p {
+  color: #333;
+  line-height: 1.5;
 }
