@@ -13,3 +13,20 @@ body {
   height: 100vh;
   overflow: hidden;
 }
+
+.bg {
+    background: url('../Images/worker.jpg')
+    no-repeat center center/cover;
+    filter: 0px;
+    height: calc(100vh + 60px);
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: calc(100vw + 60px);
+    z-index: -1;
+}
+
+.loading-text {
+    color: #fff;
+    font-size: 50px;
+}
