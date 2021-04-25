@@ -7,6 +7,7 @@
     --right-btn-hover-color: rgba(28, 122, 28, 1);
     --hover-width: 75%;
     --other-width: 25%;
+    --speed: 1000ms;
 }
 
 * {
@@ -104,6 +105,17 @@ h1 {
     background-color: var(--right-bg-color);
 }
 
+/* Start delay effect */
+
+.split.left,
+.split.right,
+.split.left::before,
+.split.right::before {
+    transition: all var(--speed) ease-in-out;
+}
+
+/* End delay effect */
+
 .hover-left .left {
     width: var(--hover-width);
 }
@@ -118,4 +130,16 @@ h1 {
 
 .hover-right .left {
     width: var(--other-width);
+}
+
+@media(max-width: 800px) {
+    h1 {
+        font-size: 2rem;
+        top: 30%;
+    }
+
+    .btn {
+        padding: 1.2rem;
+        width: 12rem;
+    }
 }
