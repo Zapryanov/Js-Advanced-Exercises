@@ -9,6 +9,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 0;
+    overflow: hidden;
     padding: 0;
 }
 
@@ -45,6 +46,12 @@ header a {
 
 header nav {
     margin-right: 20px;
+    transform: translateX(200%);
+    transition: transform 0.5s ease;
+}
+
+.show-nav {
+    transform: translateX(0);
 }
 
 header nav ul li {
@@ -67,31 +74,33 @@ header nav ul li:not(:last-child):after {
 
 /* Media Query */
 
-@media (min-width:280px) {
-    
-    
-}
-
-@media (min-width: 320px) {
-    
-    
-}
-
-@media (min-width:480px) {
-
-}
-
-@media (min-width:768px) {
-    
-    
-}
-
-@media (min-width:1024px) {
-    
-    
-}
-
-@media (min-width:1200px) {
+@media (max-width:1200px) {
    
+    
+}
+
+@media (max-width:1024px) {
+    
+    
+}
+
+@media (max-width:768px) {
+    header nav ul li {
+        display: block;
+        margin: 5px 0px;
+    }
+
+    header nav ul li:not(:last-child):after {
+        display: none;
+    }
+    
+}
+
+@media (max-width:480px) {
+
+}
+
+@media (max-width: 320px) {
+    
     
 }
