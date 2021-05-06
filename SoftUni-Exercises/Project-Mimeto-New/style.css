@@ -70,6 +70,7 @@ header a {
 header .wrap-logo {
     transform: translateY(-200%);
     transition: transform 0.5s ease;
+    width: 150px;
 }
 
 header nav {
