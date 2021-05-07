@@ -29,6 +29,10 @@ a {
     max-width: 1200px;
 }
 
+article {
+    margin-bottom: 50px;
+}
+
 img {
     width: 100%;
     max-width: 100%;
@@ -108,10 +112,14 @@ header nav ul li:not(:last-child):after {
 
 /* Start - Main */
 
+/* Article - One */
 h1 {
-    color: rgba(94, 3, 3, 0.7);
-    font-size: 1.5em;
+    color: rgba(233, 119, 119, 0.7);
+    font-size: 2em;
     text-align: center;
+    text-shadow: 1px 1px 0 brown, 1px 1.5px 0 brown, 1px 2px 0 brown, 1px 2.5px 0 brown,
+    1px 3px 0 brown, 1px 3.5px 0 brown, 1px 4px 0 brown, 1px 4.5px 0 brown,
+    5px 13px 15px black;
 }
 
 article.one p.text {
@@ -120,6 +128,31 @@ article.one p.text {
 
 .one .wrap-img img {
     width: 700px;
+}
+
+/* Article - Two */
+
+.two {
+    /* background-color: rgba(180, 190, 190, 0.2); */
+    border-radius: 12px;
+    /* box-shadow: 0 0 9px inset rgba(0, 0, 0, 0.4); */
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.two .wrap-img,
+.two .wrap-text {
+    width: 450px;
+}
+
+.two .wrap-text {
+    padding-left: 20px;
+}
+
+.two .wrap-text p:first-child {
+    margin-top: 0;
 }
 
 /* End - Main */
