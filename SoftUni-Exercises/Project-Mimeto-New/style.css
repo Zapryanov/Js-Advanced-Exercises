@@ -155,6 +155,12 @@ article.one p.text {
     margin-top: 0;
 }
 
+/* Article - Three */
+
+.three .wrap-img {
+    width: 700px;
+}
+
 /* End - Main */
 
 /* Start - Media Query */
