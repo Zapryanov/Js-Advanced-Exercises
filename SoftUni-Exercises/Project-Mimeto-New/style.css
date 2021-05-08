@@ -1,3 +1,5 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
 * {
     box-sizing: border-box;
     color: #56585f;
@@ -24,7 +26,6 @@ a {
 }
 
 .container {
-    /* background-color: lightblue; */
     width: 85%;
     max-width: 1200px;
 }
@@ -40,6 +41,33 @@ img {
     margin: 0 auto;
 }
 
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+}
+
+/* Header and Footer - common rules */
+
+header::before {
+    bottom: 0;
+}
+
+footer::before {
+    top: 0;
+}
+
+header::before,
+footer::before {
+    background-color: rgba(241, 202, 143, 0.4);
+    border-radius: 50%;
+    /* box-shadow: 0px 1px 2px 1px rgb(212, 212, 206); */
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
 /* Start - Header */
 
 header {
@@ -51,25 +79,13 @@ header {
     width: 100%;
 }
 
-header::before {
-    background-color: rgba(241, 202, 143, 0.4);
-    bottom: 0;
-    border-radius: 50%;
-    /* box-shadow: 0px 1px 2px 1px rgb(212, 212, 206); */
-    content: "";
-    height: 2px;
-    left: 0;
-    position: absolute;
-    width: 100%;
-}
-
 header a {
     color: #56585f;
     font-size: 16px;
     font-weight: bold;
 }
 
-/* Start Animation Header */
+/* -- Start Animation Header */
 
 header .wrap-logo {
     transform: translateY(-200%);
@@ -90,7 +106,7 @@ header .wrap-logo.show-after-load {
     transform: translateX(0);
 }
 
-/* End Animation Header */
+/* -- End Animation Header */
 
 header nav ul li {
     display: inline-block;
@@ -171,9 +187,55 @@ article.one p.text {
 
 /* Article - Three */
 
- 
+ .three {
+    display: flex;
+    justify-content: center;
+ }
 
 /* End - Main */
+
+/* Start - Footer */
+
+footer {
+    position: relative;
+    width: 100%;
+}
+
+.wrap-footer-content {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 20px 0 30px 0;
+}
+
+.wrap-nationality {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.flag {
+    margin-left: 5px;
+    width: 25px;
+}
+
+.space-vertically {
+    padding: 5px 0;
+    width: 200px;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+
+.fa-facebook-f {
+    background-color: blue;
+    border-radius: 50%;
+    color: white;
+    font-size: 12px;
+    padding: 5px 7px;
+}
+
+/* End - Footer */
 
 /* Start - Media Query */
 
