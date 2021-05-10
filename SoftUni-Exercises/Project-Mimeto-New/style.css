@@ -227,12 +227,27 @@ footer {
     border-bottom: 1px solid;
 }
 
+.position-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .fa-facebook-f {
-    background-color: blue;
-    border-radius: 50%;
     color: white;
     font-size: 12px;
-    padding: 5px 7px;
+}
+
+.icon-image {
+    align-items: center;
+    background-color: blue;
+    border-radius: 50%;
+    display: flex;
+    flex-flow: row;
+    height: 25px;
+    justify-content: center;
+    margin-left: 5px;
+    width: 25px;
 }
 
 /* End - Footer */
@@ -251,12 +266,12 @@ footer {
     }
 }
 
-@media (max-width:1024px) {
-    
-}
-
 @media (max-width:768px) {
     /* Header */
+    header .wrap-logo {
+        width: 120px;
+    }
+
     header nav ul li {
         display: block;
         margin: 5px 0px;
