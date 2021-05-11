@@ -81,11 +81,12 @@ header {
 
 header a {
     color: #56585f;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* -- Start Animation Header */
+/* --- Start Animation Header --- */
 
 header .wrap-logo {
     transform: translateY(-200%);
@@ -106,7 +107,7 @@ header .wrap-logo.show-after-load {
     transform: translateX(0);
 }
 
-/* -- End Animation Header */
+/* --- End Animation Header --- */
 
 header nav ul li {
     display: inline-block;
@@ -128,15 +129,16 @@ header nav ul li:not(:last-child):after {
 
 /* Start - Main */
 
-/* Article - One */
 h1 {
     color: rgba(233, 119, 119, 0.7);
-    font-size: 2em;
+    font-size: 2.5em;
     text-align: center;
     text-shadow: 1px 1px 0 brown, 1px 1.5px 0 brown, 1px 2px 0 brown, 1px 2.5px 0 brown,
     1px 3px 0 brown, 1px 3.5px 0 brown, 1px 4px 0 brown, 1px 4.5px 0 brown,
     5px 13px 15px black;
 }
+
+/* Article - One */
 
 article.one p.text {
     text-align: center;
@@ -183,6 +185,12 @@ article.one p.text {
 
 .two .wrap-text p:first-child {
     margin-top: 0;
+}
+
+.link-gallery {
+    color: rgba(233, 119, 119, 0.7);
+    font-style: italic;
+    font-weight: bold;
 }
 
 /* Article - Three */
@@ -255,6 +263,10 @@ footer {
 /* Start - Media Query */
 
 @media (max-width:1100px) {
+
+    header a {
+        font-size: 17px;
+    }
     .two .wrap-img {
         margin-right: 10px;
         width: 340px;
@@ -267,6 +279,12 @@ footer {
 }
 
 @media (max-width:768px) {
+    /* Global */
+
+    p {
+        font-size: 15px;
+    }
+
     /* Header */
     header .wrap-logo {
         width: 120px;
@@ -279,6 +297,14 @@ footer {
 
     header nav ul li:not(:last-child):after {
         display: none;
+    }
+
+    header a {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 2em;
     }
 
     /* Article - One */
@@ -308,10 +334,67 @@ footer {
 }
 
 @media (max-width:480px) {
+    /* Global */
 
+    p {
+        font-size: 13px;
+    }
+
+    /* Header */
+    header .wrap-logo {
+        width: 90px;
+    }
+
+    header nav ul li {
+        margin: 2px 0;
+    }
+
+    header a {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .space-vertically {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 320px) {
+
+    article {
+        margin-bottom: 20px;
+    }
+
+    header {
+        flex-direction: column;
+    }
     
-    
+    header .wrap-logo {
+        width: 70px;
+    }
+
+    header nav {
+        margin: 0 0 10px 0;
+    }
+
+    header nav ul {
+        text-align: center;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 11px;
+    }
+
 }
