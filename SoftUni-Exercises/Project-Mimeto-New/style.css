@@ -39,6 +39,8 @@ img {
     max-width: 100%;
     display: block;
     margin: 0 auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 p {
@@ -163,19 +165,19 @@ article.one p.text {
 
 .two .wrap-img,
 .two .wrap-text {
-    background-color: white;
-    /* border: 3px solid brown; */
-    /* box-shadow: 0 0 12px inset rgb(0 0 0 / 80%); */
     box-shadow: 0 0 12px inset rgba(204, 214, 61, 0.7);
     padding: 10px;
     width: 450px;
 }
 
 .two .wrap-img {
+    background-color: white;
     margin-right: 20px;
 }
 
 .two .wrap-text {
+    /* background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 12px inset rgba(207, 203, 253, 1); */
     margin-left: 20px;
     display: flex;
     flex-flow: column;
@@ -259,6 +261,61 @@ footer {
 }
 
 /* End - Footer */
+
+/* Start GALLERY Page */
+    .wrapper-gallery-images ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .small-img {
+        flex: 0 1 32%;
+        height: 100px;
+        width: 130px;
+    }
+
+    .big-img {
+        flex: 0 1 48.77%;
+        height: 260px;
+        margin-top: 2%;
+        width: 220px;
+    }
+
+    .small-img img {
+        background-position: center;
+        width: 100%;
+    }
+
+    .two .galery-text-container{
+        justify-content: flex-start;
+    }
+
+    .galery-text-container ul li {
+        line-height: 1.5;
+        padding: 10px 0 10px 25px;
+        position: relative;
+    }
+
+    .galery-text-container ul li::before {
+        content: "\f004";
+        position: absolute;
+        left: 0;
+        top: 15px;
+        font-family: "Font Awesome 5 Free"; 
+        font-size: 12px;
+    }
+
+    .icon {
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+    }
+
+/* End Gallery Page */
 
 /* Start - Media Query */
 
