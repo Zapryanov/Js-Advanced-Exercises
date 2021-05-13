@@ -263,6 +263,10 @@ footer {
 /* End - Footer */
 
 /* Start GALLERY Page */
+    .wrapper-gallery-images {
+        display: flex;
+        justify-content: center;
+    }
     .wrapper-gallery-images ul {
         display: flex;
         flex-flow: row wrap;
@@ -289,6 +293,11 @@ footer {
         width: 100%;
     }
 
+    .two .galery-text-container {
+        box-shadow: none;
+        padding-top: 0;
+    }
+
     .two .galery-text-container{
         justify-content: flex-start;
     }
@@ -301,6 +310,7 @@ footer {
 
     .galery-text-container ul li::before {
         content: "\f004";
+        color: brown;
         position: absolute;
         left: 0;
         top: 15px;
@@ -386,6 +396,14 @@ footer {
     .two .wrap-text {
         margin-left: 0;
         width: 100%;
+    }
+
+    /* Galery */
+
+    .two .galery-text-container {
+        padding: 0;
+        max-width: 420px;
+        margin: 20px auto 0 auto;
     }
     
 }
