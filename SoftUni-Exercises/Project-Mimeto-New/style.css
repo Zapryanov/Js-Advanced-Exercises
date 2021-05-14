@@ -26,8 +26,28 @@ a {
 }
 
 .container {
-    width: 85%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 90%;
     max-width: 1200px;
+}
+
+.container.center {
+    justify-content: center;
+}
+
+header,
+footer {
+    width: 100%;
+}
+
+main {
+    width: 76%;
+}
+
+aside {
+    width: 17%;
 }
 
 article {
@@ -46,6 +66,16 @@ img {
 p {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.4;
+}
+
+.italic {
+    color: #777;
+    font-family: 'Open Sans', arial, sans-serif;
+    font-size: 13px;
+}
+
+h2, h3 {
+    text-align: center;
 }
 
 /* Header and Footer - common rules */
@@ -131,6 +161,8 @@ header nav ul li:not(:last-child):after {
 
 /* Start - Main */
 
+
+
 h1 {
     color: rgba(233, 119, 119, 0.7);
     font-size: 2.5em;
@@ -203,6 +235,38 @@ article.one p.text {
  }
 
 /* End - Main */
+
+/* Start - Aside */
+
+aside {
+    margin-top: 100px;
+    position: relative;
+}
+
+aside::before {
+    background-color: rgba(241, 202, 143, 0.4);
+    border-radius: 50%;
+    content: "";
+    height: 90%;
+    position: absolute;
+    left: -20%;
+    width: 2px;
+}
+
+h3 span {
+    display: block;
+}
+
+.current-article {
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+.wrap-text-article {
+    pdd
+}
+
+/* End - Aside */
 
 /* Start - Footer */
 
@@ -320,6 +384,16 @@ footer {
     }
 
 /* End Gallery Page */
+
+/* Start Contacts */
+
+.wrap-img.maps {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* End Contacts */
 
 /* Start - Media Query */
 
