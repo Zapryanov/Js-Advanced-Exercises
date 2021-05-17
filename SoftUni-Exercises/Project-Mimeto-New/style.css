@@ -74,7 +74,7 @@ p {
     font-size: 13px;
 }
 
-h2, h3 {
+h3, h4 {
     text-align: center;
 }
 
@@ -180,6 +180,7 @@ article.one p.text {
 
 .one .wrap-img img,
 .three .wrap-img img {
+    border-radius: 5px;
     width: 700px;
 }
 
@@ -197,6 +198,7 @@ article.one p.text {
 
 .two .wrap-img,
 .two .wrap-text {
+    border-radius: 5px;
     box-shadow: 0 0 12px inset rgba(204, 214, 61, 0.7);
     padding: 10px;
     width: 450px;
@@ -253,17 +255,28 @@ aside::before {
     width: 2px;
 }
 
-h3 span {
+h4 span {
     display: block;
+    text-align: center;
 }
 
 .current-article {
-    border: 1px solid gray;
+    /* background-color: rgba(255, 255, 255, 1); */
+    background-color: #fefefe;
+    /* border: 1px solid gray; */
+    border-radius: 5px;
     padding: 5px;
+
+    border: 1px solid rgba(141, 34, 34, 1);
+    border-bottom: 1px solid rgba(136, 136, 136, 0.3);
+    /* box-shadow: 0px 0px inset 5px rgb(0 0 0 / 60%);
+    -moz-box-shadow: 0px 0px inset 5px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0px 0px 5px inset rgb(0 0 0 / 60%); */
+    box-shadow: 0px 0px 5px inset rgba(141, 34, 34,0.7);
 }
 
 .wrap-text-article {
-    pdd
+    padding: 10px 15px;
 }
 
 /* End - Aside */
