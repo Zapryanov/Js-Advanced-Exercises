@@ -240,7 +240,7 @@ article.one p.text {
 
  .contacts.center {
     margin: 0 auto;
-    width: 250px;
+    width: 300px;
 }
 
 .email,
@@ -248,14 +248,6 @@ article.one p.text {
 .address {
     padding-left: 10px;
     position: relative;
-}
-
-.email i,
-.social i,
-.address i {
-    left: -12px;
-    position: absolute;
-    top: 4px;
 }
 
 /* End - Main */
@@ -511,6 +503,10 @@ footer {
 
     /* Contacts */ 
 
+    .contacts.center {
+        width: 250px;
+    }
+
     .contacts p {
         font-size: 12px;
         line-height: 1;
@@ -583,6 +579,10 @@ footer {
     .contacts p {
         font-size: 11px;
     }
+
+    .maps iframe {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 320px) {
@@ -643,7 +643,7 @@ footer {
     /* Contacts */ 
 
     .contacts p {
-        font-size: 11px;
+        font-size: 10px;
     }
 
 }
