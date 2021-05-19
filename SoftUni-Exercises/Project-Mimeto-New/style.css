@@ -236,6 +236,28 @@ article.one p.text {
     justify-content: center;
  }
 
+ /* Contacts */
+
+ .contacts.center {
+    margin: 0 auto;
+    width: 250px;
+}
+
+.email,
+.social,
+.address {
+    padding-left: 10px;
+    position: relative;
+}
+
+.email i,
+.social i,
+.address i {
+    left: -12px;
+    position: absolute;
+    top: 4px;
+}
+
 /* End - Main */
 
 /* Start - Aside */
@@ -486,6 +508,13 @@ footer {
         margin: 20px auto 0 auto;
         padding: 0;
     }
+
+    /* Contacts */ 
+
+    .contacts p {
+        font-size: 12px;
+        line-height: 1;
+    }
     
 }
 
@@ -548,6 +577,12 @@ footer {
     .gallery-text-container ul li::before {
         top: 7px;
     }
+
+    /* Contacts */ 
+
+    .contacts p {
+        font-size: 11px;
+    }
 }
 
 @media (max-width: 320px) {
@@ -603,6 +638,12 @@ footer {
 
     .gallery-text-container ul li::before {
         top: 7px;
+    }
+
+    /* Contacts */ 
+
+    .contacts p {
+        font-size: 11px;
     }
 
 }
