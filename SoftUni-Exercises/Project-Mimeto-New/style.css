@@ -120,6 +120,7 @@ header a {
 
 /* --- Start Animation Header --- */
 
+/* Show all navigation */
 header .wrap-logo {
     transform: translateY(-200%);
     transition: transform 0.5s ease;
@@ -137,6 +138,34 @@ header nav {
 header nav.show-after-load,
 header .wrap-logo.show-after-load {
     transform: translateX(0);
+}
+
+/* Show only brown low dash - НЕ РАБОТИ ЗАРАДИ ПЪРВАТА АНИМАЦИЯ!!!!!!!!!!!!*/
+
+nav li {
+    position: relative;
+}
+
+a.nav-link::before,
+a.show-dash::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: brown;
+    position: absolute;
+    bottom: -2px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+a.show-dash::before {
+    opacity: 1;
+}
+
+a.nav-link:hover::before {
+    display: block;
+    opacity: 1;
 }
 
 /* --- End Animation Header --- */
@@ -438,10 +467,33 @@ footer {
         margin-left: 10px;
         width: 340px;
     }
+
+    /* Aside */
+
+    .aside h3 {
+        font-size: 17px;
+    }
+
+    .aside h4 {
+        font-size: 14px;
+    }
+
+    .aside .wrap-text-article {
+        padding: 10px 5px;
+    }
 }
 
 @media (max-width:768px) {
     /* Global */
+
+    main {
+        width: 100%;
+    }
+
+    aside {
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
 
     p {
         font-size: 15px;
@@ -491,6 +543,28 @@ footer {
     .two .wrap-text {
         margin-left: 0;
         width: 100%;
+    }
+
+    /* Three */ 
+
+    .three {
+        margin-bottom: 0;
+    }
+
+    /* Aside */ 
+
+    .aside .wrap-img-article {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .aside .wrap-img-article img {
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    }
+
+    .aside .wrap-text-article {
+        padding: 10px 20px;
     }
 
     /* Galery */
@@ -574,6 +648,12 @@ footer {
         top: 7px;
     }
 
+    /* Aside */
+
+    .aside .wrap-text-article {
+        font-size: 12px;
+    }
+
     /* Contacts */ 
 
     .contacts p {
@@ -618,6 +698,17 @@ footer {
 
     p {
         font-size: 11px;
+    }
+
+    /* Aside */
+
+    .aside .wrap-img-article {
+        width: 90%;
+    }
+
+    .aside .wrap-text-article {
+        font-size: 11px;
+        padding: 5px;
     }
 
     /* Gallery */
