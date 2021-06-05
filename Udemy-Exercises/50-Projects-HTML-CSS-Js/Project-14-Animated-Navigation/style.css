@@ -38,6 +38,7 @@ nav ul {
     padding: 0;
     transition: width 0.6s linear;
     width: 0;
+    overflow: hidden;
 }
 
 nav.active ul {
