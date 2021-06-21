@@ -3,6 +3,7 @@
 
 :root {
     --dark-blue-color: #144fc6;
+    --fill-color: #6ab3f8;
 }
 
 * {
@@ -37,5 +38,68 @@ h3 {
     flex-direction: column;
     height: 330px;
     margin: 30px 0;
+    overflow: hidden;
     width: 150px;
+}
+
+.cup.cup-small {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0 0 15px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    height: 95px;
+    justify-content: center;
+    margin: 5px;
+    text-align: center;
+    transition: 0.3s ease;
+    width: 50px;
+}
+
+.cup.cup-small.full {
+    background-color: var(--fill-color);
+    color: #fff;
+}
+
+.cups {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 280px;
+}
+
+.remained {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.remained span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.remained small {
+    font-size: 12px;
+}
+
+.percentage {
+    align-items: center;
+    background-color: var(--fill-color);
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+    height: 0;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.text {
+    text-align: center;
+    margin: 0 0 5px;
 }
