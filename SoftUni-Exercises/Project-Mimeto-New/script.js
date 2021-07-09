@@ -19,6 +19,9 @@ navLinks.forEach(link => {
     }
 })
 
-const text = document.querySelector(".wrap-text-article");
+const textArr = document.querySelectorAll(".wrap-text-article");
 
-console.log(text.textContent)
+textArr.forEach(eachArr => {
+    const result = eachArr.textContent.split(" ").filter(x => x !== "").splice(0, 10).join(" ");
+    eachArr.textContent = result + ".....";
+});
