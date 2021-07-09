@@ -112,7 +112,7 @@ header {
 }
 
 header a {
-    color: #56585f;
+    color: rgba(58, 150, 211, 0.7);
     font-size: 18px;
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -308,14 +308,14 @@ h4 span {
     background-color: #fefefe;
     /* border: 1px solid gray; */
     border-radius: 5px;
-    padding: 5px;
-
     border: 1px solid rgba(141, 34, 34, 1);
     border-bottom: 1px solid rgba(136, 136, 136, 0.3);
     /* box-shadow: 0px 0px inset 5px rgb(0 0 0 / 60%);
     -moz-box-shadow: 0px 0px inset 5px rgba(0,0,0,0.6);
     -webkit-box-shadow: 0px 0px 5px inset rgb(0 0 0 / 60%); */
     box-shadow: 0px 0px 5px inset rgba(141, 34, 34,0.7);
+    padding: 5px;
+    margin-bottom: 20px;
 }
 
 .wrap-text-article {

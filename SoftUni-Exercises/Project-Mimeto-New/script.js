@@ -18,3 +18,7 @@ navLinks.forEach(link => {
         link.classList.add("show-dash");
     }
 })
+
+const text = document.querySelector(".wrap-text-article");
+
+console.log(text.textContent)
