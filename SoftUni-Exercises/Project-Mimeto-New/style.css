@@ -193,12 +193,12 @@ header nav ul li:not(:last-child):after {
 
 
 h1 {
-    color: rgba(233, 119, 119, 0.7);
+    color: rgba(233, 119, 119, 1);
     font-size: 2.5em;
     text-align: center;
-    text-shadow: 1px 1px 0 brown, 1px 1.5px 0 brown, 1px 2px 0 brown, 1px 2.5px 0 brown,
+    /* text-shadow: 1px 1px 0 brown, 1px 1.5px 0 brown, 1px 2px 0 brown, 1px 2.5px 0 brown,
     1px 3px 0 brown, 1px 3.5px 0 brown, 1px 4px 0 brown, 1px 4.5px 0 brown,
-    5px 13px 15px black;
+    5px 13px 15px black; */
 }
 
 /* Article - One */
