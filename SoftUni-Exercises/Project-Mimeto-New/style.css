@@ -319,6 +319,12 @@ h4 span {
     padding: 10px 15px;
 }
 
+.show-text {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto 20px;
+}
+
 /* End - Aside */
 
 /* Start - Footer */

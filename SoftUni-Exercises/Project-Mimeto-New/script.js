@@ -23,6 +23,8 @@ navLinks.forEach(link => {
 const textArr = document.querySelectorAll(".wrap-text-article");
 
 textArr.forEach(eachArr => {
-    const result = eachArr.textContent.split(" ").filter(x => x !== "").splice(0, 10).join(" ");
-    eachArr.textContent = result + ".....";
+    // if (title === "За Мравка Занимавка") {
+        const result = eachArr.textContent.split(" ").filter(x => x !== "").splice(0, 10).join(" ");
+        eachArr.textContent = result + ".....";
+    // }
 });
