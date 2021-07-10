@@ -4,6 +4,7 @@ const galleryImages = document.querySelectorAll(".gallery-img");
 const title = document.title;
 const navLinks = document.querySelectorAll(".nav-link");
 
+// Arrange images in Galery page
 galleryImages.forEach((img, i) => {
     i <= 2 ? img.classList.add("small-img") : img.classList.add("big-img");
 })

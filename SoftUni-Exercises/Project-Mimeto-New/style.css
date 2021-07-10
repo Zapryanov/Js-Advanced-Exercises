@@ -448,12 +448,26 @@ footer {
 
 /* End Contacts */
 
+/* Start Lessons */
+
+.wrap-all-lessons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.wrap-all-lessons .current-article {
+    width: 60%;
+}
+
+/* End Lessons */
+
 /* Start - Media Query */
 
 @media (max-width:1100px) {
 
     header a {
-        font-size: 17px;
+        font-size: 16px;
     }
     .two .wrap-img {
         margin-right: 10px;
