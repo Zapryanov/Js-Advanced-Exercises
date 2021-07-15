@@ -317,9 +317,17 @@ h4 span {
 
 .wrap-text-article {
     padding: 10px 15px;
+    white-space: none;
 }
 
-.show-text {
+.lesson {
+    white-space: nowrap; 
+    /* height: 50px;  */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn-show-text {
     cursor: pointer;
     display: block;
     margin: 0 auto 20px;
