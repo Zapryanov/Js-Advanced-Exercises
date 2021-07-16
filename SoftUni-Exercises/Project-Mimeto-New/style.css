@@ -332,7 +332,6 @@ h4 span {
 
 .lesson {
     white-space: nowrap; 
-    /* height: 50px;  */
     overflow: hidden;
     text-overflow: ellipsis;
 }
