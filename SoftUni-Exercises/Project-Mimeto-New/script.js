@@ -24,7 +24,7 @@ navLinks.forEach(link => {
 
 // Показване и скриване на повече или по-малко текст
 const textArr = document.querySelectorAll(".wrap-text-article");
-const btnArr = Array.from(document.querySelectorAll(".btn-show-text"));
+const btnArr = Array.from(document.querySelectorAll(".btn-show-text.lesson-page"));
 
 btnArr.forEach(btn => {
     btn.addEventListener("click", (e) => {
