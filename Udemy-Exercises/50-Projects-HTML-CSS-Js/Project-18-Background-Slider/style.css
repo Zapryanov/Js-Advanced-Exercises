@@ -30,3 +30,53 @@ body::before {
   width: 100%;
   z-index: -1;
 }
+
+.slider-container {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+  width: 70vw;
+}
+
+.slide {
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  left: -15vw;
+  position: absolute;
+  opacity: 0;
+  top: -15vh;
+  transition: 0.4s ease;
+  width: 100vw;
+  z-index: 1;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.arrow {
+  background-color: transparent;
+  border: 2px solid orange;
+  color: #fff;
+  cursor: pointer;
+  font-size: 30px;
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  /* z-index: 100; */
+}
+
+.arrow:focus {
+  outline: 0;
+}
+
+.left-arrow {
+  left: calc(15vw - 65px);
+}
+
+.right-arrow {
+  right: calc(15vw - 65px);
+}
