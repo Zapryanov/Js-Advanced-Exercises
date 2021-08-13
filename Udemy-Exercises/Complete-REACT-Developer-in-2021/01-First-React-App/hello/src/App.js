@@ -36,7 +36,7 @@ class App extends Component {
     return (
       <div className="App">
         {this.state.monsters.map(monster => <h1 key={monster.id}>{monster.name}</h1>)}
-        <h1>{4 + 5}</h1>
+        <h1>4 + 5 = {4 + 5}</h1>
         <h1><this.showDate/></h1>
         <TestComponent testValue={number}/>
       </div>
