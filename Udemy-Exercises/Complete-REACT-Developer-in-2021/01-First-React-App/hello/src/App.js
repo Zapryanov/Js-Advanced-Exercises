@@ -13,6 +13,11 @@ class App extends Component {
         { name: "Frankenstein", id:"1" },
         { name: "Drakula", id:"2" },
         { name: "Zombie", id:"3" }
+      ],
+      books: [
+        { title: "IT", id:"1", author: "Stephen King", price: 20},
+        { title: "Games", id:"2", author: "John Rowland", price: 65},
+        { title: "Fishes", id:"3", author: "Debora Alice", price: 17},
       ]
     }
   }
@@ -39,6 +44,7 @@ class App extends Component {
         <h1>4 + 5 = {4 + 5}</h1>
         <h1><this.showDate/></h1>
         <TestComponent testValue={number}/>
+        {this.state.books.map((book, i) => <h2 key={book.id}>{i+1}. {book.author}: {book.title} - {book.price} $.</h2>)}
       </div>
     )
   }
