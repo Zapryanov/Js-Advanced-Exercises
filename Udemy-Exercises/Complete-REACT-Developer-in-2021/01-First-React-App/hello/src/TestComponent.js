@@ -5,9 +5,7 @@ const myName = "Ivan";
 const age = 41;
 const address = "Plovdiv";
 
-const TestComponent = (props) => {
-    console.log(props);
-    
+const TestComponent = (props) => {    
     return (
         <div>
             Hello from TestComponent - {props.testValue}...!
