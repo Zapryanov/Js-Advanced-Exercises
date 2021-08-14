@@ -44,6 +44,12 @@ class App extends Component {
       })
   }
 
+  resetCounter = () => {
+    this.setState({
+      counter: 0
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -55,6 +61,9 @@ class App extends Component {
         <div>
           <p>Counter: {this.state.counter}</p>
           <button onClick={this.updateCounter}>Increase the number</button>
+        </div>
+        <div>
+          <button onClick={this.resetCounter}>Reset counter</button>
         </div>
       </div>
     )
