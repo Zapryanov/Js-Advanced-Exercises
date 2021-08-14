@@ -9,6 +9,7 @@ class App extends Component {
     super();
 
     this.state = {
+      counter: 0,
       monsters: [
         { name: "Frankenstein", id:"1" },
         { name: "Drakula", id:"2" },
@@ -37,6 +38,12 @@ class App extends Component {
     )
   }
 
+  updateCounter = () => {
+      this.setState({
+        counter: this.state.counter + 1
+      })
+  }
+
   render() {
     return (
       <div className="App">
@@ -45,6 +52,10 @@ class App extends Component {
         <h1><this.showDate/></h1>
         <TestComponent testValue={number}/>
         {this.state.books.map((book, i) => <h2 key={book.id}>{i+1}. {book.author}: {book.title} - {book.price} $.</h2>)}
+        <div>
+          <p>Counter: {this.state.counter}</p>
+          <button onClick={this.updateCounter}>Increase the number</button>
+        </div>
       </div>
     )
   }
