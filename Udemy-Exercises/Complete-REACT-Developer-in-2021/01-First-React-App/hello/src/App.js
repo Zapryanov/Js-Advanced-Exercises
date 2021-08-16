@@ -13,7 +13,6 @@ class App extends Component {
     this.state = {
       counter: 0,
       hideCounters: false,
-      isLoading: true,
       monsters: [
         { name: "Frankenstein", id:"1" },
         { name: "Drakula", id:"2" },
@@ -27,14 +26,6 @@ class App extends Component {
     }
 
     this.counters = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-  }
-
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        isLoading: false
-      })
-    }, 2000)
   }
 
   toggleCounters = () => {
