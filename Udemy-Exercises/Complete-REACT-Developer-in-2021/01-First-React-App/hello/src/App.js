@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import TestComponent from './TestComponent';
 import Counter from './Counter';
+import InputForTest from './InputForTest';
 
 const number = 1;
 
@@ -49,6 +50,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <InputForTest/>
         {this.state.monsters.map(monster => <h1 key={monster.id}>{monster.name}</h1>)}
         <h1>4 + 5 = {4 + 5}</h1>
         <h1><this.showDate/></h1>
