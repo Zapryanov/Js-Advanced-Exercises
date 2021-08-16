@@ -11,6 +11,7 @@ class App extends Component {
 
     this.state = {
       counter: 0,
+      hideCounters: false,
       monsters: [
         { name: "Frankenstein", id:"1" },
         { name: "Drakula", id:"2" },
@@ -22,6 +23,12 @@ class App extends Component {
         { title: "Fishes", id:"3", author: "Debora Alice", price: 17},
       ]
     }
+  }
+
+  toggleCounters = () => {
+    this.setState({
+      hideCounters: !this.state.hideCounters
+    })
   }
 
   showDate() {
@@ -47,9 +54,14 @@ class App extends Component {
         <h1><this.showDate/></h1>
         <TestComponent testValue={number}/>
         {this.state.books.map((book, i) => <h2 key={book.id}>{i+1}. {book.author}: {book.title} - {book.price} $.</h2>)}
-        <Counter counter={0}/>
-        <Counter counter={0}/>
-        <Counter counter={0}/>
+        {this.state.hideCounters ? null : (
+          <div>
+            <Counter counter={0}/>
+            <Counter counter={0}/>
+            <Counter counter={0}/>
+          </div>
+        )}
+        <button onClick={this.toggleCounters}>Toggle Counters</button>
       </div>
     )
   }
