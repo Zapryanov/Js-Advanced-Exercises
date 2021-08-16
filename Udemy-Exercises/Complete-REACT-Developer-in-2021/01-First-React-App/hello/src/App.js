@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import TestComponent from './TestComponent';
+import Counter from './Counter';
 
 const number = 1;
 
@@ -38,12 +39,6 @@ class App extends Component {
     )
   }
 
-  updateCounter = () => {
-      this.setState({
-        counter: this.state.counter + 1
-      })
-  }
-
   render() {
     return (
       <div className="App">
@@ -52,10 +47,9 @@ class App extends Component {
         <h1><this.showDate/></h1>
         <TestComponent testValue={number}/>
         {this.state.books.map((book, i) => <h2 key={book.id}>{i+1}. {book.author}: {book.title} - {book.price} $.</h2>)}
-        <div>
-          <p>Counter: {this.state.counter}</p>
-          <button onClick={this.updateCounter}>Increase the number</button>
-        </div>
+        <Counter counter={0}/>
+        <Counter counter={0}/>
+        <Counter counter={0}/>
       </div>
     )
   }
