@@ -25,6 +25,8 @@ class App extends Component {
         { title: "Fishes", id:"3", author: "Debora Alice", price: 17},
       ]
     }
+
+    this.counters = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   }
 
   componentDidMount() {
@@ -56,6 +58,14 @@ class App extends Component {
     )
   }
 
+  renderCounters() {
+    return this.counters.map((c,k) => {
+      return (
+        <Counter counter={c} key={k}/>
+      )
+    })
+  }
+
   render() {
     if (this.state.isLoading) {
       return <p>Is Loading.............!</p>
@@ -70,9 +80,7 @@ class App extends Component {
         {this.state.books.map((book, i) => <h2 key={book.id}>{i+1}. {book.author}: {book.title} - {book.price} $.</h2>)}
         {this.state.hideCounters ? null : (
           <div>
-            <Counter counter={0}/>
-            <Counter counter={0}/>
-            <Counter counter={0}/>
+            {this.renderCounters()}
           </div>
         )}
         <button onClick={this.toggleCounters}>Toggle Counters</button>
