@@ -13,6 +13,7 @@ class App extends Component {
     this.state = {
       counter: 0,
       hideCounters: false,
+      isLoading: true,
       monsters: [
         { name: "Frankenstein", id:"1" },
         { name: "Drakula", id:"2" },
@@ -24,6 +25,14 @@ class App extends Component {
         { title: "Fishes", id:"3", author: "Debora Alice", price: 17},
       ]
     }
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        isLoading: false
+      })
+    }, 2000)
   }
 
   toggleCounters = () => {
@@ -48,6 +57,9 @@ class App extends Component {
   }
 
   render() {
+    if (this.state.isLoading) {
+      return <p>Is Loading.............!</p>
+    }
     return (
       <div className="App">
         <InputForTest/>
