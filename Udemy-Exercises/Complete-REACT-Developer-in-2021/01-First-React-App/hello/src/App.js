@@ -69,7 +69,7 @@ class App extends Component {
         {this.state.monsters.map(monster => <h1 key={monster.id}>{monster.name}</h1>)}
         <h1>4 + 5 = {4 + 5}</h1>
         <h1><this.showDate/></h1>
-        <TestComponent testValue={number}/>
+        <TestComponent testValue={number} car={"Audi"} engine={"V6"} color={"sky-blue"}/>
         {this.state.books.map((book, i) => <h2 key={book.id}>{i+1}. {book.author}: {book.title} - {book.price} $.</h2>)}
         {this.state.hideCounters ? null : (
           <div>

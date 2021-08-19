@@ -9,7 +9,7 @@ const TestComponent = (props) => {
     return (
         <div>
             Hello from TestComponent - {props.testValue}...!
-            <TheInnerComponent name={myName} age={age} address={address}/>
+            <TheInnerComponent name={myName} age={age} address={address} {...props}/>
         </div>
     )
 }
