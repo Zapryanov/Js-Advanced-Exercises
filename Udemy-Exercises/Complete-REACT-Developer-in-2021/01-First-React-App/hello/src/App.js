@@ -13,11 +13,7 @@ class App extends Component {
     this.state = {
       counter: 0,
       hideCounters: false,
-      monsters: [
-        { name: "Frankenstein", id:"1" },
-        { name: "Drakula", id:"2" },
-        { name: "Zombie", id:"3" }
-      ],
+      monsters: [],
       books: [
         { title: "IT", id:"1", author: "Stephen King", price: 20},
         { title: "Games", id:"2", author: "John Rowland", price: 65},
@@ -26,6 +22,12 @@ class App extends Component {
     }
 
     this.counters = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  }
+
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res => res.json())
+      .then(users => this.setState({ monsters: users}))
   }
 
   toggleCounters = () => {
@@ -52,7 +54,7 @@ class App extends Component {
   renderCounters() {
     return this.counters.map((c,k) => {
       return (
-        <Counter counter={c} key={k}/>
+        <Counter counter={c} key={k} test1={1}/>
       )
     })
   }
