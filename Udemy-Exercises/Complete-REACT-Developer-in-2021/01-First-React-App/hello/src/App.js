@@ -15,7 +15,7 @@ class App extends Component {
     this.state = {
       data: {},
       counter: 0,
-      hideCounters: false,
+      authenticate: false,
       monsters: [],
       books: [
         { title: "IT", id:"1", author: "Stephen King", price: 20},
@@ -50,7 +50,7 @@ class App extends Component {
 
   toggleCounters = () => {
     this.setState({
-      hideCounters: !this.state.hideCounters
+      authenticate: !this.state.authenticate
     })
   }
 
@@ -72,13 +72,12 @@ class App extends Component {
   renderCounters() {
     return this.counters.map((c,k) => {
       return (
-        <Counter counter={c} key={k} test1={1}/>
+        <Counter authenticate={this.state.authenticate} counter={c} key={k} test1={1}/>
       )
     })
   }
 
   render() {
-    console.log(this.state.data)
     if (this.state.isLoading) {
       return <p>Is Loading.............!</p>
     }
@@ -88,13 +87,11 @@ class App extends Component {
         {this.state.monsters.map(monster => <p key={monster.id}>{monster.name}</p>)}
         <h1>4 + 5 = {4 + 5}</h1>
         <h1><this.showDate/></h1>
-        <TestComponent testValue={number} car={"Audi"} engine={"V6"} color={"sky-blue"}/>
+        <TestComponent authenticate={this.state.authenticate} testValue={number} car={"Audi"} engine={"V6"} color={"sky-blue"}/>
         {this.state.books.map((book, i) => <h2 key={book.id}>{i+1}. {book.author}: {book.title} - {book.price} $.</h2>)}
-        {this.state.hideCounters ? null : (
-          <div>
-            {this.renderCounters()}
-          </div>
-        )}
+        <div>
+          {this.renderCounters()}
+        </div>
         <button onClick={this.toggleCounters}>Toggle Counters</button>
       </div>
     )

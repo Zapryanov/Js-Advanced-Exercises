@@ -16,9 +16,10 @@ class Counter extends Component {
     }
     
     render() {
+        const { authenticate } = this.props
         return (
             <div>
-                <p>Counter: {this.state.counter}</p>
+                <p>Counter: { authenticate ? 'Auth' : "No Auth"} {this.state.counter}</p>
                 <button onClick={this.updateCounter}>Increase the number</button>
             </div>
         )
