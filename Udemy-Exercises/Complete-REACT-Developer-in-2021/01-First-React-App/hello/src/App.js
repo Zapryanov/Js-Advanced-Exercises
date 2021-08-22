@@ -5,6 +5,7 @@ import Counter from './Counter';
 import InputForTest from './InputForTest';
 import getGithubData from './services';
 import getMonstersData from './services/index2';
+import AuthContext from './context';
 
 const number = 1;
 
@@ -69,15 +70,17 @@ class App extends Component {
     )
   }
 
+  static contextType = AuthContext
+
   renderCounters() {
     return this.counters.map((c,k) => {
       return (
-        <Counter authenticate={this.state.authenticate} counter={c} key={k} test1={1}/>
-      )
-    })
-  }
-
-  render() {
+        <Counter counter={c} key={k} test1={1}/>
+        )
+      })
+    }
+    
+    render() {
     if (this.state.isLoading) {
       return <p>Is Loading.............!</p>
     }
@@ -87,11 +90,25 @@ class App extends Component {
         {this.state.monsters.map(monster => <p key={monster.id}>{monster.name}</p>)}
         <h1>4 + 5 = {4 + 5}</h1>
         <h1><this.showDate/></h1>
-        <TestComponent authenticate={this.state.authenticate} testValue={number} car={"Audi"} engine={"V6"} color={"sky-blue"}/>
+        <AuthContext.Provider value={
+            {
+              loggedIn: this.state.authenticate,
+              username: this.state.username
+            }
+          }>
+          <TestComponent testValue={number} car={"Audi"} engine={"V6"} color={"sky-blue"}/>
+        </AuthContext.Provider>
         {this.state.books.map((book, i) => <h2 key={book.id}>{i+1}. {book.author}: {book.title} - {book.price} $.</h2>)}
-        <div>
-          {this.renderCounters()}
-        </div>
+        <AuthContext.Provider value={
+          {
+            loggedIn: this.state.authenticate,
+            username: ""
+          }
+        }>
+          <div>
+            {this.renderCounters()}
+          </div>
+        </AuthContext.Provider>
         <button onClick={this.toggleCounters}>Toggle Counters</button>
       </div>
     )

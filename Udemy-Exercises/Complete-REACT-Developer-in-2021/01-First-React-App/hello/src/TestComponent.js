@@ -6,11 +6,11 @@ const myName = "Ivan";
 const age = 41;
 const address = "Plovdiv";
 
-const TestComponent = (props) => {    
+const TestComponent = (props) => { 
     return (
         <div>
             <p className={styles.color}>Hello from TestComponent - {props.testValue}...!</p>
-            <TheInnerComponent name={myName} age={age} address={address} {...props}/>
+            <TheInnerComponent name={myName} age={age} address={address}/>
         </div>
     )
 }

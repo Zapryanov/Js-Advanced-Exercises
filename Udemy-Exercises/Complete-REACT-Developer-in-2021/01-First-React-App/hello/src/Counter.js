@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AuthContext from './context';
 
 class Counter extends Component {
     constructor(props) {
@@ -9,6 +10,8 @@ class Counter extends Component {
         }
     }
 
+    static contextType = AuthContext;
+
     updateCounter = () => {
         this.setState({
           counter: this.state.counter + 1
@@ -16,11 +19,10 @@ class Counter extends Component {
     }
     
     render() {
-        const { authenticate } = this.props
         return (
             <div>
-                <p>Counter: { authenticate ? 'Auth' : "No Auth"} {this.state.counter}</p>
-                <button onClick={this.updateCounter}>Increase the number</button>
+                <p>Counter: { this.context.loggedIn ? 'Auth' : "No Auth"} {this.state.counter}</p>
+                <button onClick={this.updateCounter}>Increase the number {this.context.loggedIn ? "Pesho" : ""}</button>
             </div>
         )
     }
