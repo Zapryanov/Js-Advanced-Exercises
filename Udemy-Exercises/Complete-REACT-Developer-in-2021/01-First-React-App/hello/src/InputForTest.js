@@ -16,9 +16,16 @@ class InputForTest extends Component {
     }
 
     render() {
+        const { name } = this.props;
+
+        if (!name) {
+            return (
+                <h1>Loading Spinner...!!!</h1>
+            )
+        }
         return(
             <div>
-                <input onChange={this.showInputValue}/>
+                <input onChange={this.showInputValue} value={name}/>
                 <p>{this.state.value}</p>
             </div>
         )

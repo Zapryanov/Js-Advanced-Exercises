@@ -78,8 +78,8 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <InputForTest/>
-        {this.state.monsters.map(monster => <p key={monster.id}>{monster.name}</p>)}
+        <InputForTest name={this.state.data.name}/>
+        {/* {this.state.monsters.map(monster => <p key={monster.id}>{monster.name}</p>)} */}
         <h1>4 + 5 = {4 + 5}</h1>
         <h1><this.showDate/></h1>
         <TestComponent testValue={number} car={"Audi"} engine={"V6"} color={"sky-blue"}/>
