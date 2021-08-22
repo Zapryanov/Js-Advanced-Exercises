@@ -4,6 +4,7 @@ import TestComponent from './TestComponent';
 import Counter from './Counter';
 import InputForTest from './InputForTest';
 import getGithubData from './services';
+import getMonstersData from './services/index2';
 
 const number = 1;
 
@@ -26,7 +27,7 @@ class App extends Component {
     this.counters = [1, 2, 3]
   }
 
-  getData = async () => {
+  getData1 = async () => {
     const dataFromGithub = await getGithubData();
 
     this.setState({
@@ -34,12 +35,17 @@ class App extends Component {
     })
   }
 
-  componentDidMount() {
-    this.getData()
+  getData2 = async () => {
+    const dataFromMonsters = await getMonstersData();
 
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(res => res.json())
-      .then(users => this.setState({ monsters: users}))
+    this.setState({ 
+      monsters: dataFromMonsters
+    })
+  }
+
+  componentDidMount() {
+    this.getData1()
+    this.getData2()
   }
 
   toggleCounters = () => {
@@ -79,7 +85,7 @@ class App extends Component {
     return (
       <div className="App">
         <InputForTest name={this.state.data.name}/>
-        {/* {this.state.monsters.map(monster => <p key={monster.id}>{monster.name}</p>)} */}
+        {this.state.monsters.map(monster => <p key={monster.id}>{monster.name}</p>)}
         <h1>4 + 5 = {4 + 5}</h1>
         <h1><this.showDate/></h1>
         <TestComponent testValue={number} car={"Audi"} engine={"V6"} color={"sky-blue"}/>
