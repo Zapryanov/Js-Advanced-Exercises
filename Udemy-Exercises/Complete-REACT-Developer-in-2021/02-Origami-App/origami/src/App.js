@@ -6,7 +6,7 @@ function App() {
   return (
     <div className={styles.app}>
       <Header />
-      <div>
+      <div className={styles.container}>
         <Aside />
       </div>
     </div>
