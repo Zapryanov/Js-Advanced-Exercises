@@ -19,25 +19,30 @@ class Origamis extends Component {
         })
     }
 
+    renderOrigamis() {
+        const { origamis } = this.state;
+
+        return origamis.map(origam => {
+            return(
+                <div key={origam._id}>
+                    {origam.description}
+                </div>
+            )
+        })
+    }
+
     componentDidMount() {
         this.getOrigamis();
     }
 
     render() {
         console.log(this.state.origamis);
-        const { origamis } = this.state;
 
         return (
             <div className={styles.container}>
                 <h1 className={styles.title}>Origamis</h1>
-                <div>
-                    {origamis.map(origam => {
-                        return(
-                            <div key={origam._id}>
-                                {origam.description}
-                            </div>
-                        )
-                    })}
+                <div className={styles["origamis-wrapper"]}>
+                    {this.renderOrigamis()}
                 </div>
             </div>
         )
