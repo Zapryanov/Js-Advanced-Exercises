@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Origam from '../origam';
 import styles from './index.module.css';
 
 class Origamis extends Component {
@@ -24,9 +25,7 @@ class Origamis extends Component {
 
         return origamis.map(origam => {
             return(
-                <div key={origam._id}>
-                    {origam.description}
-                </div>
+                <Origam  key={origam._id} {...origam}/>
             )
         })
     }
