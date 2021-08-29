@@ -4,10 +4,13 @@ import styles from './index.module.css';
 const Origam = ({ description, author }) => {
     return (
         <div className={styles.container}>
-            <div className={styles.description}>
+            <p className={styles.description}>
                 {description}
+            </p>
+            <div>
+                <small>Author: </small>
+                <span className={styles.user}>{author.username}</span>
             </div>
-            <span className={styles.user}>{author.username}</span>
         </div>
     )
 }
