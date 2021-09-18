@@ -1,15 +1,20 @@
 import React from 'react';
 import Link from '../link';
 import styles from './index.module.css';
+import getNavigation from '../../utils/navigation';
 
 const Aside = () => {
+    const links = getNavigation();
+
     return (
         <aside className={styles.container}>
-            <Link href="#" title="Publications" type="aside"/>                
-            <Link href="#" title="Share your thoughts" type="aside"/>                
-            <Link href="#" title="Profile" type="aside"/>                
-            <Link href="#" title="Login" type="aside"/>                
-            <Link href="#" title="Register" type="aside"/>     
+            {
+                links.map(navElement => {
+                    return (
+                        <Link href={navElement.link} title={navElement.title} type="aside"/>
+                    )
+                })
+            }    
         </aside>
     )
 }
