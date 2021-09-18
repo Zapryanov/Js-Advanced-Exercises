@@ -5,12 +5,11 @@ import styles from './index.module.css';
 const Aside = () => {
     return (
         <aside className={styles.container}>
-            <Link href="#" title="Going to 1" type="aside"/>                
-            <Link href="#" title="Going to 2" type="aside"/>                
-            <Link href="#" title="Going to 3" type="aside"/>                
-            <Link href="#" title="Going to 4" type="aside"/>                
-            <Link href="#" title="Going to 5" type="aside"/>                
-            <Link href="#" title="Going to 6" type="aside"/>    
+            <Link href="#" title="Publications" type="aside"/>                
+            <Link href="#" title="Share your thoughts" type="aside"/>                
+            <Link href="#" title="Profile" type="aside"/>                
+            <Link href="#" title="Login" type="aside"/>                
+            <Link href="#" title="Register" type="aside"/>     
         </aside>
     )
 }
