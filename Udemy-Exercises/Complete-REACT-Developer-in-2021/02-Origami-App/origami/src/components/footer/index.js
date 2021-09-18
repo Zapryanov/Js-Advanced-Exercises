@@ -6,12 +6,11 @@ const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div>
-                <Link href="#" title="Going to 1" type="footer"/>                
-                <Link href="#" title="Going to 2" type="footer"/>                
-                <Link href="#" title="Going to 3" type="footer"/>                
-                <Link href="#" title="Going to 4" type="footer"/>                
-                <Link href="#" title="Going to 5" type="footer"/>                
-                <Link href="#" title="Going to 6" type="footer"/>  
+                <Link href="#" title="Publications" type="footer"/>                
+                <Link href="#" title="Share your thoughts" type="footer"/>                
+                <Link href="#" title="Profile" type="footer"/>                
+                <Link href="#" title="Login" type="footer"/>                
+                <Link href="#" title="Register" type="footer"/>   
             </div>
             <p className={styles.university}>Software University ® 2021</p>
         </footer>
