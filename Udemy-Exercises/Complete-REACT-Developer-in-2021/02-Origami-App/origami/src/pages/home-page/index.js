@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PageWrapper from '../../components/page-wrapper';
+import PageLayout from '../../components/page-layout';
 import styles from './index.module.css';
 import Origam from '../../components/origam';
 import Title from '../../components/title';
@@ -38,12 +38,12 @@ class HomePage extends Component {
 
     render() {
         return (
-          <PageWrapper>
+          <PageLayout>
               <Title title="Publications" />
               <div className={styles["origamis-wrapper"]}>
                   {this.renderOrigamis()}
               </div>
-          </PageWrapper>
+          </PageLayout>
         )
     }
 }
