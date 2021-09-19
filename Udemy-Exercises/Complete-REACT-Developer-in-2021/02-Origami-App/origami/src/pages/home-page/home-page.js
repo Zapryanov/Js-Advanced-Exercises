@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './home-page.module.css';
 import Aside from '../../components/aside';
 import Footer from '../../components/footer';
