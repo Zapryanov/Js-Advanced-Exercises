@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PageWrapper from '../../components/page-wrapper';
 import styles from './index.module.css';
 import Origam from '../../components/origam';
+import Title from '../../components/title';
 
 class HomePage extends Component {
     constructor(props) {
@@ -36,16 +37,12 @@ class HomePage extends Component {
     }
 
     render() {
-        console.log(this.state.origamis);
-
         return (
           <PageWrapper>
-            <div className={styles.container}>
-                <h1 className={styles.title}>Publications</h1>
-                <div className={styles["origamis-wrapper"]}>
-                    {this.renderOrigamis()}
-                </div>
-            </div>
+              <Title title="Publications" />
+              <div className={styles["origamis-wrapper"]}>
+                  {this.renderOrigamis()}
+              </div>
           </PageWrapper>
         )
     }
