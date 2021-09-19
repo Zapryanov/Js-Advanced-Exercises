@@ -1,9 +1,13 @@
 import React from 'react';
+// import styles from './index.module.css';
+import PageWrapper from '../../components/page-wrapper';
 
-const ShareThoughts = () => {
+const ShareThoughtsPage = () => {
     return (
-        <div>Share</div>
+        <PageWrapper>
+            <div>TEST</div>
+        </PageWrapper>
     )
 }
 
-export default ShareThoughts;
+export default ShareThoughtsPage;

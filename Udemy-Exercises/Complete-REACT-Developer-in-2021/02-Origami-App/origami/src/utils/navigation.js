@@ -3,23 +3,23 @@ const getNavigation = (userId) => {
     const links = [
         {
             title: "Publikations",
-            links: "/"
+            link: "/"
         },
         {
             title: "Share",
-            links: "/share"
+            link: "/share"
         },
         {
             title: "Profile",
-            links: `/profile/${userId}`
+            link: `/profile/${userId}`
         },
         {
             title: "Login",
-            links: "/login"
+            link: "/login"
         },
         {
             title: "Register",
-            links: "/register"
+            link: "/register"
         }
     ]
 
