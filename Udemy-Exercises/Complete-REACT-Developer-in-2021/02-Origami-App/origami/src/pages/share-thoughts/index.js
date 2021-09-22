@@ -3,6 +3,7 @@ import SubmitButton from '../../components/button/submit-button';
 import styles from './index.module.css';
 import PageLayout from '../../components/page-layout';
 import Title from '../../components/title';
+import Origamis from '../../components/origamis';
 
 const ShareThoughtsPage = () => {
     return (
@@ -16,6 +17,7 @@ const ShareThoughtsPage = () => {
                     <SubmitButton title="Post" />
                 </div>
             </div>
+            <Origamis length={3}/>
         </PageLayout>
     )
 }

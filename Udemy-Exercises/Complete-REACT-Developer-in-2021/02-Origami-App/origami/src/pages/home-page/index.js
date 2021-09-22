@@ -1,51 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PageLayout from '../../components/page-layout';
-import styles from './index.module.css';
-import Origam from '../../components/origam';
+// import styles from './index.module.css';
 import Title from '../../components/title';
+import Origamis from '../../components/origamis';
 
-class HomePage extends Component {
-    constructor(props) {
-        super(props)
+const HomePage = () => {
 
-        this.state = {
-            origamis: []
-        }
-    }
-
-    getOrigamis = async () => {
-        const promise = await fetch("http://localhost:9999/api/origami");
-        const origamis = await promise.json();
-
-        this.setState({
-            origamis
-        })
-    }
-
-    renderOrigamis() {
-        const { origamis } = this.state;
-
-        return origamis.map((origam, i) => {
-            return(
-                <Origam  key={origam._id} index={i} {...origam}/>
-            )
-        })
-    }
-
-    componentDidMount() {
-        this.getOrigamis();
-    }
-
-    render() {
-        return (
-          <PageLayout>
-              <Title title="Publications" />
-              <div className={styles["origamis-wrapper"]}>
-                  {this.renderOrigamis()}
-              </div>
-          </PageLayout>
-        )
-    }
+    return (
+        <PageLayout>
+            <Title title="Publications" />
+            <Origamis />
+        </PageLayout>
+    )
+    
 }
 
 export default HomePage;
