@@ -2,7 +2,7 @@ const getNavigation = (userId) => {
     
     const links = [
         {
-            title: "Publikations",
+            title: "Publications",
             link: "/"
         },
         {
