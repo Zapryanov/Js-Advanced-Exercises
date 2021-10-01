@@ -26,12 +26,12 @@ class LoginPage extends Component {
 
         return (
             <PageLayout>
-                <div className={style.container}>
+                <form className={style.container}>
                     <Title title="Login" />
                     <Input value={email} onChange={(ev) => this.onChange(ev, "email")} label="Email" id="email" />
                     <Input value={password} onChange={(ev) => this.onChange(ev, "password")} label="Password" id="password" />
                     <SubmitButton title="Login" />
-                </div>
+                </form>
             </PageLayout>
         )
     }
