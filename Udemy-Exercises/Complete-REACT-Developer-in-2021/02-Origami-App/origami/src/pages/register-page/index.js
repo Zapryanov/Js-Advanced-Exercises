@@ -27,7 +27,7 @@ class RegisterPage extends Component {
         const { username, password } = this.state;
 
         try {
-            const promise = await fetch('http://localhost:9999/api/user/login', {
+            const promise = await fetch('http://localhost:9999/api/user/register', {
                 method: 'POST',
                 body: JSON.stringify({
                     username,
