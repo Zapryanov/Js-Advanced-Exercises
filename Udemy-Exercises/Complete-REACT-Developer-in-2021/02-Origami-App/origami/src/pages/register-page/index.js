@@ -10,7 +10,7 @@ class RegisterPage extends Component {
         super(props)
 
         this.state = {
-            email: "",
+            username: "",
             password: "",
             rePassword: ""
         }
@@ -22,19 +22,47 @@ class RegisterPage extends Component {
         this.setState(newState);
     }
     
+    handleSubmit = async (e) => {
+        e.preventDefault();
+        const { username, password } = this.state;
+
+        try {
+            const promise = await fetch('http://localhost:9999/api/user/login', {
+                method: 'POST',
+                body: JSON.stringify({
+                    username,
+                    password
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+    
+            const authToken = promise.headers.get("Authorization");
+            document.cookie = `x-auth-token=${authToken}`;
+            
+            const response = await promise.json();
+    
+            if (response.username && authToken) {
+                this.props.history.push("/")
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
     render() {
-        const { email, password, rePassword } = this.state;
+        const { username, password, rePassword } = this.state;
 
         return (
             <PageLayout>
-                <div className={style.container}>
+                <form className={style.container} onSubmit={this.handleSubmit}>
                     <Title title="Register" />
-                    <Input value={email} onChange={(e) => this.onChange(e, "email")} label="Email" id="email" />
-                    <Input value={password} onChange={(e) => this.onChange(e, "password")} label="Password" id="password" />
+                    <Input value={username} onChange={(e) => this.onChange(e, "username")} label="Username" id="username" />
+                    <Input type="password" value={password} onChange={(e) => this.onChange(e, "password")} label="Password" id="password" />
                     <Input value={rePassword} onChange={(e) => this.onChange(e, "rePassword")} label="Re-Password" id="re-password" />
                     <SubmitButton title="Register" />
-                </div>
+                </form>
             </PageLayout>
         )
     }
