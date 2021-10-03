@@ -60,7 +60,7 @@ class RegisterPage extends Component {
                     <Title title="Register" />
                     <Input value={username} onChange={(e) => this.onChange(e, "username")} label="Username" id="username" />
                     <Input type="password" value={password} onChange={(e) => this.onChange(e, "password")} label="Password" id="password" />
-                    <Input value={rePassword} onChange={(e) => this.onChange(e, "rePassword")} label="Re-Password" id="re-password" />
+                    <Input type="password" value={rePassword} onChange={(e) => this.onChange(e, "rePassword")} label="Re-Password" id="re-password" />
                     <SubmitButton title="Register" />
                 </form>
             </PageLayout>

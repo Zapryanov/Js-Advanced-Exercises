@@ -13,7 +13,11 @@ module.exports = {
         register: (req, res, next) => {
             const { username, password } = req.body;
             models.User.create({ username, password })
-                .then((createdUser) => res.send(createdUser))
+                .then((createdUser) => {
+                    const token = utils.jwt.createToken({ id: createdUser._id });
+                    res.header("Authorization", token).send(createdUser);
+                    return res.send(createdUser)
+                })
                 .catch(next)
         },
 
