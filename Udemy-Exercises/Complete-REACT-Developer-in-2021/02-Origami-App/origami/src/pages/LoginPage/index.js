@@ -10,26 +10,55 @@ class LoginPage extends Component {
         super(props)
 
         this.state = {
-            email: "",
+            username: "",
             password: ""
         }
     }
 
-    onChange = (e, type) => {
+    handleChange = (e, type) => {
         const newState = {};
         newState[type] = e.target.value;
         this.setState(newState)
     }
 
+    handleSubmit = async (e) => {
+        e.preventDefault();
+        const { username, password } = this.state;
+
+        try {
+            const promise = await fetch('http://localhost:9999/api/user/login', {
+                method: 'POST',
+                body: JSON.stringify({
+                    username,
+                    password
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+    
+            const authToken = promise.headers.get("Authorization");
+            document.cookie = `x-auth-token=${authToken}`;
+            
+            const response = await promise.json();
+    
+            if (response.username && authToken) {
+                this.props.history.push("/")
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     render() {
-        const {email, password } = this.state;
+        const { username, password } = this.state;
 
         return (
             <PageLayout>
-                <form className={style.container}>
+                <form className={style.container} onSubmit={this.handleSubmit}>
                     <Title title="Login" />
-                    <Input value={email} onChange={(ev) => this.onChange(ev, "email")} label="Email" id="email" />
-                    <Input value={password} onChange={(ev) => this.onChange(ev, "password")} label="Password" id="password" />
+                    <Input value={username} onChange={(ev) => this.handleChange(ev, "username")} label="Username" id="username" />
+                    <Input type="password" value={password} onChange={(ev) => this.handleChange(ev, "password")} label="Password" id="password" />
                     <SubmitButton title="Login" />
                 </form>
             </PageLayout>

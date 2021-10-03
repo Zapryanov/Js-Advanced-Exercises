@@ -21,6 +21,7 @@ class RegisterPage extends Component {
         newState[type] = e.target.value;
         this.setState(newState);
     }
+    
 
     render() {
         const { email, password, rePassword } = this.state;
