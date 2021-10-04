@@ -3,6 +3,7 @@ import SubmitButton from '../../components/button/submit-button';
 import Input from '../../components/input';
 import PageLayout from '../../components/page-layout';
 import Title from '../../components/title';
+import authenticate from '../../utils/authenticate';
 import style from './index.module.css';
 
 class RegisterPage extends Component {
@@ -26,29 +27,39 @@ class RegisterPage extends Component {
         e.preventDefault();
         const { username, password } = this.state;
 
-        try {
-            const promise = await fetch('http://localhost:9999/api/user/register', {
-                method: 'POST',
-                body: JSON.stringify({
-                    username,
-                    password
-                }),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
+        await authenticate('http://localhost:9999/api/user/register', {
+            username,
+            password
+        }, () => {
+            console.log('Yeeyyy...!!!');
+            this.props.history.push("/");
+        }, (e) => {
+            console.log('Error...!!!', e)
+        })
+
+        // try {
+        //     const promise = await fetch('http://localhost:9999/api/user/register', {
+        //         method: 'POST',
+        //         body: JSON.stringify({
+        //             username,
+        //             password
+        //         }),
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         }
+        //     })
     
-            const authToken = promise.headers.get("Authorization");
-            document.cookie = `x-auth-token=${authToken}`;
+        //     const authToken = promise.headers.get("Authorization");
+        //     document.cookie = `x-auth-token=${authToken}`;
             
-            const response = await promise.json();
+        //     const response = await promise.json();
     
-            if (response.username && authToken) {
-                this.props.history.push("/")
-            }
-        } catch (error) {
-            console.log(error);
-        }
+        //     if (response.username && authToken) {
+        //         this.props.history.push("/")
+        //     }
+        // } catch (error) {
+        //     console.log(error);
+        // }
     }
 
     render() {
