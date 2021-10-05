@@ -1,18 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PageLayout from '../../components/page-layout';
 // import styles from './index.module.css';
 import Title from '../../components/title';
 import Origamis from '../../components/origamis';
+import UserContext from '../../Context';
 
-const HomePage = () => {
+class HomePage extends Component {
+    static contextType = UserContext;
 
-    return (
-        <PageLayout>
-            <Title title="Publications" />
-            <Origamis />
-        </PageLayout>
-    )
-    
+    render() {
+        console.log(this.context)
+        return (
+            <PageLayout>
+                <Title title="Publications" />
+                <Origamis />
+            </PageLayout>
+        )
+    }
 }
 
 export default HomePage;

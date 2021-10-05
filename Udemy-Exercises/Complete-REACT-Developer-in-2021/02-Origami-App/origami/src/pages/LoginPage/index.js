@@ -3,6 +3,7 @@ import SubmitButton from '../../components/button/submit-button';
 import Input from '../../components/input';
 import PageLayout from '../../components/page-layout';
 import Title from '../../components/title';
+import UserContext from '../../Context';
 import authenticate from '../../utils/authenticate';
 import style from './index.module.css';
 
@@ -15,6 +16,8 @@ class LoginPage extends Component {
             password: ""
         }
     }
+
+    static contextType = UserContext;
 
     handleChange = (e, type) => {
         const newState = {};
@@ -29,8 +32,10 @@ class LoginPage extends Component {
         await authenticate('http://localhost:9999/api/user/login', {
             username,
             password
-        }, () => {
+        }, (user) => {
             console.log('Yeeyyy...!!!');
+            
+            this.context.logIn(user)
             this.props.history.push("/");
         }, (e) => {
             console.log('Error...!!!', e)
