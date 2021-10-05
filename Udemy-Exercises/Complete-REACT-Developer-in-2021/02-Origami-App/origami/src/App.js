@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import UserContext from './Context';
 
 class App extends Component {
     constructor(props) {
@@ -25,8 +26,19 @@ class App extends Component {
     }
 
     render() {
-        return this.props.children;
+        const { loggedIn, user } = this.state;
+
+        return (
+            <UserContext.Provider value={{
+                loggedIn, 
+                user, 
+                logIn: this.logIn, 
+                logOut: this.logOut
+            }}>
+                {this.props.children}
+            </UserContext.Provider>
+        )
     }
 }
 
-export default App;
+export default App
