@@ -13,8 +13,9 @@ class Header extends Component {
             loggedIn,
             user
         } = this.context;
-        const links = getNavigation(loggedIn, user);
         
+        const links = getNavigation(loggedIn, user);
+
         return (
             <header className={styles.navigation}>
                 <img className={styles.logo} src={logo} alt="logo"/>
