@@ -7,11 +7,10 @@ import UserContext from '../../Context';
 const Aside = () => {
 
     const {
-        loggedIn,
         user
     } = useContext(UserContext)
     
-    const links = getNavigation(loggedIn, user);
+    const links = getNavigation(user);
 
     return (
         <aside className={styles.container}>
