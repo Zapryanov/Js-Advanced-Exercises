@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useContext, useState } from 'react';
 import SubmitButton from '../../components/button/submit-button';
 import Input from '../../components/input';
 import PageLayout from '../../components/page-layout';
@@ -7,27 +7,13 @@ import UserContext from '../../Context';
 import authenticate from '../../utils/authenticate';
 import style from './index.module.css';
 
-class LoginPage extends Component {
-    constructor(props) {
-        super(props)
+const LoginPage = (props) => {
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const context = useContext(UserContext);
 
-        this.state = {
-            username: "",
-            password: ""
-        }
-    }
-
-    static contextType = UserContext;
-
-    handleChange = (e, type) => {
-        const newState = {};
-        newState[type] = e.target.value;
-        this.setState(newState)
-    }
-
-    handleSubmit = async (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        const { username, password } = this.state;
 
         await authenticate('http://localhost:9999/api/user/login', {
             username,
@@ -35,51 +21,23 @@ class LoginPage extends Component {
         }, (user) => {
             console.log('Yeeyyy...!!!');
             
-            this.context.logIn(user)
-            this.props.history.push("/");
+            context.logIn(user)
+            props.history.push("/");
         }, (e) => {
             console.log('Error...!!!', e)
         })
-
-        // try {
-        //     const promise = await fetch('http://localhost:9999/api/user/login', {
-        //         method: 'POST',
-        //         body: JSON.stringify({
-        //             username,
-        //             password
-        //         }),
-        //         headers: {
-        //             'Content-Type': 'application/json'
-        //         }
-        //     })
-    
-        //     const authToken = promise.headers.get("Authorization");
-        //     document.cookie = `x-auth-token=${authToken}`;
-            
-        //     const response = await promise.json();
-    
-        //     if (response.username && authToken) {
-        //         this.props.history.push("/")
-        //     }
-        // } catch (error) {
-        //     console.log(error);
-        // }
     }
 
-    render() {
-        const { username, password } = this.state;
-
-        return (
-            <PageLayout>
-                <form className={style.container} onSubmit={this.handleSubmit}>
-                    <Title title="Login" />
-                    <Input value={username} onChange={(ev) => this.handleChange(ev, "username")} label="Username" id="username" />
-                    <Input type="password" value={password} onChange={(ev) => this.handleChange(ev, "password")} label="Password" id="password" />
-                    <SubmitButton title="Login" />
-                </form>
-            </PageLayout>
-        )
-    }
+    return (
+        <PageLayout>
+            <form className={style.container} onSubmit={handleSubmit}>
+                <Title title="Login" />
+                <Input value={username} onChange={(ev) => setUsername(ev.target.value)} label="Username" id="username" />
+                <Input type="password" value={password} onChange={(ev) => setPassword(ev.target.value)} label="Password" id="password" />
+                <SubmitButton title="Login" />
+            </form>
+        </PageLayout>
+    )
 }
 
 export default LoginPage;

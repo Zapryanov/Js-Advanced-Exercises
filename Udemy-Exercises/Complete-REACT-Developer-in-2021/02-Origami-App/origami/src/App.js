@@ -8,6 +8,7 @@ function getCookie(name) {
 
 const App = (props) => {
     const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     const logIn = (user) => {
         setUser({
@@ -49,8 +50,16 @@ const App = (props) => {
             } else {
                 logOut();
             }
+            setLoading(false);
         })
+
     }, [])      
+
+    if (loading) {
+        return (
+            <div>Loading...</div>
+        )
+    }
 
     return (
         <UserContext.Provider value={{
