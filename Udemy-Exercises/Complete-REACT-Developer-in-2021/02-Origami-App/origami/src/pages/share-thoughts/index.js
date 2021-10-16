@@ -4,6 +4,7 @@ import styles from './index.module.css';
 import PageLayout from '../../components/page-layout';
 import Title from '../../components/title';
 import Origamis from '../../components/origamis';
+import getCookie from '../../utils/cookie';
 
 const ShareThoughtsPage = () => {
     const [publication, setPublication] = useState('');
@@ -15,7 +16,8 @@ const ShareThoughtsPage = () => {
                 description: publication
             }),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': getCookie('x-auth-token')
             }
         })
 
@@ -23,6 +25,10 @@ const ShareThoughtsPage = () => {
 
         console.log(data);
     }
+
+    // const handleSubmit = () => {
+    //     console.log(publication)
+    // }
 
     return (
         <PageLayout>
@@ -32,7 +38,7 @@ const ShareThoughtsPage = () => {
                     <textarea className={styles.textarea} value={publication} onChange={e => setPublication(e.target.value)} />
                 </div>
                 <div>
-                    <SubmitButton title="Post" onClick={handleSubmit} />
+                    <SubmitButton title="Post one" onClick={handleSubmit} />
                 </div>
             </div>
             <Origamis length={3}/>
