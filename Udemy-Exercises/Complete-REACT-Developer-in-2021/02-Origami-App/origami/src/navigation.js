@@ -11,9 +11,8 @@ import UserContext from './Context';
 
 const Navigation = () => {
     const context = useContext(UserContext)
-    console.log("context - ", context)
     const loggedIn = context.user.loggedIn;
-    console.log("loggedIn - ", loggedIn)
+
     return (
         <BrowserRouter>
             <Switch>

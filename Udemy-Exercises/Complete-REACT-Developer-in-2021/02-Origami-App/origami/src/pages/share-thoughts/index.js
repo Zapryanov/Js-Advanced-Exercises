@@ -5,7 +5,6 @@ import PageLayout from '../../components/page-layout';
 import Title from '../../components/title';
 import Origamis from '../../components/origamis';
 import getCookie from '../../utils/cookie';
-// import getOrigami from '../../utils/origami';
 
 const ShareThoughtsPage = () => {
     const [publication, setPublication] = useState('');
@@ -26,10 +25,6 @@ const ShareThoughtsPage = () => {
         setPublication('');
         setUpdatedOrigami([...updatedOrigami, 1]);
     }
-
-    // const handleSubmit = () => {
-    //     console.log(publication)
-    // }
 
     return (
         <PageLayout>
