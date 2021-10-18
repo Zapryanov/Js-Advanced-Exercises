@@ -3,6 +3,7 @@ import { useParams, useHistory } from 'react-router-dom';
 import Origamis from '../../components/origamis';
 import PageLayout from '../../components/page-layout';
 import UserContext from '../../Context';
+import ErrorBoundary from '../../ErrorBoundary';
 
 const ProfilePage = () => {
     const [username, setUsername] = useState(null);
@@ -35,12 +36,14 @@ const ProfilePage = () => {
 
     return (
         <PageLayout>
-            <div>
-                <p>Username: {username}</p>
-                <p>Posts: {posts}</p>
+            <ErrorBoundary>
+                <div>
+                    <p>Username: {username}</p>
+                    <p>Posts: {posts}</p>
 
-                <button onClick={logOut}>Logout</button>
-            </div>
+                    <button onClick={logOut}>Logout</button>
+                </div>
+            </ErrorBoundary>
             <Origamis length={3}/>
         </PageLayout>
     )
