@@ -7,8 +7,15 @@ class App extends Component {
     super()
 
     this.state = {
-      monsters: []
+      monsters: [],
+      serachField: ''
     }
+  }
+
+  handleSearchField = (e) => {
+    this.setState({
+      serachField: e.target.value
+    })
   }
 
   componentDidMount() {
@@ -18,9 +25,13 @@ class App extends Component {
   }
 
   render() {
+    const { monsters, serachField } = this.state;
+    const filteredMonsters = monsters.filter(monster => monster.name.toLowerCase().includes(serachField.toLocaleLowerCase()))
+    console.log(filteredMonsters)
     return (
       <div className="App">
-        <CardList monsters={this.state.monsters} />
+        <input type="search" placeholder="search monsters" onChange={(e) => this.handleSearchField(e)} />
+        <CardList monsters={filteredMonsters} />
       </div>
     );
   } 
