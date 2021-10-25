@@ -28,9 +28,9 @@ class App extends Component {
   render() {
     const { monsters, serachField } = this.state;
     const filteredMonsters = monsters.filter(monster => monster.name.toLowerCase().includes(serachField.toLocaleLowerCase()))
-    console.log(filteredMonsters)
     return (
       <div className="App">
+        <h1>Monsters Rolodex</h1>
         <SearchBox placeholder="search monsters" handleChange={this.onSearchChange}/>
         <CardList monsters={filteredMonsters} />
       </div>
