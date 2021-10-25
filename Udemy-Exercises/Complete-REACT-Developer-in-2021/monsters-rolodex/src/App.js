@@ -13,7 +13,7 @@ class App extends Component {
     }
   }
 
-  handleSearchField = (e) => {
+  onSearchChange = (e) => {
     this.setState({
       serachField: e.target.value
     })
@@ -31,7 +31,7 @@ class App extends Component {
     console.log(filteredMonsters)
     return (
       <div className="App">
-        <SearchBox placeholder="search monsters" handleChange={this.handleSearchField}/>
+        <SearchBox placeholder="search monsters" handleChange={this.onSearchChange}/>
         <CardList monsters={filteredMonsters} />
       </div>
     );
