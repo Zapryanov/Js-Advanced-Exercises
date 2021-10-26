@@ -1,0 +1,9 @@
+.wrapper-card {
+    background-color: blanchedalmond;
+    display: flex;
+    flex-flow: column;
+    margin: 10px;
+    min-width: 300px;
+    align-items: center;
+}
+
