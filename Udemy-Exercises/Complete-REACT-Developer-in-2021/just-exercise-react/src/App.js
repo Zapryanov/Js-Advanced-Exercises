@@ -17,8 +17,8 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.monsters[0])
     const {monsters} = this.state;
+    
     return (
       <div className="App">
         <header className="App-header">
