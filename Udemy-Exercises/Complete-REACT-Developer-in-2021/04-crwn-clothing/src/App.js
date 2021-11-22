@@ -10,7 +10,7 @@ import HomePage from './pages/home-page/homePage.component';
 import ShopPage from './pages/shop-page/shop.component';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.action';
-import { selectCurrentUser } from "./redux/user/user.action";
+import { selectCurrentUser } from "./redux/user/user.selectors";
 
 class App extends React.Component {
 
