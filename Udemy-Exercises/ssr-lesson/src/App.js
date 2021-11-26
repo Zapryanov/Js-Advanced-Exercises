@@ -14,9 +14,9 @@ function App() {
 
   return (
     <div className="wrapper">
-      {count}
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decrement</button>
+      <div className="count">{count}</div>
+      <button className="left" onClick={increment}>Increment</button>
+      <button className="right" onClick={decrement}>Decrement</button>
     </div>
   );
 }

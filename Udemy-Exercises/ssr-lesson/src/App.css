@@ -1,5 +1,14 @@
 .wrapper {
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.count {
+  margin: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+.left {
+  margin: 5px;
 }
