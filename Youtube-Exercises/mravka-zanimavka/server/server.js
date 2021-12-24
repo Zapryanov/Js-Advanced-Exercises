@@ -7,6 +7,8 @@ import ReactDOMServer from 'react-dom';
 
 import App from '../src/App';
 
+const PORT = 8000;
+
 const app = express();
 
 app.use('^/$', (req, res, next) => {
@@ -21,6 +23,11 @@ app.use('^/$', (req, res, next) => {
                 `<div id='root'>${ReactDOMServer.renderToString(<App />)}</div>`
             )
         );
-    })
-})
+    });
+});
 
+app.use(express.static(path.resolve(__dirname, "..", "build")))
+
+app.listen(PORT, () => {
+    console.log(`App launched on port: ${PORT}`);
+})
