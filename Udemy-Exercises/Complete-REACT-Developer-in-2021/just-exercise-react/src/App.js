@@ -1,33 +1,15 @@
-import React, { Component } from 'react';
-import CardList from './components/card-list/card-list.component';
-
-class App extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      monsters: []
-    }
-  }
-
-  componentDidMount() {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(res => res.json())
-      .then(data => this.setState({monsters: data}))
-  }
-
-  render() {
-    const {monsters} = this.state;
-    
-    return (
-      <div className="App">
-        <header className="App-header">
-          <CardList monsters={monsters}/>
-        </header>
-
+function App() {
+  return (
+    <div>
+      <h1>My Todos</h1>
+      <div className="card">
+        <h2>TITLE</h2>
+        <div className="actions">
+          <button>Delete</button>
+        </div>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default App;
