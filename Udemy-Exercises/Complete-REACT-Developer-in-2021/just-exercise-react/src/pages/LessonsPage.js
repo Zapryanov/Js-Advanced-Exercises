@@ -1,7 +1,7 @@
 function LessonsPage() {
     return (
         <div>
-            <h1>LessonsPage</h1>
+            <h1>Уроци</h1>
         </div>
     )
 }
