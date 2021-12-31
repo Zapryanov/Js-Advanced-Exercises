@@ -1,0 +1,81 @@
+.header {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+
+.header .link {
+    color: rgba(58, 150, 211, 0.7);
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* --- Start Animation Header --- */
+
+/* Show all navigation */
+/* .header .wrap-logo {
+    transform: translateY(-200%);
+    transition: transform 0.5s ease;
+    width: 150px;
+}
+
+.header nav {
+    margin-right: 20px;
+
+}
+
+
+.header .wrap-logo.show-after-load {
+    transform: translateX(0);
+} */
+
+/* Show only brown low dash - НЕ РАБОТИ ЗАРАДИ ПЪРВАТА АНИМАЦИЯ!!!!!!!!!!!!*/
+
+/* nav li {
+    position: relative;
+}
+
+.link .nav-link::before,
+.link .show-dash::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: brown;
+    position: absolute;
+    bottom: -2px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.link .show-dash::before {
+    opacity: 1;
+}
+
+.link .nav-link:hover::before {
+    display: block;
+    opacity: 1;
+} */
+
+/* --- End Animation Header --- */
+
+.header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+
+.header nav ul li:not(:last-child):after {
+    background-color: #56585f;
+    content: "";
+    height: 15px;
+    right: -12px;
+    position: absolute;
+    top: 2px;
+    width: 1px;
+}

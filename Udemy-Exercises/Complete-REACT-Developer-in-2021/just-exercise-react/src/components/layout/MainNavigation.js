@@ -1,22 +1,23 @@
 import { Link } from 'react-router-dom';
+import styles from './MainNavigation.module.css';
 
 function MainNavigation() {
     return (
-        <header>
+        <header className={styles.header}>
             <div>Мравка Занимавка</div>
             <nav>
                 <ul>
                     <li>
-                        <Link to="/">Мравка Занимавка</Link>
+                        <Link className={`${styles.link} ${styles["nav-link"]}`} to="/">Мравка Занимавка</Link>
                     </li>
                     <li>
-                        <Link to="/lessons">Уроци</Link>
+                        <Link className={`${styles.link} ${styles["nav-link"]}`} to="/lessons">Уроци</Link>
                     </li>
                     <li>
-                        <Link to="/gallery">Галерия</Link>
+                        <Link className={`${styles.link} ${styles["nav-link"]}`} to="/gallery">Галерия</Link>
                     </li>
                     <li>
-                        <Link to="/contacts">Контакти</Link>
+                        <Link className={`${styles.link} ${styles["nav-link"]}`} to="/contacts">Контакти</Link>
                     </li>
                 </ul>
             </nav>
