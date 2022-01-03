@@ -19,6 +19,9 @@ function MainNavigation() {
                     <li>
                         <Link className={`${styles.link} ${styles["nav-link"]}`} to="/contacts">Контакти</Link>
                     </li>
+                    <li>
+                        <Link className={`${styles.link} ${styles["nav-link"]}`} to="/create">Контакти</Link>
+                    </li>
                 </ul>
             </nav>
         </header>

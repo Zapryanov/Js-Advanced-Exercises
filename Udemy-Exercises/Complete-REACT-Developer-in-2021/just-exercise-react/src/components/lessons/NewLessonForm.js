@@ -15,9 +15,9 @@ function NewLessonForm() {
                 </div>
                 <div className={styles.control}>
                     <label htmlFor='description'>Добавяне на текст</label>
-                    <textarea id='description' required></textarea>
+                    <textarea id='description' required rows='5'></textarea>
                 </div>
-                <div className={styles.action}>
+                <div className={styles.actions}>
                     <button>Добави урок</button>
                 </div>
             </form>
