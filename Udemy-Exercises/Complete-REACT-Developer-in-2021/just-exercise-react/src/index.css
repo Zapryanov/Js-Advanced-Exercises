@@ -19,3 +19,16 @@ h2 {
   font-size: 1.5rem;
   color: #2c292b;
 }
+
+h4 {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrap-all-lessons {
+  text-align: center;
+}
