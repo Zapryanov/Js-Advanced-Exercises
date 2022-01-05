@@ -3,27 +3,25 @@ import { useRef } from 'react';
 import Card from '../ui/Card';
 import styles from './NewLessonForm.module.css';
 
-function NewLessonForm() {
+function NewLessonForm(props) {
     const titleInputRef = useRef();
-
     const imageInputRef = useRef();
-
     const textInputRef = useRef();
 
     function submitHandler(e) {
         e.preventDefault();
 
-        const title = titleInputRef.current.value;
-        const image = imageInputRef.current.value;
-        const text = textInputRef.current.value;
+        const enteredTitle = titleInputRef.current.value;
+        const enteredImage = imageInputRef.current.value;
+        const enteredText = textInputRef.current.value;
 
         const lessonData = {
-            title,
-            image,
-            text
-        }
+            title: enteredTitle,
+            image: enteredImage,
+            text: enteredText
+        }     
         
-        console.log(lessonData)
+        props.onAddLesson(lessonData);
     }
 
     return (
