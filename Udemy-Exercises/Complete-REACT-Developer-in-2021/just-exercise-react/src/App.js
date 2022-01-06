@@ -6,6 +6,7 @@ import GalleryPage from "./pages/GalleryPage";
 import ContactsPage from "./pages/ContactsPage";
 import Layout from "./components/layout/Layout";
 import CreateNewLessonPage from "./pages/CreateNewLessonPage";
+import FavoritsPage from "./pages/FavoritsPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/gallery" component={GalleryPage} />
         <Route path="/contacts" component={ContactsPage} />
         <Route path="/create" component={CreateNewLessonPage} />
+        <Route path="/favorites" component={FavoritsPage} />
       </Switch>
     </Layout>
   );
