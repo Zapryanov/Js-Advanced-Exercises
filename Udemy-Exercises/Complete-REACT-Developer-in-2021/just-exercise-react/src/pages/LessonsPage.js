@@ -17,6 +17,11 @@ function LessonsPage() {
             }).then(data => {
                 const lessons = [];
 
+// We can't put the data directly here because we're not getting an array, we're getting an object instead,
+// where the first key values are auto-generated IDs with nested objects
+// This is necessary because in the other file, we expect an array and 
+// through the Map () function we will extract the data
+
                 for (let key in data) {
                     const lesson = {
                         id: key,

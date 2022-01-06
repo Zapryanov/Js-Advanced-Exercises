@@ -29,6 +29,10 @@ img {
   height: auto;
 }
 
+section {
+  text-align: center;
+}
+
 .wrap-all-lessons {
   text-align: center;
 }
