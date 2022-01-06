@@ -10,7 +10,7 @@ function LessonList(props) {
                     id={lesson.id} 
                     image={lesson.image} 
                     title={lesson.title}
-                    description={lesson.description}
+                    text={lesson.text}
                 />
             ))}
         </ul>

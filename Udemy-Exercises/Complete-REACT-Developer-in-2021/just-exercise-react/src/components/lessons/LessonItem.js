@@ -9,7 +9,7 @@ function LessonItem(props) {
                 <div className={styles["wrap-img-article"]}>
                     <img src={props.image} alt={props.title} />
                 </div>
-                <p className={`${styles["wrap-text-article"]} ${styles["lesson"]}`}>{props.description}</p>
+                <p className={`${styles["wrap-text-article"]} ${styles["lesson"]}`}>{props.text}</p>
                 <button className={`${styles["btn-show-text"]} ${styles["lesson-page"]}`}>Покажи повече</button>
             </Card>
         </li>
