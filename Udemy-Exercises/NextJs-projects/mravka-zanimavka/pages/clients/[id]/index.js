@@ -7,7 +7,9 @@ function ClientProjectsPage() {
     console.log(router.query);
 
     function loadProjectHandler() {
-        console.log("Yes...");
+        // load data
+
+        console.log("Yes... from (clients/[id]/index.js)");
         router.push(`/clients/${router.query.id}/projectA`)
     }
 
