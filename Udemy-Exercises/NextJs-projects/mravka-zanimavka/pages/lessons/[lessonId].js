@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 function CurrentLessonId() {
     const router = useRouter();
 
-    console.log("router pathname - ", router.pathname);
     console.log("router query - ", router.query);
 
     // Send request to some backend server to fetch 
