@@ -14,3 +14,24 @@ a {
 * {
   box-sizing: border-box;
 }
+
+ol, ul {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	list-style: none;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.wrap-all-lessons {
+  margin: 0 auto;
+  text-align: center;
+  width: 76%;
+}

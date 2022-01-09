@@ -1,15 +1,18 @@
-import Image from "next/image"
+import Link from "next/link";
 
 function LessonItem(props) {
+    const { title, image, text, id } = props;
+    const exploreLesson = `/lesson/${id}`;
+
     return (
         <li>
             <div className="current-article">
-                <h4>{props.title}</h4>
+                <h4>{title}</h4>
                 <div className="wrap-img-article">
-                    <Image src={props.image} alt={props.title} />
+                    <img src={image} alt={title} />
                 </div>
-                <p className="wrap-text-article italic lesson one">{props.text}</p>
-                <button className="btn-show-text lesson-page">Виж повече</button>
+                <p className="wrap-text-article italic lesson one">{text}</p>
+                <Link href={exploreLesson} className="btn-show-text lesson-page">Виж повече</Link>
             </div>
         </li>
     )
