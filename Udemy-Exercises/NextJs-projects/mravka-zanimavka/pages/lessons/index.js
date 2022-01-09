@@ -4,8 +4,6 @@ function LessonsPage() {
     const [isLoading, setIsLoading] = useState(true);
     const [loadedLessons, setLoadedLessons] = useState([]);
 
-    let lessons;
-
     useEffect(() => {
         setIsLoading(true);
         fetch("https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app/lessons.json")
@@ -13,6 +11,16 @@ function LessonsPage() {
                 return response.json();
             })
             .then(data => {
+                const lessons = [];
+
+                for (const key in data) {
+                    const lesson = {
+                        id: key,
+                        ...data[key]
+                    }
+
+                    lessons.push(lesson);
+                }
                 setIsLoading(false);
                 setLoadedLessons(data);
             })
@@ -23,7 +31,6 @@ function LessonsPage() {
         return (
             <section>
                 <p>Is loading...</p>
-                
             </section>
         )
     }
@@ -31,6 +38,7 @@ function LessonsPage() {
     return (
         <div>
             <h1>Lessons Page</h1>
+            {loadedLessons.map((lesson) => {<ul><li key={lesson.id}>{lesson.text}</li></ul>})}
         </div>
     )
 }
