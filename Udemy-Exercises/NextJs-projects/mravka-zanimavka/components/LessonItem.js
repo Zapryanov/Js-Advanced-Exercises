@@ -3,7 +3,7 @@ import styles from "./LessonItem.module.css";
 
 function LessonItem(props) {
     const { title, image, text, id } = props;
-    const exploreLesson = `/lesson/${id}`;
+    const exploreLesson = `/lessons/${id}`;
 
     return (
         <li>

@@ -11,6 +11,7 @@ function CurrentLessonId() {
     return (
         <div>
             <h1>Current Lesson Id</h1>
+            <h2>{router.query.lessonId}</h2>
         </div>
     )
 }
