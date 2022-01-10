@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from "./LessonItem.module.css";
 
 function LessonItem(props) {
     const { title, image, text, id } = props;
@@ -12,7 +13,9 @@ function LessonItem(props) {
                     <img src={image} alt={title} />
                 </div>
                 <p className="wrap-text-article italic lesson one">{text}</p>
-                <Link href={exploreLesson} className="btn-show-text lesson-page">Виж повече</Link>
+                <button className={styles.btn}>
+                    <Link href={exploreLesson}>Виж повече</Link>
+                </button>
             </div>
         </li>
     )

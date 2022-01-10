@@ -2,3 +2,8 @@
     margin: 0 auto;
     width: 80%;
 }
+
+.btn {
+    background-color: #56585f(189, 184, 184);
+    border-radius: 4px;
+}
