@@ -7,15 +7,15 @@ function LessonItem(props) {
 
     return (
         <li>
-            <div className="current-article">
+            <div className={styles["current-article"]}>
                 <h4>{title}</h4>
-                <div className="wrap-img-article">
+                <div className={styles["wrap-img-article"]}>
                     <img src={image} alt={title} />
                 </div>
-                <p className="wrap-text-article italic lesson one">{text}</p>
-                <button className={styles.btn}>
-                    <Link href={exploreLesson}>Виж повече</Link>
-                </button>
+                <p className={`${styles["wrap-text-article"]} ${styles.italic} ${styles.one}`}>{text}</p>
+                <Link href={exploreLesson}>
+                    <a className={styles.btn}>Виж повече</a>
+                </Link>
             </div>
         </li>
     )
