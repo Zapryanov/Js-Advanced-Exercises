@@ -13,9 +13,6 @@ function LessonItem(props) {
                     <img src={image} alt={title} />
                 </div>
                 <p className={`${styles["wrap-text-article"]} ${styles.italic} ${styles.one}`}>{text}</p>
-                {/* <Link href={exploreLesson}>
-                    <a className={styles.btn}>Виж повече</a>
-                </Link> */}
                 <ButtonOne link={exploreLesson}>Виж повече</ButtonOne>
             </div>
         </li>
