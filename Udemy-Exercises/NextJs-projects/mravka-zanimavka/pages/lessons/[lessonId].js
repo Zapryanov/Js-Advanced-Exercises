@@ -12,6 +12,9 @@ function CurrentLessonId() {
     console.log("router query",router.query.lessonId);
     const lessonId = router.query.lessonId;
 
+    // Send request to some backend server to fetch 
+    // the piece of data with an ID of router.query.lessonId
+
     useEffect(() => {
         fetch(`https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app/lessons.json`)
         .then(res => {
@@ -34,9 +37,6 @@ function CurrentLessonId() {
             setLoadedLesson(theLesson)
         })
     }, [lessonId]);
-
-    // Send request to some backend server to fetch 
-    // the piece of data with an ID of router.query.lessonId
 
     return (
         <div>
