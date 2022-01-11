@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import LessonList from "../../components/LessonList";
+import LessonList from "../../components/lessons/LessonList";
 
 // const DUMMY_DATA = [
 //     {

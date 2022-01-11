@@ -1,4 +1,4 @@
-import LessonForm from "../../components/LessonForm";
+import LessonForm from "../../components/lessons/LessonForm";
 
 function AddNewLesson(props) {
     function addLessonHandler(lessonData) {
