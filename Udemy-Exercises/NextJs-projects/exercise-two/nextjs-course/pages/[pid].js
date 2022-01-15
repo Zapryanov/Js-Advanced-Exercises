@@ -6,6 +6,12 @@ import { Fragment } from "react";
 function ProductDetailPage(props) {
     const { loadedProduct } = props;
 
+    if (!loadedProduct) {
+        return (
+            <h1>Loading...</h1>
+        )
+    }
+
     return (
         <Fragment>
             <h1>{loadedProduct.title}</h1>
@@ -34,15 +40,9 @@ export async function getStaticProps(context) {
 export async function getStaticPaths() {
     return {
         paths: [
-            { params: { pid: "p1" } },
-            { params: { pid: "p2" } },
-            { params: { pid: "p3" } },
-            { params: { pid: "p4" } },
-            { params: { pid: "p5" } },
-            { params: { pid: "p6" } },
-            { params: { pid: "p7" } }
+            { params: { pid: "p1" } }
         ],
-        fallback: false
+        fallback: true
     }
 }
 
