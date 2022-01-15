@@ -40,6 +40,7 @@ export async function getStaticPaths() {
             { params: { pid: "p4" } },
             { params: { pid: "p5" } },
             { params: { pid: "p6" } },
+            { params: { pid: "p7" } }
         ],
         fallback: false
     }
