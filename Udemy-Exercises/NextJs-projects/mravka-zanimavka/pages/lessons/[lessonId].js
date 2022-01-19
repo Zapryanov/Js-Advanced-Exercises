@@ -21,7 +21,8 @@ export async function getStaticProps(context) {
     return {
         props: {
             selectedLesson: lesson
-        }
+        },
+        revalidate: 30
     }
 }
 
