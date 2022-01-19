@@ -50,7 +50,8 @@ export async function getStaticProps() {
     return {
         props: {
             lessons: allLessons
-        }
+        },
+        revalidate: 1800
     }
 }
 
