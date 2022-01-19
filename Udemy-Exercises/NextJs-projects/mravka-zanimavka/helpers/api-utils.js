@@ -13,3 +13,8 @@ export async function getAllLessons() {
 
     return lessons;
 }
+
+export async function getLessonById(id) {
+    const allLessons = await getAllLessons();
+    return allLessons.filter(lesson => lesson.id === id);
+}
