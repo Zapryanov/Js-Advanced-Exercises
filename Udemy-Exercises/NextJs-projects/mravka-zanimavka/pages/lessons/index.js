@@ -1,40 +1,37 @@
 import React, { useEffect, useState } from "react";
+import useSWR from "swr";
 
 import LessonList from "../../components/lessons/LessonList";
+import { getAllLessons } from "../../helpers/api-utils";
 
-function LessonsPage() {
-    const [ isLoading, setIsLoading ] = useState(true);
-    const [ loadedLessons, setLoadedLessons ] = useState([]);
+function LessonsPage(props) {
+    const [ loadedLessons, setLoadedLessons ] = useState(props.lessons);
+
+    const {data, error} = useSWR("https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app/lessons.json");
 
     useEffect(() => {
-        setIsLoading(true);
+        if (data) {
+            const transformedLessons = [];
 
-        fetch("https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app/lessons.json")
-            .then(res => {
-                return res.json();
-            })
-            .then(data => {
-                const lessons = [];
+            for(let key in data) {
+                transformedLessons.push({ 
+                    id: key, 
+                    image: data[key].image, 
+                    text: data[key].text, 
+                    title: data[key].title 
+                });
+            }
 
-                for (let key in data) {
-                    const lesson = {
-                        id: key,
-                        ...data[key]
-                    }
-                    lessons.push(lesson)
-                }
+            setLoadedLessons(transformedLessons);
+        }
+    }, [data]);
 
-                setIsLoading(false);
-                setLoadedLessons(lessons);
-            })
-    }, []);
+    if (error) {
+        return  <h1>Failed to load!!!</h1>
+    }
 
-    if (isLoading) {
-        return (
-            <section>
-                <p>Loading.....</p>
-            </section>
-        )
+    if (!data && !loadedLessons) {
+        return  <h1>Loading...</h1>
     }
 
     return (
@@ -45,6 +42,16 @@ function LessonsPage() {
             </div>
         </div>
     )
+}
+
+export async function getStaticProps() {
+    const allLessons = await getAllLessons();
+
+    return {
+        props: {
+            lessons: allLessons
+        }
+    }
 }
 
 export default LessonsPage;
