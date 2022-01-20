@@ -4,6 +4,12 @@ import { getAllLessons, getLessonById } from '../../helpers/api-utils';
 function CurrentLessonId(props) {
     const lesson = props.selectedLesson;
 
+    if (!lesson) {
+        return (
+            <h1>Loading...</h1>
+        )
+    }
+
     return (
         <div>
             <h1>Current Lesson Id</h1>
@@ -32,7 +38,7 @@ export async function getStaticPaths() {
 
     return {
         paths: pathsId,
-        fallback: false
+        fallback: true
     }
 }
 
