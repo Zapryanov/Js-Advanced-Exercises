@@ -6,6 +6,7 @@ function HomePage() {
         <div>
             <Head>
                 <title>Уроци по китайски с Мравка Занимавка</title>
+                <meta name='description' content='изучаване на китайски език с деца от най-ранна детска възраст в град Пловдив' />
             </Head>
             <h1>The Home Page</h1>
             <ul>
