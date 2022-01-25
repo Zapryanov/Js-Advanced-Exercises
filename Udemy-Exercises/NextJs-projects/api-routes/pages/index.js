@@ -1,8 +1,8 @@
-import { useRef } from 'react';
+import { useRef } from "react";
 
 function HomePage() {
-  const emailInputRef = useRef();
-  const feedbackInputRef = useRef();
+  let emailInputRef = useRef();
+  let feedbackInputRef = useRef();
 
   function submitFormHandler(event) {
     event.preventDefault();
@@ -10,21 +10,27 @@ function HomePage() {
     const enteredEmail = emailInputRef.current.value;
     const enteredFeedback = feedbackInputRef.current.value;
 
-    const reqBody = {
-      email: enteredEmail,
-      text: enteredFeedback
-    }
-    
-    fetch("/api/feedback", {
-      method: "POST",
-      body: JSON.stringify(reqBody),
-      headers: {
-        "Content-Type": "application/json"
-      },
-    })
-      .then(response => response.json())
-      .then((data) => console.log(data))
+    if (enteredEmail.length > 3 && enteredFeedback.length > 0) {
+      const reqBody = {
+        email: enteredEmail,
+        text: enteredFeedback,
+      };
 
+      fetch("/api/feedback", {
+        method: "POST",
+        body: JSON.stringify(reqBody),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+
+        emailInputRef.current.value = "";
+        feedbackInputRef.current.value = "";
+    } else {
+      console.log("Please fill in the empty fields...")
+    }
   }
 
   return (
