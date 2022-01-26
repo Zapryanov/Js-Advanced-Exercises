@@ -14,13 +14,17 @@ function LessonForm(props) {
         const enteredImage = imageInputRef.current.value;
         const enteredText = textInputRef.current.value;
 
-        const lessonData = {
-            title: enteredTitle,
-            image: enteredImage,
-            text: enteredText
+        if (enteredTitle !== "" && enteredImage !== "" && enteredText !== "") {
+            const lessonData = {
+                title: enteredTitle,
+                image: enteredImage,
+                text: enteredText
+            }
+    
+            props.onAddLesson(lessonData);
+        } else {
+            console.log("You have missed an input field...!")
         }
-
-        props.onAddLesson(lessonData);
     }
 
     return (
