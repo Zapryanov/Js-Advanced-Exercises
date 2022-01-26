@@ -1,11 +1,11 @@
 import { Fragment, useState } from "react";
-import { buildFeedbackPath, extractFeedback } from "../api/feedback";
+import { buildFeedbackPath, extractFeedback } from "../api/feedback/index";
 
 function FeedbackPage(props) {
     const [feedbackData, setFeedbackData] = useState()
 
     function loadFeedbackHandler(id) {
-        fetch(`/api/${id}`)
+        fetch(`/api/feedback/${id}`)
             .then(response => response.json())
             .then(data => {
                 // Тук указваме да е "data.feedback", защото във сървърния файл [feedbackId]
