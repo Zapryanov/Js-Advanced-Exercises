@@ -1,13 +1,33 @@
+import { Fragment, useState } from "react";
 import { buildFeedbackPath, extractFeedback } from "../api/feedback";
 
 function FeedbackPage(props) {
-    console.log("From FeedbackPage", props)
+    const [feedbackData, setFeedbackData] = useState()
+
+    function loadFeedbackHandler(id) {
+        fetch(`/api/${id}`)
+            .then(response => response.json())
+            .then(data => {
+                // Тук указваме да е "data.feedback", защото във сървърния файл [feedbackId]
+                // му зададохме това пропърти (feedback) - res.status(200).json({ feedback: selectedFeedback })
+                setFeedbackData(data.feedback);
+            });
+    }
+
     return (
-        <ul>
-            {props.feedbackItems.map((item) => (
-                <li key={item.id}>{item.text}</li>
-            ))}
-        </ul>
+        <Fragment>
+            {feedbackData && <p>{feedbackData.email}</p>}
+            <ul>
+                {props.feedbackItems.map((item) => (
+                    <li key={item.id}>
+                        {item.text}{" "} 
+                        <button onClick={loadFeedbackHandler.bind(null, item.id)}>
+                            Show Details
+                        </button>
+                    </li>
+                ))}
+            </ul>
+        </Fragment>
     )
 }
 
