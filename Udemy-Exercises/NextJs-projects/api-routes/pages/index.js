@@ -1,6 +1,8 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 function HomePage() {
+  const [feedbackItems, setFeedbackItems] = useState([]);
+
   let emailInputRef = useRef();
   let feedbackInputRef = useRef();
 
@@ -26,11 +28,19 @@ function HomePage() {
         .then((response) => response.json())
         .then((data) => console.log(data));
 
-        emailInputRef.current.value = "";
-        feedbackInputRef.current.value = "";
+      emailInputRef.current.value = "";
+      feedbackInputRef.current.value = "";
     } else {
-      console.log("Please fill in the empty fields...")
+      console.log("Please fill in the empty fields...");
     }
+  }
+
+  function loadFeedbackHandler() {
+    fetch("/api/feedback")
+      .then((response) => response.json())
+      .then((data) => {
+        setFeedbackItems(data.feedback);
+      });
   }
 
   return (
@@ -47,6 +57,13 @@ function HomePage() {
         </div>
         <button>Send Feedback</button>
       </form>
+      <hr />
+      <button onClick={loadFeedbackHandler}>Load Feedback</button>
+      <ul>
+        {feedbackItems.map((item) => (
+          <li key={item.id}>{item.text}</li>
+        ))}
+      </ul>
     </div>
   );
 }
