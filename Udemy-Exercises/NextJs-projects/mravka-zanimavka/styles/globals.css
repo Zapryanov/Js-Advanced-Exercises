@@ -35,8 +35,19 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
+h1 {
+  color: rgba(233, 119, 119, 1);
+  font-size: 2.5em;
+  text-align: center;
+}
+
 .wrap-all-lessons {
   margin: 0 auto;
   text-align: center;
+  width: 76%;
+}
+
+
+.main {
   width: 76%;
 }

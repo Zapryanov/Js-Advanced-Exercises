@@ -11,7 +11,16 @@ function MainHeader() {
             <nav className={styles.navigation}>
                 <ul>
                     <li>
-                        <Link href="/lessons">Мравка Занимавка</Link>
+                        <Link href="/">Мравка Занимавка</Link>
+                    </li>
+                    <li>
+                        <Link href="/lessons">Уроци</Link>
+                    </li>
+                    <li>
+                        <Link href="/galery">Галерия</Link>
+                    </li>
+                    <li>
+                        <Link href="/contacts">Контакти</Link>
                     </li>
                 </ul>
             </nav>
