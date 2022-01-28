@@ -1,20 +1,20 @@
 import LessonItem from "./lesson-item";
+import styles from "./lesson-list.module.css";
 
 function LessonList(props) {
     const { lessons } = props;
-    lessons.map(lesson => console.log(lesson.image))
-    console.log("from Lesson-List - ", lessons)
+    
     return (
-        <ul>
-        {lessons.map((lesson) => (
-            <LessonItem
-                key={lesson.id}
-                id={lesson.id}
-                title={lesson.title}
-                image={lesson.image}
-                text={lesson.text}
-            />
-        ))}
+        <ul className={styles["wrap-all-lessons"]}>
+            {lessons.map((lesson) => (
+                <LessonItem
+                    key={lesson.id}
+                    id={lesson.id}
+                    title={lesson.title}
+                    image={lesson.image}
+                    text={lesson.text}
+                />
+            ))}
         </ul>
     );
 }
