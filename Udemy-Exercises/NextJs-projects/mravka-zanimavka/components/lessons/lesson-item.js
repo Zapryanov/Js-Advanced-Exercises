@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 
 function LessonItem(props) {
@@ -9,7 +9,7 @@ function LessonItem(props) {
         <li key={id}>
             <h4>{title}</h4>
             <div>
-                <Image width={500} height={300} src="/images/learning-plan.png" alt={title} />
+                <img src={image} alt={title} />
             </div>
             <p>{text}</p>
             <Link href={exploreLink}>Виж повече</Link>
