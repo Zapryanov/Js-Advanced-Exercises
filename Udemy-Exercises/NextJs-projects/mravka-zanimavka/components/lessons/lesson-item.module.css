@@ -1,3 +1,79 @@
-.wrap-image {
-    width: 100%;
+.lesson-container {
+    background-color: #fefefe;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px inset rgb(141 34 34 / 70%);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(141, 34, 34, 1);
+    width: 80%;
 }
+
+.title-lesson {
+    flex: 1 0 100%;
+}
+
+.wrap-image {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.text-lesson {
+    color: #777;
+    flex: 1 0 100%;
+    font-family: 'Open Sans', arial, sans-serif;
+    font-size: 15px;
+    padding: 10px 10%;
+}
+
+/* start styling btn-lesson */
+.btn-lesson {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.btn-lesson:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.btn-lesson:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.btn-lesson:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+/* end styling btn-lesson */

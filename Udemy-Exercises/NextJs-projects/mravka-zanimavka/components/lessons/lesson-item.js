@@ -1,18 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import styles from "./lesson-item.module.css";
+
 function LessonItem(props) {
     const { id, image, title, text } = props;
     const exploreLink = `/lessons/${id}`;
 
     return (
-        <li key={id}>
-            <h4>{title}</h4>
-            <div>
-                <Image width={700} height={550} src={image} alt={title} />
+        <li className={styles["lesson-container"]} key={id}>
+            <h4 className={styles["title-lesson"]}>{title}</h4>
+            <div className={styles["wrap-image"]}>
+                <Image className={styles.image} width={1200} height={750} src={image} alt={title} />
             </div>
-            <p>{text}</p>
-            <Link href={exploreLink}>Виж повече</Link>
+            <p className={styles["text-lesson"]}>{text}</p>
+            <Link href={exploreLink}>
+                <a className={styles["btn-lesson"]}>Виж повече</a>
+            </Link>
         </li>
     )
 }
