@@ -27,6 +27,18 @@ export async function getStaticProps() {
         })
     }
 
+    if (!loadedLessons) {
+        return {
+            redirect: {
+                destination: "/"
+            }
+        }
+    }
+
+    if (loadedLessons.length === 0) {
+        return { notFound: true }
+    }
+
     // Pass data to the page via props
     return { 
         props: { 

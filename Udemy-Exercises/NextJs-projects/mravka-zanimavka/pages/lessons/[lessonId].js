@@ -3,17 +3,25 @@ import { useRouter } from "next/router";
 function CurrentLesson(props) {
     const router = useRouter();
 
+    const { lesson } = props;
+
     function goBack() {
         router.push("/lessons")
     }
 
+    if (!lesson) {
+        return (
+            <h1>Loading current Lesson...</h1>
+        )
+    }
+
     return (
         <div>
-            <h1>{props.title}</h1>
+            <h1>{lesson.title}</h1>
             <div>
                 Image
             </div>
-            <p>{props.text}</p>
+            <p>{lesson.text}</p>
             <button onClick={goBack}>Go back</button>
         </div>
     )
@@ -21,7 +29,6 @@ function CurrentLesson(props) {
 
 export async function getStaticProps(context) {
     const { params } = context;
-    console.log("From getStaticProps in lessonId - ", params);
 
     const lessonId = params.lessonId;
 
@@ -39,6 +46,7 @@ export async function getStaticProps(context) {
         })
     }
 
+    // Retrieve the searched lesson
     const currentLesson = loadedLessons.find(lesson => lesson.id === lessonId);
 
     return {
