@@ -12,7 +12,7 @@ function LessonsPage(props) {
     )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     // Fetch data from external API
     const res = await fetch(`https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app/lessons.json`)
     const data = await res.json()
@@ -28,7 +28,12 @@ export async function getServerSideProps() {
     }
 
     // Pass data to the page via props
-    return { props: { loadedLessons } }
+    return { 
+        props: { 
+            loadedLessons 
+        },
+        revalidate: 600 
+    }
 }
 
 export default LessonsPage;
