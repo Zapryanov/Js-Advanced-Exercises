@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import { getCurrentLesson } from "../../data/getData";
 
 function CurrentLesson(props) {
     const router = useRouter();
@@ -18,9 +19,7 @@ function CurrentLesson(props) {
     return (
         <div>
             <h1>{lesson.title}</h1>
-            <div>
-                Image
-            </div>
+            <div>Image</div>
             <p>{lesson.text}</p>
             <button onClick={goBack}>Go back</button>
         </div>
@@ -29,25 +28,9 @@ function CurrentLesson(props) {
 
 export async function getStaticProps(context) {
     const { params } = context;
-
     const lessonId = params.lessonId;
 
-    // Fetch data from external API
-    const res = await fetch(`https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app/lessons.json`)
-    const data = await res.json()
-  
-    // Transform the data from Firebase
-    const loadedLessons = [];
-    
-    for (const key in data) {
-        loadedLessons.push({
-            id: key, 
-            ...data[key]
-        })
-    }
-
-    // Retrieve the searched lesson
-    const currentLesson = loadedLessons.find(lesson => lesson.id === lessonId);
+    const currentLesson = await getCurrentLesson(lessonId);
 
     return {
         props: {
