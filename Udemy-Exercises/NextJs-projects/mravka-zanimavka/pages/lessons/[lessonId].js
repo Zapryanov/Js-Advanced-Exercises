@@ -32,6 +32,10 @@ export async function getStaticProps(context) {
 
     const currentLesson = await getCurrentLesson(lessonId);
 
+    if (!currentLesson) {
+        return { notFound: true }
+    }
+
     return {
         props: {
             lesson: currentLesson
@@ -42,11 +46,12 @@ export async function getStaticProps(context) {
 export async function getStaticPaths() {
     const data = await getAllLessons();
     const ids = data.map(lesson => lesson.id);
+    
     const pathsWithParams = ids.map(id => ({ params: { lessonId: id } }))
 
     return {
         paths: pathsWithParams,
-        fallback: false
+        fallback: true
     }
 }
 
