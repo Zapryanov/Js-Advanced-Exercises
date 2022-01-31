@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { getCurrentLesson } from "../../data/getData";
+import { getAllLessons, getCurrentLesson } from "../../data/getData";
 
 function CurrentLesson(props) {
     const router = useRouter();
@@ -40,13 +40,13 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
+    const data = await getAllLessons();
+    const ids = data.map(lesson => lesson.id);
+    const pathsWithParams = ids.map(id => ({ params: { lessonId: id } }))
+
     return {
-        paths: [
-            { params: { lessonId: "-Msdiga337qQ9LruZGKQ" } },
-            { params: { lessonId: "-Mse90PRarcejkqEh-HC" } },
-            { params: { lessonId: "-Mt2PeaBhBjJr4XygjKg" } }
-        ],
-        fallback: true
+        paths: pathsWithParams,
+        fallback: false
     }
 }
 
