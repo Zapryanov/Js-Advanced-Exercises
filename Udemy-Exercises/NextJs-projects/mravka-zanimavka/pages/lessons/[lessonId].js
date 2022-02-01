@@ -4,6 +4,9 @@ import { getAllLessons, getCurrentLesson } from "../../data/getData";
 function CurrentLesson(props) {
     const router = useRouter();
 
+    // Getting the data (details current lesson) 
+    // from getStaticProps in combination with getStaticPaths
+    // and the were retrieved here with the props object
     const { lesson } = props;
 
     function goBack() {
@@ -46,7 +49,7 @@ export async function getStaticProps(context) {
 export async function getStaticPaths() {
     const data = await getAllLessons();
     const ids = data.map(lesson => lesson.id);
-    
+
     const pathsWithParams = ids.map(id => ({ params: { lessonId: id } }))
 
     return {
