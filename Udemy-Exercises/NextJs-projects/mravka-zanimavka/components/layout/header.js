@@ -13,26 +13,26 @@ function Header() {
                     </a>
                 </Link>
             </div>
-            <nav>
+            <nav className={styles.nav}>
                 <ul>
                     <li>
                         <Link href="/">
-                            <a>Мравка Занимавка</a>
+                            <a className={styles["nav-link"]}>Мравка Занимавка</a>
                         </Link>
                     </li>
                     <li>
                         <Link href="/lessons">
-                            <a>Уроци</a>
+                            <a className={styles["nav-link"]}>Уроци</a>
                         </Link>
                     </li>
                     <li>
                         <Link href="/gallery">
-                            <a>Галерия</a>
+                            <a className={styles["nav-link"]}>Галерия</a>
                         </Link>
                     </li>
                     <li>
                         <Link href="/contacts">
-                            <a>Контакти</a>
+                            <a className={styles["nav-link"]}>Контакти</a>
                         </Link>
                     </li>
                 </ul>
