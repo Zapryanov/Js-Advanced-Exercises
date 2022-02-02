@@ -42,7 +42,8 @@ export async function getStaticProps(context) {
     return {
         props: {
             lesson: currentLesson
-        }
+        },
+        revalidate: 1800
     }
 }
 
