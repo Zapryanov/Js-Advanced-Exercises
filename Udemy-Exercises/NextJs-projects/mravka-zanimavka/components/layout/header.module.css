@@ -1,0 +1,35 @@
+.header {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+.header nav {
+    margin-right: 20px;
+}
+
+.header a {
+    color: rgba(58, 150, 211, 0.7);
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+
+.header nav ul li:not(:last-child):after {
+    background-color: #56585f;
+    content: "";
+    height: 15px;
+    right: -12px;
+    position: absolute;
+    top: 2px;
+    width: 0.5px;
+}

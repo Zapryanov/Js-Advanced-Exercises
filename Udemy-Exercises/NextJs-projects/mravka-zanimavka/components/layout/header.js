@@ -1,8 +1,10 @@
 import Link from "next/link";
 
+import styles from "./header.module.css";
+
 function Header() {
     return (
-        <header>
+        <header className={styles.header}>
             <div>
                 <Link href="/">
                     Logo
