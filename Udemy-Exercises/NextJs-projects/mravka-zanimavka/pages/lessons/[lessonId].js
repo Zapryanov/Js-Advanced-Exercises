@@ -1,4 +1,6 @@
+import Head from "next/head";
 import { useRouter } from "next/router";
+import { Fragment } from "react";
 import { getAllLessons, getCurrentLesson } from "../../data/getData";
 
 function CurrentLesson(props) {
@@ -20,12 +22,16 @@ function CurrentLesson(props) {
     }
 
     return (
-        <div>
+        <Fragment>
+            <Head>
+                <title>{lesson.title}</title>
+                <meta name="description" content={lesson.text} />
+            </Head>
             <h1>{lesson.title}</h1>
             <div>Image</div>
             <p>{lesson.text}</p>
             <button onClick={goBack}>Go back</button>
-        </div>
+        </Fragment>
     )
 }
 
