@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { Fragment } from "react";
 import { getAllLessons, getCurrentLesson } from "../../data/getData";
@@ -28,7 +29,9 @@ function CurrentLesson(props) {
                 <meta name="description" content={lesson.text} />
             </Head>
             <h1>{lesson.title}</h1>
-            <div>Image</div>
+            <div>
+                <Image width={1200} height={750} src={lesson.image} alt={lesson.title}/>
+            </div>
             <p>{lesson.text}</p>
             <button onClick={goBack}>Go back</button>
         </Fragment>
