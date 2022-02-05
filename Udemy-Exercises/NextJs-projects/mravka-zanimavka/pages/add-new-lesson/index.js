@@ -1,9 +1,13 @@
 import { useRef } from "react";
 
+import { useRouter } from "next/router";
+
 function AddNewLesson() {
     const titleInputRef = useRef();
     const urlInputRef = useRef();
     const textInputRef = useRef();
+
+    const router = useRouter();
     
     function submitFormHandler(e) {
         e.preventDefault();
@@ -14,8 +18,20 @@ function AddNewLesson() {
 
         console.log(enteredTtitle, enteredUrl, enteredText);
 
+        const reqBody = { title: enteredTtitle, image: enteredUrl, text: enteredText }
+
         if (enteredTtitle !== "" && enteredUrl !== "" && enteredText !== "") {
-            
+            fetch("/api/lessonApi", {
+                method: "POST",
+                body: JSON.stringify(reqBody),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+
+            router.push("/lessons");
         }
     }
 
