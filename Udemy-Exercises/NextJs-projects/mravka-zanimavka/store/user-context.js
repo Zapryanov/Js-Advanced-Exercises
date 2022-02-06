@@ -4,8 +4,4 @@ const UserContext = createContext({
     loggedIn: "false"
 });
 
-export function UserContextProvider(props) {
-    return <UserContext.Provider>{props.children}</UserContext.Provider>
-}
-
-export default UserContext;
+export default UserContext
