@@ -26,7 +26,6 @@ function SignUp() {
 
         setLoading(true);
         try {
-            console.log(currentUser)
             await login(emailRef.current.value, passwordRef.current.value)
         } catch (error) {
             alert("Error from Log In")
