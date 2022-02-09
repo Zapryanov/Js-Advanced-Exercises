@@ -19,6 +19,8 @@ function SignUp() {
             alert(`Error from Sign Up: ${error.message}`);
         }
         setLoading(false);
+        emailRef.current.value = "";
+        passwordRef.current.value = "";
     }
 
     async function handleLogin(e) {
@@ -31,6 +33,8 @@ function SignUp() {
             alert("Error from Log In")
         }
         setLoading(false);
+        emailRef.current.value = "";
+        passwordRef.current.value = "";
     }
 
     async function handleLogOut(e) {
@@ -45,7 +49,8 @@ function SignUp() {
         setLoading(false);
     }
 
-    // 
+    // Изчисти инпут полетата след логване или разлогване и
+    // направи нужните проверки.............!!!
 
     return (
         <form>
