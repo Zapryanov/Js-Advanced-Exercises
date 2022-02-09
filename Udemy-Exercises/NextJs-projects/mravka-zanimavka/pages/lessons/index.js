@@ -18,7 +18,7 @@ function LessonsPage(props) {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const loadedLessons = await getAllLessons();
 
     if (!loadedLessons) {
@@ -37,8 +37,7 @@ export async function getStaticProps() {
     return { 
         props: { 
             loadedLessons 
-        },
-        revalidate: 1800 
+        }
     }
 }
 
