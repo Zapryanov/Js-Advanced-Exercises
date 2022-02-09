@@ -15,6 +15,18 @@ function CurrentLesson(props) {
     function goBack() {
         router.push("/lessons")
     }
+    
+    const idToDelete = lesson.id;
+    
+    function deleteLesson() {
+        fetch(`https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app/lessons/${idToDelete}.json`, {
+                method: "DELETE"
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+
+        router.push("/lessons")
+    }
 
     if (!lesson) {
         return (
@@ -34,6 +46,7 @@ function CurrentLesson(props) {
             </div>
             <p>{lesson.text}</p>
             <button onClick={goBack}>Go back</button>
+            <button onClick={deleteLesson}>Delete</button>
         </Fragment>
     )
 }
