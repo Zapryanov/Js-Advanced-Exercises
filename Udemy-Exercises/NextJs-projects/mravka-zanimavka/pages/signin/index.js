@@ -1,14 +1,15 @@
 import { useRef, useState, useContext } from "react";
-
-import { logout, signup, login, useAuth } from "../../firebase/initFirebase";
-
 import UserContext from "../../store/user-context";
+import { logout, signup, login, useAuth } from "../../firebase/initFirebase";
+import styles from "./index.module.css";
+
 
 function SignInPage() {
     const userContext = useContext(UserContext);
     const { logIn, logOut} = userContext;
 
     const [loading, setLoading] = useState(false);
+
     const currentUser = useAuth();
 
     const emailRef = useRef();
@@ -24,6 +25,7 @@ function SignInPage() {
             alert(`Error from Sign Up: ${error.message}`);
         }
         setLoading(false);
+
         emailRef.current.value = "";
         passwordRef.current.value = "";
     }
@@ -41,6 +43,7 @@ function SignInPage() {
             alert("Error from Log In")
         }
         setLoading(false);
+
         emailRef.current.value = "";
         passwordRef.current.value = "";
     }
@@ -58,21 +61,31 @@ function SignInPage() {
         setLoading(false);
     }
 
-    // Изчисти инпут полетата след логване или разлогване и
-    // направи нужните проверки.............!!!
-
     return (
-        <form>
-            <div>Currently logged in as: {currentUser?.email}</div>
-            <p>{currentUser?.uid}</p>
-            <div>
-                <input type="email" placeholder="Email" ref={emailRef} />
-                <input type="password" placeholder="Password" ref={passwordRef} />
+        <>
+            <div className={styles.background}>
+                <div className={styles.shape}></div>
+                <div className={styles.shape}></div>
             </div>
-            <button disabled={ loading || currentUser } onClick={handleSignup}>Sign Up</button>
-            <button disabled={ loading || currentUser } onClick={handleLogin}>Log In</button>
-            <button disabled={ loading || !currentUser } onClick={handleLogOut}>Log Out</button>
-        </form>
+            <form className={styles.form}>
+                <h3>Login Here</h3>
+                <div>
+                    <div>
+                        <label className={styles.label} htmlFor="username">Username</label>
+                        <input id="username" className={styles.input} type="email" placeholder="Email" ref={emailRef} />
+                    </div>
+                    <div>
+                        <label className={styles.label} htmlFor="password">Password</label>
+                        <input id="password" className={styles.input} type="password" placeholder="Password" ref={passwordRef} />
+                    </div>
+                </div>
+                <div>
+                    <button className={styles.button} disabled={ loading || currentUser } onClick={handleSignup}>Sign Up</button>
+                    <button className={styles.button} disabled={ loading || currentUser } onClick={handleLogin}>Log In</button>
+                    <button className={styles.button} disabled={ loading || !currentUser } onClick={handleLogOut}>Log Out</button>
+                </div>
+            </form>
+        </>
     )
 }
 
