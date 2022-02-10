@@ -1,8 +1,10 @@
-import { useRef } from "react";
+import { useRef, useContext } from "react";
 
 import { useRouter } from "next/router";
+import UserContext from "../../store/user-context";
 
 function AddNewLesson() {
+    const { user } = useContext(UserContext)
     const titleInputRef = useRef();
     const urlInputRef = useRef();
     const textInputRef = useRef();
@@ -18,7 +20,7 @@ function AddNewLesson() {
 
         console.log(enteredTtitle, enteredUrl, enteredText);
 
-        const reqBody = { title: enteredTtitle, image: enteredUrl, text: enteredText }
+        const reqBody = { title: enteredTtitle, image: enteredUrl, text: enteredText, accessToken: user?.accessToken }
 
         if (enteredTtitle !== "" && enteredUrl !== "" && enteredText !== "") {
             fetch("/api/lessonApi", {

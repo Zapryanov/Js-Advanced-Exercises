@@ -1,15 +1,19 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import { getAllLessons, getCurrentLesson } from "../../data/getData";
+import UserContext from "../../store/user-context";
 
 function CurrentLesson(props) {
+    const userContext = useContext(UserContext)
+    const { loggedIn, user } = userContext
+    console.log(user);
     const router = useRouter();
 
     // Getting the data (details current lesson) 
     // from getStaticProps in combination with getStaticPaths
-    // and the were retrieved here with the props object
+    // and the were retrieved here with the PROPS object
     const { lesson } = props;
 
     function goBack() {
@@ -19,13 +23,20 @@ function CurrentLesson(props) {
     const idToDelete = lesson.id;
     
     function deleteLesson() {
-        fetch(`https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app/lessons/${idToDelete}.json`, {
+        fetch(`https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app/lessons/${idToDelete}.json?auth=${user?.accessToken}`, {
                 method: "DELETE"
             })
-            .then(response => response.json())
-            .then(data => console.log(data))
-
-        router.push("/lessons")
+            .then(response =>{ 
+                console.log(response);
+                if (!response.ok) {
+                    throw new error('Error')
+                }
+                response.json()})
+            .then(data => {
+                console.log(data);
+                router.push("/lessons");
+            })
+            .catch(error => console.error(error))
     }
 
     if (!lesson) {
@@ -46,7 +57,7 @@ function CurrentLesson(props) {
             </div>
             <p>{lesson.text}</p>
             <button onClick={goBack}>Go back</button>
-            <button onClick={deleteLesson}>Delete</button>
+            {loggedIn && <button onClick={deleteLesson}>Delete</button>}
         </Fragment>
     )
 }
@@ -77,7 +88,7 @@ export async function getStaticPaths() {
 
     return {
         paths: pathsWithParams,
-        fallback: true
+        fallback: "blocking"
     }
 }
 

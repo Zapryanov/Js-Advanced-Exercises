@@ -1,8 +1,13 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useContext } from "react";
 
 import { logout, signup, login, useAuth } from "../../firebase/initFirebase";
 
-function SignUp() {
+import UserContext from "../../store/user-context";
+
+function SignInPage() {
+    const userContext = useContext(UserContext);
+    const { logIn, logOut} = userContext;
+
     const [loading, setLoading] = useState(false);
     const currentUser = useAuth();
 
@@ -28,7 +33,10 @@ function SignUp() {
 
         setLoading(true);
         try {
-            await login(emailRef.current.value, passwordRef.current.value)
+            const user = await login(emailRef.current.value, passwordRef.current.value)
+            const {accessToken, email, uid} = user.user
+
+            logIn({accessToken, email, uid})
         } catch (error) {
             alert("Error from Log In")
         }
@@ -43,6 +51,7 @@ function SignUp() {
         setLoading(true);
         try {
             await logout();
+            logOut();
         } catch (error) {
             alert("Error from Log Out")
         }
@@ -67,4 +76,4 @@ function SignUp() {
     )
 }
 
-export default SignUp;
+export default SignInPage;

@@ -3,6 +3,7 @@ function handler(req, res) {
         const titleLesson = req.body.title;
         const urlLesson = req.body.image;
         const textLesson = req.body.text;
+        const accessToken = req.body.accessToken;
 
         if (!titleLesson || !urlLesson || !textLesson) {
             res.status(422).join({ message: "You have an empty input field/s...!" });
@@ -15,7 +16,7 @@ function handler(req, res) {
             text: textLesson
         }
 
-        fetch("https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app/lessons.json", {
+        fetch(`https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app/lessons.json?auth=${accessToken}`, {
                 method: "POST",
                 body: JSON.stringify(newLesson),
                 headers: {
