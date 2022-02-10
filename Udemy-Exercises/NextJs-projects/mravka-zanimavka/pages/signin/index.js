@@ -79,9 +79,9 @@ function SignInPage() {
                         <input id="password" className={styles.input} type="password" placeholder="Password" ref={passwordRef} />
                     </div>
                 </div>
-                <div>
+                <div className={styles.wrapButtons}>
                     <button className={styles.button} disabled={ loading || currentUser } onClick={handleSignup}>Sign Up</button>
-                    <button className={styles.button} disabled={ loading || currentUser } onClick={handleLogin}>Log In</button>
+                    <button className={styles.button} disabled={ loading || currentUser } onClick={handleLogin}>Sign In</button>
                     <button className={styles.button} disabled={ loading || !currentUser } onClick={handleLogOut}>Log Out</button>
                 </div>
             </form>
