@@ -1,14 +1,21 @@
 .lesson-container {
-    background-color: #fefefe;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px inset rgb(141 34 34 / 70%);
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    padding: 5px;
-    margin-bottom: 20px;
-    border: 1px solid rgba(141, 34, 34, 1);
-    width: 80%;
+  /* background-color: #fefefe;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px inset rgb(141 34 34 / 70%); */
+/* ------------------------------------------------------------ */
+  backdrop-filter: blur(10px);
+  background-color: #ffffed;
+  border: 2px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 35px rgba(8,7,16,0.6);
+/* ------------------------------------------------------------- */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 5px;
+  margin-bottom: 20px;
+  /* border: 1px solid rgba(141, 34, 34, 1); */
+  width: 80%;
 }
 
 .title-lesson {
@@ -16,18 +23,18 @@
 }
 
 .wrap-image {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .text-lesson {
-    color: #777;
-    flex: 1 0 100%;
-    font-family: 'Open Sans', arial, sans-serif;
-    font-size: 15px;
-    padding: 10px 10%;
+  color: #777;
+  flex: 1 0 100%;
+  font-family: 'Open Sans', arial, sans-serif;
+  font-size: 15px;
+  padding: 10px 10%;
 }
 
 /* start styling btn-lesson */
