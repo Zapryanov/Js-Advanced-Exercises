@@ -5,10 +5,12 @@ import { Fragment, useContext } from "react";
 import { getAllLessons, getCurrentLesson } from "../../data/getData";
 import UserContext from "../../store/user-context";
 
+import styles from "./[lessonId].module.css";
+
 function CurrentLesson(props) {
     const userContext = useContext(UserContext)
     const { loggedIn, user } = userContext
-    console.log(user);
+
     const router = useRouter();
 
     // Getting the data (details current lesson) 
@@ -51,13 +53,17 @@ function CurrentLesson(props) {
                 <title>{lesson.title}</title>
                 <meta name="description" content={lesson.text} />
             </Head>
-            <h1>{lesson.title}</h1>
-            <div>
-                <Image width={1200} height={750} src={lesson.image} alt={lesson.title}/>
+            <div className={styles["wrap-current-lesson"]}>
+                <h3 className={styles["width-line"]}>{lesson.title}</h3>
+                <div className={`${styles["width-line"]} ${styles["wrap-image"]}`}>
+                    <Image className={`${styles["image-lesson"]} ${styles["box-shadow"]}`} width={1200} height={750} src={lesson.image} alt={lesson.title}/>
+                </div>
+                <p className={`${styles["width-line"]} ${styles.text}`}>{lesson.text}</p>
+                <div className={styles["wrap-buttons"]}>
+                    <button className={styles["btn-lesson"]} onClick={goBack}>Go back</button>
+                    {loggedIn && <button className={`${styles["btn-lesson"]} ${styles.delete}`} onClick={deleteLesson}>Delete</button>}
+                </div>
             </div>
-            <p>{lesson.text}</p>
-            <button onClick={goBack}>Go back</button>
-            {loggedIn && <button onClick={deleteLesson}>Delete</button>}
         </Fragment>
     )
 }

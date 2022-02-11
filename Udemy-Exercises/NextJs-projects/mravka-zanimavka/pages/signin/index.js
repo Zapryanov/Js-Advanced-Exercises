@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { useRef, useState, useContext } from "react";
 import UserContext from "../../store/user-context";
 import { logout, signup, login, useAuth } from "../../firebase/initFirebase";
@@ -15,14 +16,17 @@ function SignInPage() {
     const emailRef = useRef();
     const passwordRef = useRef();
 
+    const router = useRouter();
+
     async function handleSignup(e) {
         e.preventDefault();
 
         setLoading(true);
         try {
             await signup(emailRef.current.value, passwordRef.current.value);
+            router.push("/lessons");
         } catch (error) {
-            alert(`Error from Sign Up: ${error.message}`);
+            alert(`Error from Sign Up: Please fill in the input fields correctly ...!`);
         }
         setLoading(false);
 
@@ -30,7 +34,7 @@ function SignInPage() {
         passwordRef.current.value = "";
     }
 
-    async function handleLogin(e) {
+    async function handleSignin(e) {
         e.preventDefault();
 
         setLoading(true);
@@ -39,8 +43,9 @@ function SignInPage() {
             const {accessToken, email, uid} = user.user
 
             logIn({accessToken, email, uid})
+            router.push("/lessons");
         } catch (error) {
-            alert("Error from Log In")
+            alert("Error from Sign In: Please fill in the input fields correctly ...!")
         }
         setLoading(false);
 
@@ -81,7 +86,7 @@ function SignInPage() {
                 </div>
                 <div className={styles.wrapButtons}>
                     <button className={styles.button} disabled={ loading || currentUser } onClick={handleSignup}>Sign Up</button>
-                    <button className={styles.button} disabled={ loading || currentUser } onClick={handleLogin}>Sign In</button>
+                    <button className={styles.button} disabled={ loading || currentUser } onClick={handleSignin}>Sign In</button>
                     <button className={styles.button} disabled={ loading || !currentUser } onClick={handleLogOut}>Log Out</button>
                 </div>
             </form>
