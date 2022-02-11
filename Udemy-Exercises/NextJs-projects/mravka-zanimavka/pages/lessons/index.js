@@ -20,6 +20,15 @@ function LessonsPage(props) {
 
 export async function getServerSideProps() {
     const loadedLessons = await getAllLessons();
+    const cuttedLessons = loadedLessons.map(lesson => (
+            {
+                id: lesson.id, 
+                title: lesson.title,
+                image: lesson.image, 
+                text: `${lesson.text.substring(0, 50)}..........`
+            }
+        ))
+    console.log(loadedLessons)
 
     if (!loadedLessons) {
         return {
@@ -36,7 +45,7 @@ export async function getServerSideProps() {
     // Pass data to the page via props
     return { 
         props: { 
-            loadedLessons 
+            loadedLessons: cuttedLessons 
         }
     }
 }
