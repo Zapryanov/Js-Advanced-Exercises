@@ -1,0 +1,13 @@
+.wrap-gallery-images {
+    display: flex;
+    justify-content: center;
+}
+
+.small-image {
+    flex: 0 1 31%;
+}
+
+.big-image {
+    flex: 0 1 48%;
+    margin-top: 3%;
+}
