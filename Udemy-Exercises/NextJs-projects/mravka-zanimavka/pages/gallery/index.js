@@ -83,8 +83,6 @@ export async function getServerSideProps() {
         }
     })
 
-    console.log(lastFive)
-
     return {
         props: {
             lastFiveLessons: lastFive
