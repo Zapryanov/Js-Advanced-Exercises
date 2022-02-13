@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import BigButton from "../components/big-button";
 import styles from "./index.module.css";
 
 function HomePage() {
@@ -35,11 +36,7 @@ function HomePage() {
                 </div>
             </article>
             <article className={`${styles.description} ${styles.three}`}>
-                <div className={styles["leaf-effect"]}>
-                    <a href="https://www.facebook.com/MravkaZanimavka">
-                        <Image width={1200} height={200} src="https://res.cloudinary.com/audipower/image/upload/v1643362891/save-lesson_izgw4s.png" alt="link-facebook" />
-                    </a>
-                </div>
+                <BigButton />
             </article>
         </div>
     )
