@@ -1,20 +1,78 @@
+import Image from "next/image";
 import { getAllLessons } from "../../data/getData";
 import styles from "./index.module.css";
 
 function GalleryPage(props) {
     const { lastFiveLessons } = props;
-    console.log(lastFiveLessons)
+
+    function smallOrBig(i) {
+        if (i < 3) {
+            return "small-image";
+        } else {
+            return "big-image";
+        }
+    }
+
     return (
         <>
             <h1>Gallery Page</h1>
-            <section>
-                <div className={styles["wrapper-gallery-images"]}>
-
+            <section className={styles["gallery-wrapper"]}>
+                <div className={styles["wrap-gallery-images"]}>
+                    <ul>
+                        {lastFiveLessons.map((lesson, i) => (
+                            <li key={lesson.id} className={styles[smallOrBig(i)]}>
+                                <Image width={450} height={300} src={lesson.image} alt="gallery-image" />    
+                            </li>
+                        ))}
+                    </ul>
                 </div>
-                <div></div>
+                <div className={styles["gallery-text-container"]}>
+                    <p className={styles.text}>
+                        <span className={styles.bold}>Ученето чрез творчество</span> използва детското 
+                        <span className={styles.bold}> въображение</span>, което от своя страна:
+                    </p>
+                    <ul>
+                        <li>
+                            <p>
+                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1644776882/red-heart_emcwxg.png" alt="heart" />
+                            </p>
+                            <p>
+                                Подобрява <span className={styles.bold}>концентрацията</span>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1644776882/red-heart_emcwxg.png" alt="heart" />
+                            </p>
+                            <p>
+                                Улеснява създаването на <span className={styles.bold}>причинно-следствените връзки</span>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1644776882/red-heart_emcwxg.png" alt="heart" />
+                            </p>
+                            <p>
+                                <span className={styles.bold}>Стимулира запаметяването</span>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1644776882/red-heart_emcwxg.png" alt="heart" />
+                            </p>
+                            <p>
+                                <span className={styles.bold}>Развива старанието и упоритостта</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
             </section>
-            <section>
-                <div></div>
+            <section className={`${styles.description} ${styles.three}`}>
+                <div className={styles["leaf-effect"]}>
+                    <a href="https://www.facebook.com/MravkaZanimavka">
+                        <Image width={1200} height={200} src="https://res.cloudinary.com/audipower/image/upload/v1643362891/save-lesson_izgw4s.png" alt="link-facebook" />
+                    </a>
+                </div>
             </section>
         </>
     )

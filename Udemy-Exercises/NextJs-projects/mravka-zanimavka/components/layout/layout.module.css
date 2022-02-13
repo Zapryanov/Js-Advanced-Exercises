@@ -5,9 +5,9 @@
     width: 90%;
     max-width: 1200px;
     margin:  0 auto;
-    /* min-height: 100vh; */
 }
 
 .main {
+    min-height: 90vh;
     width: 100%;
 }

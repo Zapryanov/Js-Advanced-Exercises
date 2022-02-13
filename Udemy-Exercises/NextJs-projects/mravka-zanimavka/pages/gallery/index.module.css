@@ -1,13 +1,102 @@
-.wrap-gallery-images {
+.gallery-wrapper {
     display: flex;
     justify-content: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.wrap-gallery-images {
+    display: flex;
+    flex: 0 1 48%;
+    justify-content: center;
+}
+
+.wrap-gallery-images ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
 
 .small-image {
     flex: 0 1 31%;
+    
 }
 
 .big-image {
     flex: 0 1 48%;
     margin-top: 3%;
+    width: 50%;
 }
+
+.gallery-text-container {
+    justify-content: flex-start;
+    padding-top: 0;
+    margin-left: 20px;
+    display: flex;
+    flex-flow: column;
+    flex: 0 1 48%;
+    padding: 20px;
+}
+
+.gallery-text-container ul li {
+    display:  flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+
+.gallery-text-container ul li p:first-child {
+    margin-right: 10px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+/* ---------------------------------------------- */
+
+.leaf-effect {
+    align-self: center;
+    background-color: #fff;
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, .5) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: #41403e;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Neucha, sans-serif;
+    font-size: 1rem;
+    line-height: 23px;
+    outline: none;
+    padding: .75rem;
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .leaf-effect:hover {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+    transform: translate3d(0, 5px, 0);
+  }
+  
+  .leaf-effect:focus {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+  }
+  
+  .leaf-effect:active {
+      -webkit-transform: scale(0.8) translateY(20%);
+      transform: scale(0.8) translateY(20%);
+  }
