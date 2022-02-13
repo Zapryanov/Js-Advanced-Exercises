@@ -28,7 +28,6 @@ export async function getServerSideProps() {
                 text: `${lesson.text.substring(0, 50)}..........`
             }
         ))
-    console.log(loadedLessons)
 
     if (!loadedLessons) {
         return {
