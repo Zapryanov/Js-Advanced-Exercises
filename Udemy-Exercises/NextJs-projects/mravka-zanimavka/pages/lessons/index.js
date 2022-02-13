@@ -1,4 +1,5 @@
 import Head from "next/head";
+import BigButton from "../../components/big-button";
 
 import LessonList from "../../components/lessons/lesson-list";
 import { getAllLessons } from "../../data/getData";
@@ -14,6 +15,7 @@ function LessonsPage(props) {
             </Head>
             <h1>Lessons Page</h1>
             <LessonList lessons={props.loadedLessons} />
+            <BigButton />
         </div>
     )
 }

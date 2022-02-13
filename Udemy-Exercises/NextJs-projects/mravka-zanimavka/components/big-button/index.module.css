@@ -24,6 +24,7 @@
     border-bottom-right-radius: 225px 15px;
     border-top-left-radius: 255px 15px;
     border-top-right-radius: 15px 225px;
+    margin-bottom: 30px;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
