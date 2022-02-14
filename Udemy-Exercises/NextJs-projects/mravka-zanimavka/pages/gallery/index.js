@@ -76,12 +76,17 @@ function GalleryPage(props) {
 }
 
 export async function getServerSideProps() {
-    const allLessons = await getAllLessons();
-    const lastFive = allLessons.filter((lesson, i) => {
+    let lastFive = [];
+    try {
+        const allLessons = await getAllLessons();
+        lastFive = allLessons.filter((lesson, i) => {
         if (i < 5) {
             return lesson;
         }
     })
+    } catch (error) {
+        console.log(error);
+    }
 
     return {
         props: {
