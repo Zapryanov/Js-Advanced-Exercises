@@ -60,6 +60,7 @@ function SignInPage() {
         try {
             await logout();
             logOut();
+            router.push("/lessons");
         } catch (error) {
             alert("Error from Log Out")
         }
