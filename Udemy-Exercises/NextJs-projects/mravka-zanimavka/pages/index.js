@@ -5,7 +5,7 @@ import styles from "./index.module.css";
 
 function HomePage() {
     return (
-        <div>
+        <div className={styles["wrap-home-page"]}>
             <h1>За Мравка Занимавка</h1>
             <article className={`${styles.description} ${styles.one}`}>
                 <p className={styles.text}>С Мравка Занимавка децата се докосват до китайския език и култура.</p>

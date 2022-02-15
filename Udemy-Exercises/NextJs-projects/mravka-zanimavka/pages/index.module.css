@@ -63,3 +63,18 @@
 }
 
 /* ---End Two------------- */
+
+@media (max-width: 768px) {
+    .two {
+        flex-flow: column;
+    }
+
+    .two .wrap-img,
+    .two .wrap-text {
+        width: 100%;
+    }
+
+    .wrap-img {
+        margin-bottom: 20px;
+    }
+}
