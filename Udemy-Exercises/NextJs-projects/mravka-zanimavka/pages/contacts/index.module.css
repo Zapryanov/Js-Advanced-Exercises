@@ -1,0 +1,57 @@
+.wrap-contacts-page {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.wrap-contacts-page section {
+    flex: 1 0 100%;
+}
+
+.center {
+    margin: 0 auto;
+    width: 300px;
+}
+
+.wrap-socials {
+    display: flex;
+    flex: 1 0 100%;
+    margin: 5px 0;
+}
+
+.wrap-socials span:first-child {
+    margin-right: 5px;
+}
+
+.wrap-google-maps {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(0, 255, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.googleText {
+    color: rgba(233, 119, 119, 1);
+    text-shadow: 1px 1px 0 rgba(0 0 0 / 50%);
+    position: absolute;
+    top: -10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.googleText::after {
+    content: "";
+    background-image: url("https://res.cloudinary.com/audipower/image/upload/v1643362514/logo_fusle7.png");
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+}
