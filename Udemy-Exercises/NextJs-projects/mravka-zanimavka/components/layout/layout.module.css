@@ -11,3 +11,15 @@
     min-height: 80vh;
     width: 100%;
 }
+
+@media (max-width: 480px) {
+    .main {
+        min-height: 70vh;
+    }
+}
+
+@media (max-width: 320px) {
+    .main {
+        min-height: 60vh;
+    }
+}

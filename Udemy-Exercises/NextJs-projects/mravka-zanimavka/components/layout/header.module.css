@@ -89,4 +89,19 @@ a.nav-link:hover::before {
     .header nav ul li::after {
         display: none;
     }
-  }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px;
+    }
+
+    .header a {
+        font-size: 13px;
+    }
+
+    .header nav ul li {
+        display: block;
+        margin: 2px 0px;
+    }
+}

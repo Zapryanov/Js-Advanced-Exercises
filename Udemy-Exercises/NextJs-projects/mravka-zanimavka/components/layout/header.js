@@ -6,7 +6,7 @@ import styles from "./header.module.css";
 function Header() {
     return (
         <header className={styles.header}>
-            <div>
+            <div className={styles.logo}>
                 <Link href="/">
                     <a>
                         <Image width={150} height={150} src="https://res.cloudinary.com/audipower/image/upload/v1643362514/logo_fusle7.png" alt="logo" />

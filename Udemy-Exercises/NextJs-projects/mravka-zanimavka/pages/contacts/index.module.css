@@ -55,3 +55,50 @@
     width: 70px;
     height: 70px;
 }
+
+@media (max-width: 768px) {
+    .wrap-google-maps {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .center {
+        font-size: 14px;
+        width: 250px;
+    }
+
+    .wrap-socials {
+        margin: 3px 0;
+    }
+
+    .wrap-socials span:first-child {
+        width: 15px;
+    }
+
+    .wrap-google-maps {
+        width: 250px;
+        height: 250px;
+    }
+
+    .googleText {
+        font-size: 10px;
+    }
+
+    .googleText::after {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 320px) {
+    .center {
+        font-size: 12px;
+    width: 200px;
+    }
+    .wrap-google-maps {
+        width: 200px;
+        height: 200px;
+    }
+}
