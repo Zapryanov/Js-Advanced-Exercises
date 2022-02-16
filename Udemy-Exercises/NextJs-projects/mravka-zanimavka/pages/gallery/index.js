@@ -34,33 +34,33 @@ function GalleryPage(props) {
                     </p>
                     <ul>
                         <li>
-                            <p>
+                            <div>
                                 <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1644776882/red-heart_emcwxg.png" alt="heart" />
-                            </p>
+                            </div>
                             <p>
                                 Подобрява <span className={styles.bold}>концентрацията</span>
                             </p>
                         </li>
                         <li>
-                            <p>
+                            <div>
                                 <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1644776882/red-heart_emcwxg.png" alt="heart" />
-                            </p>
+                            </div>
                             <p>
                                 Улеснява създаването на <span className={styles.bold}>причинно-следствените връзки</span>
                             </p>
                         </li>
                         <li>
-                            <p>
+                            <div>
                                 <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1644776882/red-heart_emcwxg.png" alt="heart" />
-                            </p>
+                            </div>
                             <p>
                                 <span className={styles.bold}>Стимулира запаметяването</span>
                             </p>
                         </li>
                         <li>
-                            <p>
+                            <div>
                                 <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1644776882/red-heart_emcwxg.png" alt="heart" />
-                            </p>
+                            </div>
                             <p>
                                 <span className={styles.bold}>Развива старанието и упоритостта</span>
                             </p>
