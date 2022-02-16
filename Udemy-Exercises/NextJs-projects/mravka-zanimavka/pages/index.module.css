@@ -11,6 +11,7 @@
     border-radius: 5px;
     box-shadow: 0 0 12px inset rgb(204 214 61 / 70%);
     padding: 10px;
+    position: relative;
 }
 
 .text {
@@ -74,7 +75,30 @@
         width: 100%;
     }
 
+    .two .wrap-text {
+        padding: 20px;
+    }
+
+    .two .wrap-text p:first-child {
+        margin-bottom: 20px;
+    }
+
     .wrap-img {
+        margin-bottom: 20px;
+    }
+    .fixImage {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrap-home-page p {
+        font-size: 13px;
+    }
+
+    .description {
         margin-bottom: 20px;
     }
 }

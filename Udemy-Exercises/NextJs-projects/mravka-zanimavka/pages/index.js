@@ -19,7 +19,7 @@ function HomePage() {
             <article className={`${styles.description} ${styles.two}`}>
                 <div className={styles["wrap-img"]}>
                     <div className={styles.shadow}>
-                        <Image width={600} height={400} src="https://res.cloudinary.com/audipower/image/upload/v1643362513/chinese-letters-min_gl1xz2.png" alt="write" />
+                        <Image width={660} height={430} src="https://res.cloudinary.com/audipower/image/upload/v1643362513/chinese-letters-min_gl1xz2.png" alt="write" />
                     </div>
                 </div>
                 <div className={styles["wrap-text"]}>
