@@ -13,9 +13,10 @@
   flex-flow: row wrap;
   justify-content: center;
   padding: 5px;
-  margin-bottom: 20px;
-  /* border: 1px solid rgba(141, 34, 34, 1); */
-  width: 80%;
+  /* margin-bottom: 20px; */
+  margin-bottom: 3.33%;
+  /* width: 80%; */
+  width: 45%;
 }
 
 .title-lesson {
@@ -94,3 +95,31 @@
   transform: translateY(2px);
 }
 /* end styling btn-lesson */
+
+/* Start Media Query */
+
+@media (max-width: 1024px) {
+  .btn-lesson {
+    height: 35px;
+  }
+}
+
+@media (max-width: 640px) {
+  .lesson-container {
+    box-shadow: 0 0 25px rgba(8,7,16,0.65);
+    margin-bottom: 30px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 320px) {
+  .text-lesson {
+    font-size: 13px;
+  }
+
+  .btn-lesson {
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

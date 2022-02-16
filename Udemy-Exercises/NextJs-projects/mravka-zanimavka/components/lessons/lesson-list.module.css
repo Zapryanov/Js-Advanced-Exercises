@@ -1,7 +1,9 @@
 .wrap-all-lessons {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    /* justify-content: center; */
+    justify-content: space-evenly;
     margin: 0 auto;
-    width: 60%;
+    /* width: 60%; */
+    width: 100%;
 }
