@@ -25,6 +25,17 @@
     margin-right: 5px;
 }
 
+.linkFacebook {
+    color: rgba(58, 150, 211, 0.7);
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.linkFacebook:hover {
+    text-shadow: 1px 1px 0 rgba(2, 69, 145, 0.5);
+
+}
+
 .wrap-google-maps {
     width: 500px;
     height: 500px;

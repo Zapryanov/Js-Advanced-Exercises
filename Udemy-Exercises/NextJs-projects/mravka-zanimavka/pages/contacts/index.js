@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./index.module.css";
 
 import GoogleMapReact from 'google-map-react';
+import Link from "next/link";
 
 const AnyReactComponent = ({ text }) => <div className={styles.googleText}>{text}</div>;
 
@@ -31,7 +32,13 @@ function ContactsPage() {
                         <span>
                             <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1644830666/facebook_gt0ii9.svg" alt="email" />
                         </span>
-                        <span>Facebook</span>
+                        <span>Facebook:
+                            <Link href="https://www.facebook.com/MravkaZanimavka">
+                                <a className={styles.linkFacebook}>
+                                    &nbsp;Мравка Занимавка
+                                </a>
+                            </Link>
+                        </span>
                     </div>
                     <div className={styles["wrap-socials"]}>
                         <span>
