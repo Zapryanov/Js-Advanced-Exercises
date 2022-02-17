@@ -94,6 +94,10 @@ a.nav-link:hover::before {
 }
 
 @media (max-width: 640px) {
+    .header nav {
+        z-index: 10;
+    }
+
     .header nav ul li {
         display: block;
         margin: 5px 0px;

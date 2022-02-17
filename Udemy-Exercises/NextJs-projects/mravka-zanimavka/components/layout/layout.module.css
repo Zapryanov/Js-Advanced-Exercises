@@ -8,13 +8,13 @@
 }
 
 .main {
-    /* min-height: 80vh; */
+    min-height: 72vh;
     width: 100%;
 }
 
 @media (max-width: 480px) {
     .main {
-        min-height: 70vh;
+        min-height: 83vh;
     }
 }
 
