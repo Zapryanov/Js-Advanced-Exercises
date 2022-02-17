@@ -117,6 +117,10 @@
     width: 100%;
   }
 
+  .wrap-image {
+    width: 90%;
+  }
+
   .text-lesson {
     font-size: 13px;
   }
