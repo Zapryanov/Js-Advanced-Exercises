@@ -97,3 +97,27 @@
 }
 
   /* End styling buttons */
+
+@media (max-width: 640px) {
+    .wrap-current-lesson {
+        width: 90%;
+    }
+
+    .btn-lesson {
+        font-size: 16px;
+    }
+  }
+
+@media (max-width: 480px) {
+    .btn-lesson {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 320px) {
+    .btn-lesson {
+        font-size: 13px;
+        padding: 7px 0;
+        width: 38%;
+    }
+}
