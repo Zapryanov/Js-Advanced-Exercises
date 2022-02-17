@@ -113,6 +113,10 @@
 }
 
 @media (max-width: 320px) {
+  .lesson-container {
+    width: 100%;
+  }
+
   .text-lesson {
     font-size: 13px;
   }
