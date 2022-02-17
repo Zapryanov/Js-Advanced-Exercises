@@ -131,8 +131,12 @@ a.nav-link:hover::before {
         width: 80px;
     }
 
+    .header nav {
+        text-align: center;
+    }
+
     .header nav ul li {
-        margin: 0px;
+        margin: 3px 0 0 0;
     }
 
     .header a {
