@@ -3,6 +3,8 @@ import { useRef, useContext } from "react";
 import { useRouter } from "next/router";
 import UserContext from "../../store/user-context";
 
+import styles from "./index.module.css";
+
 function AddNewLesson() {
     const { user } = useContext(UserContext)
     const titleInputRef = useRef();
@@ -34,22 +36,28 @@ function AddNewLesson() {
             .then(data => console.log(data))
 
             router.push("/lessons");
+        } else {
+            alert("Please fill in the input fields...!")
         }
     }
 
     return (
-        <div>
-            <h1>Добави нов Урок</h1>
-            <form>
-                <div>
+        <div className={styles["wrap-add-lesson"]}>
+            <div className={styles["frame-over-form"]}>
+                <div className={styles.shape}></div>
+                <div className={styles.shape}></div>
+            </div>
+            <form className={styles.form}>
+                <h1>Добави нов Урок</h1>
+                <div className={styles["one-line-element"]}>
                     <label htmlFor="title">Добави заглавие: </label>
                     <input type="text" id="title" ref={titleInputRef} />
                 </div>
-                <div>
+                <div className={styles["one-line-element"]}>
                     <label htmlFor="url">Добави URL на снимка: </label>
                     <input type="url" id="url" ref={urlInputRef} />
                 </div>
-                <div>
+                <div className={styles["one-line-element"]}>
                     <label htmlFor="text">Добави текст: </label>
                     <textarea id="text" rows="5" ref={textInputRef} ></textarea>
                 </div>

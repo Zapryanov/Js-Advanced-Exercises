@@ -1,0 +1,223 @@
+.wrap-add-lesson {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.frame-over-form{
+    width: 55%;
+    height: 68vh;
+    position: absolute;
+}
+
+.form,
+.frame-over-form {
+    transform: translate(-50%,-40%);
+    left: 50%;
+    top: 50%;
+}
+
+.frame-over-form .shape{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.shape:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    right: -45px;
+    top: -45px;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    left: -45px;
+    bottom: -45px;
+}
+
+.form {
+    background-color: rgba(255,255,255,0.13);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    position: absolute;
+    width: 55%;
+    height: 68vh;
+    text-align: center;
+}
+
+.one-line-element {
+    display: flex;
+    flex-flow: column;
+    margin-top: 20px;
+    padding: 0 10%;
+}
+
+.one-line-element label {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.one-line-element input {
+    background-color: rgb(243, 130, 130);
+    border-radius: 3px;
+    border-width: 0;
+    /* -webkit-box-shadow: inset 0px 0px 3px 1px rgb(0 0 0 / 50%); 
+    box-shadow: inset 0px 0px 3px 1px rgb(0 0 0 / 50%); */
+    color: #e5e5e5;
+    font-size: 16px;
+    font-weight: 300;
+    height: 35px;
+    margin-top: 5px;
+    outline: none;
+    padding: 0 10px;
+}
+
+.one-line-element textarea {
+    background-color: white;
+    box-shadow: 0 1px 3px inset;
+    border-radius: 10px;
+    color: #68665d;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 10px auto;
+    outline: none;
+    padding: 10px;
+    width: 90%;
+}
+
+.form button {
+    width: 35%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    touch-action: manipulation;
+    transition: box-shadow .2s,transform .1s;
+}
+
+.form button:hover {
+    background: linear-gradient(
+        #ffffff,
+        #ddd8d8
+    );
+}
+
+.form button:active {
+    background-color: #F7F7F7;
+    border-color: #000000;
+    transform: scale(.96);
+}
+
+@media (max-width: 768px) {
+    .frame-over-form,
+    .form {
+        width: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .frame-over-form,
+    .form {
+        width: 80%;
+    }
+
+    .frame-over-form .shape{
+        height: 70px;
+        width: 70px;
+    }
+
+    .shape:first-child {
+        right: -30px;
+        top: -30px;
+    }
+
+    .shape:last-child {
+        left: -30px;
+        bottom: -30px;
+    }
+
+    .one-line-element label {
+        font-size: 16px;
+    }
+
+    .one-line-element input {
+        font-size: 14px;
+        height: 30px;
+    }
+
+    .form button {
+        font-size: 14px;
+        font-weight: 300;
+        margin-top: 10px;
+        padding: 8px 5px;
+        width: 50%;
+    }
+}
+
+@media (max-width: 320px) {
+    .wrap-add-lesson {
+        height: 600px;
+    }
+
+    .frame-over-form,
+    .form {
+        width: 90%;
+    }
+
+    .frame-over-form .shape{
+        height: 50px;
+        width: 50px;
+    }
+
+    .shape:first-child {
+        right: -15px;
+        top: -15px;
+    }
+
+    .shape:last-child {
+        left: -15px;
+        bottom: -15px;
+    }
+
+    .one-line-element {
+        padding: 0 5%;
+    }
+
+    .one-line-element label {
+        font-size: 14px;
+    }
+
+    .one-line-element input {
+        font-size: 13px;
+        height: 25px;
+    }
+
+    .one-line-element textarea {
+        line-height: 20px;
+        width: 100%;
+    }
+
+    .form button {
+        font-size: 14px;
+        font-weight: 300;
+        margin-top: 10px;
+        padding: 8px 5px;
+        width: 50%;
+    }
+}
