@@ -7,13 +7,13 @@ import { useState, useEffect } from "react";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA844ahyDhdGrVAHtqo9Y4RkCPmDXs5Hc4",
-  authDomain: "mravka-zanimavka.firebaseapp.com",
-  databaseURL: "https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "mravka-zanimavka",
-  storageBucket: "mravka-zanimavka.appspot.com",
-  messagingSenderId: "90942997330",
-  appId: "1:90942997330:web:d37f6836e9010bb6a6308b"
+  apiKey: process.env.apiKey,
+  authDomain: process.env.authDomain,
+  databaseURL: process.env.databaseURL,
+  projectId: process.env.projectId,
+  storageBucket: process.env.storageBucket,
+  messagingSenderId: process.env.messagingSenderId,
+  appId: process.env.appId
 };
 
 // Initialize Firebase

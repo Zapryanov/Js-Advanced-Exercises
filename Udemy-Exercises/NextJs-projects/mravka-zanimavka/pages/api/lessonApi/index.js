@@ -16,7 +16,10 @@ function handler(req, res) {
             text: textLesson
         }
 
-        fetch(`https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app/lessons.json?auth=${accessToken}`, {
+        const connectionString = `${process.env.databaseUrl}/${process.env.currentDatabase}.json?auth=${accessToken}`
+
+        // fetch(`https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app/lessons.json?auth=${accessToken}`, {
+        fetch(connectionString, {
                 method: "POST",
                 body: JSON.stringify(newLesson),
                 headers: {
