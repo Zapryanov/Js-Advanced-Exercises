@@ -35,7 +35,6 @@ function CurrentLesson(props) {
                 }
                 response.json()})
             .then(data => {
-                console.log(data);
                 router.push("/lessons");
             })
             .catch(error => console.error(error))
