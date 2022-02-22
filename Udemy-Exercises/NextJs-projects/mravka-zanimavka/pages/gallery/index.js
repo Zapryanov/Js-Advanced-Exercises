@@ -81,9 +81,9 @@ export async function getServerSideProps() {
         const allLessons = await getAllLessons();
         lastFive = allLessons.filter((lesson, i) => {
         if (i < 5) {
-            return lesson;
-        }
-    })
+                return lesson;
+            }
+        })
     } catch (error) {
         console.log(error);
     }
