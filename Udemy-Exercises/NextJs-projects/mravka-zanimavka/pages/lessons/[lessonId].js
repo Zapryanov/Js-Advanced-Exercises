@@ -25,7 +25,7 @@ function CurrentLesson(props) {
     const idToDelete = lesson.id;
     
     function deleteLesson() {
-        fetch(`https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app/lessons/${idToDelete}.json?auth=${user?.accessToken}`, {
+        fetch(`${process.env.databaseURL}/${process.env.currentDatabase}/${idToDelete}.json?auth=${user?.accessToken}`, {
                 method: "DELETE"
             })
             .then(response =>{ 
