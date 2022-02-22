@@ -109,12 +109,34 @@
   }
 
 @media (max-width: 480px) {
+    h3.width-line {
+        font-size: 21px;
+    }
+
+    .text {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
     .btn-lesson {
         font-size: 14px;
     }
 }
 
 @media (max-width: 320px) {
+    .wrap-current-lesson {
+        width: 100%;
+    }
+
+    h3.width-line {
+        font-size: 18px;
+    }
+
+    .text {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
     .btn-lesson {
         font-size: 13px;
         padding: 7px 0;
