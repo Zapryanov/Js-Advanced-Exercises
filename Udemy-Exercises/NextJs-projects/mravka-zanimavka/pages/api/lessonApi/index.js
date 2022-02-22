@@ -18,8 +18,8 @@ function handler(req, res) {
 
         const connectionString = `${process.env.databaseUrl}/${process.env.currentDatabase}.json?auth=${accessToken}`
 
-        // fetch(`https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app/lessons.json?auth=${accessToken}`, {
-        fetch(connectionString, {
+        // fetch(connectionString, {
+        fetch(`https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app/lessons.json?auth=${accessToken}`, {
                 method: "POST",
                 body: JSON.stringify(newLesson),
                 headers: {
@@ -27,7 +27,7 @@ function handler(req, res) {
                 }
             })
             .then(response => response.json())
-            .then(data => console.log(data))
+            .then(data => console.log("The lesson is added from api/lessonApi - ", data))
 
         res.status(201).json({ message: "Success...", lessonApi: newLesson })
     } else {
