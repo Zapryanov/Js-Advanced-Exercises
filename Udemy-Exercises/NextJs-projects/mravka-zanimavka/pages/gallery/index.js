@@ -16,7 +16,7 @@ function GalleryPage(props) {
 
     return (
         <>
-            <h1>Gallery Page</h1>
+            <h1>Галерия</h1>
             <section className={styles["gallery-wrapper"]}>
                 <div className={styles["wrap-gallery-images"]}>
                     <ul>
@@ -79,11 +79,7 @@ export async function getServerSideProps() {
     let lastFive = [];
     try {
         const allLessons = await getAllLessons();
-        lastFive = allLessons.filter((lesson, i) => {
-        if (i < 5) {
-                return lesson;
-            }
-        })
+        lastFive = allLessons.slice(allLessons.length - 5);
     } catch (error) {
         console.log(error);
     }

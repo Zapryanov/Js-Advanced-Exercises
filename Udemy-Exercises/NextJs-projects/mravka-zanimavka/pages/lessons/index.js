@@ -13,7 +13,7 @@ function LessonsPage(props) {
                 <meta name="description" content="уроци по китайски с мравка занимавка в град пловдив" />
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
-            <h1>Lessons Page</h1>
+            <h1>Уроци</h1>
             <LessonList lessons={props.loadedLessons} />
             <BigButton />
         </div>
@@ -27,7 +27,7 @@ export async function getServerSideProps() {
                 id: lesson.id, 
                 title: lesson.title,
                 image: lesson.image, 
-                text: `${lesson.text.substring(0, 50)}..........`
+                text: `${lesson.text.substring(0, 30)} [ ..... ]`
             }
         ))
 

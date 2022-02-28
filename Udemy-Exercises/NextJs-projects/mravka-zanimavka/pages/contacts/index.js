@@ -19,7 +19,7 @@ function ContactsPage() {
 
     return (
         <div className={styles["wrap-contacts-page"]}>
-            <h1>Contacts Page</h1>
+            <h1>Контакти</h1>
             <section className={styles.contacts}>
                 <div className={styles.center}>
                     <div className={styles["wrap-socials"]}>
