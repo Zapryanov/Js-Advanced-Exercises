@@ -25,11 +25,11 @@ function Header() {
                             <a className={styles["nav-link"]}>Уроци</a>
                         </Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link href="/gallery">
                             <a className={styles["nav-link"]}>Галерия</a>
                         </Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link href="/contacts">
                             <a className={styles["nav-link"]}>Контакти</a>
