@@ -57,7 +57,7 @@ function CurrentLesson(props) {
                 <div className={`${styles["width-line"]} ${styles["wrap-image"]}`}>
                     <Image className={`${styles["image-lesson"]} ${styles["box-shadow"]}`} width={1200} height={750} src={lesson.image} alt={lesson.title}/>
                 </div>
-                <p className={`${styles["width-line"]} ${styles.text}`}>{lesson.text}</p>
+                <p className={`${styles["width-line"]} ${styles.text}`} dangerouslySetInnerHTML={{__html: lesson.text}}></p>
                 <div className={styles["wrap-buttons"]}>
                     <button className={styles["btn-lesson"]} onClick={goBack}>Go back</button>
                     {loggedIn && <button className={`${styles["btn-lesson"]} ${styles.delete}`} onClick={deleteLesson}>Delete</button>}
