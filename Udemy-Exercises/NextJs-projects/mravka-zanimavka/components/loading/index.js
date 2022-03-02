@@ -1,7 +1,9 @@
+import styles from "./index.module.css";
+
 function Loading() {
     return (
         <div>
-            <h1>Loading...</h1>
+            <div className={styles["lds-dual-ring"]}></div>
         </div>
     )
 }
