@@ -14,7 +14,7 @@ export async function getAllLessons() {
             })
         }
 
-        return loadedLessons;
+        return loadedLessons.reverse();
     } catch(err) {
         console.error(err)
     }

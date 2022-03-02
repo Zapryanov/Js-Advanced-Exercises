@@ -21,7 +21,7 @@ function LessonsPage(props) {
 }
 
 export async function getServerSideProps() {
-    const loadedLessons = await (await getAllLessons()).reverse();
+    const loadedLessons = await getAllLessons()
     const cuttedLessons = loadedLessons.map(lesson => (
             {
                 id: lesson.id, 
