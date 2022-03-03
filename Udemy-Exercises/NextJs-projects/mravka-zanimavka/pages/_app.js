@@ -35,12 +35,10 @@ function MyApp({ Component, pageProps }) {
   }, [currentUser])
 
   Router.events.on("routeChangeStart", (url) => {
-    console.log("Router is changing START...");
     setLoading(true);
   })
 
   Router.events.on("routeChangeComplete", (url) => {
-    console.log("Router is change FINISH!!!");
     setLoading(false);
   })
    
