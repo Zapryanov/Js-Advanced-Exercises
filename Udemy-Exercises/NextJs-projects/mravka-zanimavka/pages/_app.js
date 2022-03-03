@@ -1,15 +1,18 @@
-import Head from 'next/head'
-import Layout from '../components/layout/layout'
-import '../styles/globals.css'
-import UserContext from '../store/user-context'
-import { useEffect, useState } from 'react'
+import Head from 'next/head';
+import Layout from '../components/layout/layout';
+import '../styles/globals.css';
+import UserContext from '../store/user-context';
+import { useEffect, useState } from 'react';
 import { useAuth } from '../firebase/initFirebase';
+import { Router } from 'next/router';
+import Loading from '../components/loading';
 
 function MyApp({ Component, pageProps }) {
   const currentUser = useAuth();
   
   const [loggedIn, setLoggedIn] = useState(false);
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const logIn = (user) => {
     if (user) {
@@ -30,6 +33,16 @@ function MyApp({ Component, pageProps }) {
       setUser({ uid, email, accessToken})
     }
   }, [currentUser])
+
+  Router.events.on("routeChangeStart", (url) => {
+    console.log("Router is changing START...");
+    setLoading(true);
+  })
+
+  Router.events.on("routeChangeComplete", (url) => {
+    console.log("Router is change FINISH!!!");
+    setLoading(false);
+  })
    
   return (
     <Layout>
@@ -43,6 +56,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       </Head>
+      {loading && <Loading />}
       <Component {...pageProps} />
       </UserContext.Provider>
     </Layout>
