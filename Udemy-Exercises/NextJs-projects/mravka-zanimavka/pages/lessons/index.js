@@ -21,26 +21,31 @@ function LessonsPage(props) {
 }
 
 export async function getServerSideProps() {
-    const loadedLessons = await getAllLessons()
-    const cuttedLessons = loadedLessons.map(lesson => (
-            {
-                id: lesson.id, 
-                title: lesson.title,
-                image: lesson.image, 
-                text: `${lesson.text.substring(0, 30)} [ ..... ]`
-            }
-        ))
-
-    if (!loadedLessons) {
-        return {
-            redirect: {
-                destination: "/"
+    let cuttedLessons = [];
+    try {
+        const loadedLessons = await getAllLessons()
+        cuttedLessons = loadedLessons.map(lesson => (
+                {
+                    id: lesson.id, 
+                    title: lesson.title,
+                    image: lesson.image, 
+                    text: `${lesson.text.substring(0, 30)} [ ..... ]`
+                }
+            ))
+    
+        if (!loadedLessons) {
+            return {
+                redirect: {
+                    destination: "/"
+                }
             }
         }
-    }
-
-    if (loadedLessons.length === 0) {
-        return { notFound: true }
+    
+        if (loadedLessons.length === 0) {
+            return { notFound: true }
+        }
+    } catch (error) {
+        console.log(error);
     }
 
     // Pass data to the page via props
