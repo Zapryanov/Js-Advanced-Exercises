@@ -13,7 +13,7 @@ function LessonItem(props) {
             <div className={styles["wrap-image"]}>
                 <Image className={styles.image} width={1200} height={750} src={image} alt={title} />
             </div>
-            <p className={styles["text-lesson"]} dangerouslySetInnerHTML={{__html: text}}></p>
+            <p className={styles["text-lesson"]}>{text}</p>
             <Link href={exploreLink}>
                 <a className={styles["btn-lesson"]}>Виж повече</a>
             </Link>
