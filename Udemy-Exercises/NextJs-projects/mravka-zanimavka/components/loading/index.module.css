@@ -12,7 +12,7 @@
     position: absolute;
     top: -60px;
     z-index: 10;
-    left: calc(50% - 20px);
+    left: calc(50% - 23px);
 }
 .lds-dual-ring:after {
     content: " ";
