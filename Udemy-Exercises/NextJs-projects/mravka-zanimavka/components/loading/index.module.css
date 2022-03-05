@@ -32,3 +32,18 @@
         transform: rotate(360deg);
     }
 }
+
+@media (max-width: 480px) {
+    .lds-dual-ring {
+        height: 22px;
+        width: 22px;
+        top: -35px;
+    }
+
+    .lds-dual-ring::after {
+        border-width: 1px;
+        height: 22px;
+        left: calc(50% - 12px);
+        width: 22px;
+    }
+}
