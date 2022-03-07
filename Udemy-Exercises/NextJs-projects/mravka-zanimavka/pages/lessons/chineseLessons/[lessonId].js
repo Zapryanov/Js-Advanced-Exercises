@@ -70,7 +70,7 @@ function CurrentLesson(props) {
 export async function getStaticProps(context) {
     const { params } = context;
     const lessonId = params.lessonId;
-console.log(lessonId)
+
     const currentLesson = await getCurrentChineseLesson(lessonId);
 
     if (!currentLesson) {

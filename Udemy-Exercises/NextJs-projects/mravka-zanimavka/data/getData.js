@@ -24,7 +24,7 @@ export async function getAllChineseLessons() {
 export async function getCurrentChineseLesson(id) {
     const allLessons = await getAllChineseLessons();
     const currentLesson = allLessons.find(lesson => lesson.id === id);
-console.log(currentLesson)
+
     return currentLesson;
 }
 
@@ -33,7 +33,7 @@ export async function getAllEnglishLessons() {
         // Fetch data from external API
         const res = await fetch(`https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app/lessons/englishLessons.json`)
         const data = await res.json()
-        console.log(data)
+
         // Transform the data from Firebase
         const loadedLessons = [];
         
