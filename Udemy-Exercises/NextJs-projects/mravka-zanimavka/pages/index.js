@@ -3,7 +3,7 @@ import Link from "next/link";
 import BigButton from "../components/big-button";
 import styles from "./index.module.css";
 
-import { getAllChineseLessons } from "../data/getData";
+import { getAllChineseLessons, getAllEnglishLessons } from "../data/getData";
 
 function HomePage(props) {
     const { lastFiveLessons } = props;
@@ -104,8 +104,13 @@ function HomePage(props) {
 export async function getServerSideProps() {
     let lastFive = [];
     try {
-        const allLessons = await getAllChineseLessons();
-        lastFive = allLessons.slice(allLessons.length-1 - 5);
+        const allChineseLessons = await getAllChineseLessons();
+        const lastThreeChineseLessons = allChineseLessons.slice(0, 3);
+
+        const allEnglishLessons = await getAllEnglishLessons();
+        const lastTwoEnglishLessons = allEnglishLessons.slice(0, 2);
+
+        lastFive = lastThreeChineseLessons.concat(lastTwoEnglishLessons);
     } catch (error) {
         console.log(error);
     }
