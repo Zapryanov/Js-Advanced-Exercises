@@ -105,7 +105,7 @@ export async function getServerSideProps() {
     let lastFive = [];
     try {
         const allLessons = await getAllChineseLessons();
-        lastFive = allLessons.slice(allLessons.length - 5);
+        lastFive = allLessons.slice(allLessons.length-1 - 5);
     } catch (error) {
         console.log(error);
     }
