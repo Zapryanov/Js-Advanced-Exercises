@@ -2,8 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { Fragment, useContext } from "react";
-import { getAllLessons, getCurrentLesson } from "../../data/getData";
-import UserContext from "../../store/user-context";
+import { getAllChineseLessons, getCurrentChineseLesson } from "../../../data/getData";
+import UserContext from "../../../store/user-context";
 
 import styles from "./[lessonId].module.css";
 
@@ -19,13 +19,13 @@ function CurrentLesson(props) {
     const { lesson } = props;
 
     function goBack() {
-        router.push("/lessons")
+        router.push("/lessons/chineseLessons")
     }
     
     const idToDelete = lesson.id;
     
     function deleteLesson() {
-        fetch(`${process.env.databaseURL}/${process.env.currentDatabase}/${idToDelete}.json?auth=${user?.accessToken}`, {
+        fetch(`${process.env.databaseURL}/${process.env.currentDatabase}/${process.env.currentChineseDatabase}/${idToDelete}.json?auth=${user?.accessToken}`, {
                 method: "DELETE"
             })
             .then(response =>{ 
@@ -35,7 +35,7 @@ function CurrentLesson(props) {
                 }
                 response.json()})
             .then(data => {
-                router.push("/lessons");
+                router.push("/lessons/chineseLessons");
             })
             .catch(error => console.error(error))
     }
@@ -70,8 +70,8 @@ function CurrentLesson(props) {
 export async function getStaticProps(context) {
     const { params } = context;
     const lessonId = params.lessonId;
-
-    const currentLesson = await getCurrentLesson(lessonId);
+console.log(lessonId)
+    const currentLesson = await getCurrentChineseLesson(lessonId);
 
     if (!currentLesson) {
         return { notFound: true }
@@ -86,7 +86,7 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
-    const data = await getAllLessons();
+    const data = await getAllChineseLessons();
     const ids = data.map(lesson => lesson.id);
 
     const pathsWithParams = ids.map(id => ({ params: { lessonId: id } }))

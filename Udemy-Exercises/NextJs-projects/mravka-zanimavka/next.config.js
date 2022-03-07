@@ -12,6 +12,8 @@ module.exports = (phase) => {
         messagingSenderId: "90942997330",
         appId: "1:90942997330:web:d37f6836e9010bb6a6308b",
         currentDatabase: "lessons",
+        currentChineseDatabase: "chineseLessons",
+        currentEnglishDatabase: "englishLessons",
         lat: 42.150340,
         lng: 24.747780,
         bootstrapURLKeys: "AIzaSyBcr6Z1oNQUxBLId1GYlw4eFB-V-trsujk"

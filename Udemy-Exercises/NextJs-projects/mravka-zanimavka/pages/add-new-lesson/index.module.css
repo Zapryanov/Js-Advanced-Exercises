@@ -8,7 +8,7 @@
 
 .frame-over-form{
     width: 55%;
-    height: 68vh;
+    height: 82vh;
     position: absolute;
 }
 
@@ -16,7 +16,7 @@
 .frame-over-form {
     transform: translate(-50%,-40%);
     left: 50%;
-    top: 50%;
+    top: 55%;
 }
 
 .frame-over-form .shape{
@@ -52,7 +52,7 @@
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
     position: absolute;
     width: 55%;
-    height: 68vh;
+    height: 82vh;
     text-align: center;
 }
 

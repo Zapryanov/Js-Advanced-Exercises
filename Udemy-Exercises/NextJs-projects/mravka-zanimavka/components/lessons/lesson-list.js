@@ -9,6 +9,7 @@ function LessonList(props) {
             {lessons.map((lesson) => (
                 <LessonItem
                     key={lesson.id}
+                    language={lesson.language}
                     id={lesson.id}
                     title={lesson.title}
                     image={lesson.image}

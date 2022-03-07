@@ -7,6 +7,7 @@ import styles from "./index.module.css";
 
 function AddNewLesson() {
     const { user } = useContext(UserContext)
+    const languageInputRef = useRef();
     const titleInputRef = useRef();
     const urlInputRef = useRef();
     const textInputRef = useRef();
@@ -16,26 +17,40 @@ function AddNewLesson() {
     function submitFormHandler(e) {
         e.preventDefault();
 
+        const enteredLanguage = languageInputRef.current.value;
         const enteredTtitle = titleInputRef.current.value;
         const enteredUrl = urlInputRef.current.value;
         const enteredText = textInputRef.current.value;
 
-        console.log(enteredTtitle, enteredUrl, enteredText);
+        const reqBody = { language: enteredLanguage, title: enteredTtitle, image: enteredUrl, text: enteredText, accessToken: user?.accessToken }
 
-        const reqBody = { title: enteredTtitle, image: enteredUrl, text: enteredText, accessToken: user?.accessToken }
+        if ((enteredLanguage === "Английски" || enteredLanguage === "Китайски") && enteredTtitle !== "" && enteredUrl !== "" && enteredText !== "") {
+            if (enteredLanguage === "Китайски") {
+                fetch("/api/chineseLessonApi", {
+                    method: "POST",
+                    body: JSON.stringify(reqBody),
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                })
+                .then(response => response.json())
+                .then(data => console.log(data))
 
-        if (enteredTtitle !== "" && enteredUrl !== "" && enteredText !== "") {
-            fetch("/api/lessonApi", {
-                method: "POST",
-                body: JSON.stringify(reqBody),
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            })
-            .then(response => response.json())
-            .then(data => console.log(data))
+                router.push("/lessons/chineseLessons");
+            } else if (enteredLanguage === "Английски") {
+                fetch("/api/englishLessonApi", {
+                    method: "POST",
+                    body: JSON.stringify(reqBody),
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                })
+                .then(response => response.json())
+                .then(data => console.log(data))
 
-            router.push("/lessons");
+                router.push("/lessons/englishLessons");
+            }
+
         } else {
             alert("Please fill in the input fields...!")
         }
@@ -49,6 +64,10 @@ function AddNewLesson() {
             </div>
             <form className={styles.form}>
                 <h1>Добави нов Урок</h1>
+                <div className={styles["one-line-element"]}>
+                    <label htmlFor="language">Английски / Китайски: </label>
+                    <input type="text" id="language" ref={languageInputRef} />
+                </div>
                 <div className={styles["one-line-element"]}>
                     <label htmlFor="title">Добави заглавие: </label>
                     <input type="text" id="title" ref={titleInputRef} />

@@ -4,8 +4,15 @@ import Link from "next/link";
 import styles from "./lesson-item.module.css";
 
 function LessonItem(props) {
-    const { id, image, title, text } = props;
-    const exploreLink = `/lessons/${id}`;
+    const { id, language, image, title, text } = props;
+
+    let exploreLink = "";
+
+    if (language === "Китайски") {
+        exploreLink = `/lessons/chineseLessons/${id}`;
+    } else if (language === "Английски") {
+        exploreLink = `/lessons/englishLessons/${id}`;
+    }
 
     return (
         <li className={styles["lesson-container"]} key={id}>

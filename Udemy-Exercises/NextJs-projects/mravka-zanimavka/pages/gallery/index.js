@@ -1,6 +1,6 @@
 import Image from "next/image";
 import BigButton from "../../components/big-button";
-import { getAllLessons } from "../../data/getData";
+import { getAllChineseLessons } from "../../data/getData";
 import styles from "./index.module.css";
 
 function GalleryPage(props) {
@@ -78,7 +78,7 @@ function GalleryPage(props) {
 export async function getServerSideProps() {
     let lastFive = [];
     try {
-        const allLessons = await getAllLessons();
+        const allLessons = await getAllChineseLessons();
         lastFive = allLessons.slice(allLessons.length - 5);
     } catch (error) {
         console.log(error);
