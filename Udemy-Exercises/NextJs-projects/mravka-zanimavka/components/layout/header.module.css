@@ -160,10 +160,6 @@ a.nav-link:hover::before {
         width: 80px;
     }
 
-    /* .header nav {
-        text-align: center;
-    } */
-
     .header nav ul li {
         margin: 5px 0 0 0;
     }
@@ -174,5 +170,11 @@ a.nav-link:hover::before {
 
     .header a {
         font-size: 10px;
+    }
+}
+
+@media (max-width: 250px) {
+    .header nav {
+        text-align: center;
     }
 }

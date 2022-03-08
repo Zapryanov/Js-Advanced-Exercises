@@ -23,3 +23,9 @@
         min-height: 60vh;
     }
 }
+
+@media (max-width: 250px) {
+    .container {
+        width: 95%;
+    }
+}
