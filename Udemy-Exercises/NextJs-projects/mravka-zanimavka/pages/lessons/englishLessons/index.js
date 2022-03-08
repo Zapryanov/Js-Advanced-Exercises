@@ -16,8 +16,7 @@ function LessonsPage(props) {
         mounted && <div>
                 <Head>
                     <title>Уроци-Английски</title>
-                    <meta name="description" content="уроци по китайски с мравка занимавка в град пловдив" />
-                    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                    <meta name="description" content="уроци по английски за деца с мравка занимавка в град Пловдив" />
                 </Head>
                 <h1>Уроци - Английски</h1>
                 <LessonList lessons={props.loadedLessons} />

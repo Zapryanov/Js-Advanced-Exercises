@@ -50,7 +50,7 @@ function CurrentLesson(props) {
         <Fragment>
             <Head>
                 <title>{lesson.title}</title>
-                <meta name="description" content={lesson.text} />
+                <meta name="description" content={`Урок по английски за деца в Пловдив. ${lesson.text}`} />
             </Head>
             <div className={styles["wrap-current-lesson"]}>
                 <h3 className={styles["width-line"]}>{lesson.title}</h3>
