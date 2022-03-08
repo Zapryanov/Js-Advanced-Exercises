@@ -15,9 +15,6 @@ function handler(req, res) {
             image: urlLesson,
             text: textLesson
         }
-
-        // const connectionString = `${process.env.databaseUrl}/${process.env.currentDatabase}.json?auth=${accessToken}`
-        // fetch(connectionString, {
             
         fetch(`https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app/lessons.json?auth=${accessToken}`, {
                 method: "POST",
