@@ -4,6 +4,7 @@ import BigButton from "../components/big-button";
 import styles from "./index.module.css";
 
 import { getAllChineseLessons, getAllEnglishLessons } from "../data/getData";
+import Head from "next/head";
 
 function HomePage(props) {
     const { lastFiveLessons } = props;
@@ -18,6 +19,10 @@ function HomePage(props) {
 
     return (
         <div className={styles["wrap-home-page"]}>
+            <Head>
+                <title>Мравка Занимавка</title>
+                <meta name="description" content="Уроци по Китайски и Английски език за деца в град Пловдив" />
+            </Head>
             <h1>За Мравка Занимавка</h1>
             <article className={`${styles.description} ${styles.one}`}>
                 <p className={styles.text}>С Мравка Занимавка децата се докосват до китайския език и култура.</p>
