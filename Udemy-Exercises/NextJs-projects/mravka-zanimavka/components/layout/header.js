@@ -22,12 +22,12 @@ function Header() {
                     </li>
                     <li>
                         <Link href="/lessons/chineseLessons">
-                            <a className={styles["nav-link"]}>Уроци Китайски</a>
+                            <a className={styles["nav-link"]}>Учим китайски</a>
                         </Link>
                     </li>
                     <li>
                         <Link href="/lessons/englishLessons">
-                            <a className={styles["nav-link"]}>Уроци Английски</a>
+                            <a className={styles["nav-link"]}>Учим английски</a>
                         </Link>
                     </li>
                     {/* <li>

@@ -18,7 +18,7 @@ function LessonsPage(props) {
                     <title>Уроци-Английски</title>
                     <meta name="description" content="уроци по английски за деца с мравка занимавка в град Пловдив" />
                 </Head>
-                <h1>Уроци - Английски</h1>
+                <h1>Учим английски</h1>
                 <LessonList lessons={props.loadedLessons} />
                 <BigButton />
             </div>
