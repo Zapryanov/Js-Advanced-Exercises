@@ -54,7 +54,6 @@ export async function getServerSideProps() {
         console.log(error);
     }
 
-    // Pass data to the page via props
     return { 
         props: { 
             loadedLessons: cuttedLessons 

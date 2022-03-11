@@ -10,12 +10,7 @@ import styles from "./[lessonId].module.css";
 function CurrentLesson(props) {
     const userContext = useContext(UserContext)
     const { loggedIn, user } = userContext
-
     const router = useRouter();
-
-    // Getting the data (details current lesson) 
-    // from getStaticProps in combination with getStaticPaths
-    // and the were retrieved here with the PROPS object
     const { lesson } = props;
 
     function goBack() {
