@@ -19,13 +19,13 @@ function CurrentLesson(props) {
     const { lesson } = props;
 
     function goBack() {
-        router.push("/lessons/chineseLessons")
+        router.push("/lessons/englishLessons")
     }
     
     const idToDelete = lesson.id;
     
     function deleteLesson() {
-        fetch(`${process.env.databaseURL}/${process.env.currentDatabase}/${process.env.currentChineseDatabase}/${idToDelete}.json?auth=${user?.accessToken}`, {
+        fetch(`${process.env.databaseURL}/${process.env.currentDatabase}/${process.env.currentEnglishDatabase}/${idToDelete}.json?auth=${user?.accessToken}`, {
                 method: "DELETE"
             })
             .then(response =>{ 

@@ -24,7 +24,7 @@ function SignInPage() {
         setLoading(true);
         try {
             await signup(emailRef.current.value, passwordRef.current.value);
-            router.push("/lessons");
+            router.push("/");
         } catch (error) {
             alert(`Error from Sign Up: Please fill in the input fields correctly ...!`);
         }
@@ -43,7 +43,7 @@ function SignInPage() {
             const {accessToken, email, uid} = user.user
 
             logIn({accessToken, email, uid})
-            router.push("/lessons");
+            router.push("/");
         } catch (error) {
             alert("Error from Sign In: Please fill in the input fields correctly ...!")
         }
@@ -60,7 +60,7 @@ function SignInPage() {
         try {
             await logout();
             logOut();
-            router.push("/lessons");
+            router.push("/");
         } catch (error) {
             alert("Error from Log Out")
         }

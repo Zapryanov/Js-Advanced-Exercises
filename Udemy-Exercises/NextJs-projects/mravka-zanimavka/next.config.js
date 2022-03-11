@@ -4,19 +4,19 @@ module.exports = (phase) => {
   if (phase === PHASE_DEVELOPMENT_SERVER) {
     return {
       env: {
-        apiKey: "AIzaSyA844ahyDhdGrVAHtqo9Y4RkCPmDXs5Hc4",
-        authDomain: "mravka-zanimavka.firebaseapp.com",
-        databaseURL: "https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app",
-        projectId: "mravka-zanimavka",
-        storageBucket: "mravka-zanimavka.appspot.com",
-        messagingSenderId: "90942997330",
-        appId: "1:90942997330:web:d37f6836e9010bb6a6308b",
-        currentDatabase: "lessons",
-        currentChineseDatabase: "chineseLessons",
-        currentEnglishDatabase: "englishLessons",
-        lat: 42.150340,
-        lng: 24.747780,
-        bootstrapURLKeys: "AIzaSyBcr6Z1oNQUxBLId1GYlw4eFB-V-trsujk"
+        apiKey: process.env.apiKey,
+        authDomain: process.env.authDomain,
+        databaseURL: process.env.databaseURL,
+        projectId: process.env.projectId,
+        storageBucket: process.env.storageBucket,
+        messagingSenderId: process.env.messagingSenderId,
+        appId: process.env.appId,
+        currentDatabase: process.env.currentDatabase,
+        currentChineseDatabase: process.env.currentChineseDatabase,
+        currentEnglishDatabase: process.env.currentEnglishDatabase,
+        lat: process.env.lat,
+        lng: process.env.lng,
+        bootstrapURLKeys: process.env.bootstrapURLKeys
       },
       reactStrictMode: true,
       images: {
@@ -27,8 +27,21 @@ module.exports = (phase) => {
 
   return {
     env: {
-      mainDatabaseApp: "mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app",
-      currentDatabase: "lessons-production"
+      apiKey: process.env.apiKey,
+      authDomain: process.env.authDomain,
+      databaseURL: process.env.databaseURL,
+      projectId: process.env.projectId,
+      storageBucket: process.env.storageBucket,
+      messagingSenderId: process.env.messagingSenderId,
+      appId: process.env.appId,
+      currentDatabase: process.env.currentDatabase,
+      currentChineseDatabase: process.env.currentChineseDatabase,
+      currentEnglishDatabase: process.env.currentEnglishDatabase,
+      lat: process.env.lat,
+      lng: process.env.lng,
+      bootstrapURLKeys: process.env.bootstrapURLKeys,
+      mainDatabaseApp: process.env.mainDatabaseApp,
+      // currentDatabase: "lessons-production"
     },
     reactStrictMode: true,
       images: {
