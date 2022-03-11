@@ -10,7 +10,7 @@ function ContactsPage() {
 
     const renderMarkers = (map, maps) => {
         let lessons = new maps.Marker({
-            position: { lat: process.env.lat, lng: process.env.lng },
+            position: { lat: Number(process.env.lat), lng: Number(process.env.lng) },
             map,
             title: `mravka-zanimavka`
         });
@@ -52,14 +52,14 @@ function ContactsPage() {
                 <div className={`${styles["wrap-google-maps"]} ${styles.maps}`}>
                     <GoogleMapReact
                         bootstrapURLKeys={{ key: process.env.bootstrapURLKeys }}
-                        defaultCenter={{ lat: process.env.lat, lng: process.env.lng }}
+                        defaultCenter={{ lat: Number(process.env.lat), lng: Number(process.env.lng) }}
                         defaultZoom={17}
                         yesIWantToUseGoogleMapApiInternals
                         onGoogleApiLoaded={({ map, maps }) => renderMarkers(map, maps)}
                     >
                         <AnyReactComponent
-                            lat={process.env.lat}
-                            lng={process.env.lng}
+                            lat={Number(process.env.lat)}
+                            lng={Number(process.env.lng)}
                             text="Мравка Занимавка"
                         />
                     </GoogleMapReact>
