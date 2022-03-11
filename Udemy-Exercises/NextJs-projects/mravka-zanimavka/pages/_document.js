@@ -4,7 +4,10 @@ class MyDocument extends Document {
     render() {
         return (
             <Html lang="en">
-                <Head />
+                <Head>
+                    <link rel="shortcut icon" href="/images/logo.png" />
+                    <meta name="robots" content="index, follow" />
+                </Head>
                 <body>
                     <Main />
                     <NextScript />
