@@ -1,27 +1,21 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
 import BigButton from "../../../components/big-button";
 
 import LessonList from "../../../components/lessons/lesson-list";
 import { getAllEnglishLessons } from "../../../data/getData";
 
 function LessonsPage(props) {
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-    }, [])
     
     return (
-        mounted && <div>
-                <Head>
-                    <title>Уроци-Английски</title>
-                    <meta name="description" content="уроци по английски за деца с мравка занимавка в град Пловдив" />
-                </Head>
-                <h1>Учим английски</h1>
-                <LessonList lessons={props.loadedLessons} />
-                <BigButton />
-            </div>
+        <div>
+            <Head>
+                <title>Уроци-Английски</title>
+                <meta name="description" content="уроци по английски за деца с мравка занимавка в град Пловдив" />
+            </Head>
+            <h1>Учим английски</h1>
+            <LessonList lessons={props.loadedLessons} />
+            <BigButton />
+        </div>
     )
 }
 
