@@ -136,36 +136,7 @@
     font-weight: 600;
 }
 
-
 /* --- End Three --------- */
-
-@media (max-width: 768px) {
-    .two {
-        flex-flow: column;
-    }
-
-    .two .wrap-img,
-    .two .wrap-text {
-        width: 100%;
-    }
-
-    .two .wrap-text {
-        padding: 20px;
-    }
-
-    .two .wrap-text p:first-child {
-        margin-bottom: 20px;
-    }
-
-    .wrap-img {
-        margin-bottom: 20px;
-    }
-    .fixImage {
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-}
 
 @media (max-width: 1024px) {
     .gallery-text-container {
@@ -191,6 +162,31 @@
     .gallery-text-container ul li div {
         width: 15px;
         height: 15px;
+    }
+    .two {
+        flex-flow: column;
+    }
+
+    .two .wrap-img,
+    .two .wrap-text {
+        width: 100%;
+    }
+
+    .two .wrap-text {
+        padding: 20px;
+    }
+
+    .two .wrap-text p:first-child {
+        margin-bottom: 20px;
+    }
+
+    .wrap-img {
+        margin-bottom: 20px;
+    }
+    .fixImage {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }
 
