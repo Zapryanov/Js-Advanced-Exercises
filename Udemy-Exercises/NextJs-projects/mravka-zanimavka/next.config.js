@@ -21,6 +21,7 @@ module.exports = (phase) => {
       reactStrictMode: true,
       images: {
         domains: ['localhost', 'res.cloudinary.com', 'upload.wikimedia.org', 'wikipedia.org'],
+        deviceSizes: [250, 320, 480, 640, 768, 1024],
       }
     }
   }
@@ -46,6 +47,7 @@ module.exports = (phase) => {
     reactStrictMode: true,
       images: {
         domains: ['localhost', 'res.cloudinary.com', 'upload.wikimedia.org', 'wikipedia.org'],
+        deviceSizes: [250, 320, 480, 640, 768, 1024],
       }
   }
 }
