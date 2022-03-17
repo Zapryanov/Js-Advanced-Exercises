@@ -32,7 +32,7 @@ function HomePage(props) {
                 </div>
                 <p className={styles.text}>Заниманията са подходящи за деца на възраст 6-9 години и са с продължителност 90 минути.</p>
             </article>
-            <section className={styles["gallery-wrapper"]}>
+            <article className={styles["gallery-wrapper"]}>
                 <div className={styles["wrap-gallery-images"]}>
                     <ul>
                         {lastFiveLessons.map((lesson, i) => (
@@ -82,7 +82,7 @@ function HomePage(props) {
                         </li>
                     </ul>
                 </div>
-            </section>
+            </article>
             <article className={`${styles.description} ${styles.two}`}>
                 <div className={styles["wrap-img"]}>
                     <div className={styles.shadow}>
