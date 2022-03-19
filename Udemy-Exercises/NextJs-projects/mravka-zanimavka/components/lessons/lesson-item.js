@@ -1,10 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import sanitizeHtml from 'sanitize-html';
+
 import styles from "./lesson-item.module.css";
 
 function LessonItem(props) {
     const { id, language, image, title, text } = props;
+
+    const clean = sanitizeHtml(text, {
+        allowedTags: [ 'b', 'i', 'em', 'strong', 'a', 'p', 'div', 'h1', 'h2', 'h3' ],
+        allowedAttributes: {
+          'a': [ 'href' ]
+        },
+    });
 
     let exploreLink = "";
 
@@ -20,7 +29,7 @@ function LessonItem(props) {
             <div className={styles["wrap-image"]}>
                 <Image className={styles.image} width={1200} height={750} src={image} alt={title} />
             </div>
-            <p className={styles["text-lesson"]} dangerouslySetInnerHTML={{__html: text}}></p>
+            <div className={styles["text-lesson"]} dangerouslySetInnerHTML={{__html: clean}}></div>
             <Link href={exploreLink}>
                 <a className={styles["btn-lesson"]}>Виж повече</a>
             </Link>
