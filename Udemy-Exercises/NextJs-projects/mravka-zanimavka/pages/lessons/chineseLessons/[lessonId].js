@@ -44,7 +44,7 @@ function CurrentLesson(props) {
     }
 
     const clean = sanitizeHtml(lesson.text, {
-        allowedTags: [ 'b', 'i', 'em', 'strong', 'a', 'p', 'div', 'h1', 'h2', 'h3' ],
+        allowedTags: [ 'b', 'i', 'em', 'span', 'strong', 'a', 'p', 'div', 'h1', 'h2', 'h3' ],
         allowedAttributes: {
           'a': [ 'href' ]
         },
