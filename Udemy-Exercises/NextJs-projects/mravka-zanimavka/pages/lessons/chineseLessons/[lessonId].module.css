@@ -99,8 +99,12 @@
 /* End styling buttons */
 
 /* ------- dangerouslySetInnerHTML - add classes ------ */
-.width-line ul {
-    margin-top: 5px;
+.width-line > ul {
+    margin-top: 20px;
+}
+
+.width-line > div > ul {
+    margin-top: 0;
 }
 
 .width-line > div > span {
@@ -111,6 +115,10 @@
 
 .width-line a {
     color: rgba(233, 119, 119, 1);
+}
+
+.width-line a:hover {
+    color: rgb(155, 34, 34);
 }
 
 /* ------------------------------------------------------- */
