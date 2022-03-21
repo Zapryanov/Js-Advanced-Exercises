@@ -9,10 +9,15 @@ function LessonItem(props) {
     const { id, language, image, title, text } = props;
 
     const clean = sanitizeHtml(text, {
-        allowedTags: [ 'b', 'i', 'em', 'strong', 'a', 'p', 'div', 'h1', 'h2', 'h3' ],
+        allowedTags: [ 'br', 'b', 'i', 'em', 'strong', 'a', 'p', 'div', 'h1', 'h2', 'h3' ],
         allowedAttributes: {
           'a': [ 'href' ]
         },
+        allowedClasses: {
+            'p': [ 'pDangerous' ],
+            'a': [ 'aDangerous' ]
+        },
+        selfClosing: [ 'br', 'hr', 'link' ]
     });
 
     let exploreLink = "";
