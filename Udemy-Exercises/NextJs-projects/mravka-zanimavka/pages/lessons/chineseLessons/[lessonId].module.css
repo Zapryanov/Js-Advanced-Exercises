@@ -96,7 +96,24 @@
     );
 }
 
-  /* End styling buttons */
+/* End styling buttons */
+
+/* ------- dangerouslySetInnerHTML - add classes ------ */
+.width-line ul {
+    margin-top: 5px;
+}
+
+.width-line > div > span {
+    color: rgba(6, 113, 184, 0.7);
+    display:  block;
+    margin-top: 15px;
+}
+
+.width-line a {
+    color: rgba(233, 119, 119, 1);
+}
+
+/* ------------------------------------------------------- */
 
 @media (max-width: 640px) {
     .wrap-current-lesson {

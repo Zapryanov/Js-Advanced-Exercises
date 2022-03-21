@@ -44,10 +44,11 @@ function CurrentLesson(props) {
     }
 
     const clean = sanitizeHtml(lesson.text, {
-        allowedTags: [ 'b', 'i', 'em', 'span', 'strong', 'a', 'p', 'div', 'h1', 'h2', 'h3' ],
+        allowedTags: [ 'br', 'b', 'i', 'em', 'span', 'strong', 'a', 'p', 'div', 'h1', 'h2', 'h3', 'ul', 'li' ],
         allowedAttributes: {
-          'a': [ 'href' ]
+          'a': [ 'href', 'className' ]
         },
+        selfClosing: [ 'br', 'hr', 'link' ]
     });
 
     return (
