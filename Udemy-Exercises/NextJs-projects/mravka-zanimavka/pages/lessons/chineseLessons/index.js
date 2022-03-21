@@ -29,7 +29,7 @@ export async function getServerSideProps() {
                     language: lesson.language,
                     title: lesson.title,
                     image: lesson.image, 
-                    text: `${lesson.text.substring(0, 30)} [ ..... ]`
+                    text: `${lesson.text.substring(0, 35)} [ ..... ]`
                 }
             ))
     
