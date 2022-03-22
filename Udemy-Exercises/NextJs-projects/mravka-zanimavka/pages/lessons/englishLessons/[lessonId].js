@@ -103,5 +103,3 @@ export async function getStaticPaths() {
 }
 
 export default CurrentLesson;
-
-"<p><span>В английската азбука буквата <span>С</span> е трета подред. Тя има няколко особености, които често ни объркват. Понякога тя прави звука <span>[k]</span>, друг път - <span>[с]</span> или <span>[ч]</span>. Когато знаем правилата обаче, всичко става лесно : )</span></p>"
