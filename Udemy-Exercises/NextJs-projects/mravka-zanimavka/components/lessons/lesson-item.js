@@ -9,13 +9,9 @@ function LessonItem(props) {
     const { id, language, image, title, text } = props;
 
     const clean = sanitizeHtml(text, {
-        allowedTags: [ 'br', 'b', 'i', 'em', 'strong', 'a', 'p', 'div', 'h1', 'h2', 'h3' ],
+        allowedTags: [ 'br', 'b', 'i', 'em', 'span', 'strong', 'a', 'p', 'div', 'h1', 'h2', 'h3', 'ul', 'li' ],
         allowedAttributes: {
           'a': [ 'href' ]
-        },
-        allowedClasses: {
-            'p': [ 'pDangerous' ],
-            'a': [ 'aDangerous' ]
         },
         selfClosing: [ 'br', 'hr', 'link' ]
     });

@@ -108,7 +108,7 @@
     margin-top: 10px;
 }
 
-.width-line > div > p span {
+.width-line > div > p > span {
     color: rgba(6, 113, 184, 0.7);
 }
 
