@@ -99,6 +99,19 @@
 /* End styling buttons */
 
 /* ------- dangerouslySetInnerHTML - add classes ------ */
+.width-line div:not(:first-child) {
+    margin-top: 20px;
+}
+
+.width-line > div > p > span {
+    display:  block;
+    margin-top: 10px;
+}
+
+.width-line > div > p span {
+    color: rgba(6, 113, 184, 0.7);
+}
+
 .width-line > ul {
     margin-top: 20px;
 }
