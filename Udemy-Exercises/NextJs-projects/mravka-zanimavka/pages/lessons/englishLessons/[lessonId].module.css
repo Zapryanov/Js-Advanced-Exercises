@@ -98,7 +98,45 @@
     );
 }
 
-  /* End styling buttons */
+/* End styling buttons */
+
+/* ------- dangerouslySetInnerHTML - add classes ------ */
+.width-line div:not(:first-child) {
+    margin-top: 20px;
+}
+
+.width-line > div > p > span {
+    display:  block;
+    margin-top: 10px;
+}
+
+.width-line > div > p > span {
+    color: rgba(6, 113, 184, 0.7);
+}
+
+.width-line > ul {
+    margin-top: 20px;
+}
+
+.width-line > div > ul {
+    margin-top: 0;
+}
+
+.width-line > div > span {
+    color: rgba(6, 113, 184, 0.7);
+    display:  block;
+    margin-top: 15px;
+}
+
+.width-line a {
+    color: rgba(233, 119, 119, 1);
+}
+
+.width-line a:hover {
+    color: rgb(155, 34, 34);
+}
+
+/* ------------------------------------------------------- */
 
 @media (max-width: 640px) {
     .wrap-current-lesson {

@@ -5,6 +5,8 @@ import { Fragment, useContext } from "react";
 import { getAllEnglishLessons, getCurrentEnglishLesson } from "../../../data/getData";
 import UserContext from "../../../store/user-context";
 
+import sanitizeHtml from 'sanitize-html';
+
 import styles from "./[lessonId].module.css";
 
 function CurrentLesson(props) {
@@ -41,6 +43,14 @@ function CurrentLesson(props) {
         )
     }
 
+    const clean = sanitizeHtml(lesson.text, {
+        allowedTags: [ 'br', 'b', 'i', 'em', 'span', 'strong', 'a', 'p', 'div', 'h1', 'h2', 'h3', 'ul', 'li' ],
+        allowedAttributes: {
+          'a': [ 'href' ]
+        },
+        selfClosing: [ 'br', 'hr', 'link' ]
+    });
+
     return (
         <Fragment>
             <Head>
@@ -52,7 +62,7 @@ function CurrentLesson(props) {
                 <div className={`${styles["width-line"]} ${styles["wrap-image"]}`}>
                     <Image className={`${styles["image-lesson"]} ${styles["box-shadow"]}`} width={1200} height={750} src={lesson.image} alt={lesson.title}/>
                 </div>
-                <p className={`${styles["width-line"]} ${styles.text}`} dangerouslySetInnerHTML={{__html: lesson.text}}></p>
+                <p className={`${styles["width-line"]} ${styles.text}`} dangerouslySetInnerHTML={{__html: clean}}></p>
                 <div className={styles["wrap-buttons"]}>
                     <button className={styles["btn-lesson"]} onClick={goBack}>Go back</button>
                     {loggedIn && <button className={`${styles["btn-lesson"]} ${styles.delete}`} onClick={deleteLesson}>Delete</button>}
