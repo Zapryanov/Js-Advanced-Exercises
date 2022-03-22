@@ -62,7 +62,7 @@ function CurrentLesson(props) {
                 <div className={`${styles["width-line"]} ${styles["wrap-image"]}`}>
                     <Image className={`${styles["image-lesson"]} ${styles["box-shadow"]}`} width={1200} height={750} src={lesson.image} alt={lesson.title}/>
                 </div>
-                <p className={`${styles["width-line"]} ${styles.text}`} dangerouslySetInnerHTML={{__html: clean}}></p>
+                <div className={`${styles["width-line"]} ${styles.text}`} dangerouslySetInnerHTML={{__html: clean}} />
                 <div className={styles["wrap-buttons"]}>
                     <button className={styles["btn-lesson"]} onClick={goBack}>Go back</button>
                     {loggedIn && <button className={`${styles["btn-lesson"]} ${styles.delete}`} onClick={deleteLesson}>Delete</button>}
@@ -103,3 +103,5 @@ export async function getStaticPaths() {
 }
 
 export default CurrentLesson;
+
+"<p><span>В английската азбука буквата <span>С</span> е трета подред. Тя има няколко особености, които често ни объркват. Понякога тя прави звука <span>[k]</span>, друг път - <span>[с]</span> или <span>[ч]</span>. Когато знаем правилата обаче, всичко става лесно : )</span></p>"
