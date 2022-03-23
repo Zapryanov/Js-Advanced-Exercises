@@ -7,12 +7,6 @@ function Footer() {
     return (
         <footer className={styles.footer}>
             <div className={styles["wrap-footer-content"]}>
-                <div className={`${styles["wrap-nationality"]} ${styles["space-vertically"]} ${styles["position-icon"]}`}>
-                    <span>
-                        <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1643362443/bulgaria-flag_x60z6j.png" alt="bg-flag" />
-                    </span>
-                    <span className={styles["space-left"]}>Bulgaria</span>
-                </div>
                 <div className={styles["space-vertically"]}>
                     <div>
                         <Link href="https://www.facebook.com/MravkaZanimavka">
