@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import BigButton from "../components/big-button";
 import styles from "./index.module.css";
 
