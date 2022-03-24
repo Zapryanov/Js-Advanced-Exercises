@@ -103,13 +103,19 @@
     margin-top: 20px;
 }
 
-.width-line > div > p > span {
+.width-line > p > span {
     display:  block;
     margin-top: 10px;
 }
 
 .width-line > div > p > span {
     color: rgba(6, 113, 184, 0.7);
+    display:  block;
+    margin-top: 10px;
+}
+
+.width-line > p > span > span {
+    color: rgba(233, 119, 119, 1);
 }
 
 .width-line > ul {
