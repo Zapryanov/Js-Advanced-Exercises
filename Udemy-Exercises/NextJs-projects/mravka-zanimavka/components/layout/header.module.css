@@ -75,39 +75,6 @@ a.nav-link:hover::before {
 
 /* End animation dash */
 
-/* @media (max-width: 768px) {
-    .header nav {
-        margin-right: 0;
-    }
-
-    .header nav ul li {
-        margin: 0px 4px;
-    }
-
-    .header nav ul li:not(:last-child):after {
-        right: -4px;
-    }
-
-    .header a {
-      font-size: 15px;
-    }
-}
-
-@media (max-width: 640px) {
-    .header nav {
-        z-index: 10;
-    }
-
-    .header nav ul li {
-        display: block;
-        margin: 5px 0px;
-    }
-
-    .header nav ul li::after {
-        display: none;
-    }
-} */
-
 @media (max-width: 980px) {
     .header nav {
         z-index: 10;
