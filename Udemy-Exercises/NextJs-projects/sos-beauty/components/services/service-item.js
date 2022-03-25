@@ -11,7 +11,7 @@ function ServiceItem(props) {
                 <h4>{titleSmall}</h4>
             </div>
             <div>
-                <Image width={500} height={400} src={`/${image}`} alt={titleBig} />
+                <Image width={500} height={400} src={image} alt={titleBig} />
             </div>
             <div>
                 <Link href={`/cosmetics/${id}`}>
