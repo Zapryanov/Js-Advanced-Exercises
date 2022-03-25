@@ -3,7 +3,8 @@ const DUMMY_SERVICES = [
         id: "1",
         titleBig: "Козметика",
         titleSmall: "Dr.Renaud",
-        image: "https://res.cloudinary.com/audipower/image/upload/v1645764271/dr-renaud-logo_dnldij.jpg",
+        image: "/images/cosmetics-main.jpg"
+        // image: "https://res.cloudinary.com/audipower/image/upload/v1645764271/dr-renaud-logo_dnldij.jpg",
         // image: "images/dr-renaud-logo.jpg",
     },
     {
