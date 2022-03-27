@@ -7,8 +7,8 @@ function ServiceItem(props) {
     return (
         <li key={id}>
             <div>
-                <h3>{titleBig}</h3>
-                <h4>{titleSmall}</h4>
+                <h2>{titleBig}</h2>
+                <h3>{titleSmall}</h3>
             </div>
             <div>
                 <Image width={500} height={400} src={image} alt={titleBig} />
