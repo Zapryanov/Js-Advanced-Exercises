@@ -1,10 +1,12 @@
 import ServiceItem from "./service-item";
 
+import styles from "./services-list.module.css";
+
 function ServiceList(props) {
     const { services } = props;
     
     return (
-        <ul>
+        <ul className={styles["wrap-all-services"]}>
             { services.map((service) => (
                 <ServiceItem 
                     key={service.id}
