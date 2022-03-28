@@ -11,6 +11,10 @@
     padding: 10px;
 }
 
+.img {
+    object-fit: cover;
+}
+
 .service-item:hover {
     background-color: rgba(248, 248, 248, 0.9);
 }

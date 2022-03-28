@@ -17,7 +17,7 @@ function ServiceItem(props) {
                 </div>
             </div>
             <div className={styles["wrap-image-service"]}>
-                <Image width={500} height={400} src={image} alt={titleBig} />
+                <Image className={styles.img} width={500} height={400} src={image} alt={titleBig} />
             </div>
             <div>
                 <Link href={`/cosmetics/${id}`}>
