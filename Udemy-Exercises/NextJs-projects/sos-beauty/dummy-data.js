@@ -26,3 +26,7 @@ const DUMMY_SERVICES = [
 export function getAllServices () {
     return DUMMY_SERVICES
 }
+
+export function getServiceById(id) {
+    return DUMMY_SERVICES.find(service => service.id === id);
+}
