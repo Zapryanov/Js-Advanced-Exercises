@@ -1,0 +1,8 @@
+.main-header h1 {
+    color: var(--color-brown);
+    /* font-family: 'Caveat', cursive; */
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 0;
+    position: relative;
+    text-shadow: 3px 3px 1px var(--color-lightgray, rgba(220,220,220,0.7)), 4px 4px 1px rgba(0, 0, 0, 0.6);
+}
