@@ -11,6 +11,9 @@ function MainHeader() {
             <nav>
                 <ul>
                     <li>
+                        <Link href="/contacts">Контакти</Link>
+                    </li>
+                    <li>
                         <Link href="https://www.facebook.com/S.O.SBeauti/">Facebook</Link> 
                     </li>
                     <li>
