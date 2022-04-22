@@ -11,6 +11,9 @@ function MainHeader() {
             <nav>
                 <ul>
                     <li>
+                        <Link href="/">Услуги</Link>
+                    </li>
+                    <li>
                         <Link href="/contacts">Контакти</Link>
                     </li>
                     <li>
