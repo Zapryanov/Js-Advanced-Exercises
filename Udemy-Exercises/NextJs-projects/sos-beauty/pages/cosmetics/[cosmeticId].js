@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { getServiceById } from "../../dummy-data";
+import { getServiceById } from "../../data";
 
 function TypeOfCosmeticService() {
     const router = useRouter();
@@ -11,9 +11,11 @@ function TypeOfCosmeticService() {
     const currentEvent = getServiceById(serviceId);
     console.log(currentEvent);
 
-    if (!currentEvent) {
-        return <h1>Няма намерена такава услуга!</h1>
-    }
+    console.log("Id --- ", serviceId)
+
+    // if (!currentEvent) {
+    //     return <h1>Няма намерена такава услуга!</h1>
+    // }
 
     return (
         <div>

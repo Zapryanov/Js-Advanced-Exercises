@@ -17,7 +17,7 @@ export async function getServerSideProps() {
     // console.log("Cosmetics: ", cosmetics);
     const cosmeticsArray = [];
     for (let key in cosmetics) {
-        console.log(key, cosmetics[key].titleBig);
+        // console.log(key, cosmetics[key].titleBig);
         cosmeticsArray.push(cosmetics[key]);
     }
 

@@ -4,7 +4,27 @@ import Link from "next/link";
 import styles from "./service-item.module.css";
 
 function ServiceItem(props) {
-    const { id, image, titleBig, titleSmall } = props;
+    let { id, image, titleBig, titleSmall, price, generalInfo, serviceDescription } = props;
+
+    switch (titleBig) {
+        case "Козметика": 
+            id = "cosmetics";
+            break;
+        case "Маникюр": 
+            id = "manicure";
+            break;
+        case "Педикюр": 
+            id = "pedicure";
+            break;
+        case "Миглопластика": 
+            id = "eyelashes";
+            break;
+        case "Кола Маска": 
+            id = "waxing";
+            break;
+        default:
+            break;
+    }
 
     return (
         <li key={id} className={styles["service-item"]}>
