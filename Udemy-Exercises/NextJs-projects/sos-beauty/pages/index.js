@@ -10,7 +10,7 @@ function HomePage(props) {
         <title>S.O.S Beauty - Салон за красота Пловдив</title>
         <meta name="description" content="Салон за красота. Маникюр, педикюр, ноктопластика, кола маска, козметика, почистване на лице, миглопластика" />
       </Head>
-      <h1>Home Page</h1>
+      <h1>Услуги</h1>
       <ServicesList services={props.loadedServices} />
     </div>
   )
