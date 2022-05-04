@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "./service-item.module.css";
 
 function ServiceItem(props) {
-    let { id, image, titleBig, titleSmall, price, generalInfo, serviceDescription } = props;
+    let { id, image, titleBig, titleSmall } = props;
 
     switch (titleBig) {
         case "Козметика": 
