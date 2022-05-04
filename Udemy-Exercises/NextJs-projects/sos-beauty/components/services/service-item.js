@@ -40,7 +40,7 @@ function ServiceItem(props) {
                 <Image className={styles.img} width={500} height={400} src={image} alt={titleBig} />
             </div>
             <div>
-                <Link href={`/cosmetics/${id}`}>
+                <Link href={`/${id}`}>
                     <a className={styles["btn-service"]}>Виж повече</a>
                 </Link>
             </div>
