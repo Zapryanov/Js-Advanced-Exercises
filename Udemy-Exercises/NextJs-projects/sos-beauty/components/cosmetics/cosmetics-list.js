@@ -1,12 +1,12 @@
 import CosmeticItem from "./cosmetics-item";
 
-import styles from "../services/services-list.module.css";
+import styles from ".//cosmetics-list.module.css";
 
 function CosmeticsList(props) {
     const { services } = props;
     
     return (
-        <ul className={styles["wrap-all-services"]}>
+        <ul className={styles["wrap-all-cosmetics"]}>
             { services.map((service, id) => (
                 <CosmeticItem 
                     key={id}

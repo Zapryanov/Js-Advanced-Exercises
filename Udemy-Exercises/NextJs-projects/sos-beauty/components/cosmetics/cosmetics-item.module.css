@@ -3,7 +3,7 @@
     border-radius: 12px;
     box-shadow: 0 0 8px 3px rgb(0 0 0 / 55%);
     display: flex;
-    flex: 0 0 30%;
+    flex: 0 0 45%;
     /* flex: 0 0 235px; */
     flex-flow: row wrap;
     justify-content: center;
@@ -17,6 +17,10 @@
 
 .cosmetics-item:hover {
     background-color: rgba(248, 248, 248, 0.9);
+}
+
+.wrap-headings {
+    width: 100%;
 }
 
 .wrap-secondary-name {
@@ -36,6 +40,12 @@
     padding: 10px;
 }
 
+.wrap-btn-cosmetics {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .btn-cosmetics {
     padding: 10px 30px;
     background-color: var(--color-darkcyan);
@@ -44,6 +54,7 @@
     display:  inline-block;
     margin: 10px 0;
     font-weight: 400;
+
 }
 
 .btn-cosmetics:hover {
