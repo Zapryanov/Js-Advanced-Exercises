@@ -1,3 +1,7 @@
+.main-header {
+    margin-bottom: 20px;
+}
+
 .main-header h1 {
     color: var(--color-brown);
     /* font-family: 'Caveat', cursive; */
