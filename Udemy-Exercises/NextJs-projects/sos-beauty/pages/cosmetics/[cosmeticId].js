@@ -45,7 +45,8 @@ export async function getStaticProps(context) {
     return {
         props: {
             currentCosmeticService
-        }
+        },
+        revalidate: 1800
     }
 }
 
