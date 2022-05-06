@@ -1,27 +1,49 @@
-import { useRouter } from "next/router";
-import { getServiceById } from "../../data";
+import Link from "next/link";
+import { getCosmeticServiceById, getCosmeticsIds } from "../../data";
+import styles from "./[cosmeticId].module.css";
 
-function TypeOfCosmeticService() {
-    const router = useRouter();
-    const serviceId = router.query.cosmeticId;
-    const pathName = router.pathname;
-    console.log(`The name of the url - ${serviceId}`);
-    console.log(`The pathName: ${pathName}`);
+function CurrentCosmeticService(props) {
 
-    const currentEvent = getServiceById(serviceId);
-    console.log(currentEvent);
+    const currentService = props.currentCosmeticService;
 
-    console.log("Id --- ", serviceId)
-
-    // if (!currentEvent) {
-    //     return <h1>Няма намерена такава услуга!</h1>
-    // }
+    if (!currentService) {
+        return <h1>Няма намерена такава услуга!</h1>
+    }
 
     return (
         <div>
-            <h1>Заглавие: {serviceId}</h1>
+            <h1>Заглавие: {currentService.titleBig}</h1>
+            <div>Main Description</div>
+            <div className={styles["wrap-btn-cosmeticId"]}>
+                <Link href={`/cosmetics`}>
+                    <a className={styles["btn-cosmeticId"]}>Назад</a>
+                </Link>
+            </div>
         </div>
     )
 }
 
-export default TypeOfCosmeticService;
+export async function getStaticProps(context) {
+    const { params } = context;
+    const cosmeticId = params.cosmeticId;
+
+    const currentCosmeticService = await getCosmeticServiceById(cosmeticId);
+
+    return {
+        props: {
+            currentCosmeticService
+        }
+    }
+}
+
+export async function getStaticPaths() {
+    const ids = await getCosmeticsIds();
+    const pathsWithParams = ids.map(id => ({ params: { cosmeticId: id } }));
+
+    return {
+        paths: pathsWithParams,
+        fallback: "blocking"
+    }
+}
+
+export default CurrentCosmeticService;
