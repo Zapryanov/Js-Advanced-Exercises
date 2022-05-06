@@ -1,19 +1,43 @@
+import Link from "next/link";
+import Image from "next/image";
+import CosmeticsList from "../../components/cosmetics/cosmetics-list";
+
+
+// import ServicesList from "../../components/services/services-list";
 
 function CosmeticsPage(props) {
-    const objCosmetics = props.cosmetics;
-    console.log(objCosmetics);
     return (
         <div>
             <h1>Козметика</h1>
-            <ul>
+            {/* <ul>
                 {
-                    objCosmetics.map(eachService => {
+                    props.cosmetics.map(eachService => {
                         return (
-                            <li key={eachService.id}>{eachService.titleBig}</li>
+                            <li key={eachService.id}>
+                                <div>
+                                    <div>
+                                        <h2>{eachService.titleBig}</h2>
+                                    </div>
+                                    <div>
+                                        <h3>{eachService.titleSmall}</h3>
+                                    </div>
+                                </div>
+                                <div>
+                                    <Image width={300} height={220} src={eachService.image} alt={eachService.titleBig} />
+                                </div>
+                                <div>
+                                    <Link href={`/${eachService.id}`}>
+                                        <a>Виж повече</a>
+                                    </Link>
+                                </div>
+                            </li>
                         )
                     })
                 }
-            </ul>
+            </ul> */}
+            {/* <CosmeticsList cosmeticsObj={props.cosmetics} /> */}
+            {/* <ServicesList services={props.cosmetics} /> */}
+            <CosmeticsList services={props.cosmetics} />
         </div>
     )
 }
@@ -24,7 +48,6 @@ export async function getServerSideProps() {
     const cosmeticsArray = [];
 
     for (let key in cosmetics) {
-        // let obj = {[key]: cosmetics[key]};
         cosmetics[key].id = key;
         cosmeticsArray.push(cosmetics[key]);
     }

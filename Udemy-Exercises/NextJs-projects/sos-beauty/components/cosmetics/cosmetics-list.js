@@ -1,14 +1,14 @@
-import ServiceItem from "./service-item";
+import CosmeticItem from "./cosmetics-item";
 
-import styles from "./services-list.module.css";
+import styles from "../services/services-list.module.css";
 
-function ServicesList(props) {
+function CosmeticsList(props) {
     const { services } = props;
     
     return (
         <ul className={styles["wrap-all-services"]}>
             { services.map((service, id) => (
-                <ServiceItem 
+                <CosmeticItem 
                     key={id}
                     id={id}
                     titleBig={service.titleBig}
@@ -23,4 +23,4 @@ function ServicesList(props) {
     )
 }
 
-export default ServicesList;
+export default CosmeticsList;
