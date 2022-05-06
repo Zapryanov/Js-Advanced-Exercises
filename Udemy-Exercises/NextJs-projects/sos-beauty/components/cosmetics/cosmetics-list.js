@@ -7,10 +7,10 @@ function CosmeticsList(props) {
     
     return (
         <ul className={styles["wrap-all-cosmetics"]}>
-            { services.map((service, id) => (
+            { services.map((service) => (
                 <CosmeticItem 
-                    key={id}
-                    id={id}
+                    key={service.id}
+                    id={service.id}
                     titleBig={service.titleBig}
                     titleSmall={service.titleSmall}
                     image={service.image}
