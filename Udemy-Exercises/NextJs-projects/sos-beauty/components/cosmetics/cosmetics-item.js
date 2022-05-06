@@ -20,7 +20,7 @@ function CosmeticItem(props) {
                 <Image className={styles.img} width={300} height={220} src={image} alt={titleBig} />
             </div>
             <div className={styles["wrap-btn-cosmetics"]}>
-                <Link href={`/${id}`}>
+                <Link href={`/cosmetics/${id}`}>
                     <a className={styles["btn-cosmetics"]}>Виж повече</a>
                 </Link>
             </div>
