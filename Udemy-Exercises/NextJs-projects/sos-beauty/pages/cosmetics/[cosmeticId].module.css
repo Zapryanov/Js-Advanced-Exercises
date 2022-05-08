@@ -10,6 +10,7 @@
     border: 1px solid var(--color-black);
     border-radius: 12px;
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
 }
 
 .wrapper-current-cosmetic h2 {
@@ -20,6 +21,7 @@
 
 .wrap-headings {
     margin: 20px auto;
+    text-align: center;
 }
 
 .wrapper-current-cosmetic h3 {
@@ -79,24 +81,28 @@
 }
 
 .wrap-price {
+    margin: 10px auto;
     text-align: center;
     width: 100%;
+    /* background-color: var(--color-brown-transparent); */
+    background-image: linear-gradient(to bottom, var(--color-brown-transparent), var(--color-brown));
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    color: var(--color-white);
+    padding: 3px 0;
 }
 
 .price {
-    /* border-bottom: 1px solid rgba(157, 10, 10, 1);
-    border-top: 1px solid rgba(157, 10, 10, 1); */
     /* color: var(--color-brown); */
     /* font-family: 'Caveat', cursive; */
     font-family: 'Pacifico', cursive;
     font-weight: 800;
-    margin-bottom: 0;
-    /* text-shadow: 2px 2px 1px var(--color-lightgray, rgba(220,220,220,0.7)), 3px 3px 1px rgba(0, 0, 0, 0.6); */
+    text-shadow: 2px 2px 1px var(--color-lightgray, rgba(220,220,220,0.7)), 3px 3px 1px rgba(0, 0, 0, 0.6);
 
 }
 
 .wrap-btn-cosmeticId {
-    margin: 0 auto;
+    margin: 0 auto 10px auto;
 }
 
 .btn-cosmeticId {
