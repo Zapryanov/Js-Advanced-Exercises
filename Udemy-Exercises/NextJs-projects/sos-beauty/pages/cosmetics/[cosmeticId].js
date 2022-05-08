@@ -14,15 +14,20 @@ function CurrentCosmeticService(props) {
 
     return (
         <div className={styles["wrapper-current-cosmetic"]}>
-            <h2>Заглавие: {titleBig}</h2>
-            <ul className={styles["ul-service-description"]}>
-                {serviceDescription.map((sentence, i) => <li key={i}>{sentence}</li>)}
-            </ul>
+            <h2>{titleBig}</h2>
+            <span className={styles.center}>с френска професионална козметика</span>
+            <h3>{titleSmall}</h3>
             <div className={styles["wrap-image"]}>
-                <Image width={600} height={400} src={image} alt={titleBig} />
+                <div className={styles["image-shadow"]}>
+                    <Image width={450} height={300} src={image} alt={titleBig} />
+                </div>
             </div>
             <ul className={styles["ul-general-info"]}>
                 {generalInfo.map((sentence, i) => <li key={i} className={styles["li-general-info"]}>{sentence}</li>)}
+            </ul>
+            <ul className={styles["ul-service-description"]}>
+                {<li>Какво включва процедурата? :</li>}
+                {serviceDescription.map((sentence, i) => <li key={i}><span>&#10146;</span> {sentence}</li>)}
             </ul>
             <div className={styles["wrap-price"]}>
                 <span className={styles.price}>Цена: {price}лв</span>
