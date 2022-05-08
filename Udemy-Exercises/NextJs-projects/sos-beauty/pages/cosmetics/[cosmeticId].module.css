@@ -14,41 +14,19 @@
 
 .wrapper-current-cosmetic h2 {
     color: var(--color-darkcyan);
-    margin-top: 20px;
     position: relative;
     text-shadow: 2px 2px 1px var(--color-lightgray, rgba(220,220,220,0.7)), 2px 2px 1px rgba(0, 0, 0, 0.6);
 }
 
-.center {
-    text-align: center;
+.wrap-headings {
+    margin: 20px auto;
 }
 
 .wrapper-current-cosmetic h3 {
     color: var(--color-brown);
     /* font-family: 'Caveat', cursive; */
     /* font-family: 'Pacifico', cursive; */
-    margin-bottom: 0;
-    position: relative;
     text-shadow: 3px 3px 1px var(--color-darkgray, rgba(220,220,220,0.7)), 4px 4px 1px rgba(0, 0, 0, 0.6);
-}
-
-.wrapper-current-cosmetic ul {
-    margin: 20px auto;
-}
-
-.ul-service-description {
-    color: rgb(163, 23, 23);
-    text-shadow: 1px 1px rgba(0,0,0,0.6);
-    width: 90%;
-}
-
-.ul-service-description li {
-    padding: 3px 0;
-}
-
-.ul-service-description li span {
-    color: var(--color-darkcyan);
-    font-size: 15px;
 }
 
 .wrap-image {
@@ -62,6 +40,10 @@
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.7);
     border-radius: 5px;
     overflow: hidden;
+}
+
+.wrapper-current-cosmetic ul {
+    margin: 30px auto 0 auto;
 }
 
 .ul-general-info {
@@ -79,6 +61,21 @@
 
 .li-general-info:nth-child(odd) {
     background-color: white;
+}
+
+.ul-service-description {
+    color: rgb(163, 23, 23);
+    text-shadow: 1px 1px rgba(0,0,0,0.6);
+    width: 90%;
+}
+
+.ul-service-description li {
+    padding: 3px 0;
+}
+
+.ul-service-description li span {
+    color: var(--color-darkcyan);
+    font-size: 15px;
 }
 
 .wrap-price {

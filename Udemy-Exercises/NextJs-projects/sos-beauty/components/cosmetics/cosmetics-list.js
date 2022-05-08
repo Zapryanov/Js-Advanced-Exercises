@@ -14,9 +14,6 @@ function CosmeticsList(props) {
                     titleBig={service.titleBig}
                     titleSmall={service.titleSmall}
                     image={service.image}
-                    price={service.price}
-                    generalInfo={service.generalInfo}
-                    serviceDescription={service.serviceDescription}
                 />
             )) }
         </ul>

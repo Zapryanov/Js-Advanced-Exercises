@@ -6,7 +6,7 @@ import styles from "./[cosmeticId].module.css";
 function CurrentCosmeticService(props) {
 
     const currentService = props.currentCosmeticService;
-    const { titleBig, titleSmall, generalInfo, image, serviceDescription, price } = currentService;
+    const { titleBig, titleSmall, generalInfo, image, serviceDescription, price, typeOfOrigin } = currentService;
 
     if (!currentService) {
         return <h1>Няма намерена такава услуга!</h1>
@@ -14,9 +14,11 @@ function CurrentCosmeticService(props) {
 
     return (
         <div className={styles["wrapper-current-cosmetic"]}>
-            <h2>{titleBig}</h2>
-            <span className={styles.center}>с френска професионална козметика</span>
-            <h3>{titleSmall}</h3>
+            <div className={styles["wrap-headings"]}>
+                <h2>{titleBig}</h2>
+                <span className={styles.center}>{typeOfOrigin}</span>
+                <h3>{titleSmall}</h3>
+            </div>
             <div className={styles["wrap-image"]}>
                 <div className={styles["image-shadow"]}>
                     <Image width={450} height={300} src={image} alt={titleBig} />
