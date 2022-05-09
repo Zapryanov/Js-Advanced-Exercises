@@ -1,5 +1,33 @@
 .footer {
-    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
     margin-top: 20px;
     padding: 20px;
+}
+
+.each-footer-block {
+    padding: 10px 0;
+}
+
+.footer span {
+    color: rgb(250, 246, 246);
+    display: block;
+    text-shadow: 1px 1px 1px black;
+}
+
+.footer h4 {
+    position: relative;
+    /* text-align: left; */
+}
+
+.footer h4::before {
+    background-color: rgba(220, 220, 220, 0.4);
+    bottom: 0;
+    border-radius: 50%;
+    box-shadow: 0px 2px 12px 3px cornsilk;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 100%;
 }
