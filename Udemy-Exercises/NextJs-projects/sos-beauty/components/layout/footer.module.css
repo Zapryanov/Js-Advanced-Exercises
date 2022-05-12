@@ -67,7 +67,6 @@
     border-radius: 0 12px 12px 0;
     box-shadow: 0px 2px 8px 1px cornsilk;
     padding: 0;
-    /* display: table; */
 }
 
 .see-more:hover {
@@ -79,8 +78,15 @@
     color: rgba(220, 220, 220, 1);
     display: block;
     padding: 0px 8px 4px 8px;
-    /* display: table-cell; */
-    /* vertical-align: middle; */
+}
+
+.left {
+    border-radius: 0 12px 12px 0;
+}
+
+.right {
+    border-radius: 12px 0 0 12px;
+    right: 0;
 }
 
 .footer-image .image {
