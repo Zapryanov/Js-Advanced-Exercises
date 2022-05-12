@@ -2,11 +2,12 @@
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-    padding: 20px;
+    padding: 20px 0 30px 0;
 }
 
 .each-footer-block {
-    padding: 10px 0;
+    width: 330px;
+    height: 200px;
 }
 
 .footer span {
@@ -34,4 +35,54 @@
     left: 0;
     position: absolute;
     width: 100%;
+}
+
+.contacts {
+    border: 1px solid rgba(220, 220, 220, 0.4);
+    border-radius: 12px;
+    box-shadow: 0px 2px 12px 1px cornsilk;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px;
+    
+}
+
+.wrap-socials {
+    border: 1px solid rgba(220, 220, 220, 0.4);
+    border-radius: 12px;
+    box-shadow: 0px 2px 12px 1px cornsilk;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+.see-more {
+    position: absolute;
+    bottom: 50%;
+    z-index: 2;
+    background-color: var(--color-darkcyan);
+    border: 1px solid rgba(220, 220, 220, 0.4);
+    border-radius: 0 12px 12px 0;
+    box-shadow: 0px 2px 8px 1px cornsilk;
+    padding: 0;
+    /* display: table; */
+}
+
+.see-more:hover {
+    background-color: var(--color-light-darkcyan);
+    text-shadow: 1px 1px 2px var(--color-black);
+}
+
+.see-more-text {
+    color: rgba(220, 220, 220, 1);
+    display: block;
+    padding: 0px 8px 4px 8px;
+    /* display: table-cell; */
+    /* vertical-align: middle; */
+}
+
+.footer-image .image {
+    border-radius: 12px;
 }
