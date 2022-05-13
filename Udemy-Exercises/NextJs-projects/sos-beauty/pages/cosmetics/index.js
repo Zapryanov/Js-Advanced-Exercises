@@ -1,9 +1,10 @@
 import CosmeticsList from "../../components/cosmetics/cosmetics-list";
+import styles from "./index.module.css";
 
 function CosmeticsPage(props) {
     return (
         <div>
-            <h1>Козметика</h1>
+            <h1 className={styles.pageHeading}>Козметика</h1>
             <CosmeticsList services={props.cosmetics} />
         </div>
     )

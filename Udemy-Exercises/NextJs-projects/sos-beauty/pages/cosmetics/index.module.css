@@ -1,0 +1,6 @@
+.pageHeading {
+    margin: 20px auto;
+    color: var(--color-darkcyan);
+    font-size: 30px;
+    text-shadow: 1px 1px 1px var(--color-lightgray, rgba(220, 220, 220, 0.7)), 2px 2px 1px rgba(0, 0, 0, 0.6);
+}
