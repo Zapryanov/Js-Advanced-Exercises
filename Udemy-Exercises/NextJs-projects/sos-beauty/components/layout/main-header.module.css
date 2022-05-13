@@ -40,7 +40,8 @@
 .link-menu {
     color: rgb(250, 246, 246);
     display: block;
-    padding: 5px 10px 8px 10px;
+    /* padding: 5px 10px 8px 10px; */
+    padding: 5px 10px;
 }
 
 .menu li:hover {
@@ -54,4 +55,14 @@
     -webkit-transform: scale(0.8) translateY(20%);
     transform: scale(0.8) translateY(20%);
     transition: all 0.3 ease-in-out;
+}
+
+.link-phone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-phone span {
+    padding-left: 10px;
 }

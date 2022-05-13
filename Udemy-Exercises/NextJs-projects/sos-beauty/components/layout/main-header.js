@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import styles from "./main-header.module.css";
 
@@ -22,9 +23,23 @@ function MainHeader() {
                         </Link>
                     </li>
                 </ul>
-                <div>
-                    <Link href="https://www.facebook.com/S.O.SBeauti/">Facebook</Link> 
-                </div>
+                <ul className={styles.menu}>
+                    <li>
+                        <Link href="https://www.facebook.com/S.O.SBeauti/">
+                            <a className={`${styles["link-menu"]} ${styles["facebook-icon"]}`}  target="_blank">
+                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1644830666/facebook_gt0ii9.svg" alt="facebook" />
+                            </a>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="tel:+35976862629">
+                            <a className={`${styles["link-menu"]} ${styles["link-phone"]}`}>
+                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1652476270/phone_nbsxsf.png" alt="phone" />
+                                <span>0876 862 629</span>
+                            </a>
+                        </Link>
+                    </li>
+                </ul>
             </nav>
         </header>
     )
