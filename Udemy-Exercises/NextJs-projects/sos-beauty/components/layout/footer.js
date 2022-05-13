@@ -3,11 +3,14 @@ import Image from "next/image";
 
 import styles from "./footer.module.css";
 import FooterButton from "../buttons/footer-button";
+import FooterImageLink from "../imageLinks/footer-image-link";
 
 function Footer() {
     const obj = {
         googleLink: "https://www.google.com/maps/place/S.O.S+Beauty/@42.137649,24.7864931,19z/data=!4m5!3m4!1s0x14acd1671feabfcf:0xbe40cf6f6dab0e16!8m2!3d42.137649!4d24.7870403",
+        googleImage: "https://res.cloudinary.com/audipower/image/upload/v1652121714/google-map-cutted_ggybkj.jpg",
         facebookLink: "https://www.facebook.com/S.O.SBeauti",
+        facebookImage: "https://res.cloudinary.com/audipower/image/upload/v1652122789/facebook-small_xl76ob.png",
         left: styles.left,
         right: styles.right
     }
@@ -26,26 +29,18 @@ function Footer() {
                     <span>/ Срещу входа на Акваленд /</span>
                 </div>
             </div>
-            <div className={`${styles["each-footer-block"]}, ${styles["footer-socials"]}`}>
+            <div className={`${styles["each-footer-block"]}`}>
                 <h4>Facebook</h4>
                 <div className={styles["wrap-socials"]}>
                     <FooterButton  direction={obj.left} link={obj.facebookLink} />
-                    {/* <Link className={`${styles["link-facebook"]} ${styles["footer-image"]}`} href="https://www.facebook.com/S.O.SBeauti">
-                        <a target="_blank">
-                            <Image className={styles.image} width={330} height={200} src={"https://res.cloudinary.com/audipower/image/upload/v1652122789/facebook-small_xl76ob.png"} alt="google-map" />  
-                        </a>
-                    </Link> */}
+                    <FooterImageLink link={obj.facebookLink} image={obj.facebookImage} />
                 </div>
             </div>
-            <div className={`${styles["each-footer-block"]} ${styles["footer-socials"]}`}>
+            <div className={`${styles["each-footer-block"]}`}>
                 <h4>Google Map</h4>
                 <div className={styles["wrap-socials"]}>
                     <FooterButton direction={obj.right} link={obj.googleLink} />
-                    <Link className={styles["link-google-map"]} href="https://www.google.com/maps/place/S.O.S+Beauty/@42.137649,24.7864931,19z/data=!4m5!3m4!1s0x14acd1671feabfcf:0xbe40cf6f6dab0e16!8m2!3d42.137649!4d24.7870403">
-                        <a target="_blank">
-                            <Image width={330} height={200} src={"https://res.cloudinary.com/audipower/image/upload/v1652121714/google-map-cutted_ggybkj.jpg"} alt="google-map" />  
-                        </a>
-                    </Link>
+                    <FooterImageLink link={obj.googleLink} image={obj.googleImage} />
                 </div>
             </div>
         </footer>
