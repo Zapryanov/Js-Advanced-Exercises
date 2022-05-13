@@ -12,10 +12,14 @@ function MainHeader() {
             <nav>
                 <ul className={styles.menu}>
                     <li>
-                        <Link href="/">Услуги</Link>
+                        <Link href="/">
+                            <a className={styles["link-menu"]}>Услуги</a>
+                        </Link>
                     </li>
                     <li>
-                        <Link href="/contacts">Контакти</Link>
+                        <Link href="/contacts">
+                            <a className={styles["link-menu"]}>Контакти</a>
+                        </Link>
                     </li>
                 </ul>
                 <div>
