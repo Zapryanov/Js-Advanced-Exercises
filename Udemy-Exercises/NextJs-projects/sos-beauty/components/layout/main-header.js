@@ -10,23 +10,17 @@ function MainHeader() {
                 <h2>Beauty Salon</h2>
             </div>
             <nav>
-                <ul>
+                <ul className={styles.menu}>
                     <li>
                         <Link href="/">Услуги</Link>
                     </li>
                     <li>
                         <Link href="/contacts">Контакти</Link>
                     </li>
-                    <li>
-                        <Link href="https://www.facebook.com/S.O.SBeauti/">Facebook</Link> 
-                    </li>
-                    <li>
-                        <Link href="https://www.facebook.com/S.O.SBeauti/">Instagram</Link> 
-                    </li>
-                    <li>
-                        <Link href="https://www.facebook.com/S.O.SBeauti/">Twitter</Link> 
-                    </li>
                 </ul>
+                <div>
+                    <Link href="https://www.facebook.com/S.O.SBeauti/">Facebook</Link> 
+                </div>
             </nav>
         </header>
     )
