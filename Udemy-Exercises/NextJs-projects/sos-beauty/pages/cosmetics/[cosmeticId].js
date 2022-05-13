@@ -13,31 +13,33 @@ function CurrentCosmeticService(props) {
     }
 
     return (
-        <div className={styles["wrapper-current-cosmetic"]}>
-            <div className={styles["wrap-headings"]}>
-                <h2>{titleBig}</h2>
-                <span className={styles.center}>{typeOfOrigin}</span>
-                <h3>{titleSmall}</h3>
-            </div>
-            <div className={styles["wrap-image"]}>
-                <div className={styles["image-shadow"]}>
-                    <Image width={450} height={300} src={image} alt={titleBig} />
+        <div>
+            <h2 className={styles.pageHeading}>{titleBig}</h2>
+            <div className={styles["wrapper-current-cosmetic"]}>
+                <div className={styles["wrap-headings"]}>
+                    <span className={styles.center}>{typeOfOrigin}</span>
+                    <h3>{titleSmall}</h3>
                 </div>
-            </div>
-            <ul className={styles["ul-general-info"]}>
-                {generalInfo.map((sentence, i) => <li key={i} className={styles["li-general-info"]}>{sentence}</li>)}
-            </ul>
-            <ul className={styles["ul-service-description"]}>
-                {<li>Какво включва процедурата? :</li>}
-                {serviceDescription.map((sentence, i) => <li key={i}><span>&#10146;</span> {sentence}</li>)}
-            </ul>
-            <div className={styles["wrap-price"]}>
-                <span className={styles.price}>Цена: {price}лв</span>
-            </div>
-            <div className={styles["wrap-btn-cosmeticId"]}>
-                <Link href={`/cosmetics`}>
-                    <a className={styles["btn-cosmeticId"]}>Назад</a>
-                </Link>
+                <div className={styles["wrap-image"]}>
+                    <div className={styles["image-shadow"]}>
+                        <Image width={450} height={300} src={image} alt={titleBig} />
+                    </div>
+                </div>
+                <ul className={styles["ul-general-info"]}>
+                    {generalInfo.map((sentence, i) => <li key={i} className={styles["li-general-info"]}>{sentence}</li>)}
+                </ul>
+                <ul className={styles["ul-service-description"]}>
+                    {<li>Какво включва процедурата? :</li>}
+                    {serviceDescription.map((sentence, i) => <li key={i}><span>&#10146;</span> {sentence}</li>)}
+                </ul>
+                <div className={styles["wrap-price"]}>
+                    <span className={styles.price}>Цена: {price}лв</span>
+                </div>
+                <div className={styles["wrap-btn-cosmeticId"]}>
+                    <Link href={`/cosmetics`}>
+                        <a className={styles["btn-cosmeticId"]}>Назад</a>
+                    </Link>
+                </div>
             </div>
         </div>
     )
