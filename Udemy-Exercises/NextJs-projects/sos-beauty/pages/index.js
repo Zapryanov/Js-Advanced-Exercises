@@ -1,5 +1,4 @@
 import ServicesList from "../components/services/services-list";
-// import { getAllServices } from "../dummy-data";
 import Head from "next/head";
 import { getMainHeadings } from "../data";
 
@@ -19,7 +18,6 @@ function HomePage(props) {
 }
 
 export async function getServerSideProps() {
-  // const allServices = await getAllServices();
   const mainHeadings = await getMainHeadings();
   return {
     props: {
