@@ -23,7 +23,6 @@ function WaxingPage(props) {
 
 export async function getServerSideProps() {
     const manAndWomenPrices = await getWaxing();
-    // console.log("data from GetServerSideProps --- ", data);
 
     return {
         props: {
