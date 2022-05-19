@@ -7,8 +7,8 @@ function Pedicure(props) {
     const { pedicure } = props;
     return (
         <div>
-            <h1 className={styles.pageHeading}>Педикюр</h1>
-            <article className={styles["wrap-price-list"]}>
+            <h1 className="pageHeading">Педикюр</h1>
+            <article className="wrap-price-list">
                 <PricesList prices={pedicure}/>
             </article>
         </div>

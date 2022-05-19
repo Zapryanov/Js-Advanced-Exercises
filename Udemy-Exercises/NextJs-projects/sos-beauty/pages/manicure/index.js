@@ -8,8 +8,8 @@ function Manicure(props) {
     console.log(manicure);
     return (
         <div>
-            <h1 className={styles.pageHeading}>Маникюр</h1>
-            <article className={styles["wrap-price-list"]}>
+            <h1 className="pageHeading">Маникюр</h1>
+            <article className="wrap-price-list">
                 <PricesList prices={manicure}/>
             </article>
         </div>
