@@ -1,0 +1,38 @@
+.pageHeading {
+    margin: 20px auto;
+    color: var(--color-darkcyan);
+    font-size: 30px;
+    text-shadow: 1px 1px 1px var(--color-lightgray, rgba(220, 220, 220, 0.7)), 2px 2px 1px rgba(0, 0, 0, 0.6);
+}
+
+.wrap-women-and-men {
+    display:  flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.section-human {
+    width: 40%;
+}
+
+.h2-waxing {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(68, 66, 66, 0.8);
+    text-transform: uppercase;
+    text-shadow:  0px 0px 2px white,
+                1px 1px 0px rgba(68, 66, 66, 0.8),
+                1px 2px 0px rgba(68, 66, 66, 0.8),
+                1px 3px 0px rgba(68, 66, 66, 0.8),
+                1px 4px 0px rgba(68, 66, 66, 0.8),
+                1px 10px 5px rgba(16, 16, 16, 0.5);
+}
+
+.section-human:first-child {
+    margin-right: 10px;
+}
+
+.section-human:nth-child(2) {
+    margin-left: 10px;
+}

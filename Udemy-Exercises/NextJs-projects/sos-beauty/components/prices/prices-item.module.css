@@ -1,0 +1,18 @@
+.li-price-item {
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 3px 10px;
+}
+
+.part {
+    color: var(--color-brown);
+    font-family: 'Pacifico', cursive;
+    text-shadow: 1px 1px 0px black;
+}
+
+.price {
+    color: rgb(250, 246, 246);
+    text-shadow: 1px 1px 1px black;
+}
