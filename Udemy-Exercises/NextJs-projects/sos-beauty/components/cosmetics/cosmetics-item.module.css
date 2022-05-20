@@ -23,12 +23,27 @@
     width: 100%;
 }
 
+.wrap-main-name h2 {
+    font-size: 16px;
+    background-image: linear-gradient(to bottom, var(--color-brown) 40%, var(--color-darkcyan));
+    background-clip: text;
+    color: transparent;
+}
+
 .wrap-secondary-name {
     align-items: flex-start;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     min-height: 35px;
+}
+
+.wrap-secondary-name h3 {
+    color: rgba(165, 42, 42, 1);
+    text-shadow:  0px 0px 2px white,
+                1px 1px 0px var(--color-darkcyan),
+                1px 2px 0px rgba(154, 14, 14, 1),
+                1px 10px 5px rgba(16, 16, 16, 0.5);
 }
 
 .wrap-image-cosmetics {
