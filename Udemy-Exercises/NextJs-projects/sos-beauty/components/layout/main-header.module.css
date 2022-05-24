@@ -51,6 +51,10 @@
     text-shadow: 0 0 2px black;
 }
 
+.menu li:last-child {
+    margin-right: 0;
+}
+
 .link-menu {
     color: rgb(250, 246, 246);
     display: block;
