@@ -18,6 +18,11 @@ function MainHeader() {
                         </Link>
                     </li>
                     <li>
+                        <Link href="/about">
+                            <a className={styles["link-menu"]}>За нас</a>
+                        </Link>
+                    </li>
+                    <li>
                         <Link href="/contacts">
                             <a className={styles["link-menu"]}>Контакти</a>
                         </Link>
