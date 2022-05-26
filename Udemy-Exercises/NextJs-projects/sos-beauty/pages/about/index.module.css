@@ -4,7 +4,7 @@
 }
 
 .wrapper article {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .top-center {
@@ -42,6 +42,14 @@
     text-indent: 20px;
     line-height: 1.5;
     letter-spacing: 1px;
+}
+
+.wrap-text:nth-child(odd) {
+    color: black;
+}
+
+.wrap-text:nth-child(even) {
+    color: white;
 }
 
 .wrap-images ul {
