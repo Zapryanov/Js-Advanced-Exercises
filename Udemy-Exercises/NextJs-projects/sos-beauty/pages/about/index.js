@@ -1,11 +1,12 @@
 import Image from "next/image";
 
-import { getManicureAboutUs, getWaxingAboutUs } from "../../data";
+import { getCosmeticsAboutUs, getManicureAboutUs, getWaxingAboutUs } from "../../data";
 import styles from "./index.module.css";
 
 function About(props) {
     const manicureImages = props.manicurePictures;
     const waxingImages = props.waxingPictures;
+    const cosmeticsImages = props.cosmeticsPictures;
 
     return (
         <div>
@@ -52,9 +53,30 @@ function About(props) {
                         <h4>Кола Маска</h4>
                         <p>
                             Кола маската е сравнително достъпен и средно дълготраен метод за епилация. Ефекта на гладката кожа остава за
-                            около 3-4 седмици. При редовни процедури космите стават по-редки, по-меки и по-светли на цвят, 
+                            около 2-3 седмици. При редовни процедури космите стават по-редки, по-меки и по-светли на цвят, 
                             следователно по-малко забележими между процедурите.
                         </p>
+                    </div>
+                </article>
+                <article className={styles["wrap-text-and-images"]}>
+                    <div className={styles["wrap-text"]}>
+                        <h4>Козметика</h4>
+                        <p>
+                            DR Renaud e френска професионална козметика, създадена от д-р Луи Реймънд Рьоно през 1946г. 
+                            Козметичната марка Dr Renaud е пионер в натуралната козметика. 
+                            Внимателно селектирани растения, научни изследвания на свойствата им и ценни патенти за биотехнологични 
+                            разработки водят до създаване на високоефективни козметични продукти с натурални съставки. Основните активни 
+                            съставки на всяка серия са със сертифициран органичен произход.
+                        </p>
+                    </div>
+                    <div className={styles["wrap-images"]}>
+                        <ul className={styles["remove-space"]}>
+                            {cosmeticsImages.map((image, i) => 
+                                <li className={styles["current-image"]} key={i}>
+                                    <Image className={`${styles["about-us-image"]} img`} width={200} height={150} src={image} alt="nails" />
+                                </li>
+                            )}
+                        </ul>
                     </div>
                 </article>
             </section>
@@ -65,11 +87,13 @@ function About(props) {
 export async function getServerSideProps() {
     const manicure = await getManicureAboutUs();
     const waxing = await getWaxingAboutUs();
+    const cosmetics = await getCosmeticsAboutUs();
 
     return {
         props: {
             manicurePictures: manicure,
-            waxingPictures: waxing
+            waxingPictures: waxing,
+            cosmeticsPictures: cosmetics
         }
     }
 }

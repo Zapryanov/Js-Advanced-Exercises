@@ -24,15 +24,15 @@
 
 .wrap-text-and-images {
     display: flex;
-    flex-flow: row wrap;
-    background-image: linear-gradient(to bottom left, rgba(128, 128, 128, 1), rgba(192, 192, 192, 1));
+    flex-flow: row nowrap;
+    background-image: linear-gradient(to bottom left, rgba(128, 128, 128, 1), rgb(234, 231, 231));
     box-shadow: 0px 0px 7px 2px cornsilk, 1px 3px 8px 3px rgb(0 0 0 / 50%);
     border-radius: 10px;
+    justify-content: space-between;
 }
 
-.wrap-text,
 .wrap-images {
-    flex: 0 1 50%;
+    flex: 1 0 618px;
 }
 
 .wrap-text {
@@ -50,6 +50,7 @@
 
 .wrap-text:nth-child(even) {
     color: white;
+    /* color: #1EC299; */
 }
 
 .wrap-images ul {
@@ -62,9 +63,11 @@
 }
 
 .current-image {
-    opacity: 0.7;
+    opacity: 0.8;
     border-radius: 10px;
     overflow: hidden;
+    position: relative;
+    margin: 3px;
 }
 
 .current-image:hover {
@@ -72,4 +75,8 @@
     transform: scale(1.2);
     transition: 1s;
     z-index: 2;
+}
+
+.about-us-image {
+    width: 200px;
 }
