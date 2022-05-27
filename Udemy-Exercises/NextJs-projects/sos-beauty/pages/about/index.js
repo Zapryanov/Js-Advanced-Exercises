@@ -1,12 +1,13 @@
 import Image from "next/image";
 
-import { getCosmeticsAboutUs, getManicureAboutUs, getWaxingAboutUs } from "../../data";
+import { getCosmeticsAboutUs, getEyelashesAboutUs, getManicureAboutUs, getWaxingAboutUs } from "../../data";
 import styles from "./index.module.css";
 
 function About(props) {
     const manicureImages = props.manicurePictures;
     const waxingImages = props.waxingPictures;
     const cosmeticsImages = props.cosmeticsPictures;
+    const eyelashesImages = props.eyelashesPictures;
 
     return (
         <div>
@@ -79,6 +80,30 @@ function About(props) {
                         </ul>
                     </div>
                 </article>
+                <article className={styles["wrap-text-and-images"]}>
+                    <div className={styles["wrap-images"]}>
+                        <ul className={styles["remove-space"]}>
+                            {eyelashesImages.map((image, i) => 
+                                <li className={styles["current-image"]} key={i}>
+                                    <Image className="img" width={200} height={150} src={image} alt="nails" />
+                                </li>
+                            )}
+                        </ul>
+                    </div>
+                    <div className={styles["wrap-text"]}>
+                        <h4>Миглопластика</h4>
+                        <p>
+                            Класическото удължаване на миглите включва прилагане на 1 отделна кашмирена мигла върху всяка отделна естествена мигла. 
+                            Това създава вид на фина добавена дължина и обем. Класическите мигли са идеални, ако предпочитате леки естествено изглеждащи мигли.
+                            При руския обем изкуствените мигли са ултра фини, меки и пухкави, те са супер леки и осигуряват пълен обемен вид, 
+                            нанесени по няколко на всяка отделна естествена мигла. Могат да се направят да изглеждат естествени или в пълен блясък, 
+                            в зависимост от естествените ви мигли и вида, който искате да създадете. За класическите мигли, времето което отнема за поставянето
+                            е около час и половина, а за руския обем около 2 часа. Така че, може да си поспите съвсем спокойно докато трае процедурата :) .
+                            Трайността на положените мигли е около 2-3 седмици, понеже толкова е жизнения цикъл на естествените ви мигли и съответно, когато
+                            падне една такава естествена, с нея пада и залепената изкуствена. Препоръката е на 2-3 седмици да се прави поддръжка по запълване на падналите мигли.
+                        </p>
+                    </div>
+                </article>
             </section>
         </div>
     )
@@ -88,12 +113,14 @@ export async function getServerSideProps() {
     const manicure = await getManicureAboutUs();
     const waxing = await getWaxingAboutUs();
     const cosmetics = await getCosmeticsAboutUs();
+    const eyelashes = await getEyelashesAboutUs();
 
     return {
         props: {
             manicurePictures: manicure,
             waxingPictures: waxing,
-            cosmeticsPictures: cosmetics
+            cosmeticsPictures: cosmetics,
+            eyelashesPictures: eyelashes
         }
     }
 }
