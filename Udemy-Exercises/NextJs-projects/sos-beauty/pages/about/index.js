@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { getCosmeticsAboutUs, getEyelashesAboutUs, getManicureAboutUs, getWaxingAboutUs } from "../../data";
+import { getCosmeticsAboutUs, getEyelashesAboutUs, getManicureAboutUs, getMicrobladingAboutUs, getWaxingAboutUs } from "../../data";
 import styles from "./index.module.css";
 
 function About(props) {
@@ -8,6 +8,7 @@ function About(props) {
     const waxingImages = props.waxingPictures;
     const cosmeticsImages = props.cosmeticsPictures;
     const eyelashesImages = props.eyelashesPictures;
+    const microbladingImages = props.microbladingPictures;
 
     return (
         <div>
@@ -104,6 +105,26 @@ function About(props) {
                         </p>
                     </div>
                 </article>
+                <article className={styles["wrap-text-and-images"]}>
+                    <div className={styles["wrap-text"]}>
+                        <h4>Микроблейдинг</h4>
+                        <p>
+                            Всеки, който е запълвал веждите си със сенки и моливи, знае болката от сутрешния ритуал преди излизане. Микропигментацията може да промени
+                            изцяло тази загуба на време. След навлизане на микроблейдинга хората могат да имат така желаните вежди, които не са имали по рождение. 
+                            Процедурата трае около час-два, но си заслужава. След 4 до 6 седмици е нужно да се направи ретуш и ще имате перфектните вежди за следващата 
+                            година и половина до две, в зависимост от кожата ви, понеже това е индивидуално при всеки тип кожа и пигментация.
+                        </p>
+                    </div>
+                    <div className={styles["wrap-images"]}>
+                        <ul className={styles["remove-space"]}>
+                            {microbladingImages.map((image, i) => 
+                                <li className={styles["current-image"]} key={i}>
+                                    <Image className={`${styles["about-us-image"]} img`} width={200} height={150} src={image} alt="nails" />
+                                </li>
+                            )}
+                        </ul>
+                    </div>
+                </article>
             </section>
         </div>
     )
@@ -114,13 +135,15 @@ export async function getServerSideProps() {
     const waxing = await getWaxingAboutUs();
     const cosmetics = await getCosmeticsAboutUs();
     const eyelashes = await getEyelashesAboutUs();
+    const microblading = await getMicrobladingAboutUs();
 
     return {
         props: {
             manicurePictures: manicure,
             waxingPictures: waxing,
             cosmeticsPictures: cosmetics,
-            eyelashesPictures: eyelashes
+            eyelashesPictures: eyelashes,
+            microbladingPictures: microblading
         }
     }
 }
