@@ -1,0 +1,31 @@
+.wrapper-promotions {
+    min-height: 60vh;
+    position: relative;
+    z-index: 2;
+}
+
+.text-background {
+    position: absolute;
+    /* background-color: lightgreen; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-background p {
+    /* background-color: red; */
+    text-align: center;
+    transform: rotate(-25deg);
+    font-size: 70px;
+    color: #fff;
+    opacity: 0.1;
+    /* text-shadow: 1px 1px black, -1px -1px black; */
+    /* color: darkgrey;
+    font-family: sans-serif;
+    letter-spacing: 0.15em;
+    text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,
+        1px 5px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 8px 0 grey,
+        5px 13px 15px black; */
+}

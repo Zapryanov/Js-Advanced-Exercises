@@ -23,6 +23,11 @@ function MainHeader() {
                         </Link>
                     </li>
                     <li>
+                        <Link href="/promotions">
+                            <a className={styles["link-menu"]}>Промоции</a>
+                        </Link>
+                    </li>
+                    <li>
                         <Link href="/contacts">
                             <a className={styles["link-menu"]}>Контакти</a>
                         </Link>
