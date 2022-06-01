@@ -5,7 +5,7 @@ import styles from "./index.module.css";
 
 function PromotionsPage(props) {
     if (props.promotions) {
-        const { descriptionMain, descriptionDiscount, image, priceDiscounted, priceRegular } = props.promotions;
+        const { descriptionMain, descriptionDiscount, heading, image, priceDiscounted, priceRegular } = props.promotions;
         return (
             <div className={styles["wrapper-promotions"]}>
                 <h1 className="pageHeading">Промоции</h1>
@@ -13,7 +13,7 @@ function PromotionsPage(props) {
                     <p>-% Промоции -%</p>
                 </div>
                 <section className={styles["section-promotions"]}>
-                    <h3>Гел лак</h3>
+                    <h3>{heading}</h3>
                     <article>
                         <div className={styles["wrap-image-promotions"]}>
                             <Image className={styles["image"]} width={330} height={220} src={image} alt="image-promotions" />
