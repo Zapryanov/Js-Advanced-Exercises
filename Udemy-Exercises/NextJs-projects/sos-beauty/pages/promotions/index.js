@@ -4,8 +4,10 @@ import { getPromotions } from "../../data";
 import styles from "./index.module.css";
 
 function PromotionsPage(props) {
-    if (props.promotions) {
-        const { descriptionMain, descriptionDiscount, heading, image, priceDiscounted, priceRegular } = props.promotions;
+    const arr = props.promotions;
+    console.log(arr)
+    if (arr) {
+        // const { descriptionMain, descriptionDiscount, heading, image, priceDiscounted, priceRegular } = props.promotions;
         return (
             <div className={styles["wrapper-promotions"]}>
                 <h1 className="pageHeading">Промоции</h1>
@@ -13,18 +15,22 @@ function PromotionsPage(props) {
                     <p>-% Промоции -%</p>
                 </div>
                 <section className={styles["section-promotions"]}>
-                    <h3>{heading}</h3>
-                    <article>
-                        <div className={styles["wrap-image-promotions"]}>
-                            <Image className={styles["image"]} width={330} height={220} src={image} alt="image-promotions" />
+                    {arr.map((eachPromotion, i) => (
+                        <div key={i}>
+                            <h3>{eachPromotion.heading}</h3>
+                            <article>
+                                <div className={styles["wrap-image-promotions"]}>
+                                    <Image className={styles["image"]} width={330} height={220} src={eachPromotion.image} alt="image-promotions" />
+                                </div>
+                                <div className={styles["wrap-text-promotions"]}>
+                                    <p className={styles["descriptionMain"]}>{eachPromotion.descriptionMain}</p>
+                                    <p className={styles["descriptionDiscount"]}>{eachPromotion.descriptionDiscount}</p>
+                                    <p className={styles["priceRegular"]}>{eachPromotion.priceRegular}</p>
+                                    <span className={styles["priceDiscounted"]}>{eachPromotion.priceDiscounted}</span>
+                                </div>
+                            </article>
                         </div>
-                        <div className={styles["wrap-text-promotions"]}>
-                            <p className={styles["descriptionMain"]}>{descriptionMain}</p>
-                            <p className={styles["descriptionDiscount"]}>{descriptionDiscount}</p>
-                            <p className={styles["priceRegular"]}>{priceRegular}</p>
-                            <span className={styles["priceDiscounted"]}>{priceDiscounted}</span>
-                        </div>
-                    </article>
+                    ))}
                 </section>
             </div>
         )
@@ -36,7 +42,8 @@ function PromotionsPage(props) {
                     <p>-% Промоции -%</p>
                 </div>
                 <section className={styles["section-promotions"]}>
-                    <h3>Няма активна промоция!!!</h3>
+                    <h3>Няма активна промоция!</h3>
+                    <p>Очаквайте скоро интересни предложения!</p>
                 </section>
             </div>
         )
