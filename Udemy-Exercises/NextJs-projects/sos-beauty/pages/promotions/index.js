@@ -16,7 +16,7 @@ function PromotionsPage(props) {
                 </div>
                 <section className={styles["section-promotions"]}>
                     {arr.map((eachPromotion, i) => (
-                        <div key={i}>
+                        <div className={styles["each-promotion-wrapper"]} key={i}>
                             <h3>{eachPromotion.heading}</h3>
                             <article>
                                 <div className={styles["wrap-image-promotions"]}>

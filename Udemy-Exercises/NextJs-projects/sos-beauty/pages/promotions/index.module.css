@@ -26,6 +26,10 @@
     margin: 0 auto;
 }
 
+.each-promotion-wrapper {
+    margin-bottom: 30px;
+}
+
 .section-promotions article {
     display: flex;
     justify-content:  space-between;
