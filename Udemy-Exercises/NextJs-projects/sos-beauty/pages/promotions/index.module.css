@@ -58,7 +58,9 @@
 .wrap-text-promotions {
     border-top: 1px solid navajowhite;
     color: rgb(250, 246, 246);
-    text-shadow: 1px 1px 1px black;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
     width: 420px;
 }
 
@@ -66,8 +68,7 @@
     color: red;
     font-size: 25px;
     font-weight: 400;
-    margin-left: 420px;
-    transform: translateX(-50%);
+    margin: 0px 0px 5px 380px;
     text-shadow: 
         1px 1px 1px rgb(177, 174, 174), 
         -1px -1px 1px rgba(0, 0, 0, 0.6);
@@ -76,6 +77,29 @@
 .wrap-text-promotions p {
     margin-bottom: 10px;
     line-height: 1.5;
+}
+
+.descriptionMain,
+.priceRegular {
+    font-weight: 300;
+}
+
+.descriptionDiscount {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-family: 'Merriweather', serif;
+    mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    mask-size: 200%;
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 2s linear 5;
+}
+
+@keyframes shine {
+    from { -webkit-mask-position: 150%; }
+    to { -webkit-mask-position: -50%; }
 }
 
 .priceDiscounted {
@@ -90,22 +114,4 @@
     text-shadow: 
         1px 1px 1px rgb(177, 174, 174), 
         -1px -1px 1px rgba(0, 0, 0, 0.6);
-}
-
-.descriptionDiscount {
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    font-family: 'Merriweather', serif;
-    mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
-    mask-size: 200%;
-    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
-    -webkit-mask-size: 200%;
-    animation: shine 2s linear 3;
-}
-
-@keyframes shine {
-    from { -webkit-mask-position: 150%; }
-    to { -webkit-mask-position: -50%; }
 }
