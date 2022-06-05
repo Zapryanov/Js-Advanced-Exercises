@@ -11,6 +11,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  font-family: 'Montserrat', sans-serif;
   margin: 0 auto;
   min-height: 100vh;
   max-width: 1200px;
@@ -69,11 +70,18 @@ h1, h2, h3, h4 {
 .pageHeading {
   margin: 20px auto;
   color: var(--color-darkcyan);
+  font-family: 'Merriweather', serif;
   font-size: 30px;
-  text-shadow: 1px 1px 1px var(--color-lightgray, rgba(220, 220, 220, 0.7)), 2px 2px 1px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 1px var(--color-lightgray);
 }
 
 .wrap-price-list {
   margin: 0 auto;
   width: 60%;
 }
+
+/* 
+  font-family: 'Pacifico', cursive;
+  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', sans-serif;
+*/

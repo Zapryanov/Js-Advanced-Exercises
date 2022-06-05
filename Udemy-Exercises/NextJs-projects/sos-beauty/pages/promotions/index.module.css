@@ -28,6 +28,7 @@
 
 .each-promotion-wrapper {
     margin-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 .section-promotions article {
@@ -58,7 +59,8 @@
 .wrap-text-promotions {
     border-top: 1px solid navajowhite;
     color: rgb(250, 246, 246);
-    /* font-family: 'Open Sans', sans-serif; */
+    display: flex;
+    flex-flow: row wrap;
     font-family: 'Montserrat', sans-serif;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
     width: 420px;
@@ -66,17 +68,23 @@
 
 .section-promotions h3 {
     color: red;
+    font-family: 'Merriweather', serif;
     font-size: 25px;
     font-weight: 400;
     margin: 0px 0px 5px 380px;
     text-shadow: 
-        1px 1px 1px rgb(177, 174, 174), 
+        1px 1px 1px rgb(177, 174, 174),
         -1px -1px 1px rgba(0, 0, 0, 0.6);
 }
 
 .wrap-text-promotions p {
     margin-bottom: 10px;
-    line-height: 1.5;
+    line-height: 1.4;
+    flex: 1 0 100%;
+}
+
+.wrap-text-promotions > span {
+    margin-bottom: 10px;
 }
 
 .descriptionMain,
@@ -90,11 +98,11 @@
     text-transform: uppercase;
     letter-spacing: 6px;
     font-family: 'Merriweather', serif;
-    mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    /* mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
     mask-size: 200%;
     -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
     -webkit-mask-size: 200%;
-    animation: shine 2s linear 5;
+    animation: shine 2s linear 5; */
 }
 
 @keyframes shine {
@@ -110,8 +118,23 @@
         -8px -8px 12px 0 rgba(255, 255, 255, 0.35);
     color: red;
     font-size: 25px;
-    padding: 0 10px 5px 10px;
+    padding: 3px 10px;
     text-shadow: 
         1px 1px 1px rgb(177, 174, 174), 
         -1px -1px 1px rgba(0, 0, 0, 0.6);
+}
+
+/* ---------------- Styles from dangerouslySetInnerHtml---------------------- */
+.wrap-text-promotions p span {
+    font-family: 'Merriweather', serif;
+    color: rgb(237, 226, 225);
+    color: var(--color-darkcyan);
+    letter-spacing: 1px;
+        text-shadow: 
+        1px 1px 1px rgb(177, 174, 174), 
+        -1px -1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.wrap-text-promotions p b {
+    font-weight: 500;
 }

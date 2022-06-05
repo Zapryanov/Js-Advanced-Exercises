@@ -1,11 +1,14 @@
 import Image from "next/image";
 import { getPromotions } from "../../data";
 
+import DOMPurify from 'isomorphic-dompurify';
+
 import styles from "./index.module.css";
 
 function PromotionsPage(props) {
     const arr = props.promotions;
     console.log(arr)
+    
     if (arr) {
         // const { descriptionMain, descriptionDiscount, heading, image, priceDiscounted, priceRegular } = props.promotions;
         return (
@@ -23,9 +26,9 @@ function PromotionsPage(props) {
                                     <Image className={styles["image"]} width={330} height={220} src={eachPromotion.image} alt="image-promotions" />
                                 </div>
                                 <div className={styles["wrap-text-promotions"]}>
-                                    <p className={styles["descriptionMain"]}>{eachPromotion.descriptionMain}</p>
+                                    <p className={styles["descriptionMain"]} dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(eachPromotion.descriptionMain, {ALLOWED_TAGS: ['b', 'i', 'em', 'br', 'span', 'strong', 'ul', 'ol', 'li']})}} />
                                     <p className={styles["descriptionDiscount"]}>{eachPromotion.descriptionDiscount}</p>
-                                    <p className={styles["priceRegular"]}>{eachPromotion.priceRegular}</p>
+                                    <p className={styles["priceRegular"]} dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(eachPromotion.priceRegular, {ALLOWED_TAGS: ['b', 'i', 'em', 'br', 'span', 'strong', 'ul', 'ol', 'li']})}} />
                                     <span className={styles["priceDiscounted"]}>{eachPromotion.priceDiscounted}</span>
                                 </div>
                             </article>
