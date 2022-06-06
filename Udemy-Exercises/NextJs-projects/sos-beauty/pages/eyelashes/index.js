@@ -7,7 +7,7 @@ function Pedicure(props) {
     const { eyelashes } = props;
     return (
         <div>
-            <h1 className="pageHeading">Миглопластика</h1>
+            <h2 className="pageHeading">Миглопластика</h2>
             <article className="wrap-price-list">
                 <PricesList prices={eyelashes}/>
             </article>

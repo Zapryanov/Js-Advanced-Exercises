@@ -8,7 +8,7 @@ function MainHeader() {
         <header className={styles["main-header"]}>
             <div>
                 <h1>S.O.S Beauty</h1>
-                <h2>Beauty Salon</h2>
+                <div className={styles.salon}>Beauty Salon</div>
             </div>
             <nav>
                 <ul className={styles.menu}>

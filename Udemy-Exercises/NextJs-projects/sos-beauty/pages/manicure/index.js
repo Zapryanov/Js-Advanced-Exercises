@@ -8,7 +8,7 @@ function Manicure(props) {
     console.log(manicure);
     return (
         <div>
-            <h1 className="pageHeading">Маникюр</h1>
+            <h2 className="pageHeading">Маникюр</h2>
             <article className="wrap-price-list">
                 <PricesList prices={manicure}/>
             </article>

@@ -22,7 +22,7 @@ function ContactsPage() {
                 <title>Контакти</title>
                 <meta name="description" content="Контакти, адрес на салона за маникюр, педикюр, ноктопластика, кола маска, почистване на лице, Пловдив, улица Георги Данчов 46" />
             </Head>
-            <h1>Контакти</h1>
+            <h2>Контакти</h2>
 
             <section>
                     <div className={`${styles["wrap-google-maps"]} ${styles.maps}`}>

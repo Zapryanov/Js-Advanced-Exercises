@@ -7,7 +7,7 @@ function Pedicure(props) {
     const { pedicure } = props;
     return (
         <div>
-            <h1 className="pageHeading">Педикюр</h1>
+            <h2 className="pageHeading">Педикюр</h2>
             <article className="wrap-price-list">
                 <PricesList prices={pedicure}/>
             </article>

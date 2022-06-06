@@ -13,7 +13,7 @@ function PromotionsPage(props) {
         // const { descriptionMain, descriptionDiscount, heading, image, priceDiscounted, priceRegular } = props.promotions;
         return (
             <div className={styles["wrapper-promotions"]}>
-                <h1 className="pageHeading">Промоции</h1>
+                <h2 className="pageHeading">Промоции</h2>
                 <div className={styles["text-background"]}>
                     <p>-% Промоции -%</p>
                 </div>
@@ -40,7 +40,7 @@ function PromotionsPage(props) {
     } else {
         return (
             <div className={styles["wrapper-promotions"]}>
-                <h1 className="pageHeading">Промоции</h1>
+                <h2 className="pageHeading">Промоции</h2>
                 <div className={styles["text-background"]}>
                     <p>-% Промоции -%</p>
                 </div>

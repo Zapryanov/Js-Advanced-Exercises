@@ -10,7 +10,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .text-background p {
@@ -19,6 +19,8 @@
     font-size: 70px;
     color: #fff;
     opacity: 0.1;
+    margin-top: 150px;
+    position: fixed;
 }
 
 .section-promotions {

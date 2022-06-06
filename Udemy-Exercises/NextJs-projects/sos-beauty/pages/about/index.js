@@ -10,7 +10,7 @@ function About(props) {
 
     return (
         <div>
-            <h1 className="pageHeading">За нас</h1>
+            <h2 className="pageHeading">За нас</h2>
             <section className={styles["wrapper"]}>
                 <article className={styles["top-center"]}>
                     <p>
