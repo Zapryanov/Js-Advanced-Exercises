@@ -61,14 +61,12 @@
     color: rgb(250, 246, 246);
     display: flex;
     flex-flow: row wrap;
-    font-family: 'Montserrat', sans-serif;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
     width: 420px;
 }
 
 .section-promotions h3 {
     color: red;
-    font-family: 'Merriweather', serif;
     font-size: 25px;
     font-weight: 400;
     margin: 0px 0px 5px 380px;
