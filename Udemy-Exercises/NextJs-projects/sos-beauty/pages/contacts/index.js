@@ -16,28 +16,28 @@ function ContactsPage() {
             <section className={styles["section-contacts"]}>
                 <article className={styles["wrap-info"]}>
                     <div className={styles["position-text"]}>
-                        <div className={`${styles["wrap-spans-contacts"]} ${styles["home"]}`}>
-                            <span className={styles["heading-contacts"]}>Адрес</span>
-                            <span>гр. Пловдив 4023</span>
-                            <span>жк. &quot;Тракия&quot;</span>
-                            <span>Комплекс - &quot;ОЛИМПИЯ&quot;</span>
-                            <span>ул. &quot;Георги Данчов&quot; - 46</span>
-                            <span>Магазин - 1</span>
-                            <span>/ Срещу Акваленд /</span>
+                        <div className={styles["wrap-spans-contacts"]}>
+                            <span className={`${styles["heading-contacts"]} ${styles["icon-location"]}`}>Адрес :</span>
+                            <span>&nbsp; гр. Пловдив 4023</span>
+                            <span>&nbsp; жк. &quot;Тракия&quot;</span>
+                            <span>&nbsp; Комплекс - &quot;ОЛИМПИЯ&quot;</span>
+                            <span>&nbsp; ул. &quot;Георги Данчов&quot; - 46</span>
+                            <span>&nbsp; Магазин - 1</span>
+                            <span>&nbsp; / Срещу Акваленд /</span>
                         </div>
                         <div className={styles["wrap-spans-contacts"]}>
-                            <span className={styles["heading-contacts"]}>Телефон</span>
-                            <span>+359 876 862 629</span>
+                            <span className={`${styles["heading-contacts"]} ${styles["icon-phone"]}`}>Телефон</span>
+                            <span>&nbsp; +359 876 862 629</span>
                         </div>
                         <div className={styles["wrap-spans-contacts"]}>
-                            <span className={styles["heading-contacts"]}>Работно време</span>
-                            <span>Пон: 10.00 - 19.00</span>
-                            <span>Вто: 10.00 - 19.00</span>
-                            <span>Сря: 10.00 - 19.00</span>
-                            <span>Чет: 10.00 - 19.00</span>
-                            <span>Пет: 10.00 - 19.00</span>
-                            <span>Съб: 10.00 - 16.00</span>
-                            <span>Нед: 10.00 - 14.00</span>
+                            <span className={`${styles["heading-contacts"]} ${styles["icon-time"]}`}>Работно време</span>
+                            <span>&nbsp; Пон: 10.00 - 19.00</span>
+                            <span>&nbsp; Вто: 10.00 - 19.00</span>
+                            <span>&nbsp; Сря: 10.00 - 19.00</span>
+                            <span>&nbsp; Чет: 10.00 - 19.00</span>
+                            <span>&nbsp; Пет: 10.00 - 19.00</span>
+                            <span>&nbsp; Съб: 10.00 - 16.00</span>
+                            <span>&nbsp; Нед: 10.00 - 14.00</span>
                         </div>
                     </div>
                 </article>
