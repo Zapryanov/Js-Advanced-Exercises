@@ -67,11 +67,6 @@ h1, h2, h3, h4 {
 }
 
 .pageHeading {
-  /* margin: 20px auto;
-  color: var(--color-darkcyan);
-  font-family: 'Merriweather', serif;
-  font-size: 30px;
-  text-shadow: 1px 1px 1px var(--color-lightgray); */
   color: var(--color-brown);
   margin: 20px auto;
   font-size: 30px;
