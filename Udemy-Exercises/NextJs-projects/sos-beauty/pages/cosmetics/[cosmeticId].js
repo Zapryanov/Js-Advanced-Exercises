@@ -14,7 +14,7 @@ function CurrentCosmeticService(props) {
 
     return (
         <div>
-            <h2 className={styles.pageHeading}>{titleBig}</h2>
+            <h2 className="pageHeading">{titleBig}</h2>
             <div className={styles["wrapper-current-cosmetic"]}>
                 <div className={styles["wrap-headings"]}>
                     <span className={styles.center}>{typeOfOrigin}</span>

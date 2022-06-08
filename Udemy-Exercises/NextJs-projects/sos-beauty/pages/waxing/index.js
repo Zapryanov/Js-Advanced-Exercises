@@ -8,7 +8,7 @@ function WaxingPage(props) {
 
     return (
         <div>
-            <h1 className={styles.pageHeading}>Кола Маска</h1>
+            <h1 className="pageHeading">Кола Маска</h1>
             <article className={styles["wrap-women-and-men"]}>
                 <section className={styles["section-human"]}>
                     <h2 className={styles["h2-waxing"]}>Жени</h2>

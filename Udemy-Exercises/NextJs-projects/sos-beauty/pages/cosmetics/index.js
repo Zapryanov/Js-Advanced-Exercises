@@ -4,7 +4,7 @@ import styles from "./index.module.css";
 function CosmeticsPage(props) {
     return (
         <div>
-            <h2 className={styles.pageHeading}>Козметика</h2>
+            <h2 className="pageHeading">Козметика</h2>
             <CosmeticsList services={props.cosmetics} />
         </div>
     )
