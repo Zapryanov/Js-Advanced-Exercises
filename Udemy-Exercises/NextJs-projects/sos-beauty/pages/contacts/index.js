@@ -12,7 +12,7 @@ function ContactsPage() {
                 <title>Контакти</title>
                 <meta name="description" content="Контакти, адрес на салона за маникюр, педикюр, ноктопластика, кола маска, почистване на лице, Пловдив, улица Георги Данчов 46" />
             </Head>
-            <h2 className={styles.h2}>Контакти</h2>
+            <h2 className="pageHeading">Контакти</h2>
             <section className={styles["section-contacts"]}>
                 <article className={styles["wrap-info"]}>
                     <div className={styles["position-text"]}>
@@ -22,7 +22,6 @@ function ContactsPage() {
                             <span>&nbsp; жк. &quot;Тракия&quot;</span>
                             <span>&nbsp; Комплекс - &quot;ОЛИМПИЯ&quot;</span>
                             <span>&nbsp; ул. &quot;Георги Данчов&quot; - 46</span>
-                            <span>&nbsp; Магазин - 1</span>
                             <span>&nbsp; / Срещу Акваленд /</span>
                         </div>
                         <div className={styles["wrap-spans-contacts"]}>
@@ -31,13 +30,13 @@ function ContactsPage() {
                         </div>
                         <div className={styles["wrap-spans-contacts"]}>
                             <span className={`${styles["heading-contacts"]} ${styles["icon-time"]}`}>Работно време</span>
-                            <span>&nbsp; Пон: 10.00 - 19.00</span>
-                            <span>&nbsp; Вто: 10.00 - 19.00</span>
-                            <span>&nbsp; Сря: 10.00 - 19.00</span>
-                            <span>&nbsp; Чет: 10.00 - 19.00</span>
-                            <span>&nbsp; Пет: 10.00 - 19.00</span>
-                            <span>&nbsp; Съб: 10.00 - 16.00</span>
-                            <span>&nbsp; Нед: 10.00 - 14.00</span>
+                            <span>&nbsp; Пон : 10.00 - 19.00</span>
+                            <span>&nbsp; Вто : 10.00 - 19.00</span>
+                            <span>&nbsp; Сря : 10.00 - 19.00</span>
+                            <span>&nbsp; Чет : 10.00 - 19.00</span>
+                            <span>&nbsp; Пет : 10.00 - 19.00</span>
+                            <span>&nbsp; Съб : 10.00 - 16.00</span>
+                            <span>&nbsp; Нед : 10.00 - 14.00</span>
                         </div>
                     </div>
                 </article>

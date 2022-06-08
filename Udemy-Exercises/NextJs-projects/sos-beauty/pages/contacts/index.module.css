@@ -1,15 +1,19 @@
-.h2 {
+/* .h2 {
     color: var(--color-brown);
-}
+    margin: 20px auto;
+    font-size: 30px;
+    text-shadow: 1px 1px 1px var(--color-lightgray);
+} */
 
 .section-contacts {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    align-items: center;
 }
 
 .wrap-info {
-    width: 300px;
+    width: 350px;
     background-color: rgba(141, 34, 34, 1);
     border-radius: 20px 145px / 135px;
     box-shadow: 
@@ -23,7 +27,6 @@
         10px 10px 5px rgb(0 0 0 / 60%);
     -o-box-shadow: 10px 10px 5px rgba(0,0,0,0.6);
     color: rgb(248, 242, 242);
-    /* padding: 10px 10px 10px 100px; */
 }
 
 .position-text {
@@ -50,15 +53,15 @@
 }
 
 .icon-location::before {
-    background-image: url("https://res.cloudinary.com/audipower/image/upload/v1644830685/home-icon_jcbh4g.png");
+    background-image: url("/images/home.png");
 }
 
 .icon-phone::before {
-    background-image: url("https://res.cloudinary.com/audipower/image/upload/v1652476270/phone_nbsxsf.png");
+    background-image: url("/images/phone.jpg");
 }
 
 .icon-time::before {
-    background-image: url("https://res.cloudinary.com/audipower/image/upload/v1654634493/clock-icon-min_e9sbjf.png");
+    background-image: url("/images/clock.png");
 }
 
 .wrap-spans-contacts {
@@ -76,22 +79,21 @@
     position: relative;
 }
 
-.map {
-    width: 500px;
-}
-
 .wrap-google-maps {
     width: 400px;
     height: 350px;
     display: flex;
     justify-content: center;
-    margin: 20px auto;
 }
 
 .google-big-link {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: 10px 10px 5px rgb(0 0 0 / 60%);
+    -moz-box-shadow: 10px 10px 5px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 10px 10px 5px rgb(0 0 0 / 60%);
+    -o-box-shadow: 10px 10px 5px rgba(0,0,0,0.6);
 }
 
 .google-big-link::after {
