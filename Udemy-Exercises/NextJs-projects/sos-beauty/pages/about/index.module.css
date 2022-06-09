@@ -48,13 +48,39 @@
     letter-spacing: 1px;
 }
 
+.wrap-text h4 {
+    border-radius: 20px 145px / 135px;
+    box-shadow: 
+        -8px -8px 12px rgba(255, 255, 255, 0.35),
+        10px 10px 5px rgb(0 0 0 / 60%);
+    -moz-box-shadow: 
+        -8px -8px 12px rgba(255, 255, 255, 0.35),
+        10px 10px 5px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 
+        -8px -8px 12px rgba(255, 255, 255, 0.35),
+        10px 10px 5px rgb(0 0 0 / 60%);
+    -o-box-shadow: 10px 10px 5px rgba(0,0,0,0.6);
+    margin-bottom: 20px;
+    padding: 5px 0;
+    font-size: 20px;
+}
+
+.wrap-text:nth-child(odd) h4 {
+    color: white;
+    background-color: var(--color-brown);
+}
+
+.wrap-text:nth-child(even) h4 {
+    /* background-color:rgba(255, 255, 255, 0.9); */
+    color: var(--color-brown);
+}
+
 .wrap-text:nth-child(odd) {
     color: black;
 }
 
 .wrap-text:nth-child(even) {
-    color: white;
-    /* color: #1EC299; */
+    color: white;    
 }
 
 .wrap-images ul {
