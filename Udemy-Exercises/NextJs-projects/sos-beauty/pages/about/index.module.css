@@ -40,7 +40,6 @@
 }
 
 .wrap-text {
-    color: var(--color-black);
     border-radius: 10px 0 0 10px;
     padding: 20px;
     text-indent: 20px;
@@ -62,7 +61,7 @@
     -o-box-shadow: 10px 10px 5px rgba(0,0,0,0.6);
     margin-bottom: 20px;
     padding: 5px 0;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .wrap-text:nth-child(odd) h4 {
@@ -71,8 +70,10 @@
 }
 
 .wrap-text:nth-child(even) h4 {
-    /* background-color:rgba(255, 255, 255, 0.9); */
     color: var(--color-brown);
+    background-color: rgba(128, 128, 128, 1);
+    background: linear-gradient(135deg, rgba(0,0,0,0.22), rgba(255,255,255,0.25));
+    
 }
 
 .wrap-text:nth-child(odd) {
