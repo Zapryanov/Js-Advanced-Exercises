@@ -7,6 +7,7 @@ body {
 }
 
 body {
+  background-color: rgba(181, 129, 125, 0.7);
   background: linear-gradient(rgba(181, 129, 125, 0.7), rgba(181, 129, 125, 0.8)), url("/images/rose-full-min.jpg");
   background-size: cover;
   background-position: center;
