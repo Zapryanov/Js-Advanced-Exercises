@@ -39,7 +39,7 @@ function ServiceItem(props) {
             <div className={styles["wrap-image-service"]}>
                 <Image className={styles.img} width={500} height={400} src={image} alt={titleBig} />
             </div>
-            <div>
+            <div className={styles["wrap-btn-service"]}>
                 <Link href={`/${id}`}>
                     <a className={styles["btn-service"]}>Виж повече</a>
                 </Link>
