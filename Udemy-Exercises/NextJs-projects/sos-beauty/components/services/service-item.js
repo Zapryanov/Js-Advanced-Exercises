@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "./service-item.module.css";
 
 function ServiceItem(props) {
-    let { id, image, titleBig, titleSmall } = props;
+    let { id, image, titleBig, titleSmall, country } = props;
 
     switch (titleBig) {
         case "Козметика": 
@@ -33,7 +33,10 @@ function ServiceItem(props) {
                     <h2>{titleBig}</h2>
                 </div>
                 <div className={styles["wrap-secondary-name"]}>
-                    <h3>{titleSmall}</h3>
+                    <h3>
+                        {titleSmall}
+                        <span className={styles.country}>{country}</span>
+                    </h3>
                 </div>
             </div>
             <div className={styles["wrap-image-service"]}>

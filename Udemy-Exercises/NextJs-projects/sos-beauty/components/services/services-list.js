@@ -13,6 +13,7 @@ function ServicesList(props) {
                     id={id}
                     titleBig={service.titleBig}
                     titleSmall={service.titleSmall}
+                    country={service.country}
                     image={service.image}
                     price={service.price}
                     generalInfo={service.generalInfo}

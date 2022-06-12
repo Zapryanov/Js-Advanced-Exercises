@@ -10,6 +10,24 @@
     padding: 10px;
 }
 
+.wrap-main-name h2 {
+    color: rgb(85, 85, 85);
+}
+
+.wrap-secondary-name h3 {
+    color: rgb(120, 5, 5);
+    position: relative;
+}
+
+.country {
+    position: absolute;
+    bottom: -7px;
+    right: 0;
+    font-family: "Pacifico";
+    font-size: 12px;
+    color: rgb(85, 85, 85);
+}
+
 .img {
     object-fit: cover;
 }
