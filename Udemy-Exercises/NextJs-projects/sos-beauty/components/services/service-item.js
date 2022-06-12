@@ -22,6 +22,9 @@ function ServiceItem(props) {
         case "Кола Маска": 
             id = "waxing";
             break;
+        case "Микроблейдинг":
+            id = "microblading";
+            break;
         default:
             break;
     }
