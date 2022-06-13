@@ -42,7 +42,7 @@
 .wrap-secondary-name h3 {
     color: rgba(187, 124, 120, 1);
     position: relative;
-    text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.6);
+    text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.3);
 }
 
 .wrap-secondary-name .country {
