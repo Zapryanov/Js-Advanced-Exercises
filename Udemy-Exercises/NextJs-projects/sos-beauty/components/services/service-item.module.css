@@ -10,30 +10,25 @@
     padding: 10px;
 }
 
-.wrap-main-name h2 {
-    color: rgb(85, 85, 85);
-}
-
-.wrap-secondary-name h3 {
-    color: rgb(120, 5, 5);
-    position: relative;
-}
-
-.country {
-    position: absolute;
-    bottom: -7px;
-    right: 0;
-    font-family: "Pacifico";
-    font-size: 12px;
-    color: rgb(85, 85, 85);
-}
-
-.img {
-    object-fit: cover;
-}
-
 .service-item:hover {
-    background-color: rgba(248, 248, 248, 0.9);
+    background-color: rgba(230, 218, 218, 1);
+}
+
+/* .service-item:hover .wrap-main-name h2 {
+    color: rgb(235, 229, 229);
+} */
+
+.wrap-main-name h2 {
+    /* color: rgb(255, 255, 255); */
+    color: rgb(164, 22, 72);
+    color: var(--color-brown);
+    font-weight: 100;
+    /* text-shadow: 
+        1px 0px rgb(164, 22, 72), 
+        -1px 0px rgb(164, 22, 72),
+        0px 1px rgb(164, 22, 72),
+        0px -1px rgb(164, 22, 72),
+        5px 5px 3px rgba(0, 0, 0, 0.6); */
 }
 
 .wrap-secondary-name {
@@ -42,6 +37,26 @@
     flex-flow: row wrap;
     justify-content: center;
     min-height: 35px;
+}
+
+.wrap-secondary-name h3 {
+    color: rgba(187, 124, 120, 1);
+    position: relative;
+    text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.6);
+}
+
+.wrap-secondary-name .country {
+    position: absolute;
+    bottom: -7px;
+    right: 0;
+    font-family: "Pacifico";
+    font-size: 12px;
+    color: rgb(85, 85, 85);
+    text-shadow: none;
+}
+
+.img {
+    object-fit: cover;
 }
 
 .wrap-image-service {
@@ -66,7 +81,7 @@
     border-radius: 8px;
     display:  inline-block;
     border-radius: 12px;
-    color: brown;
+    color: var(--color-brown);
     transition: all 0.3s ease;
 }
 
