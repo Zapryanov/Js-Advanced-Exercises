@@ -82,7 +82,6 @@ h1, h2, h3, h4 {
 
 .pageHeading:hover {
   transition: 0.3s;
-  transform: scale(1.1);
   text-shadow: 1px -1px 0 grey, 
     1px -2px 0 grey, 
     1px -3px 0 grey,
