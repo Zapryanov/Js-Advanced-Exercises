@@ -37,14 +37,14 @@ function MainHeader() {
                     <li>
                         <Link href="https://www.facebook.com/S.O.SBeauti/">
                             <a className={`${styles["link-menu"]} ${styles["facebook-icon"]}`}  target="_blank">
-                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1644830666/facebook_gt0ii9.svg" alt="facebook" />
+                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1655236128/facebook-icon-3d_szr1ix.png" alt="facebook" />
                             </a>
                         </Link>
                     </li>
                     <li>
                         <Link href="https://www.facebook.com/S.O.SBeauti/">
                             <a className={styles["link-menu"]}  target="_blank">
-                                <Image className={styles["instagram-icon"]} width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1652520875/1200px-Instagram.svg_snthoj.png" alt="facebook" />
+                                <Image className={styles["instagram-icon"]} width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1652521525/instagram-min_szc2ds.png" alt="facebook" />
                             </a>
                         </Link>
                     </li>
