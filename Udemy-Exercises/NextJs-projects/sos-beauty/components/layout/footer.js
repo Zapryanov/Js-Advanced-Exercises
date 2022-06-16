@@ -24,7 +24,8 @@ function Footer() {
                         GSM:&nbsp;
                         <a href="tel:+35976862629">0876 862 629</a>
                     </span>
-                    <span>гр. Пловдив, комплекс - &quot;Олимпия&quot;</span>
+                    <span>гр. Пловдив</span>
+                    <span>Комплекс - &quot;Олимпия&quot;</span>
                     <span>ул. &quot;Георги Данчов&quot; - 46</span>
                     <span>/ Срещу входа на Акваленд /</span>
                 </div>

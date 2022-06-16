@@ -14,12 +14,6 @@
     position: relative;
 }
 
-.footer span {
-    color: rgb(250, 246, 246);
-    display: block;
-    text-shadow: 1px 1px 1px black;
-}
-
 .footer h4 {
     position: relative;
     color: rgba(68, 66, 66, 0.8);
@@ -75,6 +69,13 @@
     right: 0;
 }
 
+.contacts span {
+    color: rgb(250, 246, 246);
+    display: block;
+    flex: 1 0 100%;
+    text-shadow: 1px 1px 1px black;
+}
+
 @media (max-width: 1280px) {
     .footer {
         margin: 20px 20px 30px 20px;
@@ -86,7 +87,7 @@
     }
 
     .contacts {
-        padding: 10px 0 10px 5px;
+        padding: 15px 0 15px 15px;
         font-size: 12px;
     }
 
