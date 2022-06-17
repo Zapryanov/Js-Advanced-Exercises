@@ -1,20 +1,28 @@
 .see-more {
     position: absolute;
-    bottom: 50%;
+    bottom: 45%;
     z-index: 2;
-    background-color: var(--color-darkcyan);
     border: 1px solid rgba(220, 220, 220, 0.4);
-    box-shadow: 0px 2px 8px 1px cornsilk;
+    box-shadow: -1px -1px 5px white, 4px 4px 3px rgba(68, 66, 66, 1);
+    background-color: rgba(231, 217, 216, 1);
     padding: 0;
+    color: brown;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
 }
 
 .see-more:hover {
-    background-color: var(--color-light-darkcyan);
-    text-shadow: 1px 1px 2px var(--color-black);
+    background-color: var(--color-brown);
+    box-shadow: -1px -1px 5px white, 4px 4px 3px rgba(68, 66, 66, 1);
+    color: var(--color-almost-white);
+    text-shadow: 1px 1px var(--color-black);
+}
+
+.inset-shadow:hover {
+    box-shadow: 0px 0px 15px 5px inset rgb(0 0 0 / 50%);
 }
 
 .see-more-text {
-    color: rgba(220, 220, 220, 1);
     display: block;
-    padding: 3px 8px 6px 8px;
+    padding: 5px 8px 8px 8px;
 }

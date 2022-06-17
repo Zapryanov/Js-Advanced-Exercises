@@ -31,6 +31,13 @@ function Footer() {
                 </div>
             </div>
             <div className={`${styles["each-footer-block"]}`}>
+                <h4>Google Map</h4>
+                <div className={styles["wrap-socials"]}>
+                    <FooterButton direction={obj.left} link={obj.googleLink} />
+                    <FooterImageLink link={obj.googleLink} image={obj.googleImage} />
+                </div>
+            </div>
+            <div className={`${styles["each-footer-block"]}`}>
                 <h4>Facebook</h4>
                 <div className={styles["wrap-socials"]}>
                     <FooterButton  direction={obj.left} link={obj.facebookLink} />
@@ -38,10 +45,10 @@ function Footer() {
                 </div>
             </div>
             <div className={`${styles["each-footer-block"]}`}>
-                <h4>Google Map</h4>
+                <h4>Instagram</h4>
                 <div className={styles["wrap-socials"]}>
-                    <FooterButton direction={obj.right} link={obj.googleLink} />
-                    <FooterImageLink link={obj.googleLink} image={obj.googleImage} />
+                    <FooterButton  direction={obj.left} link={obj.facebookLink} />
+                    <FooterImageLink link={obj.facebookLink} image={obj.facebookImage} />
                 </div>
             </div>
         </footer>
