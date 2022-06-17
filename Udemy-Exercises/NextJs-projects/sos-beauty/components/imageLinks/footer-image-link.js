@@ -7,7 +7,7 @@ function FooterImageLink({link, image}) {
     return (
         <Link href={link}>
             <a target="_blank">
-                <Image className={styles.image} width={330} height={200} src={image} alt="google-map" />  
+                <Image className={styles.image} width={280} height={175} src={image} alt="google-map" />  
             </a>
         </Link>
     )
