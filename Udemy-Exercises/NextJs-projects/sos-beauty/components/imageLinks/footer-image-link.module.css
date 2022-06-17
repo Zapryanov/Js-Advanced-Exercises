@@ -1,0 +1,10 @@
+.wrap-image {
+    display: flex;
+    display: block;
+    height: 100%;
+}
+
+.image {
+    height: 100%;
+    background-color: red;
+}
