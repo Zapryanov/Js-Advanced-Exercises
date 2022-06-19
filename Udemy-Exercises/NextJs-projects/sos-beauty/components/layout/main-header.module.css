@@ -58,13 +58,6 @@
     margin-right: 0;
 }
 
-.link-menu {
-    color: rgb(250, 246, 246);
-    display: block;
-    /* padding: 5px 10px 8px 10px; */
-    padding: 5px 10px;
-}
-
 .menu li:hover {
     box-shadow: 2px 8px 10px 0px rgba(0, 0, 0, .3);
     transform: translate3d(0, 2px, 0);
@@ -75,6 +68,13 @@
     -webkit-transform: scale(0.8) translateY(20%);
     transform: scale(0.8) translateY(20%);
     transition: all 0.3 ease-in-out;
+}
+
+
+.link-menu {
+    color: rgb(250, 246, 246);
+    display: flex;
+    padding: 5px 10px;
 }
 
 .link-phone {
