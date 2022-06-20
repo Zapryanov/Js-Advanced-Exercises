@@ -18,6 +18,7 @@
 .main-header h1 {
     color: var(--color-brown);
     font-family: 'Pacifico', cursive;
+    font-size: 32px;
     margin-top: 20px;
     position: relative;
     text-shadow: 3px 3px 1px var(--color-lightgray), 4px 4px 1px rgba(0, 0, 0, 0.6);
@@ -109,8 +110,132 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+    .main-header h1 {
+        font-size: 28px;
+    }
+
+    .salon {
+        font-size: 16px;
+    }
+
+    .main-header nav {
+        align-items: flex-start;
+    }
+
+    .menu .socials-header {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .socials-header {
+        flex-flow: column-reverse;
+        align-items: flex-end;
+    }
+
+    .socials-header li {
+        margin-right: 0;
+    }
+
+    .socials-header li:not(:first-child) {
+        margin-bottom: 10px;
+    }
+
+    .socials-header .link-menu {
+        padding: 2px 5px;
+    }
+}
+
+@media (max-width: 580px) {
+    .main-header h1 {
+        font-size: 26px;
+    }
+
+    .salon {
+        font-size: 15px;
+    }
+
+    .menu {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .main-header .main-menu {
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .menu li {
+        margin: 0 0 20px 0;
+    }
+
+    .main-menu li {
+        display: flex;
+        justify-content: center;
+        padding: 5px 0;
+        width: 100%;
+    }
+
     .link-menu {
         font-size: 14px;
+    }
+
+    .socials-header {
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    .socials-header li {
+        padding: 5px;
+    }
+
+    .socials-header li:not(:first-child) {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .socials-header .link-menu {
+        padding: 0;
+        font-size: 12px;
+    }    
+
+    .link-menu {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 279px) {
+    .main-header h1 {
+        font-size: 20px;
+    }
+
+    .salon {
+        font-size: 12px;
+    }
+    .link-menu, .socials-header .link-menu {
+        font-size: 10px;
+    }
+
+    .social-icons {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        width: 12px;
+        height: 12px;
+    }
+
+    .phone-image {
+        height: 12px;
+        width: 10px;
+    }
+
+    .link-phone span {
+        padding-left: 2px;
+    }
+
+    .phone-image  {
+        width: 15px;
     }
 }
