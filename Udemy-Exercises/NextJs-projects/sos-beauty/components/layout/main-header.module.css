@@ -176,10 +176,6 @@
         width: 100%;
     }
 
-    .link-menu {
-        font-size: 14px;
-    }
-
     .socials-header {
         flex-flow: row wrap;
         justify-content: space-between;
