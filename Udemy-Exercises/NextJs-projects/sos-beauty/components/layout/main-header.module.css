@@ -254,3 +254,9 @@
         width: 15px;
     }
 }
+
+@media (max-width: 250px) {
+    .socials-header .link-phone {
+        font-size: 8px;
+    }
+}
