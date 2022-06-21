@@ -50,7 +50,7 @@ function MainHeader() {
                     </li>
                     <li>
                         <Link href="tel:+35976862629">
-                            <a className={`${styles["link-menu"]} ${styles["link-phone"]}`}>
+                            <a className={`${styles["link-menu"]} ${styles["link-phone"]} ${styles["social-icons"]}`}>
                                 <span className={styles["phone-image"]}>
                                     <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1652476270/phone_nbsxsf.png" alt="phone" />
                                 </span>
