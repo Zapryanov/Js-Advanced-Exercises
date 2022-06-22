@@ -46,7 +46,7 @@ function About(props) {
                                     <ul className={styles["remove-space"]}>
                                         {eachService[1].images.map((image, index) => 
                                             <li className={styles["current-image"]} key={index}>
-                                                <Image className="img" width={200} height={150} src={image} alt="nails" />
+                                                <Image className={styles.img} width={200} height={150} src={image} alt="nails" />
                                             </li>
                                         )}
                                     </ul>
