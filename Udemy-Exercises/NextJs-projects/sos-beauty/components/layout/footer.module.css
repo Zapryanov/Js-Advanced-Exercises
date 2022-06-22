@@ -100,19 +100,15 @@
 
 @media (max-width: 320px) {
     .footer {
-        margin: 20px 0;
+        margin: 0;
     }
-    .each-footer-block {
-        width: 180px;
+
+    .contacts {
+        padding: 5px 10px;
     }
 
     .wrap-socials,
     .contacts {
-        height: 110px;
-    }
-
-    .contacts {
-        padding: 5px 0 5px 5px;
-        font-size: 10px;
+        height: auto;
     }
 }
