@@ -267,3 +267,17 @@
     }
 
 }
+
+@media (max-width: 279px) {
+    .section-promotions h3 {
+        font-size: 16px;
+    }
+
+    .wrap-text-promotions {
+        font-size: 14px;
+    }
+
+    .descriptionDiscount {
+        font-size: 12px;
+    }
+}
