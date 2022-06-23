@@ -130,3 +130,140 @@
 .wrap-text-promotions p b {
     font-weight: 500;
 }
+
+@media (max-width: 849px) {
+    .section-promotions {
+        width: 700px;
+    }
+
+    .section-promotions h3 {
+        font-size: 20px;
+    }
+
+    .wrap-image-promotions {
+        width: 280px;
+    }
+
+    .wrap-text-promotions {
+        font-size: 17px;
+        width: 330px;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-promotions {
+        width: 90%;
+    }
+
+    .section-promotions h3 {
+        font-size: 18px;
+        margin-left: 75%;
+        transform: translateX(-50%);
+    }
+
+    .wrap-image-promotions {
+        width: 45%;
+    }
+
+    .wrap-text-promotions {
+        font-size: 16px;
+        width: 50%;
+    }
+}
+
+@media (max-width: 679px) {
+    .wrap-text-promotions {
+        font-size: 16px;
+    }
+
+    .wrap-text-promotions p span {
+        font-size: 13px;
+    }
+
+    .priceDiscounted {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 579px) {
+    .section-promotions article {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .each-promotion-wrapper {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .section-promotions h3 {
+        font-size: 20px;
+        margin: 10px 0;
+        text-align: center;
+        transform: translateX(0);
+        width: 100%;
+    }
+
+    .wrap-image-promotions {
+        width: 330px;
+        position: relative;
+    }
+
+    .wrap-text-promotions {
+        margin-top: 15px;
+        padding-top: 15px;
+        width: 330px;
+    }
+
+    .wrap-text-promotions p {
+        line-height: 1.4;
+    }
+
+    .priceDiscounted {
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        font-size: 25px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 399px) {
+    .wrap-image-promotions,
+    .wrap-text-promotions {
+        width: 95%;
+    }
+
+    .wrap-text-promotions {
+        font-size: 15px;
+    }
+
+    .wrap-text-promotions p span {
+        font-size: 12px;
+    }
+
+    .descriptionDiscount {
+        letter-spacing: 3px;
+    }
+}
+
+@media (max-width: 349px) {
+    .section-promotions h3 {
+        font-size: 18px;
+    }
+
+    .wrap-text-promotions p span {
+        font-size: 12px;
+    }
+
+    .priceDiscounted {
+        font-size: 20px;
+    }
+
+}
