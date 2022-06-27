@@ -71,7 +71,7 @@
 
 .ul-service-description {
     color: rgb(163, 23, 23);
-    text-shadow: 1px 1px rgba(0,0,0,0.6);
+    /* text-shadow: 1px 1px 1px rgba(0,0,0,0.6); */
     width: 90%;
 }
 
@@ -154,6 +154,14 @@
 }
 
 @media (max-width: 575px) {
+    .wrap-headings h3 {
+        font-size: 21px;
+    }
+
+    .wrap-headings .center {
+        font-size: 16px;
+    }
+
     .ul-general-info,
     .ul-service-description {
         font-size: 14px;
@@ -164,8 +172,69 @@
     }
 }
 
+@media (max-width: 399px) {
+    .price {
+        font-size: 15px;
+    }
+
+    .btn-cosmeticId {
+        font-size: 15px;
+        padding: 5px 25px;
+    }
+}
+
 @media (max-width: 319px) {
+    .wrap-headings h3 {
+        font-size: 19px;
+    }
+
+    .wrap-headings .center {
+        font-size: 14px;
+    }
+
     .wrap-image {
         margin: 0 10px;
+    }
+
+    .ul-general-info,
+    .ul-service-description {
+        font-size: 13px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
+    .btn-cosmeticId {
+        font-size: 14px;
+        padding: 5px 25px;
+    }
+}
+
+@media (max-width: 279px) {
+    .wrap-headings h3 {
+        font-size: 17px;
+    }
+
+    .wrap-headings .center {
+        font-size: 13px;
+    }
+
+    .wrap-image {
+        margin: 0 5px;
+    }
+
+    .ul-general-info,
+    .ul-service-description {
+        font-size: 12px;
+    }
+
+    .price {
+        font-size: 13px;
+    }
+
+    .btn-cosmeticId {
+        font-size: 13px;
+        padding: 5px 25px;
     }
 }
