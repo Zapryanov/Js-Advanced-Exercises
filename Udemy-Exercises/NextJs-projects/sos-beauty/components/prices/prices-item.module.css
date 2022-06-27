@@ -24,13 +24,18 @@
         flex-flow: row nowrap;
     }
 
+    .part {
+        color: var(--color-dark-red);
+        text-shadow: none;
+    }
+
     .price {
         align-self: flex-end;
         display: flex;
         flex: 0 1 55px;
         justify-content: flex-end;
     }
-  }
+}
 
 @media (max-width: 279px) {
     .li-price-item {
