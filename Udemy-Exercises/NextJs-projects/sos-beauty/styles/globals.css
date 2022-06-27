@@ -90,9 +90,39 @@ h1, h2, h3, h4 {
   }
 }
 
+@media (max-width: 639px) {
+  .wrap-price-list {
+    font-size: 15px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 579px) {
+  .wrap-price-list {
+    width: 90%
+  }
+}
+
+@media (max-width: 399px) {
+  .wrap-price-list {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 319px) {
   .pageHeading {
     font-size: 24px;
+  }
+
+  .wrap-price-list {
+    font-size: 13px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 279px) {
+  .wrap-price-list {
+    font-size: 12px;
   }
 }
 

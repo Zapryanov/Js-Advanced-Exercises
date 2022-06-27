@@ -103,6 +103,10 @@
         margin: 0;
     }
 
+    .footer h4 {
+        font-size: 16px;
+    }
+
     .contacts {
         padding: 5px 10px;
     }
