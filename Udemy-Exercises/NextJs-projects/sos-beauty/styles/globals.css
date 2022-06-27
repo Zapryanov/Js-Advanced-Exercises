@@ -106,6 +106,7 @@ h1, h2, h3, h4 {
 @media (max-width: 399px) {
   .wrap-price-list {
     font-size: 14px;
+    width: 100%;
   }
 }
 
@@ -115,14 +116,13 @@ h1, h2, h3, h4 {
   }
 
   .wrap-price-list {
-    font-size: 13px;
-    width: 100%;
+    font-size: 12px;
   }
 }
 
 @media (max-width: 279px) {
   .wrap-price-list {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 

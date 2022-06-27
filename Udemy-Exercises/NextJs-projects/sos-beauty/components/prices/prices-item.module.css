@@ -17,6 +17,21 @@
     text-shadow: 1px 1px 1px black;
 }
 
+
+
+@media (max-width: 459px) {
+    .li-price-item {
+        flex-flow: row nowrap;
+    }
+
+    .price {
+        align-self: flex-end;
+        display: flex;
+        flex: 0 1 55px;
+        justify-content: flex-end;
+    }
+  }
+
 @media (max-width: 279px) {
     .li-price-item {
         padding: 3px;
