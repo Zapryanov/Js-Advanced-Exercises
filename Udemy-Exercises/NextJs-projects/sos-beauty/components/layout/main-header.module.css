@@ -107,13 +107,13 @@
     display: block;
 } */
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
     .main-header {
         margin: 0 20px;
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     .link-menu {
         font-size: 15px;
         padding: 3px 5px;
@@ -162,7 +162,7 @@
     }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 579px) {
     .main-header h1 {
         font-size: 26px;
     }
@@ -210,7 +210,7 @@
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 319px) {
     .socials-header .link-menu {
         padding: 0;
         font-size: 12px;
