@@ -4,3 +4,41 @@
     justify-content: center;
     align-items: center;
 }
+
+.wrap-image {
+    background-color: rgb(245, 245, 245);
+    border: 1px solid gray;
+    border-radius: 12px;
+    box-shadow: inset 0px 0px 5px 2px grey;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.box-shadow-image {
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.6);
+    display: flex;
+    overflow: hidden;
+}
+
+.microblading-image {
+    border-radius: 8px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.text-section {
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 90%;
+}
+
+.wrap-text {
+    background-color: rgba(181, 129, 125, 1);
+    border-radius: 8px;
+    box-shadow: inset 0px 0px 15px 2px whitesmoke;
+    color: whitesmoke;
+    padding: 20px;
+    text-shadow: 1px 1px rgb(81, 81, 81);
+}

@@ -13,7 +13,9 @@ function Microblading(props) {
             <article className={styles["wrap-microblading"]}>
                 <section className={styles["image-section"]}>
                     <div className={styles["wrap-image"]}>
-                        <Image width={500} height={350} src={microblading.image} alt="microblading" />
+                        <div className={styles["box-shadow-image"]}>
+                            <Image className={styles["microblading-image"]} width={430} height={300} src={microblading.image} alt="microblading" />
+                        </div>
                     </div>
                 </section>
                 <section className={styles["text-section"]}>
