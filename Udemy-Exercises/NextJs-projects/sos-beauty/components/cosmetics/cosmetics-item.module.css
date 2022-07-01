@@ -24,14 +24,9 @@
 }
 
 .wrap-main-name h2 {
-    font-size: 16px;
-    color: rgba(68, 66, 66, 0.8);
-    font-weight: 500;
-    /* background-image: linear-gradient(to right, var(--color-darkcyan), rgba(242, 64, 135, 1));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent; */
+    color: rgb(58, 58, 58);
     display: inline-block;
+    font-size: 16px;
 }
 
 .wrap-secondary-name {
