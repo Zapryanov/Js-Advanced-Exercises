@@ -25,6 +25,9 @@ function ServiceItem(props) {
         case "Микроблейдинг":
             id = "microblading";
             break;
+        case "Фризьорство":
+            id = "hairdressing";
+            break;
         default:
             break;
     }
