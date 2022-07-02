@@ -28,6 +28,9 @@ function ServiceItem(props) {
         case "Фризьорство":
             id = "hairdressing";
             break;
+        case "Ежедневни процедури за лице":
+            id = "dalyFacialTreatments";
+            break;
         default:
             break;
     }
