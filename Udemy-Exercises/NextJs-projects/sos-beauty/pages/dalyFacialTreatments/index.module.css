@@ -1,0 +1,45 @@
+.each-facial-treatment {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    margin: 0 20px 30px 20px;
+    padding: 10px 20px;
+}
+
+.each-facial-treatment h3 {
+    color: var(--color-brown);
+    font-size: 22px;
+    position: relative;
+}
+
+.wrap-face-treatments-price {
+    align-items: baseline;
+    display: flex;
+    margin: 10px 0;
+}
+
+.word-price, .price {
+    background-color: var(--color-brown);
+    border: 1px solid rgb(15, 15, 15);
+    border-radius: 22px;
+    box-shadow: 
+        0 0 1px 1px white, 
+        0 0 2px 2px black,
+        0 10px 12px black;
+    color: var(--color-white);
+    padding: 5px 15px;
+}
+
+.dots {
+    flex: 1;
+    overflow: hidden;
+}
+
+@media (max-width: 991px) {
+    .each-facial-treatment {
+        font-size: 15px;
+    }
+
+    .each-facial-treatment h3 {
+        font-size: 20px;
+    }
+}
