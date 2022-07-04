@@ -102,6 +102,10 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 579px) {
+  .pageHeading {
+    font-size: 24px;
+  }
+
   .wrap-price-list {
     width: 90%
   }
@@ -109,7 +113,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 459px) {
   .pageHeading {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .wrap-price-list {
@@ -119,6 +123,13 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 319px) {
+  .pageHeading {
+    font-size: 16px;
+    color: transparent;
+    line-height: 1.2;
+    /* text-shadow: none; */
+  }
+
   .wrap-price-list {
     font-size: 12px;
   }
