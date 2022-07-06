@@ -1,6 +1,7 @@
 .each-facial-treatment {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 12px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6), -3px -3px 8px rgba(255, 255, 255, 0.7);
     margin: 0 20px 30px 20px;
     padding: 10px 20px;
 }
@@ -11,6 +12,14 @@
     position: relative;
 }
 
+.description {
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow:  3px 3px 5px rgba(0,0,0,0.3), -3px -3px 5px rgba(255,255,255,1);
+    margin: 20px 0;
+
+}
+
 .description span {
     color: white;
     letter-spacing: 1px;
@@ -19,12 +28,16 @@
     box-shadow: 0 0 0 1px #db8183, 5px 5px 3px rgba(0, 0, 0, 0.6);
     font-size: 14px;
     padding: 3px 4px 0 4px;
+    display: inline-block;
 }
 
 .wrap-face-treatments-price {
     align-items: baseline;
+    border-radius: 12px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3),-3px -3px 5px rgba(255,255,255,1);
     display: flex;
     margin: 10px 0;
+    padding: 10px;
 }
 
 .word-price, .price {
@@ -32,7 +45,7 @@
     border: 1px solid rgb(15, 15, 15);
     border-radius: 22px;
     box-shadow: 
-        0 0 1px 1px white, 
+        0 0 1px 1px white,
         0 0 2px 2px black,
         0 10px 12px black;
     color: var(--color-white);
@@ -51,5 +64,38 @@
 
     .each-facial-treatment h3 {
         font-size: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .each-facial-treatment {
+        font-size: 14px;
+    }
+
+    .each-facial-treatment h3 {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+
+    .description span {
+        font-size: 12px;
+    }
+
+    .word-price, .price {
+        font-size: 14px;
+        padding: 2px 12px 0px 12px;
+    }
+}
+
+@media (max-width: 575px) {
+    .each-facial-treatment h3 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 319px) {
+    .each-facial-treatment {
+        margin: 0 10px 20px 10px;
+        padding: 10px;
     }
 }

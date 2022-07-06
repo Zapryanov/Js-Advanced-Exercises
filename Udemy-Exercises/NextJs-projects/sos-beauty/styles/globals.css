@@ -69,6 +69,7 @@ h1, h2, h3, h4 {
 }
 
 .pageHeading {
+  letter-spacing: 0.03em;
   margin: 20px auto;
   font-size: 30px;
   color: rgba(202,160,159,1);
@@ -85,15 +86,26 @@ h1, h2, h3, h4 {
   width: 60%;
 }
 
-@media (max-width: 767px) {
+@media (max-width:992px) {
   .pageHeading {
     font-size: 28px;
   }
 }
 
+@media (max-width: 767px) {
+  .pageHeading {
+    font-size: 24px;
+  }
+}
+
 @media (max-width: 639px) {
   .pageHeading {
-    font-size: 26px;
+    font-weight: 100;
+    font-size: 21px;
+    text-shadow: 1px 1px 0 rgb(229, 215, 215), 
+      1px 2px 0 grey, 
+      1px 3px 0 grey, 
+      3px 8px 8px black;
   }
   .wrap-price-list {
     font-size: 15px;
@@ -103,7 +115,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 579px) {
   .pageHeading {
-    font-size: 24px;
+    font-size: 18px;
   }
 
   .wrap-price-list {
@@ -113,7 +125,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 459px) {
   .pageHeading {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .wrap-price-list {
@@ -126,8 +138,9 @@ h1, h2, h3, h4 {
   .pageHeading {
     font-size: 16px;
     color: transparent;
+    color: brown;
     line-height: 1.2;
-    /* text-shadow: none; */
+    text-shadow: none;
   }
 
   .wrap-price-list {
