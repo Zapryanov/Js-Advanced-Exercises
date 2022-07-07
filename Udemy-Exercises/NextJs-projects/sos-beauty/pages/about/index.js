@@ -4,9 +4,13 @@ import { getAboutUsInfo } from "../../data";
 import styles from "./index.module.css";
 
 function About(props) {
-    const mainObj = props.aboutUs;
+    const mainInfo = props.aboutUsMainInfo;
+    const brandsLogos = props.brands;
 
-    const objEntries = Object.entries(mainObj);
+    const objEntriesBrands = Object.entries(brandsLogos);
+    console.log(objEntriesBrands)
+
+    const objEntriesMainInfo = Object.entries(mainInfo);
 
     return (
         <div>
@@ -22,21 +26,14 @@ function About(props) {
                         </p>
                     </div>
                     <div className={styles["wrap-images-brands"]}>
-                        <div>
-                            <Image width={100} height={100} src="https://res.cloudinary.com/audipower/image/upload/v1657142705/nika-nagel-logo-original_qhptoi.png" alt="nika-nagel-logo" />
-                        </div>
-                        <div>
-                            <Image width={300} height={100} src="https://res.cloudinary.com/audipower/image/upload/v1657143061/iroha-logo-min_pfwpfc.png" alt="iroha-logo" />
-                        </div>
-                        <div>
-                            <Image width={240} height={100} src="https://res.cloudinary.com/audipower/image/upload/v1657204745/dr-renaud-rectangle-logo-min_jsyxsz.png" alt="iroha-logo" />
-                        </div>
-                        <div>
-                            <Image width={150} height={100} src="https://res.cloudinary.com/audipower/image/upload/v1657142097/termish-logo-min_nwvvit.png" alt="termish-logo" />
-                        </div>
+                        {objEntriesBrands.map((eachBrand, i) => (
+                            <div key={i}>
+                                <Image width={eachBrand[1].width} height={eachBrand[1].height} src={eachBrand[1].image} alt={eachBrand[1].alt} />
+                            </div>
+                        ))}
                     </div>
                 </article>
-                {objEntries.map((eachService, i) => {
+                {objEntriesMainInfo.map((eachService, i) => {
                     if (i % 2 === 0) {
                         return (
                             <article key={i} className={styles["wrap-text-and-images"]}>
@@ -83,9 +80,13 @@ function About(props) {
 export async function getServerSideProps() {
     const aboutUsInfo = await getAboutUsInfo();
 
+    const infoMainServices = aboutUsInfo.infoServices;
+    const brandsImages = aboutUsInfo.brands
+    
     return {
         props: {
-            aboutUs: aboutUsInfo
+            aboutUsMainInfo: infoMainServices,
+            brands: brandsImages
         }
     }
 }
