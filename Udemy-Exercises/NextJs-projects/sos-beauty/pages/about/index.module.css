@@ -9,19 +9,75 @@
 
 .top-center {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
     justify-content: center;
+    align-items: center;
 }
 
-.top-center p {
+.top-center .main-description {
     color: rgb(247, 243, 243);
-    flex: 0 1 70%;
+    /* flex: 0 1 70%; */
+    width: 70%;
     font-size: 18px;
     padding: 20px;
     text-shadow: 1px 1px gray;
     text-indent: 20px;
     font-weight: 300;
     letter-spacing: 0.03em;
+}
+
+.wrap-images-brands {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.dr-renaud-logo {
+    display: flex;
+    align-items: baseline;
+}
+
+.blue-circle {
+    background-color: rgba( 0, 59, 89, 1);
+    color: white;
+    display: flex;
+    /* padding: 10px; */
+    border-radius: 50%;
+    font-size: 50px;
+
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    margin-right: 5px;
+}
+
+.name {
+    color: rgba( 0, 59, 89, 1);
+    font-weight: bold;
+    font-size: 28px;
+    position: relative;
+}
+
+.name::before {
+    content: "Docteur";
+    color: rgba(0, 63, 95, 1);
+    position: absolute;
+    top: -10px;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.name::after {
+    content: "paris";
+    color: rgba(0, 63, 95, 1);
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 12px;
+    bottom: -5px;
+    right: 0;
 }
 
 .wrap-text-and-images {
@@ -137,8 +193,9 @@
 }
 
 @media (max-width: 830px) {
-    .top-center p {
-        flex: 0 1 90%;
+    .top-center .main-description {
+        /* flex: 0 1 90%; */
+        width: 100%;
         font-size: 16px;
     }
 
@@ -168,7 +225,7 @@
 }
 
 @media (max-width: 767px) {
-    .top-center p {
+    .top-center .main-description {
         flex: 0 1 100%;
     }
 
@@ -183,7 +240,7 @@
 }
 
 @media (max-width: 580px) {
-    .top-center p {
+    .top-center .main-description {
         padding: 0;
     }
 }
@@ -212,7 +269,7 @@
 }
 
 @media (max-width: 319px) {
-    .top-center p {
+    .top-center .main-description {
         font-size: 15px;
     }
 
@@ -234,7 +291,7 @@
         margin-bottom: 20px;
     }
 
-    .top-center p {
+    .top-center .main-description {
         font-size: 12px;
         line-height: 1.3;
     }
