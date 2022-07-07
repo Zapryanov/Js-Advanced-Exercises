@@ -6,6 +6,7 @@ import styles from "./index.module.css";
 function About(props) {
     const mainInfo = props.aboutUsMainInfo;
     const brandsLogos = props.brands;
+    const topCenterText = props.mainText;
 
     const objEntriesBrands = Object.entries(brandsLogos);
     console.log(objEntriesBrands)
@@ -18,12 +19,7 @@ function About(props) {
             <section className={styles["wrapper"]}>
                 <article className={styles["top-center"]}>
                     <div className={styles["main-description"]}>
-                        <p>
-                            Всяка жена е перфектна такава, каквато е. Салон за красота &rdquo;S.0.S Beauty&rdquo; е тук, за да ви помогнем да 
-                            подобрите естествената си красота и увереност. Салонът е специализиран в изкуството на маникюр, педикюр, ноктопластика, 
-                            кола маска, козметични процедури за лице, миглопластика и микроблейдинг. Работим само с качествени професионални
-                            продукти. Насладете са на вълшебството на красотата в стилна обстановка, приветлива атмосфера и професионализъм.
-                        </p>
+                        <p>{topCenterText}</p>
                     </div>
                     <div className={styles["wrap-images-brands"]}>
                         {objEntriesBrands.map((eachBrand, i) => (
@@ -81,12 +77,14 @@ export async function getServerSideProps() {
     const aboutUsInfo = await getAboutUsInfo();
 
     const infoMainServices = aboutUsInfo.infoServices;
-    const brandsImages = aboutUsInfo.brands
-    
+    const brandsImages = aboutUsInfo.brands;
+    const topText = aboutUsInfo.topText;
+
     return {
         props: {
             aboutUsMainInfo: infoMainServices,
-            brands: brandsImages
+            brands: brandsImages,
+            mainText: topText
         }
     }
 }
