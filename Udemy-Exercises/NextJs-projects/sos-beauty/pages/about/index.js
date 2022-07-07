@@ -31,12 +31,6 @@ function About(props) {
                         <div>
                             <Image width={240} height={100} src="https://res.cloudinary.com/audipower/image/upload/v1657204745/dr-renaud-rectangle-logo-min_jsyxsz.png" alt="iroha-logo" />
                         </div>
-                        {/* <div className={styles["wrapper-dr-renaud-logo"]}>
-                            <div className={styles["dr-renaud-logo"]}>
-                                <div className={styles["blue-circle"]}>DR</div>
-                                <div className={styles["name"]}>Renaud</div>
-                            </div>
-                        </div> */}
                         <div>
                             <Image width={150} height={100} src="https://res.cloudinary.com/audipower/image/upload/v1657142097/termish-logo-min_nwvvit.png" alt="termish-logo" />
                         </div>
