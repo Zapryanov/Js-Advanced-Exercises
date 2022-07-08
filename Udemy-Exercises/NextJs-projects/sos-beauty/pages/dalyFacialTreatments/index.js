@@ -4,13 +4,14 @@ import styles from "./index.module.css";
 
 function DalyFacialTreatments(props) {
     const { dalyFacialTreatments } = props;
-    console.log(dalyFacialTreatments)
+    const data = Object.entries(dalyFacialTreatments);
+    console.log(data)
     return (
         <section>
             <h1 className="pageHeading">Ежедневни процедури за лице</h1>
-            {dalyFacialTreatments.map((faceService, i) => (
+            {data.map((faceService, i) => (
                 <article className={styles["each-facial-treatment"]} key={i}>
-                    <h3>{faceService[0]}</h3>
+                    <h3>{faceService[1].heading}</h3>
                     <div className={styles.description} dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(faceService[1].description, {ALLOWED_TAGS: ['b', 'i', 'em', 'br', 'span', 'strong', 'ul', 'ol', 'li']})}} />
                     <div className={styles["wrap-face-treatments-price"]}>
                         <span className={styles["word-price"]}>Цена</span>
