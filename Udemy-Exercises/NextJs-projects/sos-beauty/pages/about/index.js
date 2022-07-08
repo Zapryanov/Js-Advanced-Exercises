@@ -9,8 +9,6 @@ function About(props) {
     const topCenterText = props.mainText;
 
     const objEntriesBrands = Object.entries(brandsLogos);
-    console.log(objEntriesBrands)
-
     const objEntriesMainInfo = Object.entries(mainInfo);
 
     return (
