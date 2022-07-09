@@ -31,12 +31,26 @@
     display: inline-block;
 }
 
+.discount {
+    box-shadow: inset -3px -3px 5px 1px white, inset 3px  3px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 15px 10px;
+    background: rgba(201,161,160,1);
+    color: white;
+    text-shadow: 
+        1px 1px 0px rgba(0,0,0,0.3);
+}
+
+.discount strong {
+    color: red;
+}
+
 .wrap-face-treatments-price {
     align-items: baseline;
     border-radius: 12px;
     box-shadow: 3px 3px 5px rgba(0,0,0,0.3),-3px -3px 5px rgba(255,255,255,1);
     display: flex;
-    margin: 10px 0;
+    margin: 20px 0;
     padding: 10px;
 }
 

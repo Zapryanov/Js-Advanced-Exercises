@@ -13,6 +13,7 @@ function DalyFacialTreatments(props) {
                 <article className={styles["each-facial-treatment"]} key={i}>
                     <h3>{faceService[1].heading}</h3>
                     <div className={styles.description} dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(faceService[1].description, {ALLOWED_TAGS: ['b', 'i', 'em', 'br', 'span', 'strong', 'ul', 'ol', 'li']})}} />
+                    {faceService[1].discount ? <div className={styles.discount} dangerouslySetInnerHTML={{__html:DOMPurify.sanitize(faceService[1].discount, {ALLOWED_TAGS: ['b', 'i', 'em', 'br', 'span', 'strong', 'ul', 'ol', 'li']})}} /> : null}
                     <div className={styles["wrap-face-treatments-price"]}>
                         <span className={styles["word-price"]}>Цена</span>
                         <span className={styles.dots}>............................................................................................................................................................................................................................................................................................................................</span>
