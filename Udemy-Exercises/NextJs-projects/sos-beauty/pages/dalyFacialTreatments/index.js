@@ -5,7 +5,7 @@ import styles from "./index.module.css";
 function DalyFacialTreatments(props) {
     const { dalyFacialTreatments } = props;
     const data = Object.entries(dalyFacialTreatments);
-    console.log(data)
+
     return (
         <section>
             <h1 className="pageHeading">Ежедневни процедури за лице</h1>
