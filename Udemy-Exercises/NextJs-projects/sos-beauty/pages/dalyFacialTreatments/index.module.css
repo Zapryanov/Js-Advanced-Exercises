@@ -17,7 +17,7 @@
     padding: 10px;
     box-shadow:  3px 3px 5px rgba(0,0,0,0.3), -3px -3px 5px rgba(255,255,255,1);
     margin: 20px 0;
-
+    text-indent: 20px;
 }
 
 .description span {
@@ -54,7 +54,6 @@
     background: linear-gradient(-45deg, rgba(0,0,0,0.26), rgba(255,255,255,0.57));
     border-radius: 12px;
     box-shadow: 8px 8px 12px 0 rgb(0 0 0 / 35%), -4px -4px 8px 0 rgb(255 255 255 / 35%);
-    color: red;
     color: white;
     display: inline-block;
     font-weight: 100;
