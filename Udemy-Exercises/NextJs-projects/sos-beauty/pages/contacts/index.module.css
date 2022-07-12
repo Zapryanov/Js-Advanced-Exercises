@@ -110,6 +110,36 @@
     background-color: rgba(0, 139, 139, 1);
 }
 
+.wrap-salon-image {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 40px 20px 0 20px;
+    width: 100%;
+}
+
+.wrap-salon-image div {
+    border-radius: 12px;
+    box-shadow: 
+        -8px -8px 12px rgba(255, 255, 255, 0.35),
+        10px 10px 5px rgb(0 0 0 / 60%);
+    -moz-box-shadow: 
+        -8px -8px 12px rgba(255, 255, 255, 0.35),
+        10px 10px 5px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 
+        -8px -8px 12px rgba(255, 255, 255, 0.35),
+        10px 10px 5px rgb(0 0 0 / 60%);
+    -o-box-shadow: 
+        -8px -8px 12px rgba(255, 255, 255, 0.35),
+        10px 10px 5px rgba(0,0,0,0.6);
+    display: flex;
+    margin: 0 10px;
+}
+
+.salon-image {
+    border-radius: 12px;
+}
+
 @media (max-width: 900px) {
     .wrap-info {
         width: 300px;

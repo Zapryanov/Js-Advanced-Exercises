@@ -1,10 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { getContatcsData } from "../../data";
 import styles from "./index.module.css";
 
-function ContactsPage() {
-    const googleLinkBig = "https://www.google.com/maps/place/S.O.S+Beauty/@42.137649,24.7864931,19z/data=!4m5!3m4!1s0x14acd1671feabfcf:0xbe40cf6f6dab0e16!8m2!3d42.137649!4d24.7870403";
+function ContactsPage(props) {
+
+    const { contactsData } = props;
+    const info = contactsData.infoContacts;
 
     return (
         <div>
@@ -18,41 +21,56 @@ function ContactsPage() {
                     <div className={styles["position-text"]}>
                         <div className={styles["wrap-spans-contacts"]}>
                             <span className={`${styles["heading-contacts"]} ${styles["icon-location"]}`}>Адрес :</span>
-                            <span>&nbsp; гр. Пловдив 4023</span>
-                            <span>&nbsp; жк. &quot;Тракия&quot;</span>
-                            <span>&nbsp; Комплекс - &quot;ОЛИМПИЯ&quot;</span>
-                            <span>&nbsp; ул. &quot;Георги Данчов&quot; - 46</span>
-                            <span>&nbsp; / Срещу Акваленд /</span>
+                            {info.address.map((item, i) => (
+                                <span key={i}>{item}</span>
+                            ))}
                         </div>
                         <div className={styles["wrap-spans-contacts"]}>
                             <span className={`${styles["heading-contacts"]} ${styles["icon-phone"]}`}>Телефон</span>
-                            <span>&nbsp; +359 876 862 629</span>
+                            <span>&nbsp; {info.telephone[0]}</span>
                         </div>
                         <div className={styles["wrap-spans-contacts"]}>
                             <span className={`${styles["heading-contacts"]} ${styles["icon-time"]}`}>Работно време</span>
-                            <span>&nbsp; Пон : 10.00 - 19.00</span>
-                            <span>&nbsp; Вто : 10.00 - 19.00</span>
-                            <span>&nbsp; Сря : 10.00 - 19.00</span>
-                            <span>&nbsp; Чет : 10.00 - 19.00</span>
-                            <span>&nbsp; Пет : 10.00 - 19.00</span>
-                            <span>&nbsp; Съб : 10.00 - 16.00</span>
-                            <span>&nbsp; Нед : 10.00 - 14.00</span>
+                            {info.worktime.map((item, i) => (
+                                <span key={i}>&nbsp; {item}</span>
+                            ))}
                         </div>
                     </div>
                 </article>
                 <article className={styles.map}>
                     <div className={styles["wrap-google-maps"]}>
-                        <Link href={googleLinkBig}>
+                        <Link href={contactsData.googleLinkBig}>
                             <a  className={styles["google-big-link"]} target="_blank">
-                                <Image width={400} height={350} src="/images/google-map-big.jpg" alt="google-map" />
+                                <Image width={400} height={350} src={contactsData.googleImageBig} alt="google-map" />
                             </a>
                         </Link>
+                    </div>
+                </article>
+                <article className={styles["wrap-salon-image"]}>
+                    <div>
+                        <Image className={styles["salon-image"]} src={contactsData.shopWindow} width={330} height={230} alt="салон за маникюр, кола маска, козметика за лице" />
+                    </div>
+                    <div>
+                        <Image className={styles["salon-image"]} src={contactsData.salonDesk} width={330} height={230} alt="бюро маникюр" />
+                    </div>
+                    <div>
+                        <Image className={styles["salon-image"]} src={contactsData.salonSofa} width={330} height={230} alt="козметичен салон чакалня" />
                     </div>
                 </article>
             </section>
 
         </div>
     )
+}
+
+export async function getServerSideProps() {
+    const contactsData = await getContatcsData();
+
+    return {
+        props: {
+            contactsData
+        }
+    }
 }
 
 export default ContactsPage;
