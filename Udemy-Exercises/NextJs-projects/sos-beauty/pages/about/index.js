@@ -8,6 +8,18 @@ function About(props) {
     const brandsLogos = props.brands;
     const topCenterText = props.mainText;
 
+    const realCosmetics = props.realCosmetics;
+    const realCosmeticsArr = [];
+
+    for (let key in realCosmetics) {
+        const innerObject = realCosmetics[key];
+        for (let key2 in innerObject) {
+            realCosmeticsArr.push(innerObject[key2]);
+        }
+    }
+
+    console.log(realCosmeticsArr);
+
     const objEntriesBrands = Object.entries(brandsLogos);
     const objEntriesMainInfo = Object.entries(mainInfo);
 
@@ -26,6 +38,14 @@ function About(props) {
                             </div>
                         ))}
                     </div>
+                    <div className={styles["wrap-images-of-products"]}>
+                        {realCosmeticsArr.map((obj, i) => (
+                            <div key={i} style={{margin: obj.margin}}>
+                                <Image className={styles["image-of-product"]} src={obj.image} width={obj.width} height={obj.height} alt={obj.alt} />
+                            </div>
+                        ))}
+                    </div>
+
                 </article>
                 {objEntriesMainInfo.map((eachService, i) => {
                     if (i % 2 === 0) {
@@ -77,12 +97,14 @@ export async function getServerSideProps() {
     const infoMainServices = aboutUsInfo.infoServices;
     const brandsImages = aboutUsInfo.brands;
     const topText = aboutUsInfo.topText;
+    const cosmeticsFromTheBrand = aboutUsInfo.cosmeticsFromTheBrand;
 
     return {
         props: {
             aboutUsMainInfo: infoMainServices,
             brands: brandsImages,
-            mainText: topText
+            mainText: topText,
+            realCosmetics: cosmeticsFromTheBrand
         }
     }
 }
