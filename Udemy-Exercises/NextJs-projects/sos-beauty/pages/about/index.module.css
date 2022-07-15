@@ -32,6 +32,19 @@
     align-items: center;
 }
 
+.wrap-images-of-products {
+    align-items: center;
+    display: flex;
+    flex-flow: row;
+}
+
+.image-of-product {
+    border-radius: 8px;
+    object-fit: contain;
+    overflow: hidden;
+    display: flex;
+}
+
 .wrap-text-and-images {
     display: flex;
     flex-flow: row nowrap;
