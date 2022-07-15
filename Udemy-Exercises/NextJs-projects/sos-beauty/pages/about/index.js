@@ -18,7 +18,6 @@ function About(props) {
         }
     }
 
-    console.log(realCosmeticsArr);
 
     const objEntriesBrands = Object.entries(brandsLogos);
     const objEntriesMainInfo = Object.entries(mainInfo);
