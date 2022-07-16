@@ -45,26 +45,32 @@
     margin: 20px auto;
 }
 
-.googleText {
-    color: rgba(233, 119, 119, 1);
-    text-shadow: 1px 1px 0 rgba(0 0 0 / 50%);
-    position: absolute;
-    top: -10px;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.google-map {
+    border-radius: 8px;
+    box-shadow: 
+        -3px -3px 5px rgb(238, 231, 231),
+        10px 10px 20px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    position: relative;
 }
 
-.googleText::after {
-    content: "";
-    background-image: url("https://res.cloudinary.com/audipower/image/upload/v1643362514/logo_fusle7.png");
-    background-size: cover;
-    background-position: center;
-    display: inline-block;
-    width: 70px;
-    height: 70px;
+.see-more {
+    border: none;
+    border-radius: 8px;
+    content: "Виж на голяма карта";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #71716e;
+    background-color: white;
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.6);
+    left: 50%;
+    margin-bottom: 20px;
+    outline: none;
+    padding: 5px 10px;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 2;
 }
 
 @media (max-width: 768px) {
@@ -93,13 +99,8 @@
         height: 250px;
     }
 
-    .googleText {
-        font-size: 10px;
-    }
-
-    .googleText::after {
-        width: 40px;
-        height: 40px;
+    .see-more {
+        font-size: 14px;
     }
 }
 
@@ -111,5 +112,9 @@
     .wrap-google-maps {
         width: 200px;
         height: 200px;
+    }
+
+    .see-more {
+        font-size: 12px;
     }
 }
