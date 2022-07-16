@@ -1,7 +1,7 @@
 export async function getAllChineseLessons() {
     try {
         // Fetch data from external API
-        const res = await fetch(`https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app/lessons/chineseLessons.json`)
+        const res = await fetch(`${process.env.databaseUrl}/${process.env.currentDatabase}/${process.env.currentChineseDatabase}.json`)
         const data = await res.json()
 
         // Transform the data from Firebase
@@ -31,7 +31,7 @@ export async function getCurrentChineseLesson(id) {
 export async function getAllEnglishLessons() {
     try {
         // Fetch data from external API
-        const res = await fetch(`https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app/lessons/englishLessons.json`)
+        const res = await fetch(`${process.env.databaseUrl}/${process.env.currentDatabase}/${process.env.currentEnglishDatabase}.json`)
         const data = await res.json()
 
         // Transform the data from Firebase
@@ -59,7 +59,7 @@ export async function getCurrentEnglishLesson(id) {
 }
 
 export async function getContactsInfo() {
-    const response = await fetch("https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app/lessons/contacts.json");
+    const response = await fetch(`${process.env.databaseUrl}/${process.env.currentDatabase}/${process.env.currentContactsDatabase}.json`);
     const data = await response.json();
 
     return data;
