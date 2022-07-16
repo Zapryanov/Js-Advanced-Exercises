@@ -57,3 +57,10 @@ export async function getCurrentEnglishLesson(id) {
 
     return currentLesson;
 }
+
+export async function getContactsInfo() {
+    const response = await fetch("https://mravka-zanimavka-default-rtdb.europe-west1.firebasedatabase.app/lessons/contacts.json");
+    const data = await response.json();
+
+    return data;
+}
