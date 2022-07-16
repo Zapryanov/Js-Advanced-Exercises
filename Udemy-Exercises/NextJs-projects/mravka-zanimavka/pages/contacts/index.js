@@ -18,13 +18,13 @@ function ContactsPage() {
                     <div className={styles.center}>
                         <div className={styles["wrap-socials"]}>
                             <span>
-                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1644830649/mail_qbj18y.svg" alt="email" />
+                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1657887892/envelope-test_hmfdeb.png" alt="email" />
                             </span>
                             <span>mravkazanimavka@gmail.com</span>
                         </div>
                         <div className={styles["wrap-socials"]}>
                             <span>
-                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1644830666/facebook_gt0ii9.svg" alt="email" />
+                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1655233946/facebook-logo_glwf64.png" alt="email" />
                             </span>
                             <span>Facebook:
                                 <Link href="https://www.facebook.com/MravkaZanimavka">
