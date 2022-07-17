@@ -42,6 +42,12 @@ function ContactsPage(props) {
                             </span>
                             <span>{contactsInfo.addressText}</span>
                         </div>
+                        <div className={styles["wrap-socials"]}>
+                            <span>
+                                <Image width={20} height={20} src={contactsInfo.phoneLogo} alt="phone" />
+                            </span>
+                            <span>{contactsInfo.phoneText}</span>
+                        </div>
                     </div>
                 </section>
                 <section>

@@ -17,6 +17,16 @@ function Footer() {
                         </Link>
                     </div>
                 </div>
+                <div className={styles["space-vertically"]}>
+                    <div>
+                        <Link href="/contacts">
+                            <a className={`${styles["position-icon"]} ${styles["facebook-link"]}`}>
+                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1652476270/phone_nbsxsf.png" alt="contacts" />
+                                <span className={styles["space-left"]}>Контакти</span>
+                            </a>
+                        </Link>
+                    </div>
+                </div>
                 <div className={styles["space-vertically"]}>Created by Ivan Zapryanov</div>
                 <div className={styles["space-vertically"]}>© 2022 Next-Js-Power</div>
             </div>
