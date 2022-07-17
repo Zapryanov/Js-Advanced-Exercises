@@ -3,8 +3,10 @@ import styles from "./index.module.css";
 import Head from "next/head";
 
 import Link from "next/link";
+import { getContactsInfo } from "../../data/getData";
 
-function ContactsPage() {
+function ContactsPage(props) {
+    const { contactsInfo } = props;
 
     return (
         <>
@@ -18,27 +20,27 @@ function ContactsPage() {
                     <div className={styles.center}>
                         <div className={styles["wrap-socials"]}>
                             <span>
-                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1657887892/envelope-test_hmfdeb.png" alt="email" />
+                                <Image width={20} height={20} src={contactsInfo.mailLogo} alt="email" />
                             </span>
-                            <span>mravkazanimavka@gmail.com</span>
+                            <span>{contactsInfo.mailText}</span>
                         </div>
                         <div className={styles["wrap-socials"]}>
                             <span>
-                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1655233946/facebook-logo_glwf64.png" alt="email" />
+                                <Image width={20} height={20} src={contactsInfo.facebookLogo} alt="facebook" />
                             </span>
                             <span>Facebook:
-                                <Link href="https://www.facebook.com/MravkaZanimavka">
+                                <Link href={contactsInfo.facebookLink}>
                                     <a className={styles.linkFacebook}>
-                                        &nbsp;Мравка Занимавка
+                                        &nbsp;{contactsInfo.facebookText}
                                     </a>
                                 </Link>
                             </span>
                         </div>
                         <div className={styles["wrap-socials"]}>
                             <span>
-                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1644830685/home-icon_jcbh4g.png" alt="email" />
+                                <Image width={20} height={20} src={contactsInfo.addressLogo} alt="address" />
                             </span>
-                            <span>Пловдив, ул. &#8222;Йоаким Груев&#8220; 15 А</span>
+                            <span>{contactsInfo.addressText}</span>
                         </div>
                     </div>
                 </section>
@@ -61,6 +63,16 @@ function ContactsPage() {
             </div>
         </>
     )
+}
+
+export async function getServerSideProps() {
+    const contactsInfo = await getContactsInfo();
+
+    return {
+        props: {
+            contactsInfo
+        }
+    }
 }
 
 export default ContactsPage;

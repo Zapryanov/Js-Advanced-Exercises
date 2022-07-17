@@ -59,7 +59,7 @@ export async function getCurrentEnglishLesson(id) {
 }
 
 export async function getContactsInfo() {
-    const response = await fetch(`${process.env.databaseUrl}/${process.env.currentDatabase}/${process.env.currentContactsDatabase}.json`);
+    const response = await fetch(`${process.env.databaseUrl}/${process.env.currentDatabase}/contacts.json`);
     const data = await response.json();
 
     return data;
