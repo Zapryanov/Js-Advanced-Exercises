@@ -24,13 +24,11 @@
 .space-vertically {
     padding: 5px 0;
     width: 200px;
-    /* text-align: center; */
     border-bottom: 1px solid;
 }
 
 .position-icon {
     display: flex;
-    /* justify-content: center; */
     align-items: center;
 }
 
