@@ -30,7 +30,7 @@ function ContactsPage(props) {
                             </span>
                             <span>Facebook:
                                 <Link href={contactsInfo.facebookLink}>
-                                    <a className={styles.linkFacebook}>
+                                    <a className={styles.linkFacebook} target="_blank">
                                         &nbsp;{contactsInfo.facebookText}
                                     </a>
                                 </Link>
