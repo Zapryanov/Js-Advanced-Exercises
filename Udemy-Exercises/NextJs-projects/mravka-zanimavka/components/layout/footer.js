@@ -10,7 +10,7 @@ function Footer() {
                 <div className={styles["space-vertically"]}>
                     <div>
                         <Link href="https://www.facebook.com/MravkaZanimavka">
-                            <a className={`${styles["position-icon"]} ${styles["facebook-link"]}`}>
+                            <a className={`${styles["position-icon"]} ${styles["facebook-link"]}`} target="_blank">
                                 <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1655233946/facebook-logo_glwf64.png" alt="facebook-icon" />
                                 <span className={styles["space-left"]}>Мравка Занимавка</span>
                             </a>
