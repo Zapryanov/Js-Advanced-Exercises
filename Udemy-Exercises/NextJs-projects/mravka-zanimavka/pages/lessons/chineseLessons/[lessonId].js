@@ -1,18 +1,16 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { Fragment, useContext } from "react";
+import { Fragment } from "react";
 import { getAllChineseLessons, getCurrentChineseLesson } from "../../../data/getData";
-import UserContext from "../../../store/user-context";
 
 import sanitizeHtml from 'sanitize-html';
 
 import styles from "./[lessonId].module.css";
 
 function CurrentLesson(props) {
-    const userContext = useContext(UserContext)
+
     const router = useRouter();
-    const { loggedIn, user } = userContext
     const { lesson } = props;
 
     function goBack() {
@@ -47,7 +45,6 @@ function CurrentLesson(props) {
                 <div className={`${styles["width-line"]} ${styles.text}`} dangerouslySetInnerHTML={{__html: clean}} />
                 <div className={styles["wrap-buttons"]}>
                     <button className={styles["btn-lesson"]} onClick={goBack}>Go back</button>
-                    {loggedIn && <button className={`${styles["btn-lesson"]} ${styles.delete}`} onClick={deleteLesson}>Delete</button>}
                 </div>
             </div>
         </Fragment>
