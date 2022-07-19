@@ -12,7 +12,7 @@ function ContactsPage(props) {
         <>
             <Head>
                 <title>Контакти</title>
-                <meta name="description" content="За контакти - град Пловдив, улица „Йоаким Груев“ 15 А. Обучение по нглийски и китайски език за деца" />
+                <meta name="description" content={`За контакти - град ${contactsInfo.addressText}. Обучение по английски и китайски език за деца.`} />
             </Head>
             <div className={styles["wrap-contacts-page"]}>
                 <h1>Контакти</h1>
