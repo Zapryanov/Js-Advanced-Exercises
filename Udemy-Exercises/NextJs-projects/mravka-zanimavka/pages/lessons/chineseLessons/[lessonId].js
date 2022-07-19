@@ -14,28 +14,9 @@ function CurrentLesson(props) {
     const router = useRouter();
     const { loggedIn, user } = userContext
     const { lesson } = props;
-    console.log(lesson)
 
     function goBack() {
         router.push("/lessons/chineseLessons")
-    }
-    
-    const idToDelete = lesson.id;
-    
-    function deleteLesson() {
-        fetch(`${process.env.databaseURL}/${process.env.currentDatabase}/${process.env.currentChineseDatabase}/${idToDelete}.json?auth=${user?.accessToken}`, {
-                method: "DELETE"
-            })
-            .then(response =>{ 
-                console.log(response);
-                if (!response.ok) {
-                    throw new error('Error')
-                }
-                response.json()})
-            .then(data => {
-                router.push("/lessons/chineseLessons");
-            })
-            .catch(error => console.error(error))
     }
 
     if (!lesson) {
