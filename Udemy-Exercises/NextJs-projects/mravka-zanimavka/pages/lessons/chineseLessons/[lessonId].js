@@ -14,6 +14,7 @@ function CurrentLesson(props) {
     const router = useRouter();
     const { loggedIn, user } = userContext
     const { lesson } = props;
+    console.log(lesson)
 
     function goBack() {
         router.push("/lessons/chineseLessons")
@@ -55,7 +56,7 @@ function CurrentLesson(props) {
         <Fragment>
             <Head>
                 <title>{lesson.title}</title>
-                <meta name="description" content={`Урок по китайски за деца в град Пловдив. ${lesson.text}`} />
+                <meta name="description" content={`Урок по китайски за деца в град Пловдив, на тема - ${lesson.title}`} />
             </Head>
             <div className={styles["wrap-current-lesson"]}>
                 <h3 className={styles["width-line"]}>{lesson.title}</h3>
