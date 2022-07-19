@@ -1,40 +1,19 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { Fragment, useContext } from "react";
+import { Fragment } from "react";
 import { getAllEnglishLessons, getCurrentEnglishLesson } from "../../../data/getData";
-import UserContext from "../../../store/user-context";
 
 import sanitizeHtml from 'sanitize-html';
 
 import styles from "./[lessonId].module.css";
 
 function CurrentLesson(props) {
-    const userContext = useContext(UserContext)
-    const { loggedIn, user } = userContext
     const router = useRouter();
     const { lesson } = props;
 
     function goBack() {
         router.push("/lessons/englishLessons")
-    }
-    
-    const idToDelete = lesson.id;
-    
-    function deleteLesson() {
-        fetch(`${process.env.databaseURL}/${process.env.currentDatabase}/${process.env.currentEnglishDatabase}/${idToDelete}.json?auth=${user?.accessToken}`, {
-                method: "DELETE"
-            })
-            .then(response =>{ 
-                console.log(response);
-                if (!response.ok) {
-                    throw new error('Error')
-                }
-                response.json()})
-            .then(data => {
-                router.push("/lessons/englishLessons");
-            })
-            .catch(error => console.error(error))
     }
 
     if (!lesson) {
@@ -65,7 +44,6 @@ function CurrentLesson(props) {
                 <div className={`${styles["width-line"]} ${styles.text}`} dangerouslySetInnerHTML={{__html: clean}} />
                 <div className={styles["wrap-buttons"]}>
                     <button className={styles["btn-lesson"]} onClick={goBack}>Go back</button>
-                    {loggedIn && <button className={`${styles["btn-lesson"]} ${styles.delete}`} onClick={deleteLesson}>Delete</button>}
                 </div>
             </div>
         </Fragment>
