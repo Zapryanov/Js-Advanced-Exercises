@@ -21,6 +21,7 @@ function HomePage(props) {
             <Head>
                 <title>Мравка Занимавка</title>
                 <meta name="description" content="Уроци по Китайски и Английски език за деца в град Пловдив" />
+                <meta name="robots" content="all" />
             </Head>
             <h1>За Мравка Занимавка</h1>
             <article className={`${styles.description} ${styles.one}`}>
