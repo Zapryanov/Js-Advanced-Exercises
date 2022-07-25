@@ -26,7 +26,7 @@ function HomePage(props) {
             <article className={`${styles.description} ${styles.one}`}>
                 <div className={styles["wrap-img"]}>
                     <div className={styles.shadow}>
-                        <Image width={1200} height={700} src="https://res.cloudinary.com/audipower/image/upload/v1647492745/learning-plan-min_tz8l5h.png" alt="concept" />
+                        <Image className={styles.img} width={1200} height={848} src="https://res.cloudinary.com/audipower/image/upload/v1647492745/learning-plan-min_tz8l5h.png" alt="concept" />
                     </div>
                 </div>
                 <p className={styles.text}>Заниманията са подходящи за деца на възраст 6-9 години и са с продължителност 90 минути.</p>
