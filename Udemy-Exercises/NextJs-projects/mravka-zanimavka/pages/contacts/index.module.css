@@ -58,7 +58,6 @@
 .see-more {
     border: none;
     border-radius: 8px;
-    content: "Виж на голяма карта";
     position: absolute;
     left: 0;
     bottom: 0;
@@ -77,6 +76,11 @@
 .see-more:active {
     margin-bottom: 15px;
     transition: 0.2s ease-in;
+}
+
+.position-google-map a {
+    height: 100%;
+    display: flex;
 }
 
 @media (max-width: 768px) {
