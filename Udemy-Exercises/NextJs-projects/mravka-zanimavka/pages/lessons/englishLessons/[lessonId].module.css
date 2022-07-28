@@ -53,7 +53,6 @@
     text-overflow: ellipsis;
 }
 
-/* Start styling buttons */
 .wrap-buttons {
     display: flex;
     flex-flow: row nowrap;
@@ -97,8 +96,6 @@
         #bb0303
     );
 }
-
-/* End styling buttons */
 
 /* ------- dangerouslySetInnerHTML - add classes ------ */
 .width-line div:not(:first-child) {
