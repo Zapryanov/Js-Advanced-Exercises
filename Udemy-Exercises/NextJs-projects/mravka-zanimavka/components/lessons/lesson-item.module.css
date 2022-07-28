@@ -1,11 +1,9 @@
 .lesson-container {
-/* ------------------------------------------------------------ */
   backdrop-filter: blur(10px);
   background-color: #ffffed;
   border: 2px solid rgba(255,255,255,0.1);
   border-radius: 10px;
   box-shadow: 0 0 35px rgba(8,7,16,0.6);
-/* ------------------------------------------------------------- */
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -43,7 +41,6 @@
   padding: 10px 10%;
 }
 
-/* start styling btn-lesson */
 .btn-lesson {
   align-items: center;
   appearance: none;
@@ -89,9 +86,6 @@
   box-shadow: #D6D6E7 0 3px 7px inset;
   transform: translateY(2px);
 }
-/* end styling btn-lesson */
-
-/* Start Media Query */
 
 @media (max-width: 1024px) {
   .btn-lesson {
