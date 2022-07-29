@@ -2,11 +2,11 @@ import Image from "next/image";
 import BigButton from "../components/big-button";
 import styles from "./index.module.css";
 
-import { getAllChineseLessons, getAllEnglishLessons } from "../data/getData";
+import { getAllChineseLessons, getAllEnglishLessons, getImagesMainPage } from "../data/getData";
 import Head from "next/head";
 
 function HomePage(props) {
-    const { lastFiveLessons } = props;
+    const { lastFiveLessons, mainPageImages } = props;
 
     function smallOrBig(i) {
         if (i < 3) {
@@ -26,7 +26,7 @@ function HomePage(props) {
             <article className={`${styles.description} ${styles.one}`}>
                 <div className={styles["wrap-img"]}>
                     <div className={styles.shadow}>
-                        <Image className={styles.img} width={1200} height={848} src="https://res.cloudinary.com/audipower/image/upload/v1647492745/learning-plan-min_tz8l5h.png" alt="concept" />
+                        <Image className={styles.img} width={1200} height={848} src={mainPageImages.learningPlan} alt="concept" />
                     </div>
                 </div>
                 <p className={styles.text}>Заниманията са подходящи за деца на възраст 6-9 години и са с продължителност 90 минути.</p>
@@ -49,7 +49,7 @@ function HomePage(props) {
                     <ul>
                         <li>
                             <div>
-                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1644776882/red-heart_emcwxg.png" alt="heart" />
+                                <Image width={20} height={20} src={mainPageImages.redHeart} alt="heart" />
                             </div>
                             <p>
                                 Подобрява <span className={styles.bold}>концентрацията</span>
@@ -57,7 +57,7 @@ function HomePage(props) {
                         </li>
                         <li>
                             <div>
-                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1644776882/red-heart_emcwxg.png" alt="heart" />
+                                <Image width={20} height={20} src={mainPageImages.redHeart} alt="heart" />
                             </div>
                             <p>
                                 Улеснява създаването на <span className={styles.bold}>причинно-следствените връзки</span>
@@ -65,7 +65,7 @@ function HomePage(props) {
                         </li>
                         <li>
                             <div>
-                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1644776882/red-heart_emcwxg.png" alt="heart" />
+                                <Image width={20} height={20} src={mainPageImages.redHeart} alt="heart" />
                             </div>
                             <p>
                                 <span className={styles.bold}>Стимулира запаметяването</span>
@@ -73,7 +73,7 @@ function HomePage(props) {
                         </li>
                         <li>
                             <div>
-                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1644776882/red-heart_emcwxg.png" alt="heart" />
+                                <Image width={20} height={20} src={mainPageImages.redHeart} alt="heart" />
                             </div>
                             <p>
                                 <span className={styles.bold}>Развива старанието и упоритостта</span>
@@ -85,7 +85,7 @@ function HomePage(props) {
             <article className={`${styles.description} ${styles.two}`}>
                 <div className={styles["wrap-img"]}>
                     <div className={styles.shadow}>
-                        <Image width={660} height={430} src="https://res.cloudinary.com/audipower/image/upload/v1643362513/chinese-letters-min_gl1xz2.png" alt="write" />
+                        <Image width={660} height={430} src={mainPageImages.chineseLetters} alt="write" />
                     </div>
                 </div>
                 <div className={styles["wrap-text"]}>
@@ -105,6 +105,8 @@ function HomePage(props) {
 }
 
 export async function getServerSideProps() {
+    const imagesMainPage = await getImagesMainPage();
+
     let lastFive = [];
     try {
         const allChineseLessons = await getAllChineseLessons();
@@ -120,7 +122,8 @@ export async function getServerSideProps() {
 
     return {
         props: {
-            lastFiveLessons: lastFive
+            lastFiveLessons: lastFive,
+            mainPageImages: imagesMainPage
         }
     }
 }
