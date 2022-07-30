@@ -87,16 +87,6 @@
     border: 2px solid #bbb8b8;
     transform: scale(.96);
 }
-.delete {
-    color: rgba(233, 119, 119, 1);
-}
-.delete:hover {
-    color: yellow;
-    background: linear-gradient(
-        #f34040,
-        #bb0303
-    );
-}
 
 /* ------- dangerouslySetInnerHTML - add classes ------ */
 .width-line div:not(:first-child) {
