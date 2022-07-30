@@ -7,7 +7,7 @@ import { getAllEnglishLessons } from "../../../data/getData";
 function LessonsPage(props) {
     
     return (
-        <div>
+        <article>
             <Head>
                 <title>Уроци-Английски</title>
                 <meta name="description" content="уроци по английски за деца с мравка занимавка в град Пловдив" />
@@ -15,7 +15,7 @@ function LessonsPage(props) {
             <h1>Учим английски</h1>
             <LessonList lessons={props.loadedLessons} />
             <BigButton />
-        </div>
+        </article>
     )
 }
 

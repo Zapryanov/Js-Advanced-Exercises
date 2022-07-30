@@ -25,7 +25,7 @@ function LessonItem(props) {
     }
 
     return (
-        <li className={styles["lesson-container"]} key={id}>
+        <article className={styles["lesson-container"]} key={id}>
             <h4 className={styles["title-lesson"]}>{title}</h4>
             <div className={styles["wrap-image"]}>
                 <Image className={styles.image} width={1200} height={750} src={image} alt={title} />
@@ -34,7 +34,7 @@ function LessonItem(props) {
             <Link href={exploreLink}>
                 <a className={styles["btn-lesson"]}>Виж повече</a>
             </Link>
-        </li>
+        </article>
     )
 }
 

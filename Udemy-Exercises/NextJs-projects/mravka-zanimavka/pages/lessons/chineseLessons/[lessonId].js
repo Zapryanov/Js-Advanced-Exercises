@@ -37,7 +37,7 @@ function CurrentLesson(props) {
                 <title>{lesson.title}</title>
                 <meta name="description" content={`Урок по китайски за деца в град Пловдив, на тема - ${lesson.title}`} />
             </Head>
-            <div className={styles["wrap-current-lesson"]}>
+            <article className={styles["wrap-current-lesson"]}>
                 <h3 className={styles["width-line"]}>{lesson.title}</h3>
                 <div className={`${styles["width-line"]} ${styles["wrap-image"]}`}>
                     <Image className={`${styles["image-lesson"]} ${styles["box-shadow"]}`} width={1200} height={750} src={lesson.image} alt={lesson.title}/>
@@ -46,7 +46,7 @@ function CurrentLesson(props) {
                 <div className={styles["wrap-buttons"]}>
                     <button className={styles["btn-lesson"]} onClick={goBack}>Go back</button>
                 </div>
-            </div>
+            </article>
         </Fragment>
     )
 }

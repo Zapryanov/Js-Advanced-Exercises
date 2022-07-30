@@ -5,7 +5,7 @@ function LessonList(props) {
     const { lessons } = props;
     
     return (
-        <ul className={styles["wrap-all-lessons"]}>
+        <section className={styles["wrap-all-lessons"]}>
             {lessons.map((lesson) => (
                 <LessonItem
                     key={lesson.id}
@@ -16,7 +16,7 @@ function LessonList(props) {
                     text={lesson.text}
                 />
             ))}
-        </ul>
+        </section>
     );
 }
 
