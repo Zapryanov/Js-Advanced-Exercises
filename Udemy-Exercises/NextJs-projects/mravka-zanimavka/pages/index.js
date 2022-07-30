@@ -24,9 +24,9 @@ function HomePage(props) {
             </Head>
             <h1>За Мравка Занимавка</h1>
             <article className={`${styles.description} ${styles.one}`}>
-                <div className={styles["wrap-img"]}>
+                <div className={`${styles["wrap-img"]} ${styles["learning-plan"]}`}>
                     <div className={styles.shadow}>
-                        <Image className={styles.img} width={1200} height={848} src={mainPageImages.learningPlan} alt="concept" />
+                        <Image className={styles.img} width={800} height={565} src={mainPageImages.learningPlan} alt="concept" />
                     </div>
                 </div>
                 <p className={styles.text}>Заниманията са подходящи за деца на възраст 6-9 години и са с продължителност 90 минути.</p>

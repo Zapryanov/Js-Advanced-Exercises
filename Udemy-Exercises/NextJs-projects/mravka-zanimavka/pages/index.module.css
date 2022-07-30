@@ -23,7 +23,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.7);
     border-radius: 5px;
     overflow: hidden;
@@ -157,6 +156,10 @@
 /* --- End Three --------- */
 
 @media (max-width: 1024px) {
+    .learning-plan {
+        width: 600px;
+        height: 424px;
+    }
     .gallery-text-container {
         padding: 0;
     }
@@ -168,6 +171,10 @@
 }
 
 @media (max-width: 768px) {
+    .learning-plan {
+        width: 100%;
+        height: auto;
+    }
     .gallery-wrapper {
         flex-flow: column;
     }

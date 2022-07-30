@@ -38,7 +38,7 @@
 
 .wrap-google-maps {
     width: 500px;
-    height: 500px;
+    height: 471px;
     background-color: rgba(0, 255, 0, 0.1);
     display: flex;
     justify-content: center;
@@ -86,7 +86,7 @@
 @media (max-width: 768px) {
     .wrap-google-maps {
         width: 400px;
-        height: 400px;
+        height: 377px;
     }
 }
 
@@ -106,7 +106,7 @@
 
     .wrap-google-maps {
         width: 250px;
-        height: 250px;
+        height: 236px;
     }
 
     .see-more {
@@ -121,7 +121,7 @@
     }
     .wrap-google-maps {
         width: 200px;
-        height: 200px;
+        height: 189px;
     }
 
     .see-more {
