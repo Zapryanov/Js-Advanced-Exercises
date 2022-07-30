@@ -6,7 +6,7 @@ import { getAllEnglishLessons, getCurrentEnglishLesson } from "../../../data/get
 
 import sanitizeHtml from 'sanitize-html';
 
-import styles from "./[lessonId].module.css";
+import styles from "../index.module.css";
 
 function CurrentLesson(props) {
     const router = useRouter();
