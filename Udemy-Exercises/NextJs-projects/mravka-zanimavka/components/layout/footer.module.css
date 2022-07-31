@@ -40,12 +40,12 @@
     color: rgba(233, 119, 119, 1);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 479px) {
     .wrap-footer-content {
         font-size: 14px;
     }
 }
-@media (max-width: 320px) {
+@media (max-width: 319px) {
     .wrap-footer-content {
         font-size: 12px;
         text-align: center;
@@ -53,5 +53,9 @@
 
     .position-icon {
         justify-content: center;
+    }
+
+    .space-vertically {
+        width: 100%;
     }
 }

@@ -83,14 +83,14 @@
     display: flex;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .wrap-google-maps {
         width: 400px;
         height: 377px;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 479px) {
     .center {
         font-size: 14px;
         width: 250px;
@@ -114,7 +114,7 @@
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 319px) {
     .center {
         font-size: 12px;
         width: 200px;

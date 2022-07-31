@@ -12,13 +12,13 @@
     width: 100%;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 479px) {
     .main {
-        min-height: 83vh;
+        min-height: 73vh;
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 319px) {
     .main {
         min-height: 60vh;
     }
