@@ -132,7 +132,7 @@
 
 /* ------------------------------------------------------- */
 
-@media (max-width: 640px) {
+@media (max-width: 639px) {
     .wrap-current-lesson {
         width: 90%;
     }
@@ -142,7 +142,7 @@
     }
   }
 
-@media (max-width: 480px) {
+@media (max-width: 479px) {
     h3.width-line {
         font-size: 21px;
     }
@@ -157,7 +157,7 @@
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 319px) {
     .wrap-current-lesson {
         width: 100%;
     }
