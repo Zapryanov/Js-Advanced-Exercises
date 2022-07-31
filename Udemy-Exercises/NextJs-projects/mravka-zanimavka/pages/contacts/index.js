@@ -14,7 +14,7 @@ function ContactsPage(props) {
                 <title>Контакти</title>
                 <meta name="description" content={`За контакти - град ${contactsInfo.addressText}. Обучение по английски и китайски език за деца.`} />
             </Head>
-            <div className={styles["wrap-contacts-page"]}>
+            <article className={styles["wrap-contacts-page"]}>
                 <h1>Контакти</h1>
                 <section className={styles.contacts}>
                     <div className={styles.center}>
@@ -68,7 +68,7 @@ function ContactsPage(props) {
                         </div>
                     </div>
                 </section>
-            </div>
+            </article>
         </>
     )
 }
