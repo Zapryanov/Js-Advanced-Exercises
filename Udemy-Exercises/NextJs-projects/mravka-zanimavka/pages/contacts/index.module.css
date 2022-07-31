@@ -46,6 +46,8 @@
 }
 
 .google-map {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
     border-radius: 8px;
     box-shadow: 
         -3px -3px 5px rgb(238, 231, 231),
@@ -57,6 +59,8 @@
 
 .see-more {
     border: none;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
     border-radius: 8px;
     position: absolute;
     left: 0;

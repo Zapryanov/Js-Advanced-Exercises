@@ -2,6 +2,8 @@
   backdrop-filter: blur(10px);
   background-color: #ffffed;
   border: 2px solid rgba(255,255,255,0.1);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
   border-radius: 10px;
   box-shadow: 0 0 35px rgba(8,7,16,0.6);
   display: flex;
@@ -17,6 +19,8 @@
 }
 
 .wrap-image {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
   border-radius: 10px;
   box-shadow: 0.4rem 0.4rem 0.45rem rgba(0, 0, 30, 0.3);
   filter: drop-shadow(0.4rem 0.4rem 0.45rem rgba(0, 0, 30, 0.5));
@@ -45,6 +49,8 @@
   align-items: center;
   appearance: none;
   background-color: #FCFCFD;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
   border-radius: 4px;
   border-width: 0;
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;

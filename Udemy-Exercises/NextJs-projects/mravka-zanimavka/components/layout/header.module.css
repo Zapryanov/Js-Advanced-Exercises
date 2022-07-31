@@ -9,6 +9,8 @@
 
 .header::before {
     background-color: rgba(241, 202, 143, 0.4);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
     border-radius: 50%;
     bottom: 0;
     content: "";
@@ -59,6 +61,8 @@ a.show-dash::before {
     background-color: brown;
     position: absolute;
     bottom: -2px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
     border-radius: 50%;
     opacity: 0;
     transition: opacity 1s;
