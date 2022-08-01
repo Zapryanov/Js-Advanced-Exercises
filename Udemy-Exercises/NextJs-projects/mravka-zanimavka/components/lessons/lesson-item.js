@@ -26,7 +26,7 @@ function LessonItem(props) {
 
     return (
         <article className={styles["lesson-container"]} key={id}>
-            <h4 className={styles["title-lesson"]}>{title}</h4>
+            <h2 className={styles["title-lesson"]}>{title}</h2>
             <div className={styles["wrap-image"]}>
                 <Image className={styles.image} width={1200} height={750} src={image} alt={title} />
             </div>

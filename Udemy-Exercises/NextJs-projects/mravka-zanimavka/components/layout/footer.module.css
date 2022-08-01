@@ -5,8 +5,6 @@
 
 .footer::before {
     background-color: rgba(241, 202, 143, 0.4);
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     border-radius: 50%;
     content: "";
     height: 2px;

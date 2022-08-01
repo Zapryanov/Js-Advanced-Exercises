@@ -2,8 +2,6 @@
     backdrop-filter: blur(10px);
     background-color: #ffffed;
     border: 2px solid rgba(255,255,255,0.1);
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
     border-radius: 10px;
     box-shadow: 0 0 35px rgba(8,7,16,0.6);
     display: flex;
@@ -18,8 +16,6 @@
 }
 
 .wrap-image {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
     border-radius: 10px;
     box-shadow: 0.4rem 0.4rem 0.45rem rgba(0, 0, 30, 0.3);
     display: flex;
@@ -29,8 +25,6 @@
 }
 
 .image-lesson {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
     border-radius: 10px;
     align-items: center;
     display: flex;
@@ -40,8 +34,8 @@
 
 .box-shadow {
     box-shadow: 
-    -8px -8px 12px 0 rgba(0, 0, 0, 0.3),
-    12px 12px 16px rgba(255, 255, 255, 0.25);
+        -8px -8px 12px 0 rgba(0, 0, 0, 0.3),
+        12px 12px 16px rgba(255, 255, 255, 0.25);
 }
 
 .text {
@@ -53,8 +47,6 @@
     width: 90%;
     background-color: white;
     box-shadow: 0 1px 3px inset;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
     border-radius: 10px;
     margin-top: 10px;
     overflow: hidden;
@@ -75,8 +67,6 @@
     font-size: 18px;
     font-weight: 300;
     border: 1px solid lightgray;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
     border-radius: 5px;
     cursor: pointer;
     padding: 10px 0;

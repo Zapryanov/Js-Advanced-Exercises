@@ -12,8 +12,6 @@
 }
 
 .wrap-img {
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
     border-radius: 5px;
     box-shadow: 0 0 12px inset rgb(204 214 61 / 70%);
     padding: 10px;
@@ -26,8 +24,6 @@
     align-items: center;
     width: 100%;
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.7);
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -46,8 +42,6 @@
 /* ----Start Two--- */
 
 .two {
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
     border-radius: 12px;
     display: flex;
     justify-content: space-between;
@@ -60,8 +54,6 @@
 
 .two .wrap-img,
 .two .wrap-text {
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
     border-radius: 5px;
     box-shadow: 0 0 12px inset rgb(204 214 61 / 70%);
     padding: 10px;
@@ -113,13 +105,14 @@
 
 .small-image {
     flex: 0 1 31%;
-    
+    display: flex;
 }
 
 .big-image {
     flex: 0 1 48%;
     margin-top: 3%;
     width: 50%;
+    display: flex;
 }
 
 .small-image,
