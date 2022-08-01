@@ -61,7 +61,7 @@ function ContactsPage(props) {
                             <div className={styles["position-google-map"]}>
                                 <Link href={contactsInfo.googleLink}>
                                     <a target="_blank">
-                                        <Image width={500} height={500} src={contactsInfo.googleImage} alt="google-map" />
+                                        <Image width={500} height={500} src={contactsInfo.googleImageTest} alt="google-map" />
                                     </a>
                                 </Link>
                             </div>

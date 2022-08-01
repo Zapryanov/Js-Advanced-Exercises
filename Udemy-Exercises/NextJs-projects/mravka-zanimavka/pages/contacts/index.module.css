@@ -86,7 +86,7 @@
 @media (max-width: 767px) {
     .wrap-google-maps {
         width: 400px;
-        height: 377px;
+        height: 400px;
     }
 }
 
@@ -106,7 +106,7 @@
 
     .wrap-google-maps {
         width: 250px;
-        height: 236px;
+        height: 250px;
     }
 
     .see-more {
@@ -121,7 +121,7 @@
     }
     .wrap-google-maps {
         width: 200px;
-        height: 189px;
+        height: 200px;
     }
 
     .see-more {
