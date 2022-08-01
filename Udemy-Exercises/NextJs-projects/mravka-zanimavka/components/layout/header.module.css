@@ -112,10 +112,6 @@ a.nav-link:hover::before {
     .header nav {
         margin-right: 0;
     }
-
-    .header nav ul li {
-        margin: 2px 0px;
-    }
 }
 
 @media (max-width: 319px) {
@@ -124,7 +120,7 @@ a.nav-link:hover::before {
     }
 
     .header nav ul li {
-        margin: 5px 0 0 0;
+        margin: 8npx 0;
     }
 
     .header nav {
