@@ -39,7 +39,7 @@ function CurrentLesson(props) {
             <div className={styles["wrap-current-lesson"]}>
                 <h3 className={styles["width-line"]}>{lesson.title}</h3>
                 <div className={`${styles["width-line"]} ${styles["wrap-image"]}`}>
-                    <Image className={`${styles["image-lesson"]} ${styles["box-shadow"]}`} width={1200} height={750} src={lesson.image} alt={lesson.title}/>
+                    <Image className={`${styles["image-lesson"]} ${styles["box-shadow"]}`} width={1200} height={800} src={lesson.image} alt={lesson.title}/>
                 </div>
                 <div className={`${styles["width-line"]} ${styles.text}`} dangerouslySetInnerHTML={{__html: clean}} />
                 <div className={styles["wrap-buttons"]}>
