@@ -26,7 +26,7 @@ function HomePage(props) {
             <article className={`${styles.description} ${styles.one}`}>
                 <div className={`${styles["wrap-img"]} ${styles["learning-plan"]}`}>
                     <div className={styles.shadow}>
-                        <Image className={styles.img} width={800} height={565} src={mainPageImages.learningPlan} alt="concept" />
+                        <Image className={styles.img} width={800} height={533} src={mainPageImages.learningPlan} alt="concept" />
                     </div>
                 </div>
                 <p className={styles.text}>Заниманията са подходящи за деца на възраст 6-9 години и са с продължителност 90 минути.</p>
@@ -85,7 +85,7 @@ function HomePage(props) {
             <article className={`${styles.description} ${styles.two}`}>
                 <div className={styles["wrap-img"]}>
                     <div className={styles.shadow}>
-                        <Image width={660} height={430} src={mainPageImages.chineseLetters} alt="write" />
+                        <Image width={660} height={440} src={mainPageImages.chineseLetters} alt="write" />
                     </div>
                 </div>
                 <div className={styles["wrap-text"]}>
