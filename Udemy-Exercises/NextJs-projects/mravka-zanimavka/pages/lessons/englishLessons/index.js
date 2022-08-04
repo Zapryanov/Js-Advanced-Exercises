@@ -2,7 +2,7 @@ import Head from "next/head";
 import BigButton from "../../../components/big-button";
 
 import LessonList from "../../../components/lessons/lesson-list";
-import { getAllEnglishLessons } from "../../../data/getData";
+import { getAllEnglishLessons, getImagesMainPage } from "../../../data/getData";
 
 function LessonsPage(props) {
     
@@ -14,13 +14,14 @@ function LessonsPage(props) {
             </Head>
             <h1>Учим английски</h1>
             <LessonList lessons={props.loadedLessons} />
-            <BigButton />
+            <BigButton url={props.mainPageImages.bigButton}/>
         </article>
     )
 }
 
 export async function getServerSideProps() {
     let cuttedLessons = [];
+    const imagesMainPage = await getImagesMainPage();
     try {
         const loadedLessons = await getAllEnglishLessons()
         cuttedLessons = loadedLessons.map(lesson => (
@@ -50,7 +51,8 @@ export async function getServerSideProps() {
 
     return { 
         props: { 
-            loadedLessons: cuttedLessons 
+            loadedLessons: cuttedLessons,
+            mainPageImages: imagesMainPage
         }
     }
 }

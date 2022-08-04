@@ -161,6 +161,15 @@
         width: 600px;
         height: 400px;
     }
+
+    .description {
+        margin-bottom: 20px;
+    }
+
+    .text {
+        margin-top: 10px;
+    }
+
     .gallery-text-container {
         padding: 0;
     }
