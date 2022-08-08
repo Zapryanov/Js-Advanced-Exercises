@@ -22,37 +22,29 @@
     margin-right: 20px;
 }
 
-.header a {
+.header nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+    padding-right: 10px;
+    line-height: 1;
+}
+
+.header nav ul li:not(:last-child) {
+    border-right: 1px solid #56585f;
+}
+
+a.nav-link {
     color: rgba(58, 150, 211, 0.7);
     font-size: 18px;
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.header nav ul li {
-    display: inline-block;
-    margin-right: 20px;
     position: relative;
-}
 
-.header nav ul li:not(:last-child):after {
-    background-color: #56585f;
-    content: "";
-    height: 15px;
-    right: -12px;
-    position: absolute;
-    top: 2px;
-    width: 0.5px;
 }
 
 /* Start animation dash */
 
-.nav li {
-    position: relative;
-}
-
-a.nav-link::before,
-a.show-dash::before {
+a.nav-link::before {
     content: "";
     width: 100%;
     height: 1px;
@@ -64,10 +56,6 @@ a.show-dash::before {
     transition: opacity 1s;
 }
 
-a.show-dash::before {
-    opacity: 1;
-}
-
 a.nav-link:hover::before {
     display: block;
     opacity: 1;
@@ -77,25 +65,26 @@ a.nav-link:hover::before {
 
 @media (max-width: 979px) {
     .header nav {
-        z-index: 10;
+        margin-right: 0;
     }
 
     .header nav ul li {
         display: block;
         margin: 15px 0px;
+        padding-right: 0px;
     }
 
     .header nav ul li::after {
         display: none;
     }
+
+    .header nav ul li:not(:last-child) {
+        border: none;
+    }
 }
 
 @media (max-width: 767px) {
-    .header nav {
-        margin-right: 0;
-    }
-
-    .header a {
+    a.nav-link {
       font-size: 15px;
     }
 }
@@ -105,7 +94,7 @@ a.nav-link:hover::before {
         width: 100px;
     }
 
-    .header a {
+    a.nav-link {
         font-size: 13px;
     }
 
@@ -120,20 +109,14 @@ a.nav-link:hover::before {
     }
 
     .header nav ul li {
-        margin: 8npx 0;
+        margin: 8px 0;
     }
 
     .header nav {
         margin-bottom: 5px;
     }
 
-    .header a {
+    a.nav-link {
         font-size: 10px;
-    }
-}
-
-@media (max-width: 250px) {
-    .header nav {
-        text-align: center;
     }
 }
