@@ -1,8 +1,7 @@
 import Image from "next/image";
 import styles from "./index.module.css";
 
-function BigButton(props) {
-    const { url } = props;
+function BigButton({ url }) {
     return (
         <div className={styles["leaf-effect"]}>
             <a href="https://www.facebook.com/MravkaZanimavka" target="__blank">
