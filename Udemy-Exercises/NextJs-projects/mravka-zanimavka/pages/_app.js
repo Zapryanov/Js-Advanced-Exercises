@@ -6,7 +6,6 @@ import { Router } from 'next/router';
 import Loading from '../components/loading';
 
 function MyApp({ Component, pageProps }) {
- console.log(pageProps)
   const [loading, setLoading] = useState(false);
 
   Router.events.on("routeChangeStart", (url) => {
