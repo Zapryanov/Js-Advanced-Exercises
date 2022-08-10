@@ -6,7 +6,7 @@ import { Router } from 'next/router';
 import Loading from '../components/loading';
 
 function MyApp({ Component, pageProps }) {
-  
+ console.log(pageProps)
   const [loading, setLoading] = useState(false);
 
   Router.events.on("routeChangeStart", (url) => {
@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
   })
    
   return (
-    <Layout>
+    <Layout logos={pageProps.mainPageImages}>
       <Head>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       </Head>
