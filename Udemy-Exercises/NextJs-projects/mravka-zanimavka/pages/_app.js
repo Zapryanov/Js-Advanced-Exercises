@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
   })
    
   return (
-    <Layout logos={pageProps.mainPageImages}>
+    <Layout>
       <Head>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       </Head>

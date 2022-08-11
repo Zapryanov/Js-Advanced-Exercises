@@ -3,13 +3,13 @@ import Link from "next/link";
 
 import styles from "./header.module.css";
 
-function Header(props) {
+function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
                 <Link href="/">
                     <a>
-                        <Image width={150} height={150} src={props.logos.logoMainPage} alt="logo" />
+                        <Image width={150} height={150} src="https://res.cloudinary.com/audipower/image/upload/v1659386249/logo-min_xzllks.png" alt="logo" />
                     </a>
                 </Link>
             </div>
