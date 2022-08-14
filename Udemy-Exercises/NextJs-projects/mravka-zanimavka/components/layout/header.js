@@ -9,7 +9,7 @@ function Header() {
             <div className={styles.logo}>
                 <Link href="/">
                     <a>
-                        <Image width={150} height={150} src="https://res.cloudinary.com/audipower/image/upload/v1659386249/logo-min_xzllks.png" alt="logo" />
+                        <Image width={150} height={150} src="/images/logo.png" alt="logo" />
                     </a>
                 </Link>
             </div>
