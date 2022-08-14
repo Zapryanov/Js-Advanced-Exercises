@@ -11,7 +11,7 @@ function Footer() {
                     <div>
                         <Link href="https://www.facebook.com/MravkaZanimavka">
                             <a className={`${styles["position-icon"]} ${styles["hyper-link"]}`} target="_blank">
-                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1659217536/facebook_r6r45d.png" alt="facebook-icon" />
+                                <Image width={20} height={20} src="/images/facebook.png" alt="facebook-icon" />
                                 <span className={styles["space-left"]}>Мравка Занимавка</span>
                             </a>
                         </Link>
@@ -21,7 +21,7 @@ function Footer() {
                     <div>
                         <Link href="/contacts">
                             <a className={`${styles["position-icon"]} ${styles["hyper-link"]}`}>
-                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1659217349/phone_kb7ijk.png" alt="contacts" />
+                                <Image width={20} height={20} src="/images/phone.png" alt="contacts" />
                                 <span className={styles["space-left"]}>Контакти</span>
                             </a>
                         </Link>
