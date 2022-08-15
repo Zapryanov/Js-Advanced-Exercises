@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { Fragment } from "react";
-import { getAllChineseLessons, getCurrentChineseLesson } from "../../../data/getData";
+import { getAllChineseLessons, getCurrentChineseLesson, sanitizeObj } from "../../../data/getData";
 
 import sanitizeHtml from 'sanitize-html';
 
@@ -21,13 +21,7 @@ function CurrentLesson(props) {
         )
     }
 
-    const clean = sanitizeHtml(lesson.text, {
-        allowedTags: [ 'br', 'b', 'i', 'em', 'span', 'strong', 'a', 'p', 'div', 'h1', 'h2', 'h3', 'ul', 'li' ],
-        allowedAttributes: {
-          'a': [ 'href' ]
-        },
-        selfClosing: [ 'br', 'hr', 'link' ]
-    });
+    const clean = sanitizeHtml(lesson.text, sanitizeObj);
 
     return (
         <Fragment>
