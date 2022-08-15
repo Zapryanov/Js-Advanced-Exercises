@@ -1,20 +1,15 @@
-import Head from "next/head";
-import BigButton from "../../../components/big-button";
-
-import LessonList from "../../../components/lessons/lesson-list";
+import AllLessonsPageComponent from "../../../components/lessons/all-lessons-page-component";
 import { getAllEnglishLessons, getImagesMainPage } from "../../../data/getData";
 
-function LessonsPage(props) {
+function EnglishLessonsPage(props) {
     
     return (
         <article>
-            <Head>
-                <title>Уроци-Английски</title>
-                <meta name="description" content="уроци по английски за деца с мравка занимавка в град Пловдив" />
-            </Head>
-            <h1>Учим английски</h1>
-            <LessonList lessons={props.loadedLessons} />
-            <BigButton url={props.mainPageImages.bigButton}/>
+            <AllLessonsPageComponent 
+                language={props.language} 
+                lessons={props.loadedLessons} 
+                url={props.mainPageImages.bigButton} 
+            />
         </article>
     )
 }
@@ -22,8 +17,9 @@ function LessonsPage(props) {
 export async function getServerSideProps() {
     let cuttedLessons = [];
     const imagesMainPage = await getImagesMainPage();
+    const loadedLessons = await getAllEnglishLessons();
+    const languageType = loadedLessons.find(obj => obj.language === "Английски") ? "английски": null;
     try {
-        const loadedLessons = await getAllEnglishLessons()
         cuttedLessons = loadedLessons.map(lesson => (
                 {
                     id: lesson.id, 
@@ -52,9 +48,10 @@ export async function getServerSideProps() {
     return { 
         props: { 
             loadedLessons: cuttedLessons,
-            mainPageImages: imagesMainPage
+            mainPageImages: imagesMainPage,
+            language: languageType
         }
     }
 }
 
-export default LessonsPage;
+export default EnglishLessonsPage;

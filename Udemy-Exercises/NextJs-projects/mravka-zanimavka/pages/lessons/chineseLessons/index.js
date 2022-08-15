@@ -4,7 +4,7 @@ import BigButton from "../../../components/big-button";
 import LessonList from "../../../components/lessons/lesson-list";
 import { getAllChineseLessons, getImagesMainPage } from "../../../data/getData";
 
-function LessonsPage(props) {
+function ChineseLessonsPage(props) {
     
     return (
         <article>
@@ -49,7 +49,6 @@ export async function getServerSideProps() {
         console.log(error);
     }
 
-    // Pass data to the page via props
     return { 
         props: { 
             loadedLessons: cuttedLessons,
@@ -58,4 +57,4 @@ export async function getServerSideProps() {
     }
 }
 
-export default LessonsPage;
+export default ChineseLessonsPage;

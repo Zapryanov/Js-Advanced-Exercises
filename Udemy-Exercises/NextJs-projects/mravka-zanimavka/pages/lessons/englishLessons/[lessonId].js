@@ -7,7 +7,7 @@ import sanitizeHtml from 'sanitize-html';
 import CurrentLessonComponent from "../../../components/lessons/current-lesson-component";
 
 
-function CurrentLesson(props) {
+function CurrentEnglishLesson(props) {
     const router = useRouter();
     const { lesson } = props;
 
@@ -66,4 +66,4 @@ export async function getStaticPaths() {
     }
 }
 
-export default CurrentLesson;
+export default CurrentEnglishLesson;
