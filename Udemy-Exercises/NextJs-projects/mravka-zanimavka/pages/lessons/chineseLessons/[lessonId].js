@@ -1,12 +1,10 @@
-import Head from "next/head";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { Fragment } from "react";
 import { getAllChineseLessons, getCurrentChineseLesson } from "../../../data/getData";
 
 import sanitizeHtml from 'sanitize-html';
 
-import styles from "../index.module.css";
+import CurrentLessonComponent from "../../../components/lessons/current-lesson-component";
 
 function CurrentLesson(props) {
 
@@ -33,20 +31,13 @@ function CurrentLesson(props) {
 
     return (
         <Fragment>
-            <Head>
-                <title>{lesson.title}</title>
-                <meta name="description" content={`Урок по китайски за деца в град Пловдив, на тема - ${lesson.title}`} />
-            </Head>
-            <article className={styles["wrap-current-lesson"]}>
-                <h3 className={styles["width-line"]}>{lesson.title}</h3>
-                <div className={`${styles["width-line"]} ${styles["wrap-image"]}`}>
-                    <Image className={`${styles["image-lesson"]} ${styles["box-shadow"]}`} width={1200} height={800} src={lesson.image} alt={lesson.title}/>
-                </div>
-                <div className={`${styles["width-line"]} ${styles.text}`} dangerouslySetInnerHTML={{__html: clean}} />
-                <div className={styles["wrap-buttons"]}>
-                    <button className={styles["btn-lesson"]} onClick={goBack}>Go back</button>
-                </div>
-            </article>
+            <CurrentLessonComponent 
+                language={lesson.language} 
+                title={lesson.title} 
+                image={lesson.image} 
+                cleanText={clean} 
+                goBackFunc={goBack} 
+            />
         </Fragment>
     )
 }
