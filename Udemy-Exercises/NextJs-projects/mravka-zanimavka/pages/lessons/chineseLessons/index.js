@@ -7,7 +7,7 @@ import { getAllChineseLessons, getImagesMainPage } from "../../../data/getData";
 function LessonsPage(props) {
     
     return (
-        <div>
+        <article>
             <Head>
                 <title>Уроци-Китайски</title>
                 <meta name="description" content="уроци по китайски за деца с мравка занимавка в град пловдив" />
@@ -15,7 +15,7 @@ function LessonsPage(props) {
             <h1>Учим китайски</h1>
             <LessonList lessons={props.loadedLessons} />
             <BigButton url={props.mainPageImages.bigButton} />
-        </div>
+        </article>
     )
 }
 
@@ -23,7 +23,7 @@ export async function getServerSideProps() {
     let cuttedLessons = [];
     const imagesMainPage = await getImagesMainPage();
     try {
-        const loadedLessons = await getAllChineseLessons()
+        const loadedLessons = await getAllChineseLessons();
         cuttedLessons = loadedLessons.map(lesson => (
                 {
                     id: lesson.id, 
