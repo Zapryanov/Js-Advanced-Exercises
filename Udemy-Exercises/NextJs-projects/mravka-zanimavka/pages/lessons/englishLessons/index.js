@@ -1,5 +1,5 @@
 import AllLessonsPageComponent from "../../../components/lessons/all-lessons-page-component";
-import { getAllEnglishLessons, getImagesMainPage } from "../../../data/getData";
+import { getAllEnglishLessons } from "../../../data/getData";
 
 function EnglishLessonsPage(props) {
     
@@ -8,7 +8,6 @@ function EnglishLessonsPage(props) {
             <AllLessonsPageComponent 
                 language={props.language} 
                 lessons={props.loadedLessons} 
-                url={props.mainPageImages.bigButton} 
             />
         </article>
     )
@@ -16,7 +15,6 @@ function EnglishLessonsPage(props) {
 
 export async function getServerSideProps() {
     let cuttedLessons = [];
-    const imagesMainPage = await getImagesMainPage();
     const loadedLessons = await getAllEnglishLessons();
     const languageType = loadedLessons.find(obj => obj.language === "Английски") ? "английски": null;
     try {
@@ -48,7 +46,6 @@ export async function getServerSideProps() {
     return { 
         props: { 
             loadedLessons: cuttedLessons,
-            mainPageImages: imagesMainPage,
             language: languageType
         }
     }

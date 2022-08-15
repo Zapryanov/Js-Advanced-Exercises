@@ -98,7 +98,7 @@ function HomePage(props) {
                 </div>
             </article>
             <article className={`${styles.description} ${styles.three}`}>
-                <BigButton url={mainPageImages.bigButton}/>
+                <BigButton />
             </article>
         </div>
     )
