@@ -2,19 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 import sanitizeHtml from 'sanitize-html';
+import { sanitizeObj } from "../../data/getData";
 
 import styles from "./lesson-item.module.css";
 
 function LessonItem(props) {
     const { id, language, image, title, text } = props;
 
-    const clean = sanitizeHtml(text, {
-        allowedTags: [ 'br', 'b', 'i', 'em', 'span', 'strong', 'a', 'p', 'div', 'h1', 'h2', 'h3', 'ul', 'li' ],
-        allowedAttributes: {
-          'a': [ 'href' ]
-        },
-        selfClosing: [ 'br', 'hr', 'link' ]
-    });
+    const clean = sanitizeHtml(text, sanitizeObj);
 
     let exploreLink = "";
 
