@@ -1,5 +1,7 @@
-import AllLessonsPageComponent from "../../../components/lessons/all-lessons-page-component";
+import dynamic from "next/dynamic";
 import { getAllChineseLessons } from "../../../data/getData";
+
+const AllLessonsPageComponent = dynamic(() => import("../../../components/lessons/all-lessons-page-component"));
 
 function ChineseLessonsPage(props) {
     
@@ -14,17 +16,13 @@ function ChineseLessonsPage(props) {
 }
 
 export async function getServerSideProps() {
-    let cuttedLessons = [];
-    const loadedLessons = await getAllChineseLessons();
-    const languageType = loadedLessons.find(obj => obj.language === "Китайски") ? "китайски": null;
     try {
-        cuttedLessons = loadedLessons.map(lesson => (
+        const loadedLessons = await getAllChineseLessons();
+        const languageType = loadedLessons[0].language.toLowerCase();
+        const cuttedLessons = loadedLessons.map(({text, ...rest}) => (
                 {
-                    id: lesson.id, 
-                    language: lesson.language,
-                    title: lesson.title,
-                    image: lesson.image, 
-                    text: `${lesson.text.substring(0, 35)} [ ..... ]`
+                    ...rest,
+                    text: `${text.substring(0, 35)} [ ..... ]`
                 }
             ))
     
@@ -39,15 +37,15 @@ export async function getServerSideProps() {
         if (loadedLessons.length === 0) {
             return { notFound: true }
         }
+
+        return { 
+            props: { 
+                loadedLessons: cuttedLessons,
+                language: languageType
+            }
+        }
     } catch (error) {
         console.log(error);
-    }
-
-    return { 
-        props: { 
-            loadedLessons: cuttedLessons,
-            language: languageType
-        }
     }
 }
 

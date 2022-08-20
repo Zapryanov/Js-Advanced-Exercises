@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
-import { Fragment } from "react";
-import { getAllChineseLessons, getCurrentChineseLesson, sanitizeObj } from "../../../data/getData";
+import { getAllChineseLessons, getCurrentChineseLesson } from "../../../data/getData";
 
-import sanitizeHtml from 'sanitize-html';
 
 import CurrentLessonComponent from "../../../components/lessons/current-lesson-component";
+import dynamic from "next/dynamic";
+const DynamicComponent = dynamic(() => import("../../../components/test"));
 
 function CurrentChineseLesson(props) {
 
@@ -21,18 +21,14 @@ function CurrentChineseLesson(props) {
         )
     }
 
-    const clean = sanitizeHtml(lesson.text, sanitizeObj);
-
     return (
-        <Fragment>
-            <CurrentLessonComponent 
-                language={lesson.language} 
-                title={lesson.title} 
-                image={lesson.image} 
-                cleanText={clean} 
-                goBackFunc={goBack} 
-            />
-        </Fragment>
+        <CurrentLessonComponent 
+            language={lesson.language} 
+            title={lesson.title} 
+            image={lesson.image} 
+            cleanText={<DynamicComponent text={lesson.text}/>} 
+            goBackFunc={goBack} 
+        />
     )
 }
 
