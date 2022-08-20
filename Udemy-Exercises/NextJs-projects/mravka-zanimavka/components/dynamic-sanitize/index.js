@@ -1,9 +1,9 @@
 import sanitize from "sanitize-html";
 
-function DynamicComponent(props) {
+function DynamicSanitizeComponent(props) {
 
     console.log(props.text);
-    
+
     const clean = sanitize(props.text, {
         allowedTags: [ 'br', 'b', 'i', 'em', 'span', 'strong', 'a', 'p', 'div', 'h1', 'h2', 'h3', 'ul', 'li' ],
         allowedAttributes: {
@@ -19,4 +19,4 @@ function DynamicComponent(props) {
     )
 }
 
-export default DynamicComponent;
+export default DynamicSanitizeComponent;
