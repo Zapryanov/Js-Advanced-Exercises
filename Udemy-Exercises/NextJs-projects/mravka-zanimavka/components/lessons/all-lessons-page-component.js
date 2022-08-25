@@ -11,7 +11,7 @@ function AllLessonsPageComponent({ language, lessons, url }) {
             </Head>
             <h1>Учим {language}</h1>
             <LessonList lessons={lessons} />
-            <BigButton url={url}/>
+            <BigButton />
         </>
     )
 }
