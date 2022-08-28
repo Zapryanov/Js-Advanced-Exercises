@@ -50,7 +50,7 @@
 }
 
 .icon-phone::before {
-    background-image: url("/images/phone.jpg");
+    background-image: url("/images/phone.png");
 }
 
 .icon-time::before {
