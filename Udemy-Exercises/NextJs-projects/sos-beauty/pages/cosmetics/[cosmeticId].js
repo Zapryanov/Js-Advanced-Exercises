@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
 import { getCosmeticServiceById, getCosmeticsIds } from "../../data";
 import styles from "./[cosmeticId].module.css";
 
@@ -14,6 +15,10 @@ function CurrentCosmeticService(props) {
 
     return (
         <div>
+            <Head>
+                <title>{titleBig}</title>
+                <meta name="description" content={`${titleBig} с френска професионална козметика в град Пловдив, Тракия.`} />
+            </Head>
             <h2 className="pageHeading">{titleBig}</h2>
             <div className={styles["wrapper-current-cosmetic"]}>
                 <div className={styles["wrap-headings"]}>
