@@ -37,7 +37,7 @@ function MainHeader() {
                     <li>
                         <Link href="https://www.facebook.com/S.O.SBeauti/">
                             <a className={`${styles["link-menu"]} ${styles["facebook-icon"]} ${styles["social-icons"]}`}  target="_blank">
-                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1659217475/facebook-icon-3d-2-resized_kn1srr.png" alt="facebook" />
+                                <Image width={20} height={20} src="https://res.cloudinary.com/audipower/image/upload/v1655237973/facebook-icon-3d-new_aqvxyn.png" alt="facebook" />
                             </a>
                         </Link>
                     </li>

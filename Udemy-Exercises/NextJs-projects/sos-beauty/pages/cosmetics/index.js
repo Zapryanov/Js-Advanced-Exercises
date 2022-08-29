@@ -1,9 +1,14 @@
+import Head from "next/head";
+
 import CosmeticsList from "../../components/cosmetics/cosmetics-list";
-import styles from "./index.module.css";
 
 function CosmeticsPage(props) {
     return (
         <div>
+            <Head>
+                <title>S.O.S Beauty - Козметика</title>
+                <meta name="description" content="Козметика за лице на френската професионална козметика DR-Renaud и на IROHA" />
+            </Head>
             <h2 className="pageHeading">Козметика</h2>
             <CosmeticsList services={props.cosmetics} />
         </div>

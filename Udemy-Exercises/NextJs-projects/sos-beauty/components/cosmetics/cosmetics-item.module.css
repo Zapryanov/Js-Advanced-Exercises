@@ -57,7 +57,10 @@
     border: 1px solid rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 5px 2px inset rgb(0 0 0 / 50%);
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 160px;
+    width: 218px;
     margin: 20px auto;
     padding: 10px;
 }
