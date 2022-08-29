@@ -68,6 +68,12 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
+img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
 .pageHeading {
   letter-spacing: 0.03em;
   margin: 20px auto;
