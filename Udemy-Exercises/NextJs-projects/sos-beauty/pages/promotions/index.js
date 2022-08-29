@@ -1,7 +1,9 @@
 import Image from "next/image";
-import { getPromotions } from "../../data";
+import Head from "next/head";
 
 import DOMPurify from 'isomorphic-dompurify';
+
+import { getPromotions } from "../../data";
 
 import styles from "./index.module.css";
 
@@ -13,6 +15,10 @@ function PromotionsPage(props) {
         // const { descriptionMain, descriptionDiscount, heading, image, priceDiscounted, priceRegular } = props.promotions;
         return (
             <div className={styles["wrapper-promotions"]}>
+                <Head>
+                    <title>Промоции на S.O.S-Beauty</title>
+                    <meta name="description" content="Промоции на козметични услуги, маникюр, педикюр, кола маска, микроблейдинг, миглопластика в Пловдив, Тракия" />
+                </Head>
                 <h2 className="pageHeading">Промоции</h2>
                 <div className={styles["text-background"]}>
                     <p>-% Промоции -%</p>
