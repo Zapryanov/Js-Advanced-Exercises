@@ -130,6 +130,14 @@
     }
 
     .main-header nav {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 75px;
+    }
+
+    /* .main-header nav {
         align-items: flex-start;
     }
 
@@ -149,7 +157,7 @@
 
     .socials-header li:not(:first-child) {
         margin-bottom: 15px;
-    }
+    } */
 
     .socials-header .link-menu {
         display: flex;
@@ -207,6 +215,12 @@
 
     .socials-header li:not(:first-child) {
         margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 359px) {
+    .menu {
+        width: 95%;
     }
 }
 
