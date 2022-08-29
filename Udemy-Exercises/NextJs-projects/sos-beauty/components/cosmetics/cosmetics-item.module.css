@@ -116,17 +116,11 @@
     }
 
     .wrap-main-name h2 {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .cosmetics-item {
         flex: 0 1 90%;
-    }
-}
-
-@media (max-width: 479px) {
-    .wrap-main-name h2 {
-        font-size: 14px;
     }
 }
 
