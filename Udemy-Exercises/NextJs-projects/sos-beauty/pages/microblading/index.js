@@ -3,12 +3,17 @@ import styles from "./index.module.css";
 
 import PricesList from "../../components/prices/prices-list";
 import { getMicroblading } from "../../data";
+import Head from "next/head";
 
 function Microblading(props) {
     const microblading = props.microblading;
 
     return (
         <div>
+            <Head>
+                <title>Микроблейдинг | салон за красота S.O.S-Beauty</title>
+                <meta name="description" content="Микроблейдинг за красиви вежди в Пловдив, Тракия, до Акваленд" />
+            </Head>
             <h1 className="pageHeading">Микроблейдинг</h1>
             <article className={styles["wrap-microblading"]}>
                 <section className={styles["image-section"]}>
@@ -19,6 +24,7 @@ function Microblading(props) {
                     </div>
                 </section>
                 <section className={styles["text-section"]}>
+                    <h2>Описание</h2>
                     <p className={styles["wrap-text"]}>
                         {microblading.description}
                     </p>

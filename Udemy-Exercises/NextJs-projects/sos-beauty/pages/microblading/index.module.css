@@ -34,6 +34,11 @@
     width: 90%;
 }
 
+.text-section h2 {
+    color: var(--color-brown);
+    text-shadow: 1px 1px 0px black;
+}
+
 .wrap-text {
     background-color: rgba(181, 129, 125, 0.8);
     border-radius: 8px;
