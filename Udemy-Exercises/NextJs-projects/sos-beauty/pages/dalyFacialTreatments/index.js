@@ -1,5 +1,7 @@
-import { getDalyFaceTreatments } from "../../data";
+import Head from 'next/head';
+
 import DOMPurify from 'isomorphic-dompurify';
+import { getDalyFaceTreatments } from "../../data";
 import styles from "./index.module.css";
 
 function DalyFacialTreatments(props) {
@@ -8,10 +10,14 @@ function DalyFacialTreatments(props) {
 
     return (
         <section>
+            <Head>
+                <title>Ежедневни процедури за лице</title>
+                <meta name="description" content="Почистване на лице, почистване и оформяне на вежди, масаж на лице, шия и деколте, дарсонвал." />
+            </Head>
             <h1 className="pageHeading">Ежедневни процедури за лице</h1>
             {data.map((faceService, i) => (
                 <article className={styles["each-facial-treatment"]} key={i}>
-                    <h3>{faceService[1].heading}</h3>
+                    <h2>{faceService[1].heading}</h2>
                     <div className={styles.description} dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(faceService[1].description, {ALLOWED_TAGS: ['b', 'i', 'em', 'br', 'span', 'strong', 'ul', 'ol', 'li']})}} />
                     {faceService[1].discount ? <div className={styles.discount} dangerouslySetInnerHTML={{__html:DOMPurify.sanitize(faceService[1].discount, {ALLOWED_TAGS: ['b', 'i', 'em', 'br', 'span', 'strong', 'ul', 'ol', 'li']})}} /> : null}
                     <div className={styles["wrap-face-treatments-price"]}>
