@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import CosmeticsList from "../../components/cosmetics/cosmetics-list";
+import { getCosmeticService } from "../../data";
 
 function CosmeticsPage(props) {
     return (
@@ -16,14 +17,7 @@ function CosmeticsPage(props) {
 }
 
 export async function getServerSideProps() {
-    const response = await fetch("https://sos-beauty-f7b87-default-rtdb.europe-west1.firebasedatabase.app/services-dev/cosmetics.json");
-    const cosmetics = await response.json();
-    const cosmeticsArray = [];
-
-    for (let key in cosmetics) {
-        cosmetics[key].id = key;
-        cosmeticsArray.push(cosmetics[key]);
-    }
+    const cosmeticsArray = await getCosmeticService();
 
     return {
         props: {
