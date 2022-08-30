@@ -14,7 +14,7 @@
     position: relative;
 }
 
-.footer h4 {
+.footer h3 {
     position: relative;
     color: rgba(68, 66, 66, 0.8);
     font-size: 18px;
@@ -23,7 +23,7 @@
     text-shadow: 0px 0px 3px var(--color-almost-white, rgba(230, 230, 230, 1));
 }
 
-.footer h4::before {
+.footer h3::before {
     background-color: rgba(220, 220, 220, 0.4);
     bottom: -10px;
     border-radius: 50%;
@@ -103,7 +103,7 @@
         margin: 0;
     }
 
-    .footer h4 {
+    .footer h3 {
         font-size: 16px;
     }
 
