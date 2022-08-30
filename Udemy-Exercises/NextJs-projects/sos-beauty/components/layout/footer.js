@@ -1,6 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
-
 import styles from "./footer.module.css";
 import FooterButton from "../buttons/footer-button";
 import FooterImageLink from "../imageLinks/footer-image-link";
@@ -10,7 +7,7 @@ function Footer() {
         googleLink: "https://www.google.com/maps/place/S.O.S+Beauty/@42.137649,24.7864931,19z/data=!4m5!3m4!1s0x14acd1671feabfcf:0xbe40cf6f6dab0e16!8m2!3d42.137649!4d24.7870403",
         googleImage: "/images/google-map-smallest.jpg",
         facebookLink: "https://www.facebook.com/S.O.SBeauti",
-        facebookImage: "/images/facebook.png",
+        facebookImage: "/images/facebook.jpg",
         left: styles.left,
         right: styles.right
     }
