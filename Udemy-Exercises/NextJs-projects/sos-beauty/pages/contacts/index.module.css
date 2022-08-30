@@ -12,13 +12,6 @@
     box-shadow: 
         -8px -8px 12px rgba(255, 255, 255, 0.35),
         10px 10px 5px rgb(0 0 0 / 60%);
-    -moz-box-shadow: 
-        -8px -8px 12px rgba(255, 255, 255, 0.35),
-        10px 10px 5px rgba(0,0,0,0.6);
-    -webkit-box-shadow: 
-        -8px -8px 12px rgba(255, 255, 255, 0.35),
-        10px 10px 5px rgb(0 0 0 / 60%);
-    -o-box-shadow: 10px 10px 5px rgba(0,0,0,0.6);
     color: rgb(248, 242, 242);
 }
 
@@ -84,9 +77,6 @@
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 10px 10px 5px rgb(0 0 0 / 60%);
-    -moz-box-shadow: 10px 10px 5px rgba(0,0,0,0.6);
-    -webkit-box-shadow: 10px 10px 5px rgb(0 0 0 / 60%);
-    -o-box-shadow: 10px 10px 5px rgba(0,0,0,0.6);
 }
 
 .google-big-link::after {
@@ -123,15 +113,6 @@
     box-shadow: 
         -8px -8px 12px rgba(255, 255, 255, 0.35),
         10px 10px 5px rgb(0 0 0 / 60%);
-    -moz-box-shadow: 
-        -8px -8px 12px rgba(255, 255, 255, 0.35),
-        10px 10px 5px rgba(0,0,0,0.6);
-    -webkit-box-shadow: 
-        -8px -8px 12px rgba(255, 255, 255, 0.35),
-        10px 10px 5px rgb(0 0 0 / 60%);
-    -o-box-shadow: 
-        -8px -8px 12px rgba(255, 255, 255, 0.35),
-        10px 10px 5px rgba(0,0,0,0.6);
     display: flex;
     margin: 0 10px;
 }
