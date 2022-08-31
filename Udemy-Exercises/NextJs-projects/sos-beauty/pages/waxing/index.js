@@ -1,3 +1,4 @@
+import Head from "next/head";
 import PricesList from "../../components/prices/prices-list";
 import { getWaxing } from "../../data";
 
@@ -8,6 +9,10 @@ function WaxingPage(props) {
 
     return (
         <div>
+            <Head>
+                <title>Кола Маска | салон за красота S.O.S-Beauty</title>
+                <meta name="description" content="Кола маска ръце, кола маска крака, кола маска мишници в Пловдив, Тракия, до Акваленд" />
+            </Head>
             <h1 className="pageHeading">Кола Маска</h1>
             <article className={styles["wrap-women-and-men"]}>
                 <section className={styles["section-human"]}>
