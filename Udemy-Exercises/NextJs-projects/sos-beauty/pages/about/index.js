@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 
 import { getAboutUsInfo } from "../../data";
@@ -24,6 +25,10 @@ function About(props) {
 
     return (
         <div>
+            <Head>
+                <title>За нас | салон за красота S.O.S-Beauty</title>
+                <meta name="description" content="Маникюр, педикюр, ноктопластика, гел лак, кола маска, микроблейдинг, почистване и терапии за лице Пловдив, Тракия, до Акваленд" />
+            </Head>
             <h2 className="pageHeading">За нас</h2>
             <section className={styles["wrapper"]}>
                 <article className={styles["top-center"]}>
@@ -51,7 +56,7 @@ function About(props) {
                         return (
                             <article key={i} className={styles["wrap-text-and-images"]}>
                                 <div className={styles["wrap-text"]}>
-                                    <h4>{eachService[1].heading}</h4>
+                                    <h2>{eachService[1].heading}</h2>
                                     <p>{eachService[1].description}</p>
                                 </div>
                                 <div className={styles["wrap-images"]}>
@@ -78,7 +83,7 @@ function About(props) {
                                     </ul>
                                 </div>
                                 <div className={styles["wrap-text"]}>
-                                    <h4>{eachService[1].heading}</h4>
+                                    <h2>{eachService[1].heading}</h2>
                                     <p>{eachService[1].description}</p>
                                 </div>
                             </article>
