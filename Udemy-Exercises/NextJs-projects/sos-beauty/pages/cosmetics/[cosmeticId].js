@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
+
 import { getCosmeticServiceById, getCosmeticsIds } from "../../data";
+
 import styles from "./[cosmeticId].module.css";
 
 function CurrentCosmeticService(props) {

@@ -1,7 +1,9 @@
 import Head from 'next/head';
 
 import DOMPurify from 'isomorphic-dompurify';
+
 import { getDalyFaceTreatments } from "../../data";
+
 import styles from "./index.module.css";
 
 function DalyFacialTreatments(props) {
