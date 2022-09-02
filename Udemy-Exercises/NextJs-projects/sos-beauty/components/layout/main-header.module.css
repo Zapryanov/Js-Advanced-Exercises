@@ -120,7 +120,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 645px) {
     .main-header h1 {
         font-size: 28px;
     }
