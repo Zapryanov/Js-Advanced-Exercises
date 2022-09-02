@@ -137,28 +137,6 @@
         min-height: 75px;
     }
 
-    /* .main-header nav {
-        align-items: flex-start;
-    }
-
-    .menu .socials-header {
-        display: flex;
-        flex-flow: column;
-    }
-
-    .socials-header {
-        flex-flow: column-reverse;
-        align-items: flex-end;
-    }
-
-    .socials-header li {
-        margin-right: 0;
-    }
-
-    .socials-header li:not(:first-child) {
-        margin-bottom: 15px;
-    } */
-
     .socials-header .link-menu {
         display: flex;
         justify-content: center;
