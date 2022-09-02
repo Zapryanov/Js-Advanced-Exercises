@@ -42,13 +42,6 @@ function MainHeader() {
                         </Link>
                     </li>
                     <li>
-                        <Link href="https://www.facebook.com/S.O.SBeauti/">
-                            <a className={`${styles["link-menu"]} ${styles["instagram-icon"]} ${styles["social-icons"]}`}  target="_blank">
-                                <Image className={styles["instagram-icon"]} width={20} height={20} src="/images/instagram-logo.png" alt="instagram" />
-                            </a>
-                        </Link>
-                    </li>
-                    <li>
                         <Link href="tel:+359876862629">
                             <a className={`${styles["link-menu"]} ${styles["link-phone"]} ${styles["social-icons"]}`}>
                                 <span className={styles["phone-image"]}>
