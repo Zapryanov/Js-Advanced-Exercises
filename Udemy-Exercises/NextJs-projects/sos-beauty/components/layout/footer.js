@@ -41,13 +41,6 @@ function Footer() {
                     <FooterImageLink link={obj.facebookLink} image={obj.facebookImage} />
                 </div>
             </div>
-            <div className={`${styles["each-footer-block"]}`}>
-                <h3>Instagram</h3>
-                <div className={styles["wrap-socials"]}>
-                    <FooterButton  direction={obj.left} link={obj.facebookLink} />
-                    <FooterImageLink link={obj.facebookLink} image={obj.facebookImage} />
-                </div>
-            </div>
         </footer>
     )
 }
