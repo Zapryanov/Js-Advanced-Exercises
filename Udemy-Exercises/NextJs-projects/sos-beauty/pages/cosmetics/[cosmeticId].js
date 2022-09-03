@@ -11,10 +11,6 @@ function CurrentCosmeticService(props) {
     const currentService = props.currentCosmeticService;
     const { titleBig, titleSmall, generalInfo, image, serviceDescription, price, typeOfOrigin } = currentService;
 
-    if (!currentService) {
-        return <h1>Няма намерена такава услуга!</h1>
-    }
-
     return (
         <div>
             <Head>
