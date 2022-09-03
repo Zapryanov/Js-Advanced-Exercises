@@ -8,16 +8,16 @@ const DynamicPriceList = dynamic(() => import("../../components/prices/prices-li
 function Eyelashes(props) {
     const { eyelashes } = props;
     return (
-        <div>
+        <article>
             <Head>
                 <title>Миглопластика | салон за красота S.O.S-Beauty</title>
                 <meta name="description" content="Миглопластика - поставяне на мигли в Пловдив, Тракия, до Акваленд" />
             </Head>
             <h2 className="pageHeading">Миглопластика</h2>
-            <article className="wrap-price-list">
+            <section className="wrap-price-list">
                 <DynamicPriceList prices={eyelashes}/>
-            </article>
-        </div>
+            </section>
+        </article>
     )
 }
 

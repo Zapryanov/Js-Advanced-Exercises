@@ -6,16 +6,16 @@ function Hairdressing(props) {
     const { hairdressing } = props;
 
     return (
-        <div>
+        <article>
             <Head>
                 <title>Фризьорство | салон за красота S.O.S-Beauty</title>
                 <meta name="description" content="Фризьорство, подстригване (мъжко, дамско, детско), прически в Пловдив, Тракия, до Акваленд" />
             </Head>
             <h2 className="pageHeading">Фризьорство</h2>
-            <article className="wrap-price-list">
+            <section className="wrap-price-list">
                 <PricesList prices={hairdressing} />
-            </article>
-        </div>
+            </section>
+        </article>
     )
 }
 

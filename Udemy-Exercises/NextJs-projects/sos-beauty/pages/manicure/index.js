@@ -6,16 +6,16 @@ function Manicure(props) {
     const { manicure } = props;
 
     return (
-        <div>
+        <article>
             <Head>
                 <title>Маникюр | салон за красота S.O.S-Beauty</title>
                 <meta name="description" content="Маникюр, гел лак, ноктопластика Nika Nagel, Termish в Пловдив, Тракия до Акваленд" />
             </Head>
             <h2 className="pageHeading">Маникюр</h2>
-            <article className="wrap-price-list">
+            <section className="wrap-price-list">
                 <PricesList prices={manicure}/>
-            </article>
-        </div>
+            </section>
+        </article>
     )
 }
 

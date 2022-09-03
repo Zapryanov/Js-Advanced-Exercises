@@ -6,16 +6,16 @@ import { getPedicure } from "../../data";
 function Pedicure(props) {
     const { pedicure } = props;
     return (
-        <div>
+        <article>
             <Head>
                 <title>Педикюр | салон за красота S.O.S-Beauty</title>
                 <meta name="description" content="Педикюр с лак или гел лак в Пловдив, Тракия, до Акваленд" />
             </Head>
             <h2 className="pageHeading">Педикюр</h2>
-            <article className="wrap-price-list">
+            <section className="wrap-price-list">
                 <PricesList prices={pedicure}/>
-            </article>
-        </div>
+            </section>
+        </article>
     )
 }
 
