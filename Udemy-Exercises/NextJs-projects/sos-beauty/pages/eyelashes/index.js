@@ -1,9 +1,12 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
 
-import PricesList from "../../components/prices/prices-list";
+// import PricesList from "../../components/prices/prices-list";
 import { getEyelashes } from "../../data";
 
-function Pedicure(props) {
+const DynamicPriceList = dynamic(() => import("../../components/prices/prices-list"));
+
+function Eyelashes(props) {
     const { eyelashes } = props;
     return (
         <div>
@@ -13,7 +16,7 @@ function Pedicure(props) {
             </Head>
             <h2 className="pageHeading">Миглопластика</h2>
             <article className="wrap-price-list">
-                <PricesList prices={eyelashes}/>
+                <DynamicPriceList prices={eyelashes}/>
             </article>
         </div>
     )
@@ -29,4 +32,4 @@ export async function getServerSideProps() {
     }
 }
 
-export default Pedicure;
+export default Eyelashes;
