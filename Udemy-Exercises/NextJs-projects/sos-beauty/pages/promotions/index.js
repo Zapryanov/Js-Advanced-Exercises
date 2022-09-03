@@ -9,10 +9,8 @@ import styles from "./index.module.css";
 
 function PromotionsPage(props) {
     const arr = props.promotions;
-    // console.log(arr)
     
     if (arr) {
-        // const { descriptionMain, descriptionDiscount, heading, image, priceDiscounted, priceRegular } = props.promotions;
         return (
             <div className={styles["wrapper-promotions"]}>
                 <Head>
