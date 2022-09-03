@@ -64,15 +64,6 @@
     opacity: 0.9;
 }
 
-.left {
-    border-radius: 0 12px 12px 0;
-}
-
-.right {
-    border-radius: 12px 0 0 12px;
-    right: 0;
-}
-
 .contacts span {
     color: rgb(250, 246, 246);
     display: block;
