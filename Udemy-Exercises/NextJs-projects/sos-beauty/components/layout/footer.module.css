@@ -44,6 +44,7 @@
     height: 175px;
     flex-flow: row wrap;
     padding: 30px;
+    width: 280px;
     
 }
 
@@ -55,6 +56,8 @@
     display: flex;
     overflow: hidden;
     position: relative;
+    width: 280px;
+    height: 175px;
 }
 
 .wrap-socials:hover {
@@ -84,17 +87,19 @@
 
     .each-footer-block {
         margin-bottom: 20px;
-        width: 230px;
     }
 
     .contacts {
         padding: 15px 0 15px 15px;
         font-size: 12px;
     }
+}
 
-    .wrap-socials,
-    .contacts {
-        height: 135px;
+@media (max-width: 349px) {
+    .wrap-socials, .contacts {
+        height: 125px;
+        margin: 0 auto;
+        width: 200px;
     }
 }
 
@@ -105,18 +110,5 @@
 
     .footer h3 {
         font-size: 16px;
-    }
-
-    .contacts {
-        padding: 5px 10px;
-    }
-
-    .contacts span {
-        padding: 3px 0;
-    }
-
-    .wrap-socials,
-    .contacts {
-        height: auto;
     }
 }
