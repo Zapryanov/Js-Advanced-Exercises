@@ -1,7 +1,6 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
 
-// import PricesList from "../../components/prices/prices-list";
 import { getEyelashes } from "../../data";
 
 const DynamicPriceList = dynamic(() => import("../../components/prices/prices-list"));
