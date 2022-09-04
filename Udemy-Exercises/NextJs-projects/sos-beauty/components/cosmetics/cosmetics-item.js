@@ -5,7 +5,7 @@ import styles from "./cosmetics-item.module.css";
 
 function CosmeticItem(props) {
     let { id, image, titleBig, titleSmall } = props;
-// console.log("Hello from cosmetics-item :))))))))")
+
     return (
         <li key={id} className={styles["cosmetics-item"]}>
             <div className={styles["wrap-headings"]}>
