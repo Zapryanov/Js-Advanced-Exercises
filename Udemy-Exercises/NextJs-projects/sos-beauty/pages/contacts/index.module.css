@@ -127,7 +127,7 @@
     border-radius: 12px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 899px) {
     .wrap-info {
         width: 300px;
     }

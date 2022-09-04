@@ -53,10 +53,7 @@
 }
 
 .ul-general-info {
-    /* border-left: 1px solid rgb(195, 195, 195); */
     border-top: 1px solid rgb(195, 195, 195);
-    /* border-right: 1px solid rgb(195, 195, 195); */
-    /* width: 90%; */
 }
 
 .li-general-info {
@@ -71,7 +68,6 @@
 
 .ul-service-description {
     color: rgb(163, 23, 23);
-    /* text-shadow: 1px 1px 1px rgba(0,0,0,0.6); */
     width: 90%;
 }
 
@@ -88,8 +84,6 @@
     margin: 10px auto;
     text-align: center;
     width: 100%;
-    /* box-shadow: inset 0px 0px 3px 2px rgb(114, 78, 78); */
-    /* background-color: rgba(181, 129, 125, 1); */
     background-image: linear-gradient(to bottom, var(--color-brown-transparent), var(--color-brown));
     border-bottom: 2px solid black;
     border-top: 2px solid black;
@@ -153,7 +147,7 @@
     
 }
 
-@media (max-width: 575px) {
+@media (max-width: 579px) {
     .wrap-headings h3 {
         font-size: 21px;
     }
