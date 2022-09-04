@@ -149,7 +149,7 @@
     }
 }
 
-@media (max-width: 830px) {
+@media (max-width: 849px) {
     .top-center .main-description {
         width: 100%;
         font-size: 16px;
@@ -205,7 +205,7 @@
     }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 579px) {
     .top-center .main-description {
         padding: 0;
     }
@@ -248,7 +248,7 @@
     }
 }
 
-@media (max-width: 249px) {
+@media (max-width: 250px) {
     .wrapper {
         margin: 0 7px;
     }
