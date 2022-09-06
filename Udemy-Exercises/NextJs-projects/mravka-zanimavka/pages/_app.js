@@ -1,7 +1,7 @@
 import Head from 'next/head';
+import { Router } from 'next/router';
 
 import { useState } from 'react';
-import { Router } from 'next/router';
 
 import '../styles/globals.css';
 

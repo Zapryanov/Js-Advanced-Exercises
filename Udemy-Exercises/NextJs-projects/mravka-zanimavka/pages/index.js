@@ -1,9 +1,10 @@
+import Head from "next/head";
 import Image from "next/image";
-import BigButton from "../components/big-button";
+
 import styles from "./index.module.css";
 
+import BigButton from "../components/big-button";
 import { getAllChineseLessons, getAllEnglishLessons, getImagesMainPage } from "../data/getData";
-import Head from "next/head";
 
 function HomePage(props) {
     const { lastFiveLessons, mainPageImages } = props;

@@ -1,9 +1,8 @@
 import { useRouter } from "next/router";
+import dynamic from "next/dynamic";
 
 import { getAllChineseLessons, getCurrentChineseLesson } from "../../../data/getData";
-
 import CurrentLessonComponent from "../../../components/lessons/current-lesson-component";
-import dynamic from "next/dynamic";
 
 const DynamicSanitizeComponent = dynamic(() => import("../../../components/dynamic-sanitize"));
 
