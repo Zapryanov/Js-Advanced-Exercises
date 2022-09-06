@@ -33,7 +33,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 479px) {
     .lds-dual-ring {
         height: 22px;
         width: 22px;
@@ -48,7 +48,7 @@
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 359px) {
     .lds-dual-ring {
         height: 18px;
         width: 18px;
