@@ -1,8 +1,9 @@
-import Image from "next/image";
-import styles from "./index.module.css";
 import Head from "next/head";
-
+import Image from "next/image";
 import Link from "next/link";
+
+import styles from "./index.module.css";
+
 import { getContactsInfo } from "../../data/getData";
 
 function ContactsPage(props) {
