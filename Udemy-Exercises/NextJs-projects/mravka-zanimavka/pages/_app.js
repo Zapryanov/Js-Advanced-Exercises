@@ -1,11 +1,11 @@
 import Head from 'next/head';
-import Layout from '../components/layout/layout';
 
 import { useState } from 'react';
 import { Router } from 'next/router';
 
 import '../styles/globals.css';
 
+import Layout from '../components/layout/layout';
 import Loading from '../components/loading';
 
 function MyApp({ Component, pageProps }) {
