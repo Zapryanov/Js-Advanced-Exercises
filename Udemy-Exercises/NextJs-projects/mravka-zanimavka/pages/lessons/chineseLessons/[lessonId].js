@@ -8,7 +8,7 @@ import CurrentLessonComponent from "../../../components/lessons/current-lesson-c
 
 // const DynamicSanitizeComponent = dynamic(() => import("../../../components/dynamic-sanitize"));
 
-const LoadableComponent = loadable(() => import("../../../components/dynamic-sanitize"));
+const LoadableComponent = loadable(() => import("../../../components/loadable-sanitize"));
 
 function CurrentChineseLesson(props) {
     const { lesson } = props;

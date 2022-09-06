@@ -1,6 +1,6 @@
 import sanitize from "sanitize-html";
 
-function DynamicSanitizeComponent(props) {
+function LoadableSanitizeComponent(props) {
 
     console.log(props.text);
 
@@ -19,4 +19,4 @@ function DynamicSanitizeComponent(props) {
     )
 }
 
-export default DynamicSanitizeComponent;
+export default LoadableSanitizeComponent;
