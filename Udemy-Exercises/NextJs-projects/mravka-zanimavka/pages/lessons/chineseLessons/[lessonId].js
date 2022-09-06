@@ -1,10 +1,14 @@
 import { useRouter } from "next/router";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
+
+import loadable from "@loadable/component";
 
 import { getAllChineseLessons, getCurrentChineseLesson } from "../../../data/getData";
 import CurrentLessonComponent from "../../../components/lessons/current-lesson-component";
 
-const DynamicSanitizeComponent = dynamic(() => import("../../../components/dynamic-sanitize"));
+// const DynamicSanitizeComponent = dynamic(() => import("../../../components/dynamic-sanitize"));
+
+const LoadableComponent = loadable(() => import("../../../components/dynamic-sanitize"));
 
 function CurrentChineseLesson(props) {
     const { lesson } = props;
@@ -25,7 +29,7 @@ function CurrentChineseLesson(props) {
             language={lesson.language} 
             title={lesson.title} 
             image={lesson.image} 
-            cleanText={<DynamicSanitizeComponent text={lesson.text}/>} 
+            cleanText={<LoadableComponent text={lesson.text}/>} 
             goBackFunc={goBack} 
         />
     )
