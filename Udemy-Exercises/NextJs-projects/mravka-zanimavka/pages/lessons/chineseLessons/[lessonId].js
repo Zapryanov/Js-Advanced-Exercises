@@ -1,12 +1,9 @@
 import { useRouter } from "next/router";
-// import dynamic from "next/dynamic";
 
 import loadable from "@loadable/component";
 
 import { getAllChineseLessons, getCurrentChineseLesson } from "../../../data/getData";
 import CurrentLessonComponent from "../../../components/lessons/current-lesson-component";
-
-// const DynamicSanitizeComponent = dynamic(() => import("../../../components/dynamic-sanitize"));
 
 const LoadableComponent = loadable(() => import("../../../components/loadable-sanitize"));
 
