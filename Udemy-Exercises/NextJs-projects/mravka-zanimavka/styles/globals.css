@@ -63,6 +63,24 @@ h4 {
   padding: 10px 0;
 }
 
+.error-container {
+  text-align: center;
+}
+
+.error-text {
+  background-color: white;
+  /* border: 1px solid black; */
+  border-radius: 5px;
+  box-shadow: 0 0 3px black;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.error-text span {
+  display: block;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 767px) {
   h1 {
     font-size: 2em;
