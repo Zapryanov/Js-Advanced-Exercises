@@ -15,12 +15,6 @@ function CurrentEnglishLesson(props) {
         router.push("/lessons/englishLessons")
     }
 
-    if (!lesson) {
-        return (
-            <h1>Loading current Lesson...</h1>
-        )
-    }
-
     return (
         <CurrentLessonComponent 
             language={lesson.language} 

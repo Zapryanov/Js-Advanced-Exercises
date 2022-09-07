@@ -1,18 +1,22 @@
 import dynamic from "next/dynamic";
+import ServerError from "../../../components/error";
 import { getAllEnglishLessons } from "../../../data/getData";
 
 const AllLessonsPageComponent = dynamic(() => import("../../../components/lessons/all-lessons-page-component"));
 
 function EnglishLessonsPage(props) {
-    
-    return (
-        <article>
-            <AllLessonsPageComponent 
-                language={props.language} 
-                lessons={props.loadedLessons} 
-            />
-        </article>
-    )
+    try {
+        return (
+            <article>
+                <AllLessonsPageComponent 
+                    language={props.language} 
+                    lessons={props.loadedLessons} 
+                />
+            </article>
+        )
+    } catch (error) {
+        <ServerError />
+    }
 }
 
 export async function getServerSideProps() {
