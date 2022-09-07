@@ -5,7 +5,6 @@ import { getAllChineseLessons } from "../../../data/getData";
 const AllLessonsPageComponent = dynamic(() => import("../../../components/lessons/all-lessons-page-component"));
 
 function ChineseLessonsPage(props) {
-    
     try {
         return (
             <article>

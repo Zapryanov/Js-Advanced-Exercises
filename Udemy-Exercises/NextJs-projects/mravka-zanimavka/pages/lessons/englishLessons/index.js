@@ -15,7 +15,9 @@ function EnglishLessonsPage(props) {
             </article>
         )
     } catch (error) {
-        <ServerError />
+        return (
+            <ServerError />
+        )
     }
 }
 
