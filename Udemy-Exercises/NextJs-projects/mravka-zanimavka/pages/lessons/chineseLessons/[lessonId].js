@@ -4,26 +4,37 @@ import loadable from "@loadable/component";
 
 import { getAllChineseLessons, getCurrentChineseLesson } from "../../../data/getData";
 import CurrentLessonComponent from "../../../components/lessons/current-lesson-component";
+import ServerError from "../../../components/error";
 
 const LoadableComponent = loadable(() => import("../../../components/loadable-sanitize"));
 
 function CurrentChineseLesson(props) {
-    const { lesson } = props;
     const router = useRouter();
+    
+    try {
+        const { lesson } = props;
 
-    function goBack() {
-        router.push("/lessons/chineseLessons")
+        function goBack() {
+            router.push("/lessons/chineseLessons")
+        }
+        
+        return (
+            <CurrentLessonComponent 
+                language={lesson.language} 
+                title={lesson.title} 
+                image={lesson.image} 
+                cleanText={<LoadableComponent text={lesson.text}/>} 
+                goBackFunc={goBack} 
+            />
+        )
+    } catch (error) {
+        return (
+            <>
+                <ServerError />
+            </>
+        )
     }
 
-    return (
-        <CurrentLessonComponent 
-            language={lesson.language} 
-            title={lesson.title} 
-            image={lesson.image} 
-            cleanText={<LoadableComponent text={lesson.text}/>} 
-            goBackFunc={goBack} 
-        />
-    )
 }
 
 export async function getStaticProps(context) {
