@@ -15,12 +15,6 @@ function CurrentChineseLesson(props) {
         router.push("/lessons/chineseLessons")
     }
 
-    if (!lesson) {
-        return (
-            <h1>Loading current Lesson...</h1>
-        )
-    }
-
     return (
         <CurrentLessonComponent 
             language={lesson.language} 
