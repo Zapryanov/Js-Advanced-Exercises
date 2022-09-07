@@ -108,11 +108,15 @@ function HomePage(props) {
     } catch (error) {
         console.log("error.message --- ", error.message, " / ", "error.name --- ", error.name)
         return (
-            <div>Server Error...!</div>
+            <div className="error-container">
+                <h1>В момента обновяваме страницата или има сървърен проблем</h1>
+                <p className="error-text">
+                    <span>Моля опитайте по-късно.</span>
+                    <span>Извинете ни за неудобството!</span>
+                </p>
+            </div>
         )
     }
-
-    
 }
 
 export async function getServerSideProps() {
