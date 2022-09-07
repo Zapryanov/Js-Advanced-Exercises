@@ -5,6 +5,7 @@ import styles from "./index.module.css";
 
 import BigButton from "../components/big-button";
 import { getAllChineseLessons, getAllEnglishLessons, getImagesMainPage } from "../data/getData";
+import ServerError from "../components/error";
 
 function HomePage(props) {
     
@@ -107,13 +108,13 @@ function HomePage(props) {
         )
     } catch (error) {
         return (
-            <div className="error-container">
-                <h1>В момента обновяваме страницата или има сървърен проблем</h1>
-                <p className="error-text">
-                    <span>Моля опитайте по-късно.</span>
-                    <span>Извинете ни за неудобството!</span>
-                </p>
-            </div>
+            <>
+                <Head>
+                    <title>Мравка Занимавка</title>
+                    <meta name="description" content="Уроци по Китайски и Английски език за деца в град Пловдив" />
+                </Head>
+                <ServerError />
+            </>
         )
     }
 }
