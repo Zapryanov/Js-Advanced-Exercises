@@ -22,36 +22,34 @@ function ChineseLessonsPage(props) {
 }
 
 export async function getServerSideProps() {
-    try {
-        const loadedLessons = await getAllChineseLessons();
-        const languageType = loadedLessons[0].language.toLowerCase();
-        const cuttedLessons = loadedLessons.map(({text, ...rest}) => (
-                {
-                    ...rest,
-                    text: `${text.substring(0, 35)} [ ..... ]`
-                }
-            ))
-    
-        if (!loadedLessons) {
-            return {
-                redirect: {
-                    destination: "/"
-                }
-            }
-        }
-    
-        if (loadedLessons.length === 0) {
-            return { notFound: true }
-        }
+    const loadedLessons = await getAllChineseLessons();
 
-        return { 
-            props: { 
-                loadedLessons: cuttedLessons,
-                language: languageType
+    if (!loadedLessons || loadedLessons.length === 0) {
+        return {
+            redirect: {
+                destination: "/"
             }
         }
-    } catch (error) {
-        console.log(error);
+    }
+
+    const languageType = loadedLessons[0].language.toLowerCase();
+    const cuttedLessons = loadedLessons.map(({text, ...rest}) => (
+            {
+                ...rest,
+                text: `${text.substring(0, 35)} [ ..... ]`
+            }
+        ))
+
+
+    if (loadedLessons.length === 0) {
+        return { notFound: true }
+    }
+
+    return { 
+        props: { 
+            loadedLessons: cuttedLessons,
+            language: languageType
+        }
     }
 }
 
