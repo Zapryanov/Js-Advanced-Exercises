@@ -17,7 +17,7 @@ function CurrentLessonComponent({language, title, image, cleanText, goBackFunc})
                 </div>
                 <div className={`${styles["width-line"]} ${styles.text}`} dangerouslySetInnerHTML={{__html: cleanText.props.text}} />
                 <div className={styles["wrap-buttons"]}>
-                    <button className={styles["btn-lesson"]} onClick={goBackFunc}>Go back</button>
+                    <button className={styles["btn-lesson"]} onClick={goBackFunc}>Назад</button>
                 </div>
             </article>
         </Fragment>
