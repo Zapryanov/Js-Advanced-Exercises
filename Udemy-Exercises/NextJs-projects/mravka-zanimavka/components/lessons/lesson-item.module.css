@@ -1,4 +1,5 @@
 .lesson-container {
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   background-color: #ffffed;
   border: 2px solid rgba(255 , 255, 255, 0.1);
@@ -14,6 +15,7 @@
 
 .title-lesson {
     flex: 1 0 100%;
+    padding: 10px 0;
 }
 
 .wrap-image {
@@ -38,7 +40,7 @@
   flex: 1 0 100%;
   font-family: 'Open Sans', arial, sans-serif;
   font-size: 15px;
-  padding: 10px 10%;
+  padding: 15px 10%;
 }
 
 .btn-lesson {
@@ -64,8 +66,7 @@
   position: relative;
   text-align: left;
   text-decoration: none;
-  transition: 
-    box-shadow .15s,transform .15s;
+  transition: box-shadow .15s,transform .15s;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -89,8 +90,17 @@
 }
 
 @media (max-width: 1023px) {
+  .title-lesson {
+    font-size: 20px;
+  }
   .btn-lesson {
     height: 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .title-lesson {
+    font-size: 18px;
   }
 }
 
@@ -102,9 +112,23 @@
   }
 }
 
+@media (max-width: 359px) {
+  .title-lesson {
+    font-size: 16px;
+  }
+
+  .text-lesson {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 319px) {
   .lesson-container {
     width: 100%;
+  }
+
+  .title-lesson {
+    font-size: 15px;
   }
 
   .wrap-image {
