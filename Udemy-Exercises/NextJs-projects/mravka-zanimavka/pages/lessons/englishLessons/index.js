@@ -21,7 +21,7 @@ function EnglishLessonsPage(props) {
     }
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const loadedLessons = await getAllEnglishLessons();
 
     if (!loadedLessons || loadedLessons.length === 0) {
@@ -49,7 +49,8 @@ export async function getServerSideProps() {
         props: { 
             loadedLessons: cuttedLessons,
             language: languageType
-        }
+        },
+        revalidate: 1800
     }
     
 }
