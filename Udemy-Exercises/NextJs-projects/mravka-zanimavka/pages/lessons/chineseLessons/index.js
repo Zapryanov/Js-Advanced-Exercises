@@ -21,7 +21,7 @@ function ChineseLessonsPage(props) {
     }
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const loadedLessons = await getAllChineseLessons();
 
     if (!loadedLessons || loadedLessons.length === 0) {
@@ -34,11 +34,11 @@ export async function getServerSideProps() {
 
     const languageType = loadedLessons[0].language.toLowerCase();
     const cuttedLessons = loadedLessons.map(({text, ...rest}) => (
-            {
-                ...rest,
-                text: `${text.substring(0, 35)} [ ..... ]`
-            }
-        ))
+        {
+            ...rest,
+            text: `${text.substring(0, 35)} [ ..... ]`
+        }
+    ))
 
 
     if (loadedLessons.length === 0) {
@@ -49,7 +49,8 @@ export async function getServerSideProps() {
         props: { 
             loadedLessons: cuttedLessons,
             language: languageType
-        }
+        },
+        revalidate: 1800
     }
 }
 
