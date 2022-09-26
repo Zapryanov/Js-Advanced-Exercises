@@ -26,11 +26,8 @@ function CurrentEnglishLesson(props) {
     )
 }
 
-export async function getStaticProps(context) {
-    const { params } = context;
-    const lessonId = params.lessonId;
-
-    const currentLesson = await getCurrentEnglishLesson(lessonId);
+export async function getStaticProps({params}) {
+    const currentLesson = await getCurrentEnglishLesson(params.lessonId);
 
     if (!currentLesson) {
         return { notFound: true }
