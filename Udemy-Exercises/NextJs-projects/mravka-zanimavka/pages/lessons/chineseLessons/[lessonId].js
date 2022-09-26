@@ -26,11 +26,8 @@ function CurrentChineseLesson(props) {
     )
 }
 
-export async function getStaticProps(context) {
-    const { params } = context;
-    const lessonId = params.lessonId;
-
-    const currentLesson = await getCurrentChineseLesson(lessonId);
+export async function getStaticProps({params}) {
+    const currentLesson = await getCurrentChineseLesson(params.lessonId);
 
     if (!currentLesson) {
         return { notFound: true }
