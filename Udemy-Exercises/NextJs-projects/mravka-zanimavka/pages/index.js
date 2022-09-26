@@ -119,7 +119,7 @@ function HomePage(props) {
     }
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const imagesMainPage = await getImagesMainPage();
 
     let lastFive = [];
@@ -139,7 +139,8 @@ export async function getServerSideProps() {
         props: {
             lastFiveLessons: lastFive,
             mainPageImages: imagesMainPage
-        }
+        },
+        revalidate: 1800
     }
 }
 
