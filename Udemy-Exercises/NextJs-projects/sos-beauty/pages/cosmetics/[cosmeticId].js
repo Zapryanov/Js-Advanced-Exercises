@@ -48,11 +48,8 @@ function CurrentCosmeticService(props) {
     )
 }
 
-export async function getStaticProps(context) {
-    const { params } = context;
-    const cosmeticId = params.cosmeticId;
-
-    const currentCosmeticService = await getCosmeticServiceById(cosmeticId);
+export async function getStaticProps({params}) {
+    const currentCosmeticService = await getCosmeticServiceById(params.cosmeticId);
 
     return {
         props: {
