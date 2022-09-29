@@ -95,7 +95,7 @@ function About(props) {
     )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const aboutUsInfo = await getAboutUsInfo();
 
     const infoMainServices = aboutUsInfo.infoServices;
@@ -109,7 +109,8 @@ export async function getServerSideProps() {
             brands: brandsImages,
             mainText: topText,
             realCosmetics: cosmeticsFromTheBrand
-        }
+        },
+        revalidate: 1800
     }
 }
 
