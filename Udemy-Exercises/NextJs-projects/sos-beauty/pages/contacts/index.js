@@ -63,13 +63,14 @@ function ContactsPage(props) {
     )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const contactsData = await getContatcsData();
 
     return {
         props: {
             contactsData
-        }
+        },
+        revalidate: 1800
     }
 }
 

@@ -28,13 +28,14 @@ function WaxingPage(props) {
     )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const manAndWomenPrices = await getWaxing();
 
     return {
         props: {
             prices: manAndWomenPrices
-        }
+        },
+        revalidate: 1800
     }
 }
 

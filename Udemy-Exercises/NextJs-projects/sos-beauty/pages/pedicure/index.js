@@ -19,13 +19,14 @@ function Pedicure(props) {
     )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const pedicure = await getPedicure();
 
     return {
         props: {
             pedicure
-        }
+        },
+        revalidate: 1800
     }
 }
 

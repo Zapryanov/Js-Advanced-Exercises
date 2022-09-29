@@ -21,13 +21,14 @@ function Eyelashes(props) {
     )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const eyelashes = await getEyelashes();
 
     return {
         props: {
             eyelashes
-        }
+        },
+        revalidate: 1800
     }
 }
 

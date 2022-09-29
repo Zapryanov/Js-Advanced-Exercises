@@ -33,13 +33,14 @@ function DalyFacialTreatments(props) {
     )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const dalyFacialTreatments = await getDalyFaceTreatments();
 
     return {
         props: {
             dalyFacialTreatments
-        }
+        },
+        revalidate: 1800
     }
 }
 

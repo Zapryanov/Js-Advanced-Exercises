@@ -16,13 +16,14 @@ function CosmeticsPage(props) {
     )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const cosmeticsArray = await getCosmeticService();
 
     return {
         props: {
             cosmetics: cosmeticsArray
-        }
+        },
+        revalidate: 1800
     }
 }
 
