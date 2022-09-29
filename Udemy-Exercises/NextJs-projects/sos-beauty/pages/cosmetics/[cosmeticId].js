@@ -25,7 +25,7 @@ function CurrentCosmeticService(props) {
                 </div>
                 <div className={styles["wrap-image"]}>
                     <div className={styles["image-shadow"]}>
-                        <Image width={450} height={300} src={image} alt={titleBig} />
+                        <Image width={300} height={220} src={image} alt={titleBig} />
                     </div>
                 </div>
                 <ul className={styles["ul-general-info"]}>
