@@ -15,12 +15,13 @@ function HomePage(props) {
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const mainHeadings = await getMainHeadings();
   return {
     props: {
       loadedServices: mainHeadings
-    }
+    },
+    revalidate: 1800
   }
 }
 
