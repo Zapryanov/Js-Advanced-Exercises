@@ -11,7 +11,7 @@
     border-radius: 20px 145px / 135px;
     box-shadow: 
         -8px -8px 12px rgba(255, 255, 255, 0.35),
-        10px 10px 5px rgb(0 0 0 / 60%);
+        10px 10px 5px var(--color-black-transparent);
     color: rgb(248, 242, 242);
 }
 
@@ -76,7 +76,7 @@
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 10px 10px 5px rgb(0 0 0 / 60%);
+    box-shadow: 10px 10px 5px var(--color-black-transparent);
 }
 
 .google-big-link::after {
@@ -91,13 +91,13 @@
     display: block;
     left: 50%;
     bottom: 20px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    text-shadow: 1px 1px 1px var(--color-black-transparent);
     transform: translateX(-50%);
 }
 
 .google-big-link:hover::after {
-    color: rgb(255, 255, 255);
-    background-color: rgba(0, 139, 139, 1);
+    color: var(--color-white);
+    background-color: var(--color-darkcyan);
 }
 
 .wrap-salon-image {
@@ -112,7 +112,7 @@
     border-radius: 12px;
     box-shadow: 
         -8px -8px 12px rgba(255, 255, 255, 0.35),
-        10px 10px 5px rgb(0 0 0 / 60%);
+        10px 10px 5px var(--color-black-transparent);
     display: flex;
     margin: 0 10px;
 }

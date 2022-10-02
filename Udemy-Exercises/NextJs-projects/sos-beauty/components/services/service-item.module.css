@@ -1,7 +1,7 @@
 .service-item {
-    background-color: rgba(248, 248, 248, 0.7);
+    background-color: var(--color-almost-white-transparent);
     border-radius: 12px;
-    box-shadow: 0 0 8px 3px rgb(0 0 0 / 55%);
+    box-shadow: 0 0 8px 3px var(--color-black-transparent);
     display: flex;
     width: 380px;
     flex-flow: row wrap;
@@ -50,8 +50,8 @@
 }
 
 .wrap-image-service {
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 5px 2px inset rgb(0 0 0 / 50%);
+    border: 1px solid var(--color-black-transparent);
+    box-shadow: 0px 0px 5px 2px inset var(--color-black-transparent);
     display: flex;
     height: 160px;
     margin: 20px auto;
@@ -60,7 +60,7 @@
 }
 
 .wrap-btn-service {
-    box-shadow: -1px -1px 5px white,4px 4px 3px rgba(68, 66, 66, 1);
+    box-shadow: -1px -1px 5px var(--color-white),4px 4px 3px var(--gray-shadow);
     border-radius: 12px;
     margin: 10px 0;
     transition: all 0.5s ease;
@@ -77,7 +77,7 @@
 
 .btn-service:hover {
     background-color: var(--color-light-brown);
-    box-shadow: 0px 0px 15px 5px inset rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 15px 5px inset var(--color-black-transparent);
     color: var(--color-almost-white);
     text-shadow: 1px 1px var(--color-black);
 }

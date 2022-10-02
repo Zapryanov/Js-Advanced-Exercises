@@ -2,9 +2,9 @@
     position: absolute;
     bottom: 45%;
     z-index: 2;
-    border: 1px solid rgba(220, 220, 220, 0.4);
+    border: 1px solid var(--color-lightgray-2);
     border-radius: 0 12px 12px 0;
-    box-shadow: -1px -1px 5px white, 4px 4px 3px rgba(68, 66, 66, 1);
+    box-shadow: -1px -1px 5px var(--color-white), 4px 4px 3px var(--gray-shadow);
     background-color: rgba(231, 217, 216, 1);
     padding: 0;
     color: brown;
@@ -14,7 +14,7 @@
 
 .see-more:hover {
     background-color: var(--color-brown);
-    box-shadow: -1px -1px 5px white, 4px 4px 3px rgba(68, 66, 66, 1);
+    box-shadow: -1px -1px 5px white, 4px 4px 3px var(--gray-shadow);
     color: var(--color-almost-white);
     text-shadow: 1px 1px var(--color-black);
 }

@@ -1,31 +1,31 @@
 .each-facial-treatment {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: var(--color-almost-white-transparent);
     border-radius: 12px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6), -3px -3px 8px rgba(255, 255, 255, 0.7);
+    box-shadow: 10px 10px 10px var(--color-black-transparent), -3px -3px 8px var(--color-almost-white-transparent);
     margin: 0 20px 30px 20px;
     padding: 10px 20px;
 }
 
-.each-facial-treatment h3 {
+.each-facial-treatment h2 {
     color: var(--color-brown);
     font-size: 22px;
 
     text-shadow: 
-        1px 0 white,
-        0 1px white,
-        -1px 0 white,
-        0 -1px white,
-        2px 0 rgb(138, 136, 136),
-        0 2px rgb(138, 136, 136),
-        -2px 0 rgb(138, 136, 136),
-        0 -2px rgb(138, 136, 136),
-        5px 10px 3px rgba(85, 84, 84, 0.5);
+        1px 0 var(--color-white),
+        0 1px var(--color-white),
+        -1px 0 var(--color-white),
+        0 -1px var(--color-white),
+        2px 0 var(--color-pure-gray),
+        0 2px var(--color-pure-gray),
+        -2px 0 var(--color-pure-gray),
+        0 -2px var(--color-pure-gray),
+        5px 10px 3px var(--deep-shadow);
 }
 
 .description {
     border-radius: 12px;
     padding: 10px;
-    box-shadow:  3px 3px 5px rgba(0,0,0,0.3), -3px -3px 5px rgba(255,255,255,1);
+    box-shadow:  3px 3px 5px var(--color-black-lighter), -3px -3px 5px var(--color-white);
     margin: 20px 0;
     text-indent: 20px;
 }
@@ -35,36 +35,36 @@
     letter-spacing: 1px;
     background-color: #db8183;
     border-radius: 20px 145px / 135px;
-    box-shadow: 0 0 0 1px #db8183, 5px 5px 3px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 0 1px #db8183, 5px 5px 3px var(--color-black-transparent);
     font-size: 14px;
     padding: 3px 4px 0 4px;
     display: inline-block;
 }
 
 .discount {
-    box-shadow: inset -3px -3px 4px 2px white, inset 3px  3px 5px 1px rgba(0, 0, 0, 0.6);
+    box-shadow: inset -3px -3px 4px 2px var(--color-white), inset 3px  3px 5px 1px var(--color-black-transparent);
     background-color: var(--color-brown);
     border-radius: 10px;
     padding: 15px 10px;
-    color: rgba(230, 230, 230, 1);
+    color: var(--color-almost-white);
     display: flex;
 }
 
 .discount strong {    
-    background: linear-gradient(-45deg, rgba(0,0,0,0.26), rgba(255,255,255,0.57));
+    background: linear-gradient(-45deg, var(--color-black-lighter), var(--color-white-transparent));
     border-radius: 12px;
-    box-shadow: 8px 8px 12px 0 rgb(0 0 0 / 35%), -4px -4px 8px 0 rgb(255 255 255 / 35%);
+    box-shadow: 8px 8px 12px 0 var(--color-black-lighter), -4px -4px 8px 0 rgb(255 255 255 / 35%);
     color: white;
     display: inline-block;
     font-weight: 100;
     padding: 3px 10px;
-    text-shadow: 1px 1px 1px rgb(177 174 174), -1px -1px 1px rgb(0 0 0 / 60%);
+    text-shadow: 1px 1px 1px var(--color-lightgray-3), -1px -1px 1px var(--color-black-transparent);
 }
 
 .wrap-face-treatments-price {
     align-items: baseline;
     border-radius: 12px;
-    box-shadow: 3px 3px 5px rgba(0,0,0,0.3),-3px -3px 5px rgba(255,255,255,1);
+    box-shadow: 3px 3px 5px var(--color-black-lighter),-3px -3px 5px var(--color-white);
     display: flex;
     margin: 20px 0;
     padding: 10px;
@@ -72,12 +72,12 @@
 
 .word-price, .price {
     background-color: var(--color-brown);
-    border: 1px solid rgb(15, 15, 15);
+    border: 1px solid var(--color-black);
     border-radius: 22px;
     box-shadow: 
-        0 0 1px 1px white,
-        0 0 2px 2px black,
-        0 10px 12px black;
+        0 0 1px 1px var(--color-white),
+        0 0 2px 2px var(--color-black),
+        0 10px 12px var(--color-black);
     color: var(--color-white);
     padding: 5px 15px;
 }

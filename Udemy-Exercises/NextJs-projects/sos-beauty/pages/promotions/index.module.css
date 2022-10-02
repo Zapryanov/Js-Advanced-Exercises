@@ -16,7 +16,7 @@
     text-align: center;
     transform: rotate(-25deg);
     font-size: 70px;
-    color: #fff;
+    color: var(--color-white);
     opacity: 0.1;
     margin-top: 150px;
     position: fixed;
@@ -58,23 +58,23 @@
 }
 
 .wrap-text-promotions {
-    border-top: 1px solid navajowhite;
-    color: rgb(250, 246, 246);
+    border-top: 1px solid var(--color-navajowhite);
+    color: var(--color-white-2);
     display: flex;
     flex-flow: row wrap;
     font-size: 18px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    text-shadow: 1px 1px 1px var(--color-black-transparent);
     width: 420px;
 }
 
 .section-promotions h3 {
-    color: red;
+    color: var(--color-red);
     font-size: 25px;
     font-weight: 400;
     margin: 0px 0px 5px 380px;
     text-shadow: 
         1px 1px 1px rgb(177, 174, 174),
-        -1px -1px 1px rgba(0, 0, 0, 0.6);
+        -1px -1px 1px var(--color-black-transparent);
 }
 
 .wrap-text-promotions p {
@@ -93,7 +93,7 @@
 }
 
 .descriptionDiscount {
-    color: navajowhite;
+    color: var(--color-navajowhite);
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 6px;
@@ -102,26 +102,25 @@
 
 .priceDiscounted {
     border-radius: 10px;
-    background: linear-gradient(-45deg, rgba(0,0,0,0.26), rgba(255,255,255,0.57));
+    background: linear-gradient(-45deg, rgba(0,0,0,0.26), var(--color-white-transparent));
     box-shadow: 
-        12px 12px 16px 0 rgba(0, 0, 0, 0.35),
-        -8px -8px 12px 0 rgba(255, 255, 255, 0.35);
-    color: red;
+        12px 12px 16px 0 rgba(0, 0, 0, 0.35);
+    color: var(--color-red);
     font-size: 25px;
     padding: 3px 10px;
     text-shadow: 
         1px 1px 1px rgb(177, 174, 174), 
-        -1px -1px 1px rgba(0, 0, 0, 0.6);
+        -1px -1px 1px var(--color-black-transparent);
 }
 
 /* ---------------- Styles from dangerouslySetInnerHtml---------------------- */
 .wrap-text-promotions p span {
     font-family: 'Merriweather', serif;
-    color: navajowhite;
+    color: var(--color-navajowhite);
     font-size: 16px;
     letter-spacing: 1px;
     border-radius: 20px 145px / 135px;
-    border: 1px solid navajowhite;
+    border: 1px solid var(--color-navajowhite);
     padding: 1px 4px;
     display: inline-block;
     

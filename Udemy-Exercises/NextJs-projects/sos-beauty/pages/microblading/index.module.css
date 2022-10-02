@@ -6,24 +6,24 @@
 }
 
 .wrap-image {
-    background-color: rgb(245, 245, 245);
-    border: 1px solid gray;
+    background-color: var(--color-white-2);
+    border: 1px solid var(--color-pure-gray);
     border-radius: 12px;
-    box-shadow: inset 0px 0px 5px 2px grey;
+    box-shadow: inset 0px 0px 5px 2px var(--color-pure-gray);
     margin-bottom: 20px;
     padding: 10px;
 }
 
 .box-shadow-image {
     border-radius: 8px;
-    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.6);
+    box-shadow: 2px 2px 5px 1px var(--color-black-transparent);
     display: flex;
     overflow: hidden;
 }
 
 .microblading-image {
     border-radius: 8px;
-    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 4px 4px 5px var(--color-black-transparent);
     overflow: hidden;
     object-fit: cover;
 }
@@ -36,16 +36,16 @@
 
 .text-section h2 {
     color: var(--color-brown);
-    text-shadow: 1px 1px 0px black;
+    text-shadow: 1px 1px 0px var(--color-black);
 }
 
 .wrap-text {
-    background-color: rgba(181, 129, 125, 0.8);
+    background-color: var(--main-background-dark);
     border-radius: 8px;
-    box-shadow: inset 0px 0px 15px 2px whitesmoke;
-    color: whitesmoke;
+    box-shadow: inset 0px 0px 15px 2px var(--color-white-2);
+    color: var(--color-white-2);
     padding: 20px;
-    text-shadow: 1px 1px rgb(81, 81, 81);
+    text-shadow: 1px 1px var(--color-darker-gray);
 }
 
 @media (max-width: 1279px) {
@@ -106,7 +106,7 @@
     }
 
     .wrap-text {
-        border: 1px solid rgb(197, 196, 196);
+        border: 1px solid var(--color-lightgray-3);
         box-shadow: none;
         padding: 10px;
     }
