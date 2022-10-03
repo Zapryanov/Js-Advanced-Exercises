@@ -6,8 +6,7 @@ import { getDalyFaceTreatments } from "../../data";
 
 import styles from "./index.module.css";
 
-function DalyFacialTreatments(props) {
-    const { dalyFacialTreatments } = props;
+function DalyFacialTreatments({dalyFacialTreatments}) {
     const data = Object.entries(dalyFacialTreatments);
 
     return (
