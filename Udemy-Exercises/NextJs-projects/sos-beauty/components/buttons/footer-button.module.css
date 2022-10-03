@@ -7,14 +7,14 @@
     box-shadow: -1px -1px 5px var(--color-white), 4px 4px 3px var(--gray-shadow);
     background-color: rgba(231, 217, 216, 1);
     padding: 0;
-    color: brown;
+    color: var(--color-brown);
     transition: 0.3s ease-in-out;
     overflow: hidden;
 }
 
 .see-more:hover {
     background-color: var(--color-brown);
-    box-shadow: -1px -1px 5px white, 4px 4px 3px var(--gray-shadow);
+    box-shadow: -1px -1px 5px var(--color-white), 4px 4px 3px var(--gray-shadow);
     color: var(--color-almost-white);
     text-shadow: 1px 1px var(--color-black);
 }
