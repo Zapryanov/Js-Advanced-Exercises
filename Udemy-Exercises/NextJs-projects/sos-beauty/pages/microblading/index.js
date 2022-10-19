@@ -40,6 +40,12 @@ function Microblading(props) {
 export async function getServerSideProps() {
     const microbladingInfo = await getMicroblading();
 
+    if (!microbladingInfo) {
+        return {
+            notFound: true
+        }
+    }
+
     return {
         props: {
             microblading: microbladingInfo
