@@ -19,14 +19,13 @@ function Hairdressing(props) {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const hairdressing = await getHairdressing();
 
     return {
         props: {
             hairdressing
-        },
-        revalidate: 1800
+        }
     }
 }
 

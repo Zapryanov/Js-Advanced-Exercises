@@ -37,14 +37,13 @@ function Microblading(props) {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const microbladingInfo = await getMicroblading();
 
     return {
         props: {
             microblading: microbladingInfo
-        },
-        revalidate: 1800
+        }
     }
 }
 
