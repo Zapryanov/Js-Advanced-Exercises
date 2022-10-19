@@ -154,6 +154,7 @@ img {
 @media (max-width: 319px) {
   .pageHeading {
     font-size: 16px;
+    font-weight: bold;
     color: transparent;
     color: var(--color-brown);
     line-height: 1.2;
