@@ -6,6 +6,7 @@ import styles from "./index.module.css";
 
 function WaxingPage(props) {
     const { men, women } = props.prices;
+    console.log(props.prices)
 
     return (
         <div>
@@ -30,6 +31,13 @@ function WaxingPage(props) {
 
 export async function getStaticProps() {
     const manAndWomenPrices = await getWaxing();
+    console.log(typeof(manAndWomenPrices))
+
+    if (manAndWomenPrices === null) {
+        return {
+          notFound: true,
+        }
+    }
 
     return {
         props: {

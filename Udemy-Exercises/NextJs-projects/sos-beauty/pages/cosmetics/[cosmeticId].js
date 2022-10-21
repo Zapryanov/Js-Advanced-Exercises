@@ -51,6 +51,15 @@ function CurrentCosmeticService(props) {
 export async function getStaticProps({params}) {
     const currentCosmeticService = await getCosmeticServiceById(params.cosmeticId);
 
+    if (!currentCosmeticService) {
+        return {
+            redirect: {
+                destination: "/",
+                permanent: false
+            }
+        }
+    }
+
     return {
         props: {
             currentCosmeticService

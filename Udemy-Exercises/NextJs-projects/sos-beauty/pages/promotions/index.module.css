@@ -130,6 +130,10 @@
     font-weight: 500;
 }
 
+.descriptionMain strong {
+    color: var(--color-navajowhite);
+}
+
 @media (max-width: 849px) {
     .section-promotions {
         width: 700px;

@@ -19,6 +19,15 @@ function CosmeticsPage(props) {
 export async function getStaticProps() {
     const cosmeticsArray = await getCosmeticService();
 
+    if (!cosmeticsArray) {
+        return {
+            redirect: {
+                destination: "/",
+                permanent: false
+            }
+        }
+    }
+
     return {
         props: {
             cosmetics: cosmeticsArray

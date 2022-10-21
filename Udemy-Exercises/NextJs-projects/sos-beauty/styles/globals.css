@@ -110,7 +110,6 @@ img {
 }
 
 .notFoundContainer {
-  /* background: linear-gradient(45deg, var(--color-almost-white) 25%, var(--color-white)); */
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -121,12 +120,21 @@ img {
   padding: 0 20px;
 }
 
+.notFoundContainer p {
+  margin-bottom: 20px;
+}
+
 .linkNotFound {
   background-color: var(--color-brown);
-  border: 2px solid var(--color-lightgray);
+  box-shadow: 0 0 0 2px var(--color-lightgray), 0 0 0 3px var(--color-black);
   border-radius: 5px;
   color: var(--color-white);
   padding: 3px 8px;
+}
+
+.linkNotFound:active {
+  transform: translateY(5px);
+  transition: all 0.2s;
 }
 
 @media (max-width:991px) {

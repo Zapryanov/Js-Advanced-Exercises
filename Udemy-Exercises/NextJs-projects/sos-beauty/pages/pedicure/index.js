@@ -22,6 +22,12 @@ function Pedicure(props) {
 export async function getStaticProps() {
     const pedicure = await getPedicure();
 
+    if (!pedicure) {
+        return {
+          notFound: true,
+        }
+    }
+
     return {
         props: {
             pedicure
