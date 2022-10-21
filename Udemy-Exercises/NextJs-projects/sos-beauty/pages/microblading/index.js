@@ -42,7 +42,10 @@ export async function getServerSideProps() {
 
     if (!microbladingInfo) {
         return {
-            notFound: true
+            redirect: {
+                destination: "/",
+                permanent: false
+            }
         }
     }
 

@@ -22,6 +22,15 @@ function Hairdressing(props) {
 export async function getServerSideProps() {
     const hairdressing = await getHairdressing();
 
+    if (!hairdressing) {
+        return {
+            redirect: {
+                destination: '/',
+                permanent: false,
+            }
+        }
+    }
+
     return {
         props: {
             hairdressing
