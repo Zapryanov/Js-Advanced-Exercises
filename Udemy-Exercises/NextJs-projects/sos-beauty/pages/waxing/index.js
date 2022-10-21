@@ -31,9 +31,8 @@ function WaxingPage(props) {
 
 export async function getStaticProps() {
     const manAndWomenPrices = await getWaxing();
-    console.log(typeof(manAndWomenPrices))
 
-    if (manAndWomenPrices === null) {
+    if (!manAndWomenPrices) {
         return {
           notFound: true,
         }
