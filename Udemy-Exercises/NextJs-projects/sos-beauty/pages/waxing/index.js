@@ -6,7 +6,6 @@ import styles from "./index.module.css";
 
 function WaxingPage(props) {
     const { men, women } = props.prices;
-    console.log(props.prices)
 
     return (
         <div>
