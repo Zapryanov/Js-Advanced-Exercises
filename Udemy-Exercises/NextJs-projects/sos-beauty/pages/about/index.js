@@ -103,6 +103,12 @@ export async function getStaticProps() {
     const topText = aboutUsInfo.topText;
     const cosmeticsFromTheBrand = aboutUsInfo.cosmeticsFromTheBrand;
 
+    if (!infoMainServices || !brandsImages || !topText || !cosmeticsFromTheBrand) {
+        return {
+            notFound: true
+        }
+    }
+
     return {
         props: {
             aboutUsMainInfo: infoMainServices,

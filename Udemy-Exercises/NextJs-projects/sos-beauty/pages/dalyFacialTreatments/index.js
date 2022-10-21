@@ -35,6 +35,12 @@ function DalyFacialTreatments({dalyFacialTreatments}) {
 export async function getStaticProps() {
     const dalyFacialTreatments = await getDalyFaceTreatments();
 
+    if (!dalyFacialTreatments) {
+        return {
+            notFound: true,
+        }
+    }
+
     return {
         props: {
             dalyFacialTreatments

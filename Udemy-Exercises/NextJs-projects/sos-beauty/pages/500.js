@@ -1,6 +1,8 @@
 function Custom500() {
     return (
-        <div>Surver error occured...!</div>
+        <div>
+            <h1 className="pageHeading">Възникна грешка на сървъра!</h1>
+        </div>
     )
 }
 
