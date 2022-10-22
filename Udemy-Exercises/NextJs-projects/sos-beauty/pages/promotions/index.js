@@ -59,12 +59,13 @@ function PromotionsPage(props) {
 
 export async function getStaticProps() {
     const promotionsObject = await getPromotions();
-     return {
-         props: {
-             promotions: promotionsObject
-         },
-         revalidate: 1800
-     }
+
+    return {
+        props: {
+            promotions: promotionsObject
+        },
+        revalidate: 1800
+    }
 }
 
 export default PromotionsPage;

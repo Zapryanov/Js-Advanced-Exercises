@@ -1,8 +1,8 @@
 .wrap-microblading {
+    align-items: center;
     display: flex;
     flex-flow: column;
     justify-content: center;
-    align-items: center;
 }
 
 .wrap-image {

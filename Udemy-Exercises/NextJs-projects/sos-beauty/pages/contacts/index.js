@@ -65,6 +65,7 @@ function ContactsPage(props) {
 
 export async function getStaticProps() {
     const contactsData = await getContatcsData();
+    
 
     if (!contactsData) {
         return {

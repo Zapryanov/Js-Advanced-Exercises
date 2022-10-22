@@ -9,17 +9,17 @@
 }
 
 .each-footer-block {
-    width: 280px;
     margin: 0 10px;
     position: relative;
+    width: 280px;
 }
 
 .footer h3 {
-    position: relative;
     color: var(--color-darker-gray);
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 30px;
+    position: relative;
     text-shadow: 0px 0px 3px var(--color-almost-white);
 }
 
@@ -41,8 +41,8 @@
     box-shadow: 0px 2px 12px 1px var(--color-cornsilk);
     box-sizing: border-box;
     display: flex;
-    height: 175px;
     flex-flow: row wrap;
+    height: 175px;
     padding: 30px;
     width: 280px;
     
@@ -54,10 +54,10 @@
     box-shadow: 0px 2px 12px 1px var(--color-cornsilk);
     box-sizing: border-box;
     display: flex;
+    height: 175px;
     overflow: hidden;
     position: relative;
     width: 280px;
-    height: 175px;
 }
 
 .wrap-socials:hover {
@@ -81,8 +81,8 @@
     }
 
     .contacts {
-        padding: 15px 0 15px 15px;
         font-size: 12px;
+        padding: 15px 0 15px 15px;
     }
 }
 

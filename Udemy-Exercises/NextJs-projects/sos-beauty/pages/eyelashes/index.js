@@ -24,6 +24,12 @@ function Eyelashes(props) {
 export async function getStaticProps() {
     const eyelashes = await getEyelashes();
 
+    if (!eyelashes) {
+        return {
+            notFound: true
+        }
+    }
+
     return {
         props: {
             eyelashes

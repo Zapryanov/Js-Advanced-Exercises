@@ -3,11 +3,11 @@
     border-radius: 12px;
     box-shadow: 0 0 8px 3px var(--color-black-transparent);
     display: flex;
-    width: 380px;
     flex-flow: row wrap;
     justify-content: center;
     margin: 0px 10px 20px 10px;
     padding: 10px;
+    width: 380px;
 }
 
 .service-item:hover {
@@ -36,12 +36,12 @@
 }
 
 .wrap-secondary-name .country {
-    position: absolute;
     bottom: -7px;
-    right: 0;
+    color: rgba(85, 85, 85, 0.8);
     font-family: "Pacifico";
     font-size: 12px;
-    color: rgba(85, 85, 85, 0.8);
+    position: absolute;
+    right: 0;
     text-shadow: none;
 }
 
@@ -63,15 +63,14 @@
     box-shadow: -1px -1px 5px var(--color-white),4px 4px 3px var(--gray-shadow);
     border-radius: 12px;
     margin: 10px 0;
+    overflow: hidden;
     transition: all 0.5s ease;
 }
 
 .btn-service {
-    padding: 10px 30px;
-    border-radius: 8px;
-    display:  inline-block;
-    border-radius: 12px;
     color: var(--color-brown);
+    display:  inline-block;
+    padding: 10px 30px;
     transition: all 0.3s ease;
 }
 
@@ -84,9 +83,9 @@
 
 @media (max-width: 479px) {
     .service-item {
-        width: 100%;
         margin-left: 30px;
         margin-right: 30px;
+        width: 100%;
     }
 
     .wrap-main-name h2 {
