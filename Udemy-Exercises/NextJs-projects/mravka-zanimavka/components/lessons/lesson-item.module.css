@@ -8,8 +8,8 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  padding: 5px;
   margin-bottom: 3.33%;
+  padding: 5px;
   width: 45%;
 }
 
@@ -55,6 +55,7 @@
   cursor: pointer;
   display: inline-flex;
   font-family: "JetBrains Mono",monospace;
+  font-size: 18px;
   height: 48px;
   justify-content: center;
   line-height: 1;
@@ -67,12 +68,11 @@
   text-align: left;
   text-decoration: none;
   transition: box-shadow .15s,transform .15s;
-  user-select: none;
   -webkit-user-select: none;
+  user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
   will-change: box-shadow,transform;
-  font-size: 18px;
 }
 
 .btn-lesson:focus {

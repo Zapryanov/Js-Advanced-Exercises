@@ -3,12 +3,12 @@
 }
 
 .description {
-    margin-bottom: 50px;
-    text-align: center;
+    align-items: center;
     display: flex;
     flex-flow: column;
     justify-content: center;
-    align-items: center;
+    margin-bottom: 50px;
+    text-align: center;
 }
 
 .wrap-img {
@@ -19,19 +19,19 @@
 }
 
 .shadow {
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.7);
-    border-radius: 5px;
     overflow: hidden;
+    width: 100%;
 }
 
 .img {
-    width: auto;
-    max-width: 100%;
     height: auto;
+    max-width: 100%;
+    width: auto;
 }
 
 .text {
@@ -39,17 +39,14 @@
     line-height: 1.4;
 }
 
-/* ----Start Two--- */
-
 .two {
+    align-items: stretch;
     border-radius: 12px;
     display: flex;
+    flex-flow: row;
     justify-content: space-between;
     padding: 20px 0;
     width: 100%;
-
-    flex-flow: row;
-    align-items: stretch;
 }
 
 .two .wrap-img,
@@ -63,11 +60,11 @@
 .two .wrap-text {
     display: flex;
     flex-flow: column;
+    font-family: Arial, Helvetica, sans-serif;
     justify-content: space-evenly;
+    line-height: 1.4;
     padding: 10px 20px;
     text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.4;
 }
 
 .two .wrap-text p:first-child {
@@ -79,10 +76,6 @@
     font-style: italic;
     font-weight: bold;
 }
-
-/* ---End Two------------- */
-
-/* --- Start Three ------- */
 
 .gallery-wrapper {
     display: flex;
@@ -104,15 +97,15 @@
 }
 
 .small-image {
-    flex: 0 1 31%;
     display: flex;
+    flex: 0 1 31%;
 }
 
 .big-image {
+    display: flex;
     flex: 0 1 48%;
     margin-top: 3%;
     width: 50%;
-    display: flex;
 }
 
 .small-image,
@@ -130,19 +123,18 @@
 }
 
 .gallery-text-container {
-    justify-content: flex-start;
-    padding-top: 0;
-    margin-left: 20px;
     display: flex;
     flex-flow: column;
     flex: 0 1 48%;
+    justify-content: flex-start;
+    margin-left: 20px;
     padding: 20px;
 }
 
 .gallery-text-container ul li {
+    align-items: flex-start;
     display:  flex;
     flex-flow: row nowrap;
-    align-items: flex-start;
     margin-top: 15px;
 }
 
@@ -158,8 +150,8 @@
 
 @media (max-width: 1023px) {
     .learning-plan {
-        width: 600px;
         height: 400px;
+        width: 600px;
     }
 
     .description {
@@ -175,15 +167,15 @@
     }
 
     .gallery-text-container ul li div {
-        width: 15px;
         height: 15px;
+        width: 15px;
     }
 }
 
 @media (max-width: 767px) {
     .learning-plan {
-        width: 100%;
         height: auto;
+        width: 100%;
     }
     .gallery-wrapper {
         flex-flow: column;
@@ -195,8 +187,8 @@
     }
 
     .gallery-text-container ul li div {
-        width: 15px;
         height: 15px;
+        width: 15px;
     }
     .two {
         flex-flow: column;

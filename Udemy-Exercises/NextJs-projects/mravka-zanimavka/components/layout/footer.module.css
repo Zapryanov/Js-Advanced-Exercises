@@ -23,13 +23,13 @@
 
 .space-vertically {
     padding: 5px 0;
-    width: 200px;
     border-bottom: 1px solid;
+    width: 200px;
 }
 
 .position-icon {
-    display: flex;
     align-items: center;
+    display: flex;
 }
 
 .space-left {

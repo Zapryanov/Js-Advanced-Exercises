@@ -1,9 +1,9 @@
 html,
 body {
+  align-items: center;
   background-color: #ffffed;
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin: 0;
   overflow-x: hidden;
   padding: 0;
@@ -12,9 +12,9 @@ body {
 *,
 *:before,
 *:after{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -23,19 +23,19 @@ a {
 }
 
 ol, ul {
-  margin: 0;
-	padding: 0;
-	border: 0;
+  border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
 	list-style: none;
+  margin: 0;
+  padding: 0;
+	vertical-align: baseline;
 }
 
 img {
-  width: 100%;
   max-width: 100%;
   object-fit: cover;
+  width: 100%;
 }
 
 h1, h2, h3, h4 {
@@ -57,10 +57,10 @@ h3 {
 }
 
 h4 {
-  text-shadow: 1px 1px 1px rgb(0 0 0 / 60%);
   font-size: 22px;
   font-weight: 300;
   padding: 10px 0;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 60%);
 }
 
 .error-container {
