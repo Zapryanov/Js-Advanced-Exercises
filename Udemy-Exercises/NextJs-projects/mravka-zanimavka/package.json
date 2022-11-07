@@ -2,19 +2,16 @@
   "name": "mravka-zanimavka",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "export": "next export"
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "@loadable/component": "^5.15.2",
-    "isomorphic-dompurify": "^0.23.0",
     "next": "^12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "sanitize-html": "^2.7.0",
+    "sanitize-html": "^2.7.3",
     "sharp": "^0.30.7"
   },
   "devDependencies": {

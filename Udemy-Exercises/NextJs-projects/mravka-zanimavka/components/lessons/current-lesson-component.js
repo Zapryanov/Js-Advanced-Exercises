@@ -1,11 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Fragment } from "react";
 import styles from "./current-lesson-component.module.css";
 
 function CurrentLessonComponent({language, title, image, cleanText, goBackFunc}) {
     return (
-        <Fragment>
+        <>
             <Head>
                 <title>{title}</title>
                 <meta name="description" content={`Урок по ${language} за деца в град Пловдив, на тема - ${title}`} />
@@ -20,7 +19,7 @@ function CurrentLessonComponent({language, title, image, cleanText, goBackFunc})
                     <button className={styles["btn-lesson"]} onClick={goBackFunc}>Назад</button>
                 </div>
             </article>
-        </Fragment>
+        </>
     )
 }
 
