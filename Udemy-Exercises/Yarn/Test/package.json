@@ -1,0 +1,14 @@
+{
+  "name": "Test",
+  "version": "1.0.0",
+  "description": "Yarn testing",
+  "main": "index.js",
+  "author": "Ivan",
+  "license": "MIT",
+  "scripts": {
+    "greet": "echo Hello World!!!",
+    "start": "node ./server.js",
+    "mod": "yarn config set save-prefix"
+  },
+  "dependencies": {}
+}
