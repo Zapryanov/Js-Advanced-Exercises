@@ -2,7 +2,7 @@ import Head from "next/head";
 import LessonList from "./lesson-list";
 import BigButton from "../big-button";
 
-function AllLessonsPageComponent({ language, lessons, url }) {
+function AllLessonsPageComponent({ language, lessons }) {
     return (
         <>
             <Head>
